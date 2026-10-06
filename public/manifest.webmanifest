@@ -1,13 +1,31 @@
 {
   "name": "Asklepios",
   "short_name": "Asklepios",
-  "description": "TCCC training simulator — join exercises from your phone.",
+  "description": "TCCC training simulator: join exercises from your phone.",
   "start_url": "/join",
   "display": "standalone",
   "background_color": "#080c0a",
   "theme_color": "#080c0a",
   "orientation": "portrait-primary",
   "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
     {
       "src": "/favicon.svg",
       "sizes": "any",

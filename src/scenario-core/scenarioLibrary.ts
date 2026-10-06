@@ -95,7 +95,8 @@ export function validateOperationalScenarioCatalog(value: unknown): asserts valu
 }
 
 export async function loadOperationalScenarioCatalog(): Promise<OperationalScenarioCatalog> {
-  const response = await fetch('/data/scenario_library/operational-pack.json', { cache: 'no-store' });
+  // Default cache mode so the service worker can serve this offline after first visit.
+  const response = await fetch('/data/scenario_library/operational-pack.json');
   if (!response.ok) throw new Error(`Scenario catalog request failed with status ${response.status}.`);
   const value: unknown = await response.json();
   validateOperationalScenarioCatalog(value);
