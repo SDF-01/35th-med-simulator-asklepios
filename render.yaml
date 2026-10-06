@@ -1,24 +1,30 @@
-# Asklepios network hub on Render (free web service).
+# Asklepios single Render web service (SPA + Socket.IO hub).
 #
-# Recommended: Cloudflare Pages (or similar) for the Vite SPA + this hub for Socket.IO.
-# Optional single-service: append ` && npm run build:bundle` to buildCommand so `dist/`
-# exists; the hub then serves the SPA when present (see server/index.ts).
+# Option B (default for new accounts): build produces `dist/`; hub serves the SPA
+# when dist/index.html exists (see server/index.ts). Same-origin: leave VITE_HUB_URL empty.
+#
+# Option A alternative: omit `&& npm run build:bundle`, host SPA on Cloudflare Pages,
+# and set ASKLEPIOS_CORS_ORIGIN to the Pages origin (+ set VITE_HUB_URL on the SPA).
 #
 # Free-tier sleep: point UptimeRobot (or similar) at GET /api/health every ~5 minutes.
+#
+# After first deploy, set ASKLEPIOS_CORS_ORIGIN to this service's real public HTTPS origin
+# (Dashboard → Environment). Placeholder below matches the Blueprint service name.
 services:
   - type: web
     name: asklepios-hub
     runtime: node
     plan: free
     # Include devDependencies so tsx is available for start:hub on the free tier.
-    buildCommand: npm ci --include=dev
+    # build:bundle writes dist/ so the hub can serve the SPA on the same origin.
+    buildCommand: npm ci --include=dev && npm run build:bundle
     startCommand: npm run start:hub
     healthCheckPath: /api/health
     envVars:
       - key: NODE_ENV
         value: production
       - key: ASKLEPIOS_CORS_ORIGIN
-        # Must list the real browser origin(s): Cloudflare Pages URL, and/or this
-        # Render URL when serving SPA from the same hub (comma-separated).
-        # Example: https://asklepios.pages.dev,https://asklepios-hub.onrender.com
-        value: https://project-asklepios.vercel.app
+        # Must be this service's public HTTPS origin (update after first deploy if
+        # Render assigns a different hostname than the placeholder).
+        # Example: https://asklepios-hub.onrender.com
+        value: https://asklepios-hub.onrender.com
