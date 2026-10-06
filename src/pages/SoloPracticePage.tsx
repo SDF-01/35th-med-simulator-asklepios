@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { PracticeHistoryPanel } from '@/components/practice/PracticeHistoryPanel';
 import { Alert } from '@/components/ui/Alert';
 import { AppChrome } from '@/components/ui/AppChrome';
 import { Card } from '@/components/ui/Card';
@@ -57,6 +58,8 @@ export function SoloPracticePage() {
             deployButtonLabel="Start solo practice"
           />
         </Card>
+
+        <PracticeHistoryPanel className="mb-8" />
       </div>
     </PageShell>
   );

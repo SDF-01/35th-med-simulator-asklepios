@@ -58,6 +58,9 @@ export function LandingPage() {
               Host exercise
             </Button>
           </div>
+          <p className="mx-auto mt-2 max-w-md text-center text-xs text-ask-muted">
+            Past practices and local AAR summaries live on the solo practice page (this device only).
+          </p>
           <div className="mx-auto mt-3 max-w-md">
             <Button
               type="button"
