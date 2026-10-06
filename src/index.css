@@ -1,5 +1,15 @@
 @import 'tailwindcss';
 
+/* Self-hosted fonts (offline / PWA; no Google Fonts CDN). */
+@import '@fontsource/source-sans-3/400.css';
+@import '@fontsource/source-sans-3/500.css';
+@import '@fontsource/source-sans-3/600.css';
+@import '@fontsource/source-sans-3/700.css';
+@import '@fontsource/source-sans-3/400-italic.css';
+@import '@fontsource/ibm-plex-mono/400.css';
+@import '@fontsource/ibm-plex-mono/500.css';
+@import '@fontsource/ibm-plex-mono/600.css';
+
 @theme {
   /* Trauma Bay Phosphor: field monitor aesthetic */
   --color-ask-bg: #080c0a;
@@ -38,8 +48,8 @@
   --ask-critical-wash: rgba(255, 71, 87, 0.1);
   --ask-immediate-wash: rgba(255, 71, 87, 0.12);
   --ask-delayed-wash: rgba(255, 176, 32, 0.1);
-  --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
-  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-display: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
   --ask-font-size-display: clamp(2rem, 5vw, 3.5rem);
   --ask-font-size-title: 1.375rem;

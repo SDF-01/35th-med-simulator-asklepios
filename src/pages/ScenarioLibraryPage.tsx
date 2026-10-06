@@ -126,7 +126,8 @@ export function ScenarioLibraryPage() {
 
   useEffect(() => {
     let active = true;
-    fetch('/data/scenario_library/stakeholder-dashboard.json', { cache: 'no-store' })
+    // Default cache mode so the service worker can serve this offline after first visit.
+    fetch('/data/scenario_library/stakeholder-dashboard.json')
       .then(async (response) => {
         if (!response.ok) throw new Error(`Scenario library could not be loaded (${response.status}).`);
         return response.json() as Promise<StakeholderDashboard>;

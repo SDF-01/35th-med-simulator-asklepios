@@ -2,7 +2,7 @@
 
 Networked **Tactical Combat Casualty Care (TCCC)** training simulator for 35th Fighter Wing Medical Group personnel.
 
-**Training simulation only — not for operational use, direct patient care, or clinical decision support.**
+**Training simulation only: not for operational use, direct patient care, or clinical decision support.**
 
 Providers train on phone-sized bedside workflows. WIT evaluators configure and deploy scenarios. Command staff observe exercise-wide status. Lobbies work like an “Among Us” room code: host creates a 6-character code, providers join with that code.
 
@@ -12,9 +12,9 @@ Seeded from [SDF-01/ProjectAsklepios](https://github.com/SDF-01/ProjectAsklepios
 
 | Layer | Location |
 |-------|----------|
-| Frontend | `src/` — React 19, Vite 6, Tailwind 4, Zustand, React Router |
-| Simulation engines | `src/engines/` — vitals, triage, supply, AAR (runs in the browser) |
-| Hub | `server/` — Express + Socket.IO lobbies and device sync (in-memory) |
+| Frontend | `src/`: React 19, Vite 6, Tailwind 4, Zustand, React Router |
+| Simulation engines | `src/engines/`: vitals, triage, supply, AAR (runs in the browser) |
+| Hub | `server/`: Express + Socket.IO lobbies and device sync (in-memory) |
 | Content | `content/exercises/toon/` → generated catalog (100 exercises) |
 
 ## Local development
@@ -46,13 +46,19 @@ Multi-role handoff chains are not included in solo mode yet.
 2. Open provider → `/join` → enter code → save profile.
 3. WIT opens the console and deploys a scenario.
 
+### Offline / PWA
+
+Production builds register a service worker (`vite-plugin-pwa`) that precaches the app shell and static files under `public/data/**`. Fonts are self-hosted via `@fontsource` (Source Sans 3 and IBM Plex Mono); there is no Google Fonts CDN dependency.
+
+After one online visit to a production or `vite preview` build, scenario library JSON and the UI shell should load offline. Multiplayer lobbies still need the hub online. Installable icons live in `public/icons/` and are listed in `public/manifest.webmanifest`.
+
 ## Planned work (this repo)
 
-1. ~~**Solo practice mode**~~ — `/solo` ships on branch `feat/solo-practice-mode`.
-2. **Offline / PWA hardening** — self-hosted fonts, service worker, install icons.
-3. **Local history** — persist past sessions/AAR in localStorage.
-4. **Free multiplayer hosting** — `render.yaml` now uses `npm ci --include=dev` so `tsx` is available; still need frontend host + CORS + keep-alive.
-5. **Solo handoffs** — pass-and-play or in-browser lobby stand-in (deferred).
+1. ~~**Solo practice mode**~~: `/solo` available for single-device practice without the hub.
+2. ~~**Offline / PWA hardening**~~: self-hosted fonts, service worker, install icons (see Offline / PWA above).
+3. **Local history**: persist past sessions/AAR in localStorage.
+4. **Free multiplayer hosting**: `render.yaml` now uses `npm ci --include=dev` so `tsx` is available; still need frontend host + CORS + keep-alive.
+5. **Solo handoffs**: pass-and-play or in-browser lobby stand-in (deferred).
 
 ## Notes
 
