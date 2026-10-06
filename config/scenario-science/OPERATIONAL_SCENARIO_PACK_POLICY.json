@@ -1,0 +1,33 @@
+{
+  "admission_boundaries": {
+    "clinical_decision_support": "PROHIBITED",
+    "direct_patient_care": "PROHIBITED",
+    "healthcare_simulation": "PERMITTED_WITHIN_VALIDATED_SCOPE",
+    "human_team_behavior": "STRUCTURAL_ONLY_NOT_CALIBRATED",
+    "operational_timing": "NOT_CALIBRATED",
+    "scoring_state": "SOURCE_CONFORMANCE_ONLY",
+    "treatment_state": "NO_SIMULATION_ADMITTED_CONCRETE_TREATMENT"
+  },
+  "catalog_id": "ASK-OPERATIONAL-PACK-RC3-8C",
+  "catalog_profile": "DETERMINISTIC_STAKEHOLDER_SCENARIO_CATALOG_V1",
+  "entries_per_profile": 3,
+  "output_path": "public/data/scenario_library/operational-pack.json",
+  "policy_epoch": 1,
+  "policy_id": "asklepios-operational-scenario-pack-policy-v1",
+  "policy_sha256": "1cacbe1f0406d38ad416ab2b1b4d387e8d428dd1c6e9ae021a70805fc5cd0808",
+  "required_profiles": [
+    "DIRECT_HANDOFF_BASELINE",
+    "COMMUNICATION_RELAY_REQUIRED",
+    "RESOURCE_COORDINATION_REQUIRED",
+    "DUAL_CONSTRAINT_RELAY_AND_COORDINATION"
+  ],
+  "required_total_entries": 12,
+  "schema_version": "1.0.0",
+  "selection_profile": "GREEDY_TOPIC_THEN_CONTEXT_DIVERSITY_STABLE_TIEBREAK_V1",
+  "source_archive_path": "reports/scenario-behavioral-equivalence.json",
+  "stakeholder_surfaces": [
+    "learner_scenario_library",
+    "instructor_scenario_selection",
+    "scientific_reviewer_provenance"
+  ]
+}

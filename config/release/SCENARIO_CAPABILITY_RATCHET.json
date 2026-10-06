@@ -1,0 +1,191 @@
+{
+  "authority_boundary": {
+    "clinical_authority": "NOT_GRANTED",
+    "human_team_behavior": "STRUCTURAL_ONLY_NOT_CALIBRATED",
+    "operational_calibration": "NOT_CALIBRATED",
+    "patient_care_use": "PROHIBITED",
+    "patient_dynamics": "SOURCE_BOUND_STATIC_OBSERVATIONS_ONLY",
+    "quality_vector_use": "SCENARIO_SELECTION_ONLY_NOT_LEARNER_SCORING",
+    "scoring_behavior": "inherited_unchanged"
+  },
+  "exact_invariants": {
+    "behavior_archive_duplicate_behavior_candidates": 0,
+    "behavior_archive_full_observed_cell_coverage": true,
+    "behavior_archive_narrative_or_provenance_only_variants_create_new_behavior": false,
+    "behavioral_equivalence_accepted_attacks": 0,
+    "behavioral_equivalence_context_only_novelty": false,
+    "behavioral_equivalence_narrative_only_novelty": false,
+    "complete_assignment_cycle_verified_for_each_topic": true,
+    "evidence_non_authoring_equals_generated_cases": true,
+    "fault_challenges_fully_rejected": true,
+    "missing_reviewed_factor_values": 0,
+    "operational_pack_accepted_attacks": 0,
+    "plain_language_summary_accepted_attacks": 0,
+    "relation_checks_all_pass": true,
+    "scenario_genome_cycle_free": true,
+    "scenario_genome_nonterminal_dead_ends": 0,
+    "scenario_genome_unreachable_nodes": 0,
+    "scenario_science_accepted_attacks": 0,
+    "scenario_science_timing_affects_score": false,
+    "stakeholder_concrete_treatments_admitted": 0,
+    "stakeholder_orphan_capabilities": 0,
+    "stakeholder_product_accepted_attacks": 0,
+    "stakeholder_safety_gate_can_be_averaged_away": false,
+    "treatment_active_learner_choices": 0,
+    "treatment_admission_accepted_attacks": 0,
+    "treatment_concrete_treatments_admitted": 0,
+    "uncovered_interactions": 0,
+    "uncovered_pairs": 0
+  },
+  "genome_path": "public/data/scenario_core/verified_scenario_genome.json",
+  "hard_floors": {
+    "behavior_archive": {
+      "candidate_count": 107,
+      "candidates_with_unique_interaction_contribution": 107,
+      "elite_count": 30,
+      "minimum_cell_occupancy": 1,
+      "occupied_cell_ratio_bps": 10000,
+      "occupied_cells": 30,
+      "possible_cells_in_observed_domain": 30,
+      "total_strength_three_interactions_observed": 1543,
+      "unique_behavior_signatures": 107
+    },
+    "behavior_archive_check": {
+      "checks": 2863
+    },
+    "behavioral_equivalence": {
+      "candidate_count": 107,
+      "policy_equivalence_classes": 4,
+      "policy_novelty_ratio_bps": 373,
+      "unique_context_signatures": 107
+    },
+    "behavioral_equivalence_attacks": {
+      "attacks": 12,
+      "cases": 13
+    },
+    "behavioral_equivalence_check": {
+      "candidate_count": 107,
+      "checks": 1131,
+      "policy_equivalence_classes": 4,
+      "unique_context_signatures": 107
+    },
+    "operational_pack": {
+      "entries": 12,
+      "minimum_entries_per_profile": 3,
+      "profiles": 4
+    },
+    "operational_pack_attacks": {
+      "attacks": 11,
+      "cases": 12
+    },
+    "plain_language_summary": {
+      "headings": 8,
+      "sections": 8
+    },
+    "plain_language_summary_attacks": {
+      "attacks": 7,
+      "cases": 8
+    },
+    "plain_language_summary_node": {
+      "headings": 8,
+      "sections": 8
+    },
+    "scenario_contract": {
+      "fault_challenges": 24,
+      "generated_cases": 640,
+      "independent_checks": 12190,
+      "local_checks": 26240,
+      "pair_schedule_cases": 24,
+      "topics": 5,
+      "unique_operational_contexts": 499,
+      "unique_packages": 640
+    },
+    "scenario_experience": {
+      "covered_interactions": 1543,
+      "covering_array_strength": 3,
+      "deterministic_repeats": 107,
+      "experience_checks": 12519,
+      "feasible_assignments": 5760,
+      "generated_cases": 107,
+      "independent_checks": 16207,
+      "required_interactions": 1543,
+      "schedule_rows": 107,
+      "topics_checked": 5,
+      "total_operational_context_space_per_topic": 1152,
+      "unique_certified_packages": 107,
+      "unique_operational_contexts": 106
+    },
+    "scenario_science_attacks": {
+      "attacks": 17,
+      "cases": 18
+    },
+    "scenario_science_telemetry": {
+      "events": 4
+    },
+    "stakeholder_product": {
+      "admitted_treatments": 0,
+      "capability_count": 9,
+      "reference_scorecards": 4,
+      "scenario_entries": 12
+    },
+    "stakeholder_product_attacks": {
+      "attacks": 15,
+      "cases": 16
+    },
+    "stakeholder_product_node": {
+      "admitted_treatments": 0,
+      "behavior_profiles": 4,
+      "checks": 139,
+      "scenario_entries": 12
+    },
+    "stakeholder_product_python": {
+      "admitted_treatments": 0,
+      "behavior_profiles": 4,
+      "checks": 147,
+      "scenario_entries": 12
+    },
+    "treatment_admission": {
+      "active_learner_choice_count": 0,
+      "entry_count": 2,
+      "simulation_admitted_count": 0
+    },
+    "treatment_admission_attacks": {
+      "attacks": 11,
+      "cases": 12
+    },
+    "treatment_admission_node": {
+      "active_learner_choice_count": 0,
+      "entry_count": 2,
+      "simulation_admitted_count": 0
+    }
+  },
+  "ratchet_anchor_sha256": "870a94620630dc6fc4a41f3d13120ea45527966676d72e69bd5b460bee45218e",
+  "ratchet_epoch": 5,
+  "ratchet_id": "asklepios-scenario-capability-ratchet-v1",
+  "report_path": "reports/scenario-capability-ratchet.json",
+  "schema_version": "1.0.0",
+  "source_reports": {
+    "behavior_archive": "reports/scenario-behavior-archive.json",
+    "behavior_archive_check": "reports/scenario-behavior-archive-check.json",
+    "behavioral_equivalence": "reports/scenario-behavioral-equivalence.json",
+    "behavioral_equivalence_attacks": "reports/scenario-behavioral-equivalence-mutations.json",
+    "behavioral_equivalence_check": "reports/scenario-behavioral-equivalence-python.json",
+    "operational_pack": "reports/operational-scenario-pack-generation.json",
+    "operational_pack_attacks": "reports/operational-scenario-pack-mutations.json",
+    "plain_language_summary": "reports/plain-language-change-summary.json",
+    "plain_language_summary_attacks": "reports/plain-language-change-summary-mutations.json",
+    "plain_language_summary_node": "reports/plain-language-change-summary-node.json",
+    "scenario_contract": "reports/scenario-contract-assurance.json",
+    "scenario_experience": "reports/scenario-experience-assurance.json",
+    "scenario_science_attacks": "reports/scenario-science-telemetry-mutations.json",
+    "scenario_science_telemetry": "reports/scenario-science-telemetry-python.json",
+    "stakeholder_product": "reports/stakeholder-product-bundle.json",
+    "stakeholder_product_attacks": "reports/stakeholder-product-bundle-mutations.json",
+    "stakeholder_product_node": "reports/stakeholder-product-bundle-node.json",
+    "stakeholder_product_python": "reports/stakeholder-product-bundle-python.json",
+    "treatment_admission": "reports/treatment-admission-registry.json",
+    "treatment_admission_attacks": "reports/treatment-admission-registry-mutations.json",
+    "treatment_admission_node": "reports/treatment-admission-registry-node.json"
+  },
+  "truth_boundary": "The ratchet prevents structural scenario-generation, coverage, reproducibility, provenance, and authority-boundary regressions. It does not promote clinical authority, operational calibration, human-behavior calibration, patient dynamics, or psychometric validity."
+}

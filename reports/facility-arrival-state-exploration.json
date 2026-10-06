@@ -1,0 +1,58 @@
+{
+  "active_dead_end_samples": [],
+  "bounded_frontier_active_states": 16213,
+  "depth_bound": 9,
+  "differential_checks": 250,
+  "differential_failures": [],
+  "errors": [],
+  "exploration_model": "semantic-state breadth-first exploration with command identifiers and revision counters quotiented out of the state key",
+  "limitations": [
+    "The breadth-first proof is bounded by semantic action depth.",
+    "Repeatable delay behavior beyond the bound is represented by a separately replayed source-timeout witness.",
+    "The abstraction retains all fields used by current action admission and transition semantics but is not an unbounded liveness proof."
+  ],
+  "maximum_depth_seen": 9,
+  "properties": {
+    "abstract_and_concrete_reducers_agree_on_sampled_edges": true,
+    "completed_terminal_witness_exists": true,
+    "every_explored_active_state_has_continuation_or_frontier_witness": true,
+    "timeout_terminal_witness_exists": true,
+    "unsafe_discharge_terminal_witness_exists": true,
+    "unsafe_tourniquet_terminal_witness_exists": true
+  },
+  "reachable_nonterminal_dead_ends": 0,
+  "schema_version": "1.1.0",
+  "state_limit": 100000,
+  "states_seen": 40717,
+  "status": "PASS",
+  "terminal_state_counts_within_bound": {
+    "failed": 14932
+  },
+  "terminal_witnesses": {
+    "completed": {
+      "elapsed_seconds": 645,
+      "session_sha256": "5f37b7ef487ce02dc1d577967e66cc73ef1f5f8e875b9029f9f0253ed1207b71",
+      "terminal_status": "completed",
+      "transitions": 16
+    },
+    "failed_unsafe_discharge": {
+      "elapsed_seconds": 55,
+      "session_sha256": "e6abca9c1b4b81fa96dc83379090286d9d061649f2d7c4bbd3f82305d19e05ec",
+      "terminal_status": "failed",
+      "transitions": 3
+    },
+    "failed_unsafe_tourniquet": {
+      "elapsed_seconds": 55,
+      "session_sha256": "6fc141fce92f562d0cf7c009ace95e90cf8c592c78079db46e6fef437333e518",
+      "terminal_status": "failed",
+      "transitions": 3
+    },
+    "timeout": {
+      "elapsed_seconds": 1200,
+      "session_sha256": "a8263473e93967f714e155d0e48291f788632fee6b62ad949acc6e6929ac91fe",
+      "terminal_status": "timeout",
+      "transitions": 23
+    }
+  },
+  "transitions_explored": 63690
+}

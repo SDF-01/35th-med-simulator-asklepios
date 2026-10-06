@@ -1,0 +1,12 @@
+{
+  "behavior_dimensions": 23,
+  "checker_profile": "INDEPENDENT_NODE_SCENARIO_GENOME_RECONSTRUCTION_V1",
+  "classification": "PASS",
+  "errors": [],
+  "evidence_records": 6,
+  "genome_id": "ASK-GENOME-17BD61FD1C616438",
+  "genome_sha256": "0cf582dcd76f4696167ccee89bd8b349e5b3bb717ca7538f9ed8cae4ba1490fc",
+  "required_behavior_dimensions": 18,
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

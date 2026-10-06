@@ -1,0 +1,16 @@
+import ScenarioContracts
+
+#print axioms ScenarioContracts.overlay_preserves_protected
+#print axioms ScenarioContracts.overlay_preserves_scoring
+#print axioms ScenarioContracts.overlay_preserves_actions
+#print axioms ScenarioContracts.supporting_overlay_preserves_protected
+#print axioms ScenarioContracts.supporting_overlay_preserves_scoring
+#print axioms ScenarioContracts.route_contains_start
+#print axioms ScenarioContracts.route_contains_terminal
+#print axioms ScenarioContracts.route_extension_preserves_membership
+#print axioms ScenarioContracts.covers_append
+#print axioms ScenarioContracts.covers_subset
+#print axioms ScenarioContracts.accepted_protects_fields
+#print axioms ScenarioContracts.accepted_has_route
+#print axioms ScenarioContracts.accepted_has_origins
+#print axioms ScenarioContracts.accepted_has_valid_stage_payloads

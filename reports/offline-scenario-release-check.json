@@ -1,0 +1,16 @@
+{
+  "artifacts": 10,
+  "capability_ratchet_epoch": 2,
+  "classification": "PASS",
+  "engine_evolution": "SCENARIO_GENOME_DUAL_RATCHETS_RECEIPT_EVIDENCE_QUALITY_DIVERSITY_V4",
+  "errors": [],
+  "genome_id": "ASK-GENOME-17BD61FD1C616438",
+  "graph_id": "asklepios-rc3.7a.3-evidence-calibrated-evolution-graph",
+  "mismatches": [],
+  "mode": "check",
+  "release_id": "ASK-OFFLINE-RC3.7A.3",
+  "release_sha256": "e191e19677fd6e8e35687cf9561665aa2e0dee4abcc171462f1af388a41d8e75",
+  "schema_version": "1.2.0",
+  "status": "PASS",
+  "technical_debt_ratchet_epoch": 4
+}

@@ -1,0 +1,162 @@
+{
+  "accepted_attacks": 0,
+  "attacks": 14,
+  "cases": 15,
+  "classification": "PASS",
+  "errors": [],
+  "results": [
+    {
+      "case_id": "baseline",
+      "checker_errors": [],
+      "classification": "PASS",
+      "expected": "PASS",
+      "pass": true,
+      "status": "PASS"
+    },
+    {
+      "case_id": "missing_axiom_report",
+      "checker_errors": [
+        "missing live report:reports/facility-decision-axiom-check.json"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected": "REJECTED",
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "axiom_inventory_weakened",
+      "checker_errors": [
+        "formal theorem inventory differs"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected": "REJECTED",
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "axiom_status_failed",
+      "checker_errors": [
+        "axiom audit failed"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected": "REJECTED",
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "reproducibility_error",
+      "checker_errors": [
+        "build reproducibility errors"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected": "REJECTED",
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "false_signed_provenance",
+      "checker_errors": [
+        "unexpected signature state"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected": "REJECTED",
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "empty_provenance_subject",
+      "checker_errors": [
+        "provenance subjects missing"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected": "REJECTED",
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "source_report_failed",
+      "checker_errors": [
+        "report not PASS:integrity"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected": "REJECTED",
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "mutation_inventory_reduced",
+      "checker_errors": [
+        "semantic mutation inventory differs"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected": "REJECTED",
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "manifest_bound_file_tampered",
+      "checker_errors": [
+        "manifest byte count:learner-projection.json",
+        "manifest hash:learner-projection.json"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected": "REJECTED",
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "patient_care_authority_escalated",
+      "checker_errors": [
+        "patient-care authority escalated"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected": "REJECTED",
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "world_event_action_coupling_rejected",
+      "checker_errors": [
+        "second-casualty event is not the reviewed clock-driven trigger"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected": "REJECTED",
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "evidence_rule_prematurely_admitted",
+      "checker_errors": [
+        "clinical rule admitted without completed promotion"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected": "REJECTED",
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "evidence_mutation_inventory_weakened",
+      "checker_errors": [
+        "evidence promotion attack inventory weakened"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected": "REJECTED",
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "validator_internal_error_is_not_rejection",
+      "checker_errors": [
+        "validator_failed_before_structured_result"
+      ],
+      "classification": "PASS",
+      "expected": "INTERNAL_ERROR",
+      "observed_classification": "INTERNAL_ERROR",
+      "pass": true,
+      "status": "PASS"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "unexpected_internal_errors": 0
+}

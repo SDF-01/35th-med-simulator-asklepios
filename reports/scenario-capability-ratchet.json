@@ -1,0 +1,150 @@
+{
+  "authority_boundary": {
+    "clinical_authority": "NOT_GRANTED",
+    "human_team_behavior": "STRUCTURAL_ONLY_NOT_CALIBRATED",
+    "operational_calibration": "NOT_CALIBRATED",
+    "patient_care_use": "PROHIBITED",
+    "patient_dynamics": "SOURCE_BOUND_STATIC_OBSERVATIONS_ONLY",
+    "quality_vector_use": "SCENARIO_SELECTION_ONLY_NOT_LEARNER_SCORING",
+    "scoring_behavior": "inherited_unchanged"
+  },
+  "classification": "PASS",
+  "errors": [],
+  "floors": {
+    "behavior_archive": {
+      "candidate_count": 107,
+      "candidates_with_unique_interaction_contribution": 107,
+      "elite_count": 30,
+      "minimum_cell_occupancy": 1,
+      "occupied_cell_ratio_bps": 10000,
+      "occupied_cells": 30,
+      "possible_cells_in_observed_domain": 30,
+      "total_strength_three_interactions_observed": 1543,
+      "unique_behavior_signatures": 107
+    },
+    "behavior_archive_check": {
+      "checks": 2863
+    },
+    "scenario_contract": {
+      "fault_challenges": 24,
+      "generated_cases": 640,
+      "independent_checks": 12190,
+      "local_checks": 26240,
+      "pair_schedule_cases": 24,
+      "topics": 5,
+      "unique_operational_contexts": 499,
+      "unique_packages": 640
+    },
+    "scenario_experience": {
+      "covered_interactions": 1543,
+      "covering_array_strength": 3,
+      "deterministic_repeats": 107,
+      "experience_checks": 12519,
+      "feasible_assignments": 5760,
+      "generated_cases": 107,
+      "independent_checks": 16207,
+      "required_interactions": 1543,
+      "schedule_rows": 107,
+      "topics_checked": 5,
+      "total_operational_context_space_per_topic": 1152,
+      "unique_certified_packages": 107,
+      "unique_operational_contexts": 106
+    }
+  },
+  "genome_sha256": "0cf582dcd76f4696167ccee89bd8b349e5b3bb717ca7538f9ed8cae4ba1490fc",
+  "margins": {
+    "behavior_archive": {
+      "candidate_count": 0,
+      "candidates_with_unique_interaction_contribution": 0,
+      "elite_count": 0,
+      "minimum_cell_occupancy": 0,
+      "occupied_cell_ratio_bps": 0,
+      "occupied_cells": 0,
+      "possible_cells_in_observed_domain": 0,
+      "total_strength_three_interactions_observed": 0,
+      "unique_behavior_signatures": 0
+    },
+    "behavior_archive_check": {
+      "checks": 0
+    },
+    "scenario_contract": {
+      "fault_challenges": 0,
+      "generated_cases": 0,
+      "independent_checks": 0,
+      "local_checks": 0,
+      "pair_schedule_cases": 0,
+      "topics": 0,
+      "unique_operational_contexts": 0,
+      "unique_packages": 0
+    },
+    "scenario_experience": {
+      "covered_interactions": 0,
+      "covering_array_strength": 0,
+      "deterministic_repeats": 0,
+      "experience_checks": 0,
+      "feasible_assignments": 0,
+      "generated_cases": 0,
+      "independent_checks": 0,
+      "required_interactions": 0,
+      "schedule_rows": 0,
+      "topics_checked": 0,
+      "total_operational_context_space_per_topic": 0,
+      "unique_certified_packages": 0,
+      "unique_operational_contexts": 0
+    }
+  },
+  "observed": {
+    "behavior_archive": {
+      "candidate_count": 107,
+      "candidates_with_unique_interaction_contribution": 107,
+      "elite_count": 30,
+      "minimum_cell_occupancy": 1,
+      "occupied_cell_ratio_bps": 10000,
+      "occupied_cells": 30,
+      "possible_cells_in_observed_domain": 30,
+      "total_strength_three_interactions_observed": 1543,
+      "unique_behavior_signatures": 107
+    },
+    "behavior_archive_check": {
+      "checks": 2863
+    },
+    "scenario_contract": {
+      "fault_challenges": 24,
+      "generated_cases": 640,
+      "independent_checks": 12190,
+      "local_checks": 26240,
+      "pair_schedule_cases": 24,
+      "topics": 5,
+      "unique_operational_contexts": 499,
+      "unique_packages": 640
+    },
+    "scenario_experience": {
+      "covered_interactions": 1543,
+      "covering_array_strength": 3,
+      "deterministic_repeats": 107,
+      "experience_checks": 12519,
+      "feasible_assignments": 5760,
+      "generated_cases": 107,
+      "independent_checks": 16207,
+      "required_interactions": 1543,
+      "schedule_rows": 107,
+      "topics_checked": 5,
+      "total_operational_context_space_per_topic": 1152,
+      "unique_certified_packages": 107,
+      "unique_operational_contexts": 106
+    }
+  },
+  "policy_file_sha256": "67cf49b09c69baf24af17d760b6821f86d8db38fbc83b8c67195767ea5fdc96e",
+  "ratchet_anchor_sha256": "2b9cccda2d72060fa2eba80042b854b34f3b78a023c6421369111becc2204dd5",
+  "ratchet_epoch": 2,
+  "ratchet_id": "asklepios-scenario-capability-ratchet-v1",
+  "schema_version": "1.0.0",
+  "source_report_sha256": {
+    "behavior_archive": "db6a1bc536a1328d00d6113e93098ed039113d18006c3dbfca69e1cac5b2c0fc",
+    "behavior_archive_check": "1d2585670386ec46cd613121c48deb0af337fb9e46da5888af189b2bdcad263a",
+    "scenario_contract": "0bc1638a691e35879d2b81e8b0080d09704bb811be4d96550c138ee4a191fb23",
+    "scenario_experience": "1692bd3adf363afb4f34017e655170e0f14a83beaba2a7c3c15f3dc08cf76264"
+  },
+  "status": "PASS",
+  "truth_boundary": "The ratchet prevents structural scenario-generation, coverage, reproducibility, provenance, and authority-boundary regressions. It does not promote clinical authority, operational calibration, human-behavior calibration, patient dynamics, or psychometric validity."
+}

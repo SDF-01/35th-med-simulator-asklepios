@@ -1,0 +1,80 @@
+{
+  "cases": 9,
+  "classification": "PASS",
+  "failures": [],
+  "hash_mode": "canonical_utf8_lf_v1",
+  "path_mode": "repository_posix_v1",
+  "python_policy": "setup_python_or_explicit_override_then_python_3_12_plus",
+  "results": [
+    {
+      "case_id": "gitattributes_enforces_lf",
+      "classification": "PASS",
+      "errors": [],
+      "pass": true,
+      "status": "PASS"
+    },
+    {
+      "case_id": "repository_paths_are_posix",
+      "classification": "PASS",
+      "errors": [],
+      "pass": true,
+      "status": "PASS"
+    },
+    {
+      "case_id": "launcher_policy_is_explicit",
+      "classification": "PASS",
+      "errors": [],
+      "pass": true,
+      "status": "PASS"
+    },
+    {
+      "case_id": "explicit_python_override_selected",
+      "classification": "PASS",
+      "errors": [],
+      "pass": true,
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "case_id": "setup_python_root_selected",
+      "classification": "PASS",
+      "errors": [],
+      "pass": true,
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "case_id": "baseline_binding_check",
+      "classification": "PASS",
+      "errors": [],
+      "pass": true,
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "case_id": "crlf_checkout_preserves_source_identity",
+      "classification": "PASS",
+      "errors": [],
+      "pass": true,
+      "status": "PASS"
+    },
+    {
+      "case_id": "semantic_source_change_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "pass": true,
+      "returncode": 1,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "utf8_bom_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "pass": true,
+      "returncode": 1,
+      "status": "EXPECTED_REJECTION"
+    }
+  ],
+  "schema_version": "1.1.0",
+  "status": "PASS"
+}

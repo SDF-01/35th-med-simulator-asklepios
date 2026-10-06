@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "runtime": "node:vm",
+  "checks": 47,
+  "canonical": {
+    "terminal_status": "completed",
+    "elapsed_seconds": 645,
+    "score_bps": 10000,
+    "transitions": 16
+  },
+  "alternate_branches": {
+    "unsafe_discharge": "failed",
+    "unsafe_tourniquet": "failed",
+    "timeout": "timeout"
+  },
+  "results": [
+    {
+      "id": "engine_exported",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "initial_active",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "initial_hidden_findings",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "initial_prearrival_event",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "initial_score_zero",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "initial_receive_enabled",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "initial_primary_blocked",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "clock_prefix_accepts_receive_handoff",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "clock_prefix_accepts_primary_assessment",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "clock_prefix_accepts_monitor_vitals",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "clock_prefix_accepts_differential",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "clock_event_absent_before_240",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "clock_event_fires_after_imaging_crosses_240",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "clock_event_fires_after_labs_crosses_240",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "clock_event_is_action_independent",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "canonical_completed",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "canonical_elapsed",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "canonical_score",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "canonical_diagnostics_event",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "canonical_clock_event",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "canonical_clock_alert",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "canonical_hidden_findings_released",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "canonical_all_commands",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "canonical_wit_process_only",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "canonical_operational_score_isolated",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "unsafe_discharge_failed",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "unsafe_discharge_score_bounded",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "unsafe_tourniquet_failed",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "timeout_terminal",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "timeout_exact_boundary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "timeout_event_present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "timeout_hidden_findings_still_hidden",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "alternate_accepts_receive_handoff",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "alternate_accepts_primary_assessment",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "alternate_accepts_order_labs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "alternate_accepts_order_imaging",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "alternate_accepts_monitor_vitals",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "alternate_accepts_differential",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "alternate_accepts_pain_management",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "alternate_accepts_confirm_surge_roles",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "alternate_accepts_documentation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "alternate_accepts_wait_for_diagnostics",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "alternate_accepts_review_diagnostics",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "alternate_accepts_escalation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "alternate_accepts_complete_handoff",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "alternate_order_completed",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "alternate_score",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "errors": []
+}

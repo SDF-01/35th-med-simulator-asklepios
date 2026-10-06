@@ -1,0 +1,247 @@
+{
+  "generated": {
+    "schema_version": "1.0.0",
+    "generator": {
+      "generator_id": "asklepios-hybrid-scenario-engine",
+      "generator_version": "1.0.0",
+      "seed": 20260727,
+      "topic_id": "airway",
+      "retriever_track": "hybrid_cc_loto",
+      "source_bridge_schema": "2.0.0"
+    },
+    "authority": {
+      "source_tier": 3,
+      "clinical_authority": "NOT_GRANTED",
+      "scoring_enabled": false,
+      "deployment_mode": "research_sandbox_only"
+    },
+    "scenario": {
+      "scenario_id": "ASK-RS-AIRWAY-3380a82e",
+      "title": "Airway deterioration during constrained transport",
+      "version": "research-1.0.0",
+      "fictionalization_notice": "Fictional, unscored research scenario. It does not establish medical advice, provider scope, treatment rules, or clinical scoring.",
+      "operational_context": {
+        "location_type": "fictional casualty collection point",
+        "threat_type": "transport_disruption",
+        "weather": "high wind with airborne debris",
+        "visibility": "Variable",
+        "comms_status": "degraded",
+        "resource_status": "constrained",
+        "narrative": "Fictional training evolution at fictional casualty collection point. Weather: high wind with airborne debris. Communications: limited. Research-supported cue categories: airway patency cue, voice or mental-status cue, reassessment cue. Resource event: communications degrade during the lane. The facilitator controls progression. No automated clinical score or treatment rule is active."
+      },
+      "training_objectives": [
+        "Recognize changing airway cues",
+        "Reassess after environmental changes",
+        "Communicate a concise transport update"
+      ],
+      "target_section": "A_field_reaction_triage_incident_response",
+      "target_role": "medic_or_technician",
+      "skill_level": "advanced",
+      "difficulty": "advanced",
+      "threat_type": "transport_disruption",
+      "casualty_count": 1,
+      "patients": [
+        {
+          "patient_id": "P1",
+          "age_band": "35-44",
+          "sex": "F",
+          "role_context": "Rescue team member",
+          "mechanism_of_injury": "airway obstruction concern after blast exposure",
+          "initial_presentation": "Casualty is anxious, speaking in short phrases, and developing noisy respirations during transport.",
+          "injury_profile_refs": [
+            "neck_trauma",
+            "possible_chest_contusion"
+          ],
+          "initial_vitals": {
+            "hr": 135,
+            "bp_systolic": 106,
+            "bp_diastolic": 73,
+            "rr": 34,
+            "spo2": 93,
+            "temp_c": 36.5,
+            "gcs": 12
+          },
+          "hidden_findings": [
+            "Airway patency may change as swelling progresses."
+          ],
+          "deterioration_timeline": [
+            "Voice, respiratory effort, and oxygenation cues may worsen over several timed events."
+          ],
+          "visible_body_zones": [
+            {
+              "zone": "neck",
+              "label": "Neck swelling and airway concern",
+              "severity": "suspected"
+            },
+            {
+              "zone": "chest",
+              "label": "Respiratory distress",
+              "severity": "suspected"
+            }
+          ]
+        }
+      ],
+      "expected_actions": {
+        "critical": [],
+        "important": [],
+        "optional": [],
+        "unsafe": []
+      },
+      "end_conditions": {
+        "success": [
+          "Facilitator confirms that all selected cues and resource events were explored."
+        ],
+        "failure": [
+          "No automated clinical failure state is assigned in research-sandbox mode."
+        ],
+        "timeout_minutes": 20
+      },
+      "aar_teaching_points": [
+        "Compare observations with the cited research record and its stated limitations.",
+        "Preserve uncertainty when the evidence does not establish a clinical rule.",
+        "Any scored action or state-transition rule requires a separate approved authority layer."
+      ]
+    },
+    "evidence": [
+      {
+        "evidence_id": "els_682ab75e35523a51-chunk-0001-9d5ac27da8",
+        "source_id": "doi:10.1016/j.resuscitation.2025.110795",
+        "title": "Efficacy of supraglottic airway devices in chest compression synchronized ventilation during continuous resuscitation: a prospective randomized cross-over cadaver study",
+        "journal": "Resuscitation",
+        "doi": "10.1016/j.resuscitation.2025.110795",
+        "publication_date": "2025-11-01",
+        "locator": "Introduction",
+        "chunk_sha256": "9d5ac27da8b3ea867ce99d590beb8fedc8b0e7a0faa4496783741bbfcb26d326",
+        "source_file_sha256": "29175c6569e8332b88b5c68abf7a0696cb1f1922bb3fcb76b823a914ce985421"
+      },
+      {
+        "evidence_id": "els_682ab75e35523a51-chunk-0007-58170c279f",
+        "source_id": "doi:10.1016/j.resuscitation.2025.110795",
+        "title": "Efficacy of supraglottic airway devices in chest compression synchronized ventilation during continuous resuscitation: a prospective randomized cross-over cadaver study",
+        "journal": "Resuscitation",
+        "doi": "10.1016/j.resuscitation.2025.110795",
+        "publication_date": "2025-11-01",
+        "locator": "Discussion > Limitations",
+        "chunk_sha256": "58170c279f3274f17e41026e910b561ce12364862bed807006913a991c5c8474",
+        "source_file_sha256": "29175c6569e8332b88b5c68abf7a0696cb1f1922bb3fcb76b823a914ce985421"
+      },
+      {
+        "evidence_id": "els_d5334efb972187b2-chunk-0008-7591314b16",
+        "source_id": "doi:10.1016/j.amj.2025.03.001",
+        "title": "Airway Management in the Offshore Rescue Helicopter: Evaluation of Tracheal Intubation in Alternative Positions",
+        "journal": "Air Medical Journal",
+        "doi": "10.1016/j.amj.2025.03.001",
+        "publication_date": "2025-05-01",
+        "locator": "Discussion > Advantages of VLS; Discussion > Influencing Factors; Discussion > Icepick Intubation; Discussion > Limitations",
+        "chunk_sha256": "7591314b166969cb0ee802ebcf3a963d8376eb38a0f62e577e887cb562b92bcb",
+        "source_file_sha256": "986c766cfad2aa50dd4f21d23e93963248ca989942ec6643698d3a7db29ab8df"
+      },
+      {
+        "evidence_id": "els_d5334efb972187b2-chunk-0001-755b424038",
+        "source_id": "doi:10.1016/j.amj.2025.03.001",
+        "title": "Airway Management in the Offshore Rescue Helicopter: Evaluation of Tracheal Intubation in Alternative Positions",
+        "journal": "Air Medical Journal",
+        "doi": "10.1016/j.amj.2025.03.001",
+        "publication_date": "2025-05-01",
+        "locator": "Body",
+        "chunk_sha256": "755b424038be0cf7453ff543ac5c7e51aba6539f7aa439fecc9e6dbd76a6727a",
+        "source_file_sha256": "986c766cfad2aa50dd4f21d23e93963248ca989942ec6643698d3a7db29ab8df"
+      },
+      {
+        "evidence_id": "els_30cce1189e1c8b46-chunk-0001-7642a70f46",
+        "source_id": "doi:10.1016/j.resuscitation.2025.110584",
+        "title": "Effect of different airway devices on ventilation during cardiopulmonary resuscitation",
+        "journal": "Resuscitation",
+        "doi": "10.1016/j.resuscitation.2025.110584",
+        "publication_date": "2025-05-01",
+        "locator": "Introduction",
+        "chunk_sha256": "7642a70f46c1992f9f0c51d66ec88490c4c58b9c2fea1ec137882fcadd18715b",
+        "source_file_sha256": "6daf9178b8cae71bed32ee1f7c6826862333fb6c9e879614d40a625c862b14cf"
+      },
+      {
+        "evidence_id": "els_9a9b9ba52760709d-chunk-0004-425b891c81",
+        "source_id": "doi:10.1016/j.jemermed.2024.10.005",
+        "title": "Case Report of an Obstructive Endotracheal Mass from a Blood Clot: An Airway Nightmare",
+        "journal": "The Journal of Emergency Medicine",
+        "doi": "10.1016/j.jemermed.2024.10.005",
+        "publication_date": "2025-04-01",
+        "locator": "Discussion",
+        "chunk_sha256": "425b891c810342bbe419d846a43efb7290a67b687939d0069ad27a6c90126f1c",
+        "source_file_sha256": "c4a46338b3b38f58f912c944518729e286e3198d78e819fc8bc0a35c7ee0beee"
+      }
+    ],
+    "field_provenance": [
+      {
+        "field_path": "scenario.operational_context",
+        "derivation": "procedural_constraint",
+        "evidence_ids": [
+          "els_682ab75e35523a51-chunk-0001-9d5ac27da8",
+          "els_682ab75e35523a51-chunk-0007-58170c279f",
+          "els_d5334efb972187b2-chunk-0008-7591314b16",
+          "els_d5334efb972187b2-chunk-0001-755b424038",
+          "els_30cce1189e1c8b46-chunk-0001-7642a70f46",
+          "els_9a9b9ba52760709d-chunk-0004-425b891c81"
+        ],
+        "note": "Context is fictionalized from a deterministic profile and citation-only prototype metadata."
+      },
+      {
+        "field_path": "scenario.patients[0].initial_presentation",
+        "derivation": "procedural_constraint",
+        "evidence_ids": [
+          "els_682ab75e35523a51-chunk-0001-9d5ac27da8",
+          "els_682ab75e35523a51-chunk-0007-58170c279f",
+          "els_d5334efb972187b2-chunk-0008-7591314b16",
+          "els_d5334efb972187b2-chunk-0001-755b424038",
+          "els_30cce1189e1c8b46-chunk-0001-7642a70f46",
+          "els_9a9b9ba52760709d-chunk-0004-425b891c81"
+        ],
+        "note": "Presentation remains observational and cannot create a treatment rule."
+      },
+      {
+        "field_path": "cue_categories",
+        "derivation": "retrieved_research_support",
+        "evidence_ids": [
+          "els_682ab75e35523a51-chunk-0001-9d5ac27da8",
+          "els_682ab75e35523a51-chunk-0007-58170c279f",
+          "els_d5334efb972187b2-chunk-0008-7591314b16",
+          "els_d5334efb972187b2-chunk-0001-755b424038",
+          "els_30cce1189e1c8b46-chunk-0001-7642a70f46",
+          "els_9a9b9ba52760709d-chunk-0004-425b891c81"
+        ],
+        "note": "Cue categories are scenario prompts, not authoritative physiology."
+      },
+      {
+        "field_path": "complication_categories",
+        "derivation": "retrieved_research_support",
+        "evidence_ids": [
+          "els_682ab75e35523a51-chunk-0001-9d5ac27da8",
+          "els_682ab75e35523a51-chunk-0007-58170c279f",
+          "els_d5334efb972187b2-chunk-0008-7591314b16",
+          "els_d5334efb972187b2-chunk-0001-755b424038",
+          "els_30cce1189e1c8b46-chunk-0001-7642a70f46",
+          "els_9a9b9ba52760709d-chunk-0004-425b891c81"
+        ],
+        "note": "Complications are facilitator candidates and remain unscored."
+      }
+    ],
+    "cue_categories": [
+      "airway patency cue",
+      "voice or mental-status cue",
+      "reassessment cue"
+    ],
+    "complication_categories": [
+      "airway deterioration concern",
+      "transport positioning concern"
+    ],
+    "resource_events": [
+      "communications degrade during the lane",
+      "transport arrival is delayed"
+    ],
+    "content_fingerprint": "e9599837cc8a7981"
+  },
+  "validation": {
+    "status": "PASS",
+    "issues": [],
+    "checked_invariants": 55
+  }
+}

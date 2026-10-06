@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "scenario_id": "ASK-V-F3A6E77080",
+  "source_scenario_id": "ASK-A-001",
+  "topic_id": "massive_hemorrhage",
+  "evidence_references": 6,
+  "route_nodes": 7,
+  "route_edges": 7,
+  "local_checks": 41,
+  "independent_checks": 152,
+  "experience_checks": 119,
+  "route_maximum_steps": 6,
+  "package_sha256": "7765e691316a19a0c4dd89622947f21ff153f87e7bd807963e7af519153d3388"
+}

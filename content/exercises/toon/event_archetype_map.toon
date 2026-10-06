@@ -1,0 +1,51 @@
+meta:
+  version: 1
+  description: Default chain archetype by event type with optional category overrides
+
+defaults:
+  fallbackArchetype: CLINIC_DIAGNOSTIC
+
+event_rules[25]{eventTypeId,archetypeId}:
+  inbound_missile,FIELD_TO_OR
+  drone_attack,FIELD_TO_OR
+  cbrne,CBRNE_CHAIN
+  active_shooter,FIELD_TO_OR
+  explosion_blast,FIELD_TO_OR
+  aircraft_mishap,AVIATION
+  mass_casualty_incident,MCI_SURGE
+  earthquake,MCI_SURGE
+  tsunami,HA_DR
+  hurricane_typhoon,HA_DR
+  wildfire,ENVIRONMENTAL
+  vehicle_accident,GARRISON_CLINIC
+  heat_stress,ENVIRONMENTAL
+  cold_weather_injury,ENVIRONMENTAL
+  structural_collapse,MCI_SURGE
+  cyber_attack_cascading,CLINIC_DIAGNOSTIC
+  crowd_surge,MCI_SURGE
+  hazmat_release,CBRNE_CHAIN
+  biological_agent,CBRNE_CHAIN
+  chemical_agent,CBRNE_CHAIN
+  radiological_exposure,CBRNE_CHAIN
+  nuclear_detonation,CBRNE_CHAIN
+  unexploded_ordnance,FIELD_TO_OR
+  indirect_fire,DEPLOYED_AUSTERE
+  sniper_attack,DEPLOYED_AUSTERE
+
+category_overrides[16]{categoryId,eventTypeId,archetypeId}:
+  deployed_location,inbound_missile,DEPLOYED_AUSTERE
+  deployed_location,drone_attack,DEPLOYED_AUSTERE
+  deployed_location,explosion_blast,DEPLOYED_AUSTERE
+  combat_theater,indirect_fire,DEPLOYED_AUSTERE
+  combat_theater,sniper_attack,DEPLOYED_AUSTERE
+  combat_theater,mass_casualty_incident,DEPLOYED_AUSTERE
+  humanitarian_assistance,earthquake,HA_DR
+  humanitarian_assistance,hurricane_typhoon,HA_DR
+  airshow_open_house,aircraft_mishap,AVIATION
+  airshow_open_house,crowd_surge,MCI_SURGE
+  garrison_training,vehicle_accident,GARRISON_CLINIC
+  garrison_training,heat_stress,ENVIRONMENTAL
+  home_station,inbound_missile,FIELD_TO_OR
+  home_station,mass_casualty_incident,MCI_SURGE
+  joint_exercise,explosion_blast,FIELD_TO_OR
+  special_event,crowd_surge,MCI_SURGE

@@ -1,0 +1,131 @@
+{
+  "attacks": 10,
+  "cases": 11,
+  "classification": "PASS",
+  "errors": [],
+  "results": [
+    {
+      "case_id": "baseline",
+      "checker_errors": [],
+      "classification": "PASS",
+      "expected_pass": true,
+      "observed_pass": true,
+      "pass": true,
+      "status": "PASS"
+    },
+    {
+      "case_id": "learner_route_to_instructor",
+      "checker_errors": [
+        "role route differs:/examples/facility-decision/learner:FacilityDecisionInstructorPage"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "overview_mode_switcher",
+      "checker_errors": [
+        "overview contains client-side mode switcher"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "session_query_escalator",
+      "checker_errors": [
+        "session role selectable from URL query"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "learner_score_leak",
+      "checker_errors": [
+        "learner projection leaks:learner-projection.json:['normalized_source_score_bps']"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "learner_provenance_leak",
+      "checker_errors": [
+        "learner projection leaks:learner-projection.json:['source_binding']"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "learner_high_risk_judgment_leak",
+      "checker_errors": [
+        "learner action leaks high-risk judgment:learner-projection.json:discharge_without_workup",
+        "learner projection leaks:learner-projection.json:['high_risk']"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "learner_high_risk_category_leak",
+      "checker_errors": [
+        "learner action category leaks answer label:learner-projection.json:discharge_without_workup"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "learner_validation_answer_leak",
+      "checker_errors": [
+        "learner field leaks validation answer:learner-projection.json:discharge_without_workup:deliberate_confirmation",
+        "learner projection leaks:learner-projection.json:['must_equal']"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "instructor_demo_escalation",
+      "checker_errors": [
+        "instructor projection boundary differs"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "missing_server_limit",
+      "checker_errors": [
+        "server authorization limitation not disclosed"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

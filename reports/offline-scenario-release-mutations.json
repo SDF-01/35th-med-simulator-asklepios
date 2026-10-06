@@ -1,0 +1,1097 @@
+{
+  "accepted_attacks": 0,
+  "attacks": 39,
+  "case_registry_profile": "UNIQUE_DETERMINISTIC_CASE_REGISTRY_V1",
+  "cases": 44,
+  "classification": "PASS",
+  "duration_ms": 9486,
+  "errors": [],
+  "registry_case_id_inventory_sha256": "435c73c877393f8a342db070d64e9cbb0e07e3b1c7599a6b834845352fddb430",
+  "registry_case_ids": [
+    "baseline",
+    "release_graph_lock_hash_churn_preserves_offline_identity",
+    "release_graph_structure_change_rejected",
+    "release_graph_raw_hash_cycle_rejected",
+    "release_graph_raw_artifact_cycle_rejected",
+    "release_graph_binding_mode_removed",
+    "documentation_writer_ownership_expanded",
+    "documentation_verification_ownership_reduced",
+    "release_self_hash_tampered",
+    "playable_hash_stale",
+    "external_script_rejected",
+    "csp_connection_boundary_weakened",
+    "network_api_reintroduced",
+    "root_marker_removed",
+    "root_genome_identity_drift",
+    "facility_readme_evolution_removed",
+    "verified_readme_ratchet_removed",
+    "standalone_document_release_stale",
+    "canonical_repository_url_regressed",
+    "live_deployment_health_claim_reintroduced",
+    "catalog_and_generated_variant_counts_conflated",
+    "standalone_document_title_regressed",
+    "policy_truth_boundary_promoted",
+    "checker_cli_capability_removed",
+    "acyclic_release_identity_capability_removed",
+    "checker_cli_guardrail_documentation_removed",
+    "canonical_writer_capability_removed",
+    "route_topology_capability_removed",
+    "technical_debt_capability_removed",
+    "technical_debt_ratchet_capability_removed",
+    "technical_debt_ratchet_artifact_tampered",
+    "artifact_authority_documentation_removed",
+    "route_topology_documentation_removed",
+    "technical_debt_documentation_removed",
+    "technical_debt_ratchet_identity_documentation_removed",
+    "policy_offline_network_promoted",
+    "windows_path_escape_rejected",
+    "absolute_path_rejected",
+    "symlink_artifact_rejected",
+    "scenario_genome_hash_forged",
+    "graph_stage_floor_weakened"
+  ],
+  "registry_cases": 41,
+  "results": [
+    {
+      "case_id": "offline-release-case-registry-is-unique",
+      "case_id_inventory_sha256": "435c73c877393f8a342db070d64e9cbb0e07e3b1c7599a6b834845352fddb430",
+      "classification": "PASS",
+      "declared_cases": 41,
+      "errors": [],
+      "is_attack": false,
+      "pass": true,
+      "status": "PASS",
+      "unique_cases": 41
+    },
+    {
+      "case_id": "writer_preserves_verification_only_documentation",
+      "changed_verification_only_paths": [],
+      "classification": "PASS",
+      "duration_ms": 587,
+      "errors": [],
+      "is_attack": false,
+      "pass": true,
+      "status": "PASS",
+      "writer_classification": "PASS",
+      "writer_exit_status": 0
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "baseline",
+      "classification": "PASS",
+      "duration_ms": 900,
+      "errors": [],
+      "expected_artifact_pass": true,
+      "is_attack": false,
+      "node_classification": "PASS",
+      "node_errors": [],
+      "node_exit_status": 0,
+      "observed_artifact_pass": true,
+      "pass": true,
+      "python_classification": "PASS",
+      "python_errors": [],
+      "python_exit_status": 0,
+      "status": "PASS"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "release_graph_lock_hash_churn_preserves_offline_identity",
+      "classification": "PASS",
+      "duration_ms": 867,
+      "errors": [],
+      "expected_artifact_pass": true,
+      "is_attack": false,
+      "node_classification": "PASS",
+      "node_errors": [],
+      "node_exit_status": 0,
+      "observed_artifact_pass": true,
+      "pass": true,
+      "python_classification": "PASS",
+      "python_errors": [],
+      "python_exit_status": 0,
+      "status": "PASS"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "release_graph_structure_change_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 782,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution block differs:facility",
+        "canonical engine-evolution block differs:verified",
+        "canonical engine-evolution document differs:README.md",
+        "canonical engine-evolution document differs:docs/FACILITY_ARRIVAL_STANDALONE.md",
+        "canonical root guardrail differs:- Release-identity DAG",
+        "offline scenario release differs",
+        "playable scenario-evolution binding differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "canonical engine-evolution block differs:facility",
+        "canonical engine-evolution block differs:verified",
+        "offline descriptor artifact identity differs:root_readme",
+        "offline descriptor artifact identity differs:standalone_documentation",
+        "offline playable scenario-evolution binding differs",
+        "offline scenario release differs:README.md",
+        "offline scenario release differs:docs/FACILITY_ARRIVAL_STANDALONE.md",
+        "offline scenario release differs:public/data/scenario_core/offline_scenario_release.json"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "release_graph_raw_hash_cycle_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 809,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "offline scenario release differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "offline scenario release differs:public/data/scenario_core/offline_scenario_release.json"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "release_graph_raw_artifact_cycle_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 775,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "offline artifact inventory differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "GenomeError:offline artifact inventory differs"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "release_graph_binding_mode_removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 805,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "offline graph binding mode differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "GenomeError:offline graph binding mode differs"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "documentation_writer_ownership_expanded",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 845,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "offline documentation writer-owned surface contract differs",
+        "offline scenario release differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "GenomeError:offline documentation writer-owned surface contract differs"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "documentation_verification_ownership_reduced",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 855,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "offline documentation ownership partition differs",
+        "offline documentation verification-only surface contract differs",
+        "offline scenario release differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "GenomeError:offline documentation verification-only surface contract differs"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "release_self_hash_tampered",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 819,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "offline release self hash differs",
+        "offline scenario release differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "offline scenario release differs:public/data/scenario_core/offline_scenario_release.json"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "playable_hash_stale",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 810,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "offline scenario release differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "offline scenario release differs:public/data/scenario_core/offline_scenario_release.json"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "external_script_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 848,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "playable forbidden runtime pattern:<script\\b[^>]*\\bsrc\\s*="
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "offline playable forbidden runtime pattern:<script\\b[^>]*\\bsrc\\s*="
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "csp_connection_boundary_weakened",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 860,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "playable CSP connection boundary missing"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "offline playable CSP does not block connections"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "network_api_reintroduced",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 787,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "playable forbidden runtime pattern:\\bfetch\\s*\\("
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "offline playable forbidden runtime pattern:\\bfetch\\s*\\("
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "root_marker_removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 749,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "documentation marker inventory differs:root",
+        "offline scenario release differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "GenomeError:documentation marker inventory differs:<!-- asklepios-facility-arrival:start -->:<!-- asklepios-facility-arrival:end -->"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "root_genome_identity_drift",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 925,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "engine-evolution identity missing:root:ASK-GENOME-17BD61FD1C616438"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "engine-evolution identity missing:root:ASK-GENOME-17BD61FD1C616438",
+        "offline descriptor artifact identity differs:root_readme",
+        "offline scenario release differs:README.md",
+        "offline scenario release differs:public/data/scenario_core/offline_scenario_release.json"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "facility_readme_evolution_removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 962,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution block differs:facility",
+        "engine-evolution guardrail missing:facility:## Engine evolution binding",
+        "offline documentation required literal missing:facility:## Engine evolution binding"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "canonical engine-evolution block differs:facility",
+        "engine-evolution guardrail missing:facility:## Engine evolution binding",
+        "offline documentation required literal missing:facility:## Engine evolution binding"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "verified_readme_ratchet_removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 806,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution block differs:verified",
+        "offline documentation required literal missing:verified:- Technical-debt ratchet:"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "canonical engine-evolution block differs:verified",
+        "offline documentation required literal missing:verified:- Technical-debt ratchet:"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "standalone_document_release_stale",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 796,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution document differs:docs/FACILITY_ARRIVAL_STANDALONE.md",
+        "engine-evolution identity missing:standalone:ASK-OFFLINE-RC3.7A.3"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "engine-evolution identity missing:standalone:ASK-OFFLINE-RC3.7A.3",
+        "offline descriptor artifact identity differs:standalone_documentation",
+        "offline scenario release differs:docs/FACILITY_ARRIVAL_STANDALONE.md",
+        "offline scenario release differs:public/data/scenario_core/offline_scenario_release.json"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "canonical_repository_url_regressed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 877,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical repository declaration differs",
+        "offline documentation required literal missing:root:Canonical repository: https://github.com/SDF-01/ProjectAsklepios"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "canonical repository declaration differs",
+        "offline documentation required literal missing:root:Canonical repository: https://github.com/SDF-01/ProjectAsklepios"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "live_deployment_health_claim_reintroduced",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 857,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "offline documentation forbidden claim:root:the live deployment is healthy",
+        "unsupported live deployment claim:the live deployment is healthy"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "offline descriptor artifact identity differs:root_readme",
+        "offline documentation forbidden claim:root:the live deployment is healthy",
+        "offline scenario release differs:README.md",
+        "offline scenario release differs:public/data/scenario_core/offline_scenario_release.json",
+        "unsupported live deployment claim:the live deployment is healthy"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "catalog_and_generated_variant_counts_conflated",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 927,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "offline documentation forbidden claim:root:generated scenario catalog (107 toon-authored exercises)",
+        "offline documentation required literal missing:root:## Static exercise catalog (100 TOON-authored exercises)",
+        "static exercise catalog conflated with generated scenarios",
+        "static exercise catalog identity differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "offline documentation forbidden claim:root:generated scenario catalog (107 toon-authored exercises)",
+        "offline documentation required literal missing:root:## Static exercise catalog (100 TOON-authored exercises)",
+        "static exercise catalog conflated with generated scenarios",
+        "static exercise catalog identity differs"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "standalone_document_title_regressed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 841,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution document differs:docs/FACILITY_ARRIVAL_STANDALONE.md",
+        "engine-evolution guardrail missing:standalone:## Engine evolution and reproducibility boundary",
+        "offline documentation required literal missing:standalone:## Engine evolution and reproducibility boundary"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "engine-evolution guardrail missing:standalone:## Engine evolution and reproducibility boundary",
+        "offline descriptor artifact identity differs:standalone_documentation",
+        "offline documentation required literal missing:standalone:## Engine evolution and reproducibility boundary",
+        "offline scenario release differs:docs/FACILITY_ARRIVAL_STANDALONE.md",
+        "offline scenario release differs:public/data/scenario_core/offline_scenario_release.json"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "policy_truth_boundary_promoted",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 842,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "offline scenario release differs",
+        "offline truth boundary differs",
+        "playable scenario-evolution binding differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "GenomeError:offline truth boundary differs"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "checker_cli_capability_removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 866,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "offline capability inventory differs",
+        "offline scenario release differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "GenomeError:offline capability inventory differs"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "acyclic_release_identity_capability_removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 820,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "offline capability inventory differs",
+        "offline scenario release differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "GenomeError:offline capability inventory differs"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "checker_cli_guardrail_documentation_removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 854,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "canonical root guardrail differs:- Checker boundary",
+        "offline documentation required literal missing:root:- Checker boundary:"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "offline descriptor artifact identity differs:root_readme",
+        "offline documentation required literal missing:root:- Checker boundary:",
+        "offline scenario release differs:README.md",
+        "offline scenario release differs:public/data/scenario_core/offline_scenario_release.json"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "canonical_writer_capability_removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 889,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "offline capability inventory differs",
+        "offline scenario release differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "GenomeError:offline capability inventory differs"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "route_topology_capability_removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 791,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "offline capability inventory differs",
+        "offline scenario release differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "GenomeError:offline capability inventory differs"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "technical_debt_capability_removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 682,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "offline capability inventory differs",
+        "offline scenario release differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "GenomeError:offline capability inventory differs"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "technical_debt_ratchet_capability_removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 763,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "offline capability inventory differs",
+        "offline scenario release differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "GenomeError:offline capability inventory differs"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "technical_debt_ratchet_artifact_tampered",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 808,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution block differs:facility",
+        "canonical engine-evolution block differs:verified",
+        "canonical engine-evolution document differs:README.md",
+        "canonical engine-evolution document differs:docs/FACILITY_ARRIVAL_STANDALONE.md",
+        "engine-evolution identity missing:facility:1111111111111111111111111111111111111111111111111111111111111111",
+        "engine-evolution identity missing:root:1111111111111111111111111111111111111111111111111111111111111111",
+        "engine-evolution identity missing:standalone:1111111111111111111111111111111111111111111111111111111111111111",
+        "engine-evolution identity missing:verified:1111111111111111111111111111111111111111111111111111111111111111",
+        "offline scenario release differs",
+        "playable scenario-evolution binding differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "GenomeError:offline technical-debt ratchet anchor differs"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "artifact_authority_documentation_removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 891,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "canonical root guardrail differs:- Artifact authority",
+        "offline documentation required literal missing:root:- Artifact authority:"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "offline descriptor artifact identity differs:root_readme",
+        "offline documentation required literal missing:root:- Artifact authority:",
+        "offline scenario release differs:README.md",
+        "offline scenario release differs:public/data/scenario_core/offline_scenario_release.json"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "route_topology_documentation_removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 944,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "canonical root guardrail differs:- Route topology",
+        "offline documentation required literal missing:root:- Route topology:"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "offline descriptor artifact identity differs:root_readme",
+        "offline documentation required literal missing:root:- Route topology:",
+        "offline scenario release differs:README.md",
+        "offline scenario release differs:public/data/scenario_core/offline_scenario_release.json"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "technical_debt_documentation_removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 779,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "canonical root guardrail differs:- Technical-debt ratchet"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "offline descriptor artifact identity differs:root_readme",
+        "offline scenario release differs:README.md",
+        "offline scenario release differs:public/data/scenario_core/offline_scenario_release.json"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "technical_debt_ratchet_identity_documentation_removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 899,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "engine-evolution identity missing:root:asklepios-technical-debt-ratchet-v1"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "engine-evolution identity missing:root:asklepios-technical-debt-ratchet-v1",
+        "offline descriptor artifact identity differs:root_readme",
+        "offline scenario release differs:README.md",
+        "offline scenario release differs:public/data/scenario_core/offline_scenario_release.json"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "policy_offline_network_promoted",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 888,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "offline guarantee contract differs",
+        "offline scenario release differs",
+        "playable scenario-evolution binding differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "GenomeError:offline guarantee contract differs"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "windows_path_escape_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 943,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "offline artifact inventory differs",
+        "offline scenario release differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "GenomeError:Windows path separator forbidden in repository path"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "absolute_path_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 915,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "offline artifact inventory differs",
+        "offline scenario release differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "GenomeError:absolute repository path forbidden"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "symlink_artifact_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 795,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "CheckerContractError:path parent is unsafe:examples/facility-arrival/manifest.json"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "GenomeError:symlink forbidden in repository path:examples/facility-arrival/manifest.json"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "scenario_genome_hash_forged",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 863,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution block differs:facility",
+        "canonical engine-evolution block differs:verified",
+        "canonical engine-evolution document differs:README.md",
+        "canonical engine-evolution document differs:docs/FACILITY_ARRIVAL_STANDALONE.md",
+        "engine-evolution identity missing:facility:2222222222222222222222222222222222222222222222222222222222222222",
+        "engine-evolution identity missing:root:2222222222222222222222222222222222222222222222222222222222222222",
+        "engine-evolution identity missing:standalone:2222222222222222222222222222222222222222222222222222222222222222",
+        "engine-evolution identity missing:verified:2222222222222222222222222222222222222222222222222222222222222222",
+        "offline scenario release differs",
+        "playable scenario-evolution binding differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "GenomeError:scenario Genome self-hash mismatch"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "graph_stage_floor_weakened",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 682,
+      "errors": [],
+      "expected_artifact_pass": false,
+      "is_attack": true,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "offline policy graph stage count differs",
+        "offline scenario release differs"
+      ],
+      "node_exit_status": 3,
+      "observed_artifact_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "GenomeError:offline policy graph stage count differs"
+      ],
+      "python_exit_status": 3,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "offline-release-adversarial-suite-preserves-source-tree",
+      "classification": "PASS",
+      "errors": [],
+      "is_attack": false,
+      "pass": true,
+      "source_mutations": [],
+      "source_root_after_sha256": "4455328feb293cb54fc89403bf195a20e5ee4453e84dc0dbb3155df8cfe654f5",
+      "source_root_before_sha256": "4455328feb293cb54fc89403bf195a20e5ee4453e84dc0dbb3155df8cfe654f5",
+      "status": "PASS"
+    }
+  ],
+  "scheduler_profile": "BOUNDED_PARALLEL_ISOLATED_FIXTURES_V1",
+  "schema_version": "2.0.0",
+  "source_guard_profile": "SOURCE_INVENTORY_PRESERVATION_RATCHET_V1",
+  "source_mutations": [],
+  "source_root_after_sha256": "4455328feb293cb54fc89403bf195a20e5ee4453e84dc0dbb3155df8cfe654f5",
+  "source_root_before_sha256": "4455328feb293cb54fc89403bf195a20e5ee4453e84dc0dbb3155df8cfe654f5",
+  "status": "PASS",
+  "workers": 4
+}

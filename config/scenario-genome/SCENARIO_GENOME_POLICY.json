@@ -1,0 +1,66 @@
+{
+  "authority_boundary": {
+    "clinical_authority": "NOT_GRANTED",
+    "deployment_scope": "research_sandbox_only",
+    "evidence_authority": "supporting_only",
+    "human_team_behavior": "STRUCTURAL_ONLY_NOT_CALIBRATED",
+    "operational_calibration": "NOT_CALIBRATED",
+    "patient_care_use": "PROHIBITED",
+    "patient_dynamics": "SOURCE_BOUND_STATIC_OBSERVATIONS_ONLY",
+    "scoring_behavior": "inherited_unchanged"
+  },
+  "behavior_descriptor_profile": "INTERPRETABLE_STRUCTURAL_BEHAVIOR_DESCRIPTOR_V1",
+  "forbidden_genome_fields": [
+    "action_probability",
+    "clinical_effect_probability",
+    "compliance_probability",
+    "empirical_distribution",
+    "patient_outcome_probability",
+    "physiology_transition_probability",
+    "real_world_frequency",
+    "treatment_effect",
+    "treatment_recommendation"
+  ],
+  "genome_identity_domain": "asklepios.scenario-genome.v1",
+  "genome_schema_version": "1.0.0",
+  "output_path": "public/data/scenario_core/verified_scenario_genome.json",
+  "policy_id": "asklepios-scenario-genome-policy-v1",
+  "provenance_requirements": {
+    "content_registry_file_hash": true,
+    "content_registry_merkle_root": true,
+    "exact_evidence_record_hashes": true,
+    "generator_implementation_hashes": true,
+    "scenario_package_certificate_hash": true,
+    "scenario_package_file_hash": true
+  },
+  "report_path": "reports/scenario-genome.json",
+  "route_topology_profile": "REACHABLE_TERMINATING_DAG_V1",
+  "required_behavior_dimensions": [
+    "atom_count",
+    "branching_nodes",
+    "cycle_free",
+    "evidence_references",
+    "expected_action_counts",
+    "field_origin_records",
+    "maximum_out_degree",
+    "node_kind_counts",
+    "nonterminal_dead_ends",
+    "operational_factor_count",
+    "reachable_nodes",
+    "route_edges",
+    "route_maximum_steps",
+    "route_nodes",
+    "stage_count",
+    "terminal_nodes",
+    "unreachable_nodes",
+    "unsafe_action_count"
+  ],
+  "schema_version": "1.0.0",
+  "source_paths": {
+    "content_registry": "public/data/content_registry/content_registry.json",
+    "independent_checker": "scripts/check_scenario_genome.mjs",
+    "scenario_package": "public/data/scenario_core/verified_scenario_package.json",
+    "writer": "scripts/build_scenario_genome.py"
+  },
+  "truth_boundary": "The scenario genome is a deterministic structural identity and provenance artifact. It does not establish clinical correctness, treatment authority, calibrated human behavior, calibrated operational timing, patient physiology, causal effects, or real-world frequencies."
+}

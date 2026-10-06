@@ -1,0 +1,121 @@
+{
+  "baseline_fail_fast": "CANONICAL_BASELINE_FAILS_BEFORE_ADVERSARIAL_SCHEDULING_V1",
+  "cases": 7,
+  "classification": "PASS",
+  "errors": [],
+  "heavy_case_isolation": "SPAWNED_PROCESS_GROUP_WITH_DURABLE_RESULT_V2",
+  "heavy_case_timeout_seconds": 240,
+  "heavy_case_workers": 4,
+  "mutation_workers": 4,
+  "partition_isolation": "PARALLEL_INDEPENDENT_MUTATION_AND_HEAVY_PARTITIONS_V1",
+  "results": [
+    {
+      "case_id": "stable-source-snapshot-acquisition",
+      "classification": "PASS",
+      "concurrent_drift": [],
+      "errors": [],
+      "pass": true,
+      "snapshot_inventory_root_sha256": "d906a35fa67fc7eb5f4e29a5d929ffbe2a6f5ee7e3b8dc7b11a58bf26eeb5735",
+      "snapshot_mismatch": [],
+      "source_inventory_root_sha256": "d906a35fa67fc7eb5f4e29a5d929ffbe2a6f5ee7e3b8dc7b11a58bf26eeb5735",
+      "source_snapshot_isolation": "STABLE_HERMETIC_SUITE_SOURCE_SNAPSHOT_WITH_PER_CASE_COPIES_V2",
+      "status": "PASS"
+    },
+    {
+      "baseline_fail_fast": "CANONICAL_BASELINE_FAILS_BEFORE_ADVERSARIAL_SCHEDULING_V1",
+      "case_id": "canonical_graph_baseline",
+      "classification": "PASS",
+      "errors": [],
+      "observed_classification": "PASS",
+      "pass": true,
+      "source_snapshot_isolation": "STABLE_HERMETIC_SUITE_SOURCE_SNAPSHOT_WITH_PER_CASE_COPIES_V2",
+      "status": "PASS"
+    },
+    {
+      "case_id": "scenario-behavior-archive-output-removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 1955.378,
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "offline descriptor semantic graph contract differs",
+        "scenario evolution outputs differ:scenario.contracts"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION",
+      "validator_returncode": 3
+    },
+    {
+      "case_id": "scenario-behavior-archive-check-stage-removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 836.205,
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "canonical release graph unavailable:ReleaseGraphError:stage dependency missing:scenario.behavior-archive-attacks:scenario.behavior-archive-check"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION",
+      "validator_returncode": 3
+    },
+    {
+      "case_id": "scenario-behavior-archive-attacks-detached",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 1949.162,
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "offline descriptor semantic graph contract differs",
+        "package rehearsal omits scenario evolution stage:scenario.behavior-archive-check",
+        "scenario evolution predecessors differ:scenario.behavior-archive-attacks"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION",
+      "validator_returncode": 3
+    },
+    {
+      "case_id": "scenario-behavior-archive-checker-lock-removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 1956.584,
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "input set files added:scenario-source:['scripts/check_scenario_behavior_archive.py']",
+        "offline descriptor semantic graph contract differs",
+        "release stage entrypoint is not locked:stage:scenario.behavior-archive-check:scripts/check_scenario_behavior_archive.py",
+        "scenario transitive dependency is not locked:scripts/check_scenario_behavior_archive.py"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION",
+      "validator_returncode": 3
+    },
+    {
+      "case_id": "release-graph-adversarial-suite-preserves-source-tree",
+      "changed_paths": [],
+      "classification": "PASS",
+      "concurrent_source_changes": [],
+      "errors": [],
+      "locked_paths": 404,
+      "pass": true,
+      "sealed_inventory_root_after": "d906a35fa67fc7eb5f4e29a5d929ffbe2a6f5ee7e3b8dc7b11a58bf26eeb5735",
+      "sealed_inventory_root_before": "d906a35fa67fc7eb5f4e29a5d929ffbe2a6f5ee7e3b8dc7b11a58bf26eeb5735",
+      "sealed_snapshot_changes": [],
+      "source_inventory_root_after": "d906a35fa67fc7eb5f4e29a5d929ffbe2a6f5ee7e3b8dc7b11a58bf26eeb5735",
+      "source_inventory_root_before": "d906a35fa67fc7eb5f4e29a5d929ffbe2a6f5ee7e3b8dc7b11a58bf26eeb5735",
+      "source_mutation_attribution": "NONE",
+      "source_snapshot_isolation": "STABLE_HERMETIC_SUITE_SOURCE_SNAPSHOT_WITH_PER_CASE_COPIES_V2",
+      "status": "PASS"
+    }
+  ],
+  "schema_version": "1.1.0",
+  "selected_cases": [
+    "canonical_graph_baseline",
+    "release-graph-adversarial-suite-preserves-source-tree",
+    "scenario-behavior-archive-attacks-detached",
+    "scenario-behavior-archive-check-stage-removed",
+    "scenario-behavior-archive-checker-lock-removed",
+    "scenario-behavior-archive-output-removed"
+  ],
+  "source_snapshot_isolation": "STABLE_HERMETIC_SUITE_SOURCE_SNAPSHOT_WITH_PER_CASE_COPIES_V2",
+  "status": "PASS"
+}

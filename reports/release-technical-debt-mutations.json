@@ -1,0 +1,229 @@
+{
+  "cases": 20,
+  "classification": "PASS",
+  "errors": [],
+  "results": [
+    {
+      "case_id": "source_baseline_without_receipts",
+      "classification": "PASS",
+      "duration_ms": 37,
+      "errors": [],
+      "mode": "source",
+      "observed_classification": "PASS",
+      "pass": true,
+      "required_error": null,
+      "status": "PASS"
+    },
+    {
+      "case_id": "final_baseline_authenticated",
+      "classification": "PASS",
+      "duration_ms": 116,
+      "errors": [],
+      "mode": "final",
+      "observed_classification": "PASS",
+      "pass": true,
+      "required_error": null,
+      "status": "PASS"
+    },
+    {
+      "case_id": "absolute_debt_free_claim_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 26,
+      "errors": [],
+      "mode": "source",
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "absolute debt-free claim was enabled",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "open_release_blocker_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 29,
+      "errors": [],
+      "mode": "source",
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "release-blocking technical debt remains",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "duplicate_debt_id_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 27,
+      "errors": [],
+      "mode": "source",
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "technical-debt ID duplicated",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "missing_evidence_stage_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 27,
+      "errors": [],
+      "mode": "source",
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "technical-debt evidence stage absent",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "hub_runtime_receipt_requirement_removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 29,
+      "errors": [],
+      "mode": "source",
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "technical-debt critical final evidence missing:hub.runtime-smoke",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "timing_receipt_requirement_removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 26,
+      "errors": [],
+      "mode": "source",
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "technical-debt critical final evidence missing:simulation.timing-assurance",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "scenario_evolution_attack_receipt_requirement_removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 25,
+      "errors": [],
+      "mode": "source",
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "technical-debt critical final evidence missing:scenario.evolution-evidence-attacks",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "behavior_archive_receipt_requirement_removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 25,
+      "errors": [],
+      "mode": "source",
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "technical-debt critical final evidence missing:scenario.behavior-archive-attacks",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "debt_ratchet_receipt_requirement_removed",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 27,
+      "errors": [],
+      "mode": "source",
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "technical-debt critical final evidence missing:release.debt-ratchet-attacks",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "terminal_stage_changed_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 25,
+      "errors": [],
+      "mode": "source",
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "technical-debt terminal evidence stage differs",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "final_missing_hub_runtime_receipt_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 36,
+      "errors": [],
+      "mode": "final",
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "required evidence receipt invalid or missing:hub.runtime-smoke",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "final_missing_timing_receipt_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 37,
+      "errors": [],
+      "mode": "final",
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "required evidence receipt invalid or missing:simulation.timing-assurance",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "final_missing_decision_receipt_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 36,
+      "errors": [],
+      "mode": "final",
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "required evidence receipt invalid or missing:final.decision-evidence",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "final_missing_scenario_evolution_receipt_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 37,
+      "errors": [],
+      "mode": "final",
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "required evidence receipt invalid or missing:scenario.evolution-evidence-attacks",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "final_missing_behavior_archive_receipt_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 37,
+      "errors": [],
+      "mode": "final",
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "required evidence receipt invalid or missing:scenario.behavior-archive-attacks",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "forged_runtime_receipt_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 40,
+      "errors": [],
+      "mode": "final",
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "required evidence receipt invalid or missing:hub.runtime-smoke",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "stale_runtime_output_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 37,
+      "errors": [],
+      "mode": "final",
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "required evidence receipt differs:hub.runtime-smoke:output_root_sha256",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "changed_hub_input_invalidates_evidence",
+      "classification": "EXPECTED_REJECTION",
+      "duration_ms": 40,
+      "errors": [],
+      "mode": "final",
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "input set hash differs:policy-source",
+      "status": "EXPECTED_REJECTION"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

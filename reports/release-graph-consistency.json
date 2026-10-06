@@ -1,0 +1,90 @@
+{
+  "checks": 4325,
+  "classification": "PASS",
+  "errors": [],
+  "graph_id": "asklepios-rc3.7a.3-evidence-calibrated-evolution-graph",
+  "production_designation": "NOT_GRANTED",
+  "release_candidate": "RC3.7A.3 evidence-calibrated Scenario Genome, dual monotonic ratchets, acyclic semantic release identity, differential engine documentation, authenticated evolution evidence, and unified cross-platform checker-boundary convergence candidate",
+  "schema_version": "1.0.0",
+  "source_closure": {
+    "authenticated_generated_dependencies_checked": 4,
+    "dependency_index_sources": 150,
+    "index_errors": [],
+    "node_mode": "STATIC_REPOSITORY_LOCAL_ESM_IMPORT_CLOSURE_V2",
+    "python_mode": "AST_REPOSITORY_LOCAL_IMPORT_CLOSURE_V2",
+    "repository_local_dependencies_checked": 522,
+    "schema_version": "1.1.0",
+    "scope": "STAGE_ENTRYPOINT_TRANSITIVE_REPOSITORY_LOCAL_SOURCE_V2",
+    "stage_entrypoints_checked": 199,
+    "stages_checked": 108,
+    "unique_entrypoints": 101,
+    "unique_sources_visited": 150
+  },
+  "stages": 108,
+  "status": "PASS",
+  "targets": [
+    "canonical-runtime",
+    "ci-app-typecheck",
+    "ci-content-registry-integrated",
+    "ci-content-registry-source",
+    "ci-example-integrated",
+    "ci-example-node",
+    "ci-example-python",
+    "ci-formal",
+    "ci-hub-runtime",
+    "ci-hub-security",
+    "ci-integrated",
+    "ci-production-simulation",
+    "ci-reproducibility",
+    "ci-runtime",
+    "ci-scenario",
+    "ci-source",
+    "ci-standalone",
+    "ci-standalone-integrated",
+    "facility-arrival-final",
+    "facility-arrival-runtime",
+    "facility-decision-runtime",
+    "facility-decision-source",
+    "package-rehearsal",
+    "publisher-full",
+    "publisher-runtime",
+    "simulation-timing-final"
+  ],
+  "workflow_jobs": {
+    ".github/workflows/content-registry-ci.yml": [
+      "integrated-registry-gate",
+      "registry-formal",
+      "registry-runtime"
+    ],
+    ".github/workflows/example-scenario-ci.yml": [
+      "example-node",
+      "example-python",
+      "integrated-example-gate"
+    ],
+    ".github/workflows/facility-arrival-ci.yml": [
+      "facility-formal",
+      "facility-reproducibility",
+      "facility-runtime-linux",
+      "facility-runtime-windows",
+      "facility-static-and-python",
+      "integrated-facility-gate"
+    ],
+    ".github/workflows/facility-decision-integrity-ci.yml": [
+      "facility-decision-formal",
+      "facility-decision-reproducibility",
+      "facility-decision-runtime-linux",
+      "facility-decision-runtime-windows",
+      "facility-decision-source",
+      "integrated-facility-decision-gate"
+    ],
+    ".github/workflows/facility-standalone-ci.yml": [
+      "standalone-integrated",
+      "standalone-linux",
+      "standalone-windows"
+    ],
+    ".github/workflows/scenario-contracts-ci.yml": [
+      "formal-contracts",
+      "runtime-contracts"
+    ]
+  }
+}

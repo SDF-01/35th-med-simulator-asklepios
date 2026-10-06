@@ -1,0 +1,252 @@
+{
+  "schema_version": "1.0.0",
+  "classification": "PASS",
+  "status": "PASS",
+  "cases": 19,
+  "baseline": {
+    "classification": "PASS",
+    "checks_run": 119,
+    "pass": true
+  },
+  "attacks": [
+    {
+      "case_id": "blank_route_label",
+      "classification": "EXPECTED_REJECTION",
+      "pass": true,
+      "required_code": "experience.route_labels",
+      "observed_status": "FAIL",
+      "observed_codes": [
+        "experience.route_contract",
+        "experience.route_labels",
+        "package.certificate",
+        "package.route"
+      ]
+    },
+    {
+      "case_id": "raw_identifier_route_label",
+      "classification": "EXPECTED_REJECTION",
+      "pass": true,
+      "required_code": "experience.route_labels",
+      "observed_status": "FAIL",
+      "observed_codes": [
+        "experience.route_contract",
+        "experience.route_labels",
+        "package.certificate",
+        "package.route"
+      ]
+    },
+    {
+      "case_id": "route_dead_end",
+      "classification": "EXPECTED_REJECTION",
+      "pass": true,
+      "required_code": "experience.route_contract",
+      "observed_status": "FAIL",
+      "observed_codes": [
+        "experience.multiple_successful_routes",
+        "experience.profile_requirements",
+        "experience.route_contract",
+        "experience.route_liveness",
+        "package.certificate",
+        "package.route"
+      ]
+    },
+    {
+      "case_id": "terminal_outgoing_edge",
+      "classification": "EXPECTED_REJECTION",
+      "pass": true,
+      "required_code": "experience.route_terminal_outgoing",
+      "observed_status": "FAIL",
+      "observed_codes": [
+        "experience.multiple_successful_routes",
+        "experience.profile_requirements",
+        "experience.route_contract",
+        "experience.route_terminal_outgoing",
+        "package.certificate",
+        "package.route"
+      ]
+    },
+    {
+      "case_id": "multiple_terminal_nodes",
+      "classification": "EXPECTED_REJECTION",
+      "pass": true,
+      "required_code": "experience.route_terminal_count",
+      "observed_status": "FAIL",
+      "observed_codes": [
+        "experience.multiple_successful_routes",
+        "experience.profile_requirements",
+        "experience.route_completion",
+        "experience.route_contract",
+        "experience.route_terminal_count",
+        "experience.route_terminal_outgoing",
+        "package.certificate",
+        "package.route"
+      ]
+    },
+    {
+      "case_id": "route_cycle",
+      "classification": "EXPECTED_REJECTION",
+      "pass": true,
+      "required_code": "experience.route_cycle",
+      "observed_status": "FAIL",
+      "observed_codes": [
+        "experience.multiple_successful_routes",
+        "experience.profile_requirements",
+        "experience.route_contract",
+        "experience.route_cycle",
+        "experience.route_liveness",
+        "package.certificate",
+        "package.route"
+      ]
+    },
+    {
+      "case_id": "training_boundary_removed",
+      "classification": "EXPECTED_REJECTION",
+      "pass": true,
+      "required_code": "experience.boundary_notice",
+      "observed_status": "FAIL",
+      "observed_codes": [
+        "experience.boundary_notice",
+        "package.certificate"
+      ]
+    },
+    {
+      "case_id": "narrative_factor_removed",
+      "classification": "EXPECTED_REJECTION",
+      "pass": true,
+      "required_code": "experience.narrative_binding",
+      "observed_status": "FAIL",
+      "observed_codes": [
+        "experience.narrative_binding",
+        "package.certificate"
+      ]
+    },
+    {
+      "case_id": "aar_removed",
+      "classification": "EXPECTED_REJECTION",
+      "pass": true,
+      "required_code": "experience.aar",
+      "observed_status": "FAIL",
+      "observed_codes": [
+        "experience.aar",
+        "experience.protected_projection",
+        "package.certificate",
+        "package.origin",
+        "package.path_scope",
+        "package.protected"
+      ]
+    },
+    {
+      "case_id": "authority_promoted",
+      "classification": "EXPECTED_REJECTION",
+      "pass": true,
+      "required_code": "package.authority",
+      "observed_status": "FAIL",
+      "observed_codes": [
+        "experience.authority",
+        "package.authority",
+        "package.certificate"
+      ]
+    },
+    {
+      "case_id": "citation_title_removed",
+      "classification": "EXPECTED_REJECTION",
+      "pass": true,
+      "required_code": "experience.evidence_label",
+      "observed_status": "FAIL",
+      "observed_codes": [
+        "experience.evidence_label",
+        "package.certificate"
+      ]
+    },
+    {
+      "case_id": "protected_action_changed",
+      "classification": "EXPECTED_REJECTION",
+      "pass": true,
+      "required_code": "package.protected",
+      "observed_status": "FAIL",
+      "observed_codes": [
+        "experience.protected_projection",
+        "package.certificate",
+        "package.origin",
+        "package.path_scope",
+        "package.protected"
+      ]
+    },
+    {
+      "case_id": "origin_atom_missing",
+      "classification": "EXPECTED_REJECTION",
+      "pass": true,
+      "required_code": "experience.origin_atoms",
+      "observed_status": "FAIL",
+      "observed_codes": [
+        "experience.origin_atoms",
+        "package.certificate"
+      ]
+    },
+    {
+      "case_id": "resource_event_outside_reviewed_pool",
+      "classification": "EXPECTED_REJECTION",
+      "pass": true,
+      "required_code": "experience.factor_scope",
+      "observed_status": "FAIL",
+      "observed_codes": [
+        "experience.factor_scope",
+        "experience.narrative_binding",
+        "package.certificate"
+      ]
+    },
+    {
+      "case_id": "meaningful_branch_removed",
+      "classification": "EXPECTED_REJECTION",
+      "pass": true,
+      "required_code": "experience.meaningful_branch",
+      "observed_status": "FAIL",
+      "observed_codes": [
+        "experience.meaningful_branch",
+        "experience.multiple_successful_routes",
+        "experience.profile_requirements",
+        "experience.route_contract",
+        "package.certificate",
+        "package.route"
+      ]
+    },
+    {
+      "case_id": "profile_requirement_bypassed",
+      "classification": "EXPECTED_REJECTION",
+      "pass": true,
+      "required_code": "experience.profile_requirements",
+      "observed_status": "FAIL",
+      "observed_codes": [
+        "experience.profile_requirements",
+        "experience.route_contract",
+        "package.certificate",
+        "package.route"
+      ]
+    },
+    {
+      "case_id": "profile_requirement_relabelled",
+      "classification": "EXPECTED_REJECTION",
+      "pass": true,
+      "required_code": "experience.profile_requirements",
+      "observed_status": "FAIL",
+      "observed_codes": [
+        "experience.profile_requirements",
+        "experience.route_contract",
+        "package.certificate",
+        "package.route"
+      ]
+    },
+    {
+      "case_id": "variant_identity_removed",
+      "classification": "EXPECTED_REJECTION",
+      "pass": true,
+      "required_code": "experience.title",
+      "observed_status": "FAIL",
+      "observed_codes": [
+        "experience.title",
+        "package.certificate"
+      ]
+    }
+  ],
+  "failures": []
+}

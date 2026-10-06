@@ -1,0 +1,96 @@
+{
+  "claim_boundary": {
+    "clinical_effectiveness_claim": "NOT_ESTABLISHED_BY_SOFTWARE_RELEASE",
+    "direct_patient_care_authority": "NOT_GRANTED",
+    "program_accreditation_claim": "NOT_MADE",
+    "software_readiness_claim": "PRODUCTION_HEALTHCARE_SIMULATION_SOFTWARE_READY"
+  },
+  "data_boundary": {
+    "allowed_data": [
+      "synthetic_data",
+      "fictionalized_training_data",
+      "deidentified_data_with_local_approval"
+    ],
+    "real_patient_data": "PROHIBITED_BY_DEFAULT",
+    "secrets_or_credentials_in_scenario_artifacts": "PROHIBITED"
+  },
+  "permitted_use": {
+    "healthcare_simulation_training": {
+      "conditions": [
+        "prebrief_present",
+        "measurable_objectives_present",
+        "facilitation_controls_present",
+        "planned_debrief_present",
+        "training_boundary_visible"
+      ],
+      "description": "Source-bound, facilitator-led healthcare simulation for education, rehearsal, teamwork practice, and system-process testing.",
+      "permitted_environments": [
+        "simulation_center",
+        "classroom",
+        "tabletop_exercise",
+        "in_situ_simulation_with_no_real_patient_data"
+      ],
+      "permitted_users": [
+        "trained_facilitator",
+        "healthcare_learner",
+        "healthcare_team_participant",
+        "observer",
+        "exercise_command_staff"
+      ],
+      "scenario_classes": [
+        "reviewed_source_bound_scenario",
+        "reviewed_operational_variant"
+      ],
+      "status": "PERMITTED_WITHIN_VALIDATED_SCOPE"
+    },
+    "simulated_patient_care_workflows": {
+      "conditions": [
+        "simulation_mode_visibly_active",
+        "no_real_patient_data_by_default",
+        "no_clinical_decision_support_output",
+        "facilitator_or_training_governance_present",
+        "scenario_version_and_provenance_visible"
+      ],
+      "description": "Simulation of patient-care workflows using synthetic, fictionalized, or locally approved deidentified training data; no real-patient clinical authority is granted.",
+      "status": "PERMITTED_WITHIN_VALIDATED_SCOPE"
+    }
+  },
+  "product_scope": "PRODUCTION_HEALTHCARE_SIMULATION_SOFTWARE",
+  "profile_id": "asklepios-healthcare-simulation-intended-use-v1",
+  "prohibited_use": {
+    "autonomous_clinical_action": "PROHIBITED",
+    "clinical_decision_support": "PROHIBITED",
+    "direct_patient_care": "PROHIBITED",
+    "real_patient_diagnosis_or_treatment": "PROHIBITED",
+    "time_critical_real_patient_direction": "PROHIBITED"
+  },
+  "required_learning_cycle": {
+    "evaluation_or_feedback_plan": true,
+    "facilitation_plan": true,
+    "learner_interaction": true,
+    "measurable_objectives": true,
+    "planned_debrief_or_guided_reflection": true,
+    "prebrief": true
+  },
+  "restricted_use": {
+    "generated_unreviewed_variants": {
+      "promotion_requirements": [
+        "independent_content_review",
+        "scenario_contract_pass",
+        "experience_contract_pass",
+        "versioned_approval_record"
+      ],
+      "status": "RESEARCH_SANDBOX_ONLY"
+    },
+    "learner_high_stakes_credentialing": {
+      "requirements": [
+        "validated_assessment_instrument",
+        "inter_rater_reliability",
+        "standard_setting",
+        "appeals_and_governance"
+      ],
+      "status": "NOT_AUTHORIZED_WITHOUT_EXTERNAL_VALIDATION"
+    }
+  },
+  "schema_version": "1.0.0"
+}

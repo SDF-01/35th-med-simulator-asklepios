@@ -1,0 +1,471 @@
+{
+  "declared_node_builtin_capabilities": [
+    {
+      "source": "scripts/checkFacilityArrivalRuntimeResolution.ts",
+      "specifier": "node:fs"
+    },
+    {
+      "source": "scripts/checkFacilityArrivalRuntimeResolution.ts",
+      "specifier": "node:path"
+    },
+    {
+      "source": "scripts/engine_evolution_documentation_common.mjs",
+      "specifier": "node:crypto"
+    },
+    {
+      "source": "scripts/generateFacilityArrivalArtifacts.ts",
+      "specifier": "node:fs"
+    },
+    {
+      "source": "scripts/generateFacilityArrivalArtifacts.ts",
+      "specifier": "node:path"
+    },
+    {
+      "source": "src/tests/facilityArrivalDecision.test.ts",
+      "specifier": "node:assert/strict"
+    },
+    {
+      "source": "src/tests/facilityArrivalDecision.test.ts",
+      "specifier": "node:test"
+    },
+    {
+      "source": "src/tests/facilityArrivalRelations.test.ts",
+      "specifier": "node:assert/strict"
+    },
+    {
+      "source": "src/tests/facilityArrivalRelations.test.ts",
+      "specifier": "node:test"
+    },
+    {
+      "source": "src/tests/facilityArrivalRuntime.test.ts",
+      "specifier": "node:assert/strict"
+    },
+    {
+      "source": "src/tests/facilityArrivalRuntime.test.ts",
+      "specifier": "node:test"
+    }
+  ],
+  "edges": [
+    {
+      "source": "scripts/checkFacilityArrivalRuntimeResolution.ts",
+      "specifier": "../src/facility-arrival-checker/verify",
+      "target": "src/facility-arrival-checker/verify.ts"
+    },
+    {
+      "source": "scripts/checkFacilityArrivalRuntimeResolution.ts",
+      "specifier": "../src/facility-arrival/context",
+      "target": "src/facility-arrival/context.ts"
+    },
+    {
+      "source": "scripts/checkFacilityArrivalRuntimeResolution.ts",
+      "specifier": "../src/facility-arrival/engine",
+      "target": "src/facility-arrival/engine.ts"
+    },
+    {
+      "source": "scripts/checkFacilityArrivalRuntimeResolution.ts",
+      "specifier": "node:fs",
+      "target": "node:fs"
+    },
+    {
+      "source": "scripts/checkFacilityArrivalRuntimeResolution.ts",
+      "specifier": "node:path",
+      "target": "node:path"
+    },
+    {
+      "source": "scripts/engine_evolution_documentation_common.mjs",
+      "specifier": "node:crypto",
+      "target": "node:crypto"
+    },
+    {
+      "source": "scripts/generateFacilityArrivalArtifacts.ts",
+      "specifier": "../src/content/scenarios",
+      "target": "src/content/scenarios.ts"
+    },
+    {
+      "source": "scripts/generateFacilityArrivalArtifacts.ts",
+      "specifier": "../src/facility-arrival/context",
+      "target": "src/facility-arrival/context.ts"
+    },
+    {
+      "source": "scripts/generateFacilityArrivalArtifacts.ts",
+      "specifier": "../src/facility-arrival/engine",
+      "target": "src/facility-arrival/engine.ts"
+    },
+    {
+      "source": "scripts/generateFacilityArrivalArtifacts.ts",
+      "specifier": "../src/scenario-core/hash",
+      "target": "src/scenario-core/hash.ts"
+    },
+    {
+      "source": "scripts/generateFacilityArrivalArtifacts.ts",
+      "specifier": "../src/types",
+      "target": "src/types/index.ts"
+    },
+    {
+      "source": "scripts/generateFacilityArrivalArtifacts.ts",
+      "specifier": "./engine_evolution_documentation_common.mjs",
+      "target": "scripts/engine_evolution_documentation_common.mjs"
+    },
+    {
+      "source": "scripts/generateFacilityArrivalArtifacts.ts",
+      "specifier": "node:fs",
+      "target": "node:fs"
+    },
+    {
+      "source": "scripts/generateFacilityArrivalArtifacts.ts",
+      "specifier": "node:path",
+      "target": "node:path"
+    },
+    {
+      "source": "src/content/injuryProfiles.ts",
+      "specifier": "@/types/bodyInjury",
+      "target": "src/types/bodyInjury.ts"
+    },
+    {
+      "source": "src/content/scenarios.ts",
+      "specifier": "@/engines/scenarioInjuryValidation",
+      "target": "src/engines/scenarioInjuryValidation.ts"
+    },
+    {
+      "source": "src/content/scenarios.ts",
+      "specifier": "@/types",
+      "target": "src/types/index.ts"
+    },
+    {
+      "source": "src/engines/scenarioInjuryValidation.ts",
+      "specifier": "@/content/injuryProfiles",
+      "target": "src/content/injuryProfiles.ts"
+    },
+    {
+      "source": "src/engines/scenarioInjuryValidation.ts",
+      "specifier": "@/content/scenarios",
+      "target": "src/content/scenarios.ts"
+    },
+    {
+      "source": "src/engines/scenarioInjuryValidation.ts",
+      "specifier": "@/types",
+      "target": "src/types/index.ts"
+    },
+    {
+      "source": "src/engines/scenarioInjuryValidation.ts",
+      "specifier": "@/types/bodyInjury",
+      "target": "src/types/bodyInjury.ts"
+    },
+    {
+      "source": "src/facility-arrival-checker/verify.ts",
+      "specifier": "../facility-arrival/types",
+      "target": "src/facility-arrival/types.ts"
+    },
+    {
+      "source": "src/facility-arrival-checker/verify.ts",
+      "specifier": "../scenario-core/certificate",
+      "target": "src/scenario-core/certificate.ts"
+    },
+    {
+      "source": "src/facility-arrival-checker/verify.ts",
+      "specifier": "../scenario-core/hash",
+      "target": "src/scenario-core/hash.ts"
+    },
+    {
+      "source": "src/facility-arrival-checker/verify.ts",
+      "specifier": "../types",
+      "target": "src/types/index.ts"
+    },
+    {
+      "source": "src/facility-arrival/context.ts",
+      "specifier": "../content/scenarios",
+      "target": "src/content/scenarios.ts"
+    },
+    {
+      "source": "src/facility-arrival/context.ts",
+      "specifier": "./bindings.generated",
+      "target": "src/facility-arrival/bindings.generated.ts"
+    },
+    {
+      "source": "src/facility-arrival/context.ts",
+      "specifier": "./specification.generated",
+      "target": "src/facility-arrival/specification.generated.ts"
+    },
+    {
+      "source": "src/facility-arrival/context.ts",
+      "specifier": "./types",
+      "target": "src/facility-arrival/types.ts"
+    },
+    {
+      "source": "src/facility-arrival/engine.ts",
+      "specifier": "../scenario-core/certificate",
+      "target": "src/scenario-core/certificate.ts"
+    },
+    {
+      "source": "src/facility-arrival/engine.ts",
+      "specifier": "../scenario-core/hash",
+      "target": "src/scenario-core/hash.ts"
+    },
+    {
+      "source": "src/facility-arrival/engine.ts",
+      "specifier": "../types",
+      "target": "src/types/index.ts"
+    },
+    {
+      "source": "src/facility-arrival/engine.ts",
+      "specifier": "./types",
+      "target": "src/facility-arrival/types.ts"
+    },
+    {
+      "source": "src/facility-arrival/specification.generated.ts",
+      "specifier": "./types",
+      "target": "src/facility-arrival/types.ts"
+    },
+    {
+      "source": "src/facility-arrival/types.ts",
+      "specifier": "../types",
+      "target": "src/types/index.ts"
+    },
+    {
+      "source": "src/scenario-core/certificate.ts",
+      "specifier": "../scenario-generation/types",
+      "target": "src/scenario-generation/types.ts"
+    },
+    {
+      "source": "src/scenario-core/certificate.ts",
+      "specifier": "../types",
+      "target": "src/types/index.ts"
+    },
+    {
+      "source": "src/scenario-core/certificate.ts",
+      "specifier": "./hash",
+      "target": "src/scenario-core/hash.ts"
+    },
+    {
+      "source": "src/scenario-core/certificate.ts",
+      "specifier": "./projection",
+      "target": "src/scenario-core/projection.ts"
+    },
+    {
+      "source": "src/scenario-core/certificate.ts",
+      "specifier": "./route",
+      "target": "src/scenario-core/route.ts"
+    },
+    {
+      "source": "src/scenario-core/certificate.ts",
+      "specifier": "./stages",
+      "target": "src/scenario-core/stages.ts"
+    },
+    {
+      "source": "src/scenario-core/certificate.ts",
+      "specifier": "./types",
+      "target": "src/scenario-core/types.ts"
+    },
+    {
+      "source": "src/scenario-core/projection.ts",
+      "specifier": "../types",
+      "target": "src/types/index.ts"
+    },
+    {
+      "source": "src/scenario-core/route.ts",
+      "specifier": "./types",
+      "target": "src/scenario-core/types.ts"
+    },
+    {
+      "source": "src/scenario-core/stages.ts",
+      "specifier": "../types",
+      "target": "src/types/index.ts"
+    },
+    {
+      "source": "src/scenario-core/stages.ts",
+      "specifier": "./hash",
+      "target": "src/scenario-core/hash.ts"
+    },
+    {
+      "source": "src/scenario-core/stages.ts",
+      "specifier": "./types",
+      "target": "src/scenario-core/types.ts"
+    },
+    {
+      "source": "src/scenario-core/types.ts",
+      "specifier": "../scenario-generation/types",
+      "target": "src/scenario-generation/types.ts"
+    },
+    {
+      "source": "src/scenario-core/types.ts",
+      "specifier": "../types",
+      "target": "src/types/index.ts"
+    },
+    {
+      "source": "src/scenario-generation/types.ts",
+      "specifier": "../types",
+      "target": "src/types/index.ts"
+    },
+    {
+      "source": "src/tests/facilityArrivalDecision.test.ts",
+      "specifier": "../facility-arrival/context",
+      "target": "src/facility-arrival/context.ts"
+    },
+    {
+      "source": "src/tests/facilityArrivalDecision.test.ts",
+      "specifier": "../facility-arrival/engine",
+      "target": "src/facility-arrival/engine.ts"
+    },
+    {
+      "source": "src/tests/facilityArrivalDecision.test.ts",
+      "specifier": "node:assert/strict",
+      "target": "node:assert/strict"
+    },
+    {
+      "source": "src/tests/facilityArrivalDecision.test.ts",
+      "specifier": "node:test",
+      "target": "node:test"
+    },
+    {
+      "source": "src/tests/facilityArrivalRelations.test.ts",
+      "specifier": "../facility-arrival-checker/verify",
+      "target": "src/facility-arrival-checker/verify.ts"
+    },
+    {
+      "source": "src/tests/facilityArrivalRelations.test.ts",
+      "specifier": "../facility-arrival/context",
+      "target": "src/facility-arrival/context.ts"
+    },
+    {
+      "source": "src/tests/facilityArrivalRelations.test.ts",
+      "specifier": "../facility-arrival/engine",
+      "target": "src/facility-arrival/engine.ts"
+    },
+    {
+      "source": "src/tests/facilityArrivalRelations.test.ts",
+      "specifier": "../facility-arrival/types",
+      "target": "src/facility-arrival/types.ts"
+    },
+    {
+      "source": "src/tests/facilityArrivalRelations.test.ts",
+      "specifier": "node:assert/strict",
+      "target": "node:assert/strict"
+    },
+    {
+      "source": "src/tests/facilityArrivalRelations.test.ts",
+      "specifier": "node:test",
+      "target": "node:test"
+    },
+    {
+      "source": "src/tests/facilityArrivalRuntime.test.ts",
+      "specifier": "../facility-arrival-checker/verify",
+      "target": "src/facility-arrival-checker/verify.ts"
+    },
+    {
+      "source": "src/tests/facilityArrivalRuntime.test.ts",
+      "specifier": "../facility-arrival/context",
+      "target": "src/facility-arrival/context.ts"
+    },
+    {
+      "source": "src/tests/facilityArrivalRuntime.test.ts",
+      "specifier": "../facility-arrival/engine",
+      "target": "src/facility-arrival/engine.ts"
+    },
+    {
+      "source": "src/tests/facilityArrivalRuntime.test.ts",
+      "specifier": "../facility-arrival/types",
+      "target": "src/facility-arrival/types.ts"
+    },
+    {
+      "source": "src/tests/facilityArrivalRuntime.test.ts",
+      "specifier": "node:assert/strict",
+      "target": "node:assert/strict"
+    },
+    {
+      "source": "src/tests/facilityArrivalRuntime.test.ts",
+      "specifier": "node:test",
+      "target": "node:test"
+    },
+    {
+      "source": "src/types/index.ts",
+      "specifier": "@/types/bodyInjury",
+      "target": "src/types/bodyInjury.ts"
+    }
+  ],
+  "entry_points": [
+    "scripts/generateFacilityArrivalArtifacts.ts",
+    "scripts/checkFacilityArrivalRuntimeResolution.ts",
+    "src/tests/facilityArrivalDecision.test.ts",
+    "src/tests/facilityArrivalRelations.test.ts",
+    "src/tests/facilityArrivalRuntime.test.ts"
+  ],
+  "errors": [],
+  "files_checked": 24,
+  "module_edges_checked": 67,
+  "node_builtin_capability_profile": "EXACT_SOURCE_SCOPED_NODE_BUILTINS_V1",
+  "observed_node_builtin_edges": [
+    {
+      "source": "scripts/checkFacilityArrivalRuntimeResolution.ts",
+      "specifier": "node:fs"
+    },
+    {
+      "source": "scripts/checkFacilityArrivalRuntimeResolution.ts",
+      "specifier": "node:path"
+    },
+    {
+      "source": "scripts/engine_evolution_documentation_common.mjs",
+      "specifier": "node:crypto"
+    },
+    {
+      "source": "scripts/generateFacilityArrivalArtifacts.ts",
+      "specifier": "node:fs"
+    },
+    {
+      "source": "scripts/generateFacilityArrivalArtifacts.ts",
+      "specifier": "node:path"
+    },
+    {
+      "source": "src/tests/facilityArrivalDecision.test.ts",
+      "specifier": "node:assert/strict"
+    },
+    {
+      "source": "src/tests/facilityArrivalDecision.test.ts",
+      "specifier": "node:test"
+    },
+    {
+      "source": "src/tests/facilityArrivalRelations.test.ts",
+      "specifier": "node:assert/strict"
+    },
+    {
+      "source": "src/tests/facilityArrivalRelations.test.ts",
+      "specifier": "node:test"
+    },
+    {
+      "source": "src/tests/facilityArrivalRuntime.test.ts",
+      "specifier": "node:assert/strict"
+    },
+    {
+      "source": "src/tests/facilityArrivalRuntime.test.ts",
+      "specifier": "node:test"
+    }
+  ],
+  "reachable_files": [
+    "scripts/checkFacilityArrivalRuntimeResolution.ts",
+    "scripts/engine_evolution_documentation_common.mjs",
+    "scripts/generateFacilityArrivalArtifacts.ts",
+    "src/content/injuryProfiles.ts",
+    "src/content/scenarios.ts",
+    "src/engines/scenarioInjuryValidation.ts",
+    "src/facility-arrival-checker/verify.ts",
+    "src/facility-arrival/bindings.generated.ts",
+    "src/facility-arrival/context.ts",
+    "src/facility-arrival/engine.ts",
+    "src/facility-arrival/specification.generated.ts",
+    "src/facility-arrival/types.ts",
+    "src/scenario-core/certificate.ts",
+    "src/scenario-core/hash.ts",
+    "src/scenario-core/projection.ts",
+    "src/scenario-core/route.ts",
+    "src/scenario-core/stages.ts",
+    "src/scenario-core/types.ts",
+    "src/scenario-generation/types.ts",
+    "src/tests/facilityArrivalDecision.test.ts",
+    "src/tests/facilityArrivalRelations.test.ts",
+    "src/tests/facilityArrivalRuntime.test.ts",
+    "src/types/bodyInjury.ts",
+    "src/types/index.ts"
+  ],
+  "schema_version": "1.1.0",
+  "status": "PASS",
+  "tsconfig": "tsconfig.app.json"
+}

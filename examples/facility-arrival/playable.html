@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; font-src data:; connect-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'">
+<title>Project Asklepios · Offline Facility Arrival Scenario</title>
+<style id="asklepios-style">:root{color-scheme:dark;--bg:#071015;--panel:#0d1b22;--panel2:#102630;--line:#24404b;--text:#ecf6f7;--muted:#9ab1b8;--accent:#42d7c8;--accent2:#8af2e4;--warn:#f5c46b;--danger:#ff6b6b;--success:#7ee787;--shadow:0 20px 70px rgba(0,0,0,.35)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 20% 0%,#12313a 0,transparent 35%),linear-gradient(180deg,#061015,#09171d 45%,#061015);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}button{font:inherit}.shell{width:min(1440px,100%);margin:auto;padding:28px}.hero{padding:28px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(135deg,rgba(66,215,200,.13),rgba(13,27,34,.93) 45%);box-shadow:var(--shadow)}.eyebrow{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:800}.hero h1{font-size:clamp(2rem,4vw,4.3rem);line-height:.98;margin:.65rem 0 1rem;max-width:920px}.hero p{max-width:900px;color:#c5d8dc;line-height:1.7}.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.badge{padding:7px 10px;border-radius:999px;border:1px solid var(--line);font-size:.78rem;font-weight:700}.badge-accent{color:var(--accent2);background:rgba(66,215,200,.09)}.badge-success{color:var(--success);background:rgba(126,231,135,.08)}.badge-warning{color:var(--warn);background:rgba(245,196,107,.08)}.badge-danger{color:#ffb0b0;background:rgba(255,107,107,.1)}.badge-muted{color:var(--muted)}.toolbar{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}.btn,.action{border:1px solid var(--line);color:var(--text);background:#10242d;border-radius:12px;padding:11px 14px;cursor:pointer;transition:.18s transform,.18s border-color,.18s background}.btn:hover,.action:hover{transform:translateY(-1px);border-color:var(--accent)}.btn-primary,.action-primary{background:linear-gradient(135deg,#1d8f88,#146b6a);border-color:#38bdb2}.btn-danger,.action-danger{background:linear-gradient(135deg,#8e3636,#54252a);border-color:#d45b5b}.btn-secondary,.action-secondary{background:#10242d}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.tabs button.selected{background:var(--accent);color:#03201e;border-color:var(--accent);font-weight:800}.status-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}.metric{border:1px solid var(--line);background:rgba(13,27,34,.88);padding:14px;border-radius:14px}.metric span{display:block;color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.12em}.metric strong{display:block;font-size:1.35rem;margin-top:4px}.grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(320px,.75fr);gap:18px}.stack{display:grid;gap:18px}.card{border:1px solid var(--line);background:rgba(13,27,34,.94);border-radius:18px;padding:20px;box-shadow:0 15px 45px rgba(0,0,0,.18)}.card h2,.card h3,.card h4{margin-top:0}.card p{color:#bed0d4;line-height:1.65}.vitals{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:16px}.vital{padding:10px;border-radius:11px;background:#0a171d;border:1px solid #1e3740;text-align:center}.vital span{display:block;color:var(--muted);font-size:.72rem}.vital strong{display:block;margin-top:3px}.actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.action{text-align:left;min-height:72px}.action span{font-weight:750;display:block}.action small{display:block;color:#c0d0d4;margin-top:5px}.muted,.empty{color:var(--muted)}ul{line-height:1.6}.alert{padding:10px 12px;border-left:3px solid var(--warn);background:rgba(245,196,107,.06);margin:8px 0;border-radius:4px 10px 10px 4px}.timeline{display:grid;gap:10px;max-height:720px;overflow:auto;padding-right:4px}.timeline-item{display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px;border:1px solid #1e3540;border-radius:12px;background:#09161c}.timeline-seq{width:28px;height:28px;display:grid;place-items:center;border-radius:50%;background:#17333b;color:var(--accent);font-weight:800}.timeline-meta,.timeline-origin{color:var(--muted);font-size:.75rem}.wit-list{display:grid;gap:10px}.wit-item{display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px;border-bottom:1px solid var(--line)}.wit-item>span{color:var(--accent);font-weight:800}.wit-item p{margin:.3rem 0}.wit-item small{color:var(--muted)}details{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:8px 0;background:#09161c}summary{cursor:pointer;font-weight:700}summary span{float:right;color:var(--muted);font-weight:500}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:10px;border-bottom:1px solid var(--line);vertical-align:top}th{width:220px;color:var(--muted)}code{font-size:.78rem;overflow-wrap:anywhere;color:#bcfff7}.scope-records{display:grid;gap:10px}.scope-records article{padding:12px;border:1px solid var(--line);border-radius:12px}.scope-records p{margin:.4rem 0}.scope-records small{color:var(--muted)}.aar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.aar-grid>div{padding:12px;background:#09161c;border:1px solid var(--line);border-radius:12px}.aar-grid span{display:block;color:var(--muted);font-size:.75rem}.aar-grid strong{display:block;margin-top:5px}.aar-columns{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}.validity{margin-top:15px}.footer{color:var(--muted);font-size:.8rem;text-align:center;padding:28px}.toast{position:fixed;right:20px;bottom:20px;background:#301b1e;border:1px solid var(--danger);padding:12px 16px;border-radius:10px;opacity:0;transform:translateY(10px);pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:none}.offline-note{margin-top:18px;padding:12px;border:1px dashed var(--accent);border-radius:12px;color:#c4f8f2}.noscript{margin:20px;background:#391f22;padding:20px;border:1px solid var(--danger)}[hidden]{display:none!important}@media(max-width:900px){.shell{padding:14px}.grid{grid-template-columns:1fr}.vitals{grid-template-columns:repeat(3,1fr)}.actions{grid-template-columns:1fr}.status-strip{grid-template-columns:1fr 1fr 1fr}.aar-grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.status-strip,.aar-columns{grid-template-columns:1fr}.vitals{grid-template-columns:repeat(2,1fr)}.hero{padding:20px}.toolbar .btn{width:100%}}.profile-shell{margin:18px 0}.profile-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.profile-option{font:inherit;text-align:left;color:var(--text);background:#0a171d;border:1px solid var(--line);border-radius:14px;padding:14px;cursor:pointer;min-height:132px;transition:.18s transform,.18s border-color,.18s background}.profile-option:hover{transform:translateY(-1px);border-color:var(--accent)}.profile-option.selected{border-color:var(--accent);background:linear-gradient(145deg,rgba(66,215,200,.16),#0d222a);box-shadow:0 0 0 1px rgba(66,215,200,.16)}.profile-option strong,.profile-option span,.profile-option small{display:block}.profile-option strong{font-size:.96rem;color:var(--accent2)}.profile-option span{margin-top:8px;color:#d0dfe2;line-height:1.45}.profile-option small{margin-top:10px;color:var(--muted)}.profile-brief{margin-top:12px;padding:16px;border:1px solid var(--line);border-radius:14px;background:rgba(9,22,28,.82)}.profile-brief h3{margin:.35rem 0}.profile-brief p{margin:.45rem 0}.profile-brief ul{margin:.5rem 0}.profile-brief small{color:var(--muted)}@media(max-width:1100px){.profile-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.profile-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<noscript><div class="noscript">JavaScript is required, but no network or server is required. Enable JavaScript and reopen this local HTML file.</div></noscript>
+<div class="shell">
+<header class="hero">
+<div class="eyebrow">Project Asklepios · RC3.8A.1 offline evidence-calibrated evolution</div>
+<h1>Facility arrival after CUF and TFC</h1>
+<p>A complete deterministic receiving-clinic simulation with four learner-selectable role-model teamwork challenges. Everything needed to run it is embedded in this one HTML file: scenario data, engine, interface, provenance, alternate branches, and after-action review.</p>
+<div id="status-badges" class="badges"></div>
+<div class="offline-note"><strong>No Vercel. No API. No installation.</strong> Save this file, double-click it, and the scenario runs locally in a modern browser. Patient-care use is prohibited.</div>
+</header>
+<section class="card profile-shell" aria-labelledby="role-model-heading">
+<h2 id="role-model-heading">Choose a role-model teamwork challenge</h2>
+<p>Each challenge keeps the same protected clinical source template while changing the operational coordination route the learner must complete.</p>
+<div id="profile-selector" class="profile-grid" role="group" aria-label="Role-model teamwork challenges"></div>
+<div id="profile-brief" class="profile-brief" aria-live="polite"></div>
+</section>
+<div class="toolbar" aria-label="Simulation controls">
+<button id="reset" class="btn btn-secondary">Reset manual run</button>
+<button id="autoplay" class="btn btn-primary">Watch autoplay</button>
+<button id="canonical" class="btn btn-secondary">Load completed replay</button>
+<button id="timeout" class="btn btn-secondary">Load timeout branch</button>
+<button id="unsafe-discharge" class="btn btn-danger">Unsafe discharge branch</button>
+<button id="unsafe-tourniquet" class="btn btn-danger">Unsafe tourniquet branch</button>
+<button id="save" class="btn btn-secondary">Save run report</button>
+</div>
+<div class="tabs" role="tablist" aria-label="Scenario views">
+<button class="btn selected" data-tab="learner" role="tab" aria-selected="true">Learner view</button>
+<button class="btn" data-tab="wit" role="tab" aria-selected="false">WIT process view</button>
+<button class="btn" data-tab="provenance" role="tab" aria-selected="false">Provenance view</button>
+</div>
+<div class="status-strip"><div class="metric"><span>Elapsed</span><strong id="elapsed">0:00</strong></div><div class="metric"><span>Phase</span><strong id="phase">Prearrival</strong></div><div class="metric"><span>Source score</span><strong id="score">0.00%</strong></div></div>
+<section data-panel="learner" class="grid">
+<div class="stack">
+<article class="card"><h2>Receiving brief</h2><p id="patient-brief"></p><div id="vitals" class="vitals"></div></article>
+<article class="card"><h2>Available learner actions</h2><p>The engine—not the buttons—enforces prerequisites, event timing, hidden information, timeout, score isolation, and terminal behavior.</p><div id="actions" class="actions"></div></article>
+<article class="card"><h2>Learner-visible findings</h2><ul id="findings"></ul><div id="alerts"></div></article>
+<article class="card"><h2>After-action review</h2><div id="aar"></div></article>
+</div>
+<aside class="card"><h2>Authenticated interaction timeline</h2><div id="timeline" class="timeline"></div></aside>
+</section>
+<section data-panel="wit" hidden class="grid">
+<div class="card"><h2>Wing Inspection Team process observations</h2><p>These observations are process-only. They cannot create treatment actions, reveal hidden findings, or award clinical points.</p><div id="wit-list" class="wit-list"></div></div>
+<div class="card"><h2>Actor information state</h2><p>Each role sees only its own accumulated facts.</p><div id="knowledge"></div></div>
+</section>
+<section data-panel="provenance" hidden class="grid">
+<div class="card"><h2>Source and build identity</h2><table><tbody id="provenance-table"></tbody></table></div>
+<div class="card"><h2>Scope references</h2><p>These records frame continuum-of-care and inspection-process scope. They do not silently create clinical rules.</p><div id="scope-records" class="scope-records"></div></div>
+</section>
+<footer class="footer">Project Asklepios · RC3.8A.1 offline simulation reference · four playable teamwork role models · Scenario Genome and dual ratchets bound · operational timings not calibrated</footer>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script type="application/json" id="asklepios-scenario-data">{"authority":{"automatic_clinical_rule_generation":false,"clinical_content_mode":"INHERITED_REPOSITORY_TEMPLATE","deployment_scope":"production_training_reference","evidence_mode":"IDENTITY_AND_SCOPE_ONLY","operational_content_mode":"DETERMINISTIC_EXERCISE_ORCHESTRATION","patient_care_use":"PROHIBITED"},"default_role_model_profile_id":"DIRECT_HANDOFF_BASELINE","example_manifest":{"authority":{"automatic_clinical_rule_generation":false,"clinical_content_mode":"INHERITED_REPOSITORY_TEMPLATE","deployment_scope":"production_training_reference","evidence_mode":"IDENTITY_AND_SCOPE_ONLY","operational_content_mode":"DETERMINISTIC_EXERCISE_ORCHESTRATION","patient_care_use":"PROHIBITED"},"browser_route":"/examples/facility-arrival","care_continuum_phase":"post_cuf_tfc_facility_reception","certificate":{"certificate_version":"1.0.0","checks":{"actor_knowledge_authorized":true,"diagnostics_precede_hidden_findings":true,"patient_care_use_prohibited":true,"replay_chain_complete":true,"required_source_actions_complete":true,"score_within_bounds":true,"source_action_subset_preserved":true,"source_binding_matches":true,"terminal_handoff_reached":true,"timeout_is_event_sourced":true,"transition_states_bound":true,"uncalibrated_parameters_disclosed":true,"unsafe_source_actions_fail_closed":true,"wit_observations_process_only":true},"claim_ledger_sha256":"8fc0336e161c8dca55b06e4937289ce3d72ffee0ebbe576e2d6d25dcaa8077d8","final_state_sha256":"bc7bacdaa42f81d75a31357966a4190e650dc8b2318edf06f8cac6a3ae544130","initial_state_sha256":"6a2843f21aab46f28b29bd262e0effb6d7f491a2f659d778df2f8964f7b871b6","replay_root_sha256":"8bc19cc15011716a475ba39b8daac8e38089179c73db5dddba5716470de4b183","session_sha256":"5d22d201964725a31c36f27b1cfc5c671869917dcc3a887d7bbcba6bcc5d26f0","source_binding_sha256":"6bb454ccf779b5dba62b212fe04f47c1073cc1f6ef2ac573b592bf2d1809e523","spec_sha256":"a13ee903414743d971edb1fbb53b2f624defc59a995cfd88235040766c0e54f8","transition_root_sha256":"733009c9b0de2562bc2a0110261e2450bb9ad87dbe7886fef377bbad18e87dd9"},"counts":{"claim_records":7,"demonstrated_gates":11,"learner_actions":13,"open_gates":10,"system_events":3,"transitions":16,"wit_observations":16},"example_id":"ASK-FACILITY-ARRIVAL-RC3-3","files":{"aar":"aar.json","claim_ledger":"claim-ledger.json","documentation":"README.md","interaction":"interaction.json","source_snapshot":"source-snapshot.json","source_truth":"source-truth.json"},"generated_from":{"content_registry_root":"9db5b82df90426da8c1543b9ef67464dec59aff90d9731a5be26fff83f621841","source_path":"src/content/scenarios.ts","source_snapshot_sha256":"86df2d9f28cbfed710052f4e9d39f74431704cffee39bfaa27430cc1727e8d89","spec_path":"config/facility-arrival/ASK-D-001.json","spec_sha256":"a13ee903414743d971edb1fbb53b2f624defc59a995cfd88235040766c0e54f8"},"hashes":{"aar_sha256":"b466543a2526b9a0bb9db0213c67dff08442e2396bc2286fefb7ed90dcf52622","claim_ledger_sha256":"7238a7fa9dd285b414567dbdd14fc32fc43ab7eebb1051f78aee40702b9fd4a9","documentation_sha256":"2ff4f3515a43850265f4d08785155c2c66aaacccff4b19677aac800e59767cd1","interaction_sha256":"ed10347c99462299dddf1c6ba3a8963b8abf2a0222edce3fcbe1f42465f6af1c","source_snapshot_sha256":"104361f7ab61de9ee4239eb57aedfff9468af1cd25ed32aeecc40d9fcdac855d","source_truth_sha256":"26cfb27377e50b8b0bbeffb9d7c9ba1757fc78e1307a3609e5e886593688277b"},"manifest_sha256":"9468f9236944a332328b2f4237c39d78de0d23dd72fc750f8c27d81e28897007","schema_version":"1.1.0","source_binding":{"content_registry_merkle_root":"9db5b82df90426da8c1543b9ef67464dec59aff90d9731a5be26fff83f621841","source_action_ids":["differential","discharge_without_workup","documentation","escalation","monitor_vitals","order_imaging","order_labs","pain_management","primary_assessment","remove_tourniquet"],"source_file_path":"src/content/scenarios.ts","source_scenario_id":"ASK-D-001","source_scenario_sha256":"b5562e64b4847d7bc47afc9fcc1e917aeee3268dddee3134bd2c3129266d5636","template_asset_id":"template:ASK-D-001","template_record_sha256":"6eeb1fbea265617816c0fc0a74854673fe5395e1ef74d619e0913f89211afc57"},"title":"Post-CUF/TFC blast casualty reception at a constrained base clinic"},"open_validity_obligations":["claim_level_clinical_entailment","real_world_frequency_calibration","human_team_policy_calibration","facility_specific_workflow_calibration","continuous_physiology_model","concurrent_multi_casualty_resource_contention","causal_identification_for_counterfactual_aar","executable_to_lean_refinement","independent_proof_kernel_acceptance","formal_vva_for_specific_wing_intended_use"],"provenance":{"css_sha256":"bd193703f236af60cfd052f33b6f0838aa14af6c91033477e70630686f6cc7f1","engine_sha256":"abe09a1aeffcc2d43441e16ef8c609b0074e3c65c66cb3f77d67b4a79fd6fc85","example_manifest_file_sha256":"0c10685ab2b3f024175b8851a8464cb833751c44fafb7f83272286e6f3a632c4","example_manifest_path":"examples/facility-arrival/manifest.json","payload_sha256":"70f93afbbf455d24bb0f7d7ef4f075e2ebdf012153d2d684dba39adb33e2c806","role_model_contract_sha256":"b2de4b06d5d653c8a20e400a03bea6f46e0610bcd36edcb4bfd2fab08c410391","role_model_policy_path":"config/scenario-science/BEHAVIORAL_DIVERSITY_POLICY.json","role_model_policy_sha256":"9c0ab07fcf150daf78847d41b77f6e8f69cddc0e97b1a2eac8b8a40a87055d42","role_model_profiles_root_sha256":"46ff208577407f1fc14081bb85a86d4aae6690313d232d1487885de263d7cecb","snapshot_file_sha256":"104361f7ab61de9ee4239eb57aedfff9468af1cd25ed32aeecc40d9fcdac855d","snapshot_path":"examples/facility-arrival/source-snapshot.json","source_truth_file_sha256":"26cfb27377e50b8b0bbeffb9d7c9ba1757fc78e1307a3609e5e886593688277b","source_truth_path":"examples/facility-arrival/source-truth.json","spec_file_sha256":"0d3fce8af407703c006787c3f55b6e14b6c5172b4e3dec45e8020ffba0fce7f5","spec_path":"config/facility-arrival/ASK-D-001.json","ui_sha256":"f71e90154550b1d2327a289dc06d6c6f28d621dae4628cb777c96029f89045d7"},"release_id":"ASK-OFFLINE-RC3.8A.1","role_model_profile_contract":{"clinical_authority":"NOT_GRANTED","contract_sha256":"b2de4b06d5d653c8a20e400a03bea6f46e0610bcd36edcb4bfd2fab08c410391","default_profile_id":"DIRECT_HANDOFF_BASELINE","operational_timing":"NOT_CALIBRATED","playable_profile_count":4,"profile_family":"REVIEWED_NONCLINICAL_OPERATIONAL_ROUTE_FAMILY_V1","required_profile_ids":["DIRECT_HANDOFF_BASELINE","COMMUNICATION_RELAY_REQUIRED","RESOURCE_COORDINATION_REQUIRED","DUAL_CONSTRAINT_RELAY_AND_COORDINATION"],"schema_version":"1.0.0","scoring_state":"SOURCE_CONFORMANCE_ONLY","selection_profile":"LEARNER_SELECTABLE_OFFLINE_ROLE_MODELS_V1","source_policy_path":"config/scenario-science/BEHAVIORAL_DIVERSITY_POLICY.json","source_policy_sha256":"9c0ab07fcf150daf78847d41b77f6e8f69cddc0e97b1a2eac8b8a40a87055d42"},"role_model_profiles":[{"challenge":"Build the operational picture, preserve the source-bound workflow, and close a direct handoff.","clinical_authority":"NOT_GRANTED","context":{"communications":"available","location":"constrained base-clinic receiving bay","resources":"limited but coordinated"},"human_behavior_calibration":"STRUCTURAL_ONLY_NOT_CALIBRATED","intermediate_handoff_steps":0,"label":"Direct handoff baseline","learning_focus":["establish the operational picture","complete a traceable direct handoff","close the exercise without an unsafe branch"],"profile_family":"REVIEWED_NONCLINICAL_OPERATIONAL_ROUTE_FAMILY_V1","profile_id":"DIRECT_HANDOFF_BASELINE","profile_sha256":"5584ee1f177375ec8a98f3d3f7fd550e0dea59d9ef9a2b46762ce33e365790a0","required_operational_actions":[],"role_model_id":"ASK-OFFLINE-RM-DIRECT","schema_version":"1.0.0","scoring_effect":"ZERO_CLINICAL_POINTS","short_description":"Complete a normal closed-loop handoff without an added relay or resource step."},{"challenge":"Recognize the communications break, establish a relay, confirm receipt, and preserve the message through final handoff.","clinical_authority":"NOT_GRANTED","context":{"communications":"unavailable at the final receiver","location":"austere receiving area","resources":"limited but coordinated"},"human_behavior_calibration":"STRUCTURAL_ONLY_NOT_CALIBRATED","intermediate_handoff_steps":1,"label":"Communications relay","learning_focus":["recognize degraded communications","establish an intermediate relay","preserve information through the final handoff"],"profile_family":"REVIEWED_NONCLINICAL_OPERATIONAL_ROUTE_FAMILY_V1","profile_id":"COMMUNICATION_RELAY_REQUIRED","profile_sha256":"628096fd2ef65dd2fd4691fc3a8cc8b3a6114ee6dd669bb443479593af6f3ceb","required_operational_actions":["establish_communications_relay"],"role_model_id":"ASK-OFFLINE-RM-RELAY","schema_version":"1.0.0","scoring_effect":"ZERO_CLINICAL_POINTS","short_description":"Degraded communications require an intermediate relay before final handoff."},{"challenge":"Recognize resource contention, coordinate the constrained asset, confirm ownership, and then complete the handoff.","clinical_authority":"NOT_GRANTED","context":{"communications":"degraded but usable","location":"aircraft-shelter access road","resources":"overwhelmed"},"human_behavior_calibration":"STRUCTURAL_ONLY_NOT_CALIBRATED","intermediate_handoff_steps":1,"label":"Resource coordination","learning_focus":["recognize resource contention","coordinate the constrained resource","complete handoff after the resource step"],"profile_family":"REVIEWED_NONCLINICAL_OPERATIONAL_ROUTE_FAMILY_V1","profile_id":"RESOURCE_COORDINATION_REQUIRED","profile_sha256":"311c154cff625c208c9f5f8556d865b7cb7874b21bd0f3953ecdf59fdf21cc6c","required_operational_actions":["coordinate_constrained_resource"],"role_model_id":"ASK-OFFLINE-RM-RESOURCE","schema_version":"1.0.0","scoring_effect":"ZERO_CLINICAL_POINTS","short_description":"A constrained resource must be assigned and ownership confirmed before handoff."},{"challenge":"Establish a relay first, use it to coordinate the constrained resource, and preserve a closed-loop final handoff.","clinical_authority":"NOT_GRANTED","context":{"communications":"unavailable","location":"logistics staging apron","resources":"overwhelmed"},"human_behavior_calibration":"STRUCTURAL_ONLY_NOT_CALIBRATED","intermediate_handoff_steps":2,"label":"Relay and resource coordination","learning_focus":["manage simultaneous communications and resource constraints","sequence relay before resource coordination","preserve a closed-loop final handoff"],"profile_family":"REVIEWED_NONCLINICAL_OPERATIONAL_ROUTE_FAMILY_V1","profile_id":"DUAL_CONSTRAINT_RELAY_AND_COORDINATION","profile_sha256":"cde42fefdc20f8840c41c7a6866f08c2aeb9fff3a93e72978c780305f9ac0db3","required_operational_actions":["establish_communications_relay","coordinate_constrained_resource"],"role_model_id":"ASK-OFFLINE-RM-DUAL","schema_version":"1.0.0","scoring_effect":"ZERO_CLINICAL_POINTS","short_description":"The team must solve both a communications break and a resource conflict in order."}],"scenario_evolution":{"capability_floor":{"scenario_contract":{"fault_challenges":24,"generated_cases":640,"independent_checks":12190,"local_checks":26240,"pair_schedule_cases":24,"topics":5,"unique_operational_contexts":499,"unique_packages":640},"scenario_experience":{"covered_interactions":1543,"covering_array_strength":3,"deterministic_repeats":107,"experience_checks":12519,"feasible_assignments":5760,"generated_cases":107,"independent_checks":16207,"required_interactions":1543,"schedule_rows":107,"topics_checked":5,"total_operational_context_space_per_topic":1152,"unique_certified_packages":107,"unique_operational_contexts":106}},"capability_ratchet":{"ratchet_anchor_sha256":"870a94620630dc6fc4a41f3d13120ea45527966676d72e69bd5b460bee45218e","ratchet_epoch":5,"ratchet_id":"asklepios-scenario-capability-ratchet-v1"},"display_version":"RC3.8A.1","engine_evolution":"SCENARIO_SCIENCE_BEHAVIORAL_DIVERSITY_STAKEHOLDER_SCORECARD_TREATMENT_ADMISSION_PLAIN_LANGUAGE_DUAL_RATCHETS_V8","offline_guarantees":{"content_security_policy_connect_none":true,"deterministic_replay":true,"external_runtime_assets":false,"installation_required":false,"network_requests":false,"server_required":false,"single_file":true},"release_graph":{"binding_mode":"ACYCLIC_SEMANTIC_PROJECTION_V1","contract_sha256":"0f202ff8af5bacd6817f93443e1d8cf4573524f4c676e9d1701d9c50b783fb8e","graph_id":"asklepios-rc3.8a.1-scenario-science-stakeholder-graph","stage_count":122,"target_count":26},"release_id":"ASK-OFFLINE-RC3.8A.1","scenario_genome":{"genome_id":"ASK-GENOME-528E11A5CC61EE45","genome_sha256":"53b695595dd7d053cac1468992db51cb5519d4761a6cf644a895ee008e2fe8ff"},"technical_debt_ratchet":{"ratchet_anchor_sha256":"84d04484d51e79944b3079889d0eed50841f9588422e0f9928c3840822b5fb91","ratchet_epoch":8,"ratchet_id":"asklepios-technical-debt-ratchet-v1"},"truth_boundary":{"clinical_authority":"NOT_GRANTED","human_team_behavior":"STRUCTURAL_ONLY_NOT_CALIBRATED","operational_calibration":"NOT_CALIBRATED","patient_care_use":"PROHIBITED","patient_dynamics":"SOURCE_BOUND_STATIC_OBSERVATIONS_ONLY","quality_vector_use":"SCENARIO_SELECTION_ONLY_NOT_LEARNER_SCORING","scoring_behavior":"inherited_unchanged"}},"schema_version":"1.2.0","source_snapshot":{"content_registry_merkle_root":"9db5b82df90426da8c1543b9ef67464dec59aff90d9731a5be26fff83f621841","end_conditions":{"failure":["Preventable deterioration","Critical unsafe action"],"success":["Assessment completed","Diagnostics ordered","Disposition escalated appropriately"],"timeout_minutes":20},"patient":{"hidden_findings":["Developing pneumothorax","Elevated lactate on labs if ordered"],"initial_presentation":"Male patient on gurney, alert but confused. Complains of chest pain and shortness of breath. Tourniquet in place on right thigh from field care. Skin pale, diaphoretic.","initial_vitals":{"bp_diastolic":62,"bp_systolic":98,"gcs":13,"hr":118,"rr":24,"spo2":93,"temp_c":36.4}},"schema_version":"1.0.0","snapshot_sha256":"86df2d9f28cbfed710052f4e9d39f74431704cffee39bfaa27430cc1727e8d89","source_action_ids":["differential","discharge_without_workup","documentation","escalation","monitor_vitals","order_imaging","order_labs","pain_management","primary_assessment","remove_tourniquet"],"source_actions":[{"id":"differential","label":"Document differential diagnosis","points":10,"priority":"important"},{"id":"discharge_without_workup","label":"Discharge without adequate workup","points":-25,"priority":"unsafe"},{"id":"documentation","label":"Document findings and plan","points":5,"priority":"optional"},{"id":"escalation","label":"Escalate disposition / consult","points":12,"priority":"important"},{"id":"monitor_vitals","label":"Establish continuous monitoring","points":8,"priority":"important"},{"id":"order_imaging","label":"Order chest imaging","points":15,"priority":"critical"},{"id":"order_labs","label":"Order relevant labs","points":12,"priority":"critical"},{"id":"pain_management","label":"Address pain management","points":3,"priority":"optional"},{"id":"primary_assessment","label":"Perform primary assessment","points":15,"priority":"critical"},{"id":"remove_tourniquet","label":"Remove tourniquet without indication","points":-20,"priority":"unsafe"}],"source_file_path":"src/content/scenarios.ts","source_scenario_id":"ASK-D-001","source_scenario_sha256":"b5562e64b4847d7bc47afc9fcc1e917aeee3268dddee3134bd2c3129266d5636","template_asset_id":"template:ASK-D-001","template_record_sha256":"6eeb1fbea265617816c0fc0a74854673fe5395e1ef74d619e0913f89211afc57"},"source_truth":{"clinical_rule_source":"ASK-D-001 inherited repository template only","purpose":"Identity-only scope and process references for post-field-care facility reception and Wing Inspection Team framing.","records":[{"clinical_rule_entailment":"NOT_USED","locator":"Primary goals; Blood; Documentation; Radiology; Tactical Combat Casualty Care Guidelines; Transport","relation":"SCOPE_AND_PROCESS_REFERENCE","retrieved_at_utc":"2026-07-29T00:00:00Z","source_id":"JTS-CPG-INDEX-2026-07-28","source_record_sha256":"40714379340ec612d4a12b6acb5ca80422fa3ee2e5d25c2ce1470e8c3a221858","supported_scope_claim":"JTS publishes current casualty-care standards and lists relevant resuscitation, documentation, imaging, TCCC, and transport resources.","title":"Joint Trauma System Clinical Practice Guidelines","url":"https://jts.health.mil/index.cfm/CPGs/cpgs"},{"clinical_rule_entailment":"NOT_USED","locator":"Performance Improvement overview","relation":"SCOPE_AND_PROCESS_REFERENCE","retrieved_at_utc":"2026-07-29T00:00:00Z","source_id":"JTS-PI-2026-04-02","source_record_sha256":"9b6c8a1b76578053feecdebdf45f3023e5e1aee4451f45946f90cfc9c380b539","supported_scope_claim":"JTS performance improvement spans the continuum of care and evaluates transitions between phases of care.","title":"Joint Trauma System Performance Improvement","url":"https://jts.health.mil/index.cfm/pi"},{"clinical_rule_entailment":"NOT_USED","locator":"Mission and component committees","relation":"SCOPE_AND_PROCESS_REFERENCE","retrieved_at_utc":"2026-07-29T00:00:00Z","source_id":"JTS-DCOT-2026-04-03","source_record_sha256":"343fa86af0b6d32fe08ece0312b1cb196259237b96220e801595cfa644ba8280","supported_scope_claim":"DoD combat-casualty governance spans tactical, en route, and surgical care through separate expert committees.","title":"Defense Committees on Trauma","url":"https://jts.health.mil/index.cfm/committees/dcot"},{"clinical_rule_entailment":"NOT_USED","locator":"WIT roles in observation, evaluation, trend identification, and corrective-action validation","relation":"SCOPE_AND_PROCESS_REFERENCE","retrieved_at_utc":"2026-07-29T00:00:00Z","source_id":"USAF-WIT-CRE-2026","source_record_sha256":"95767c94b7cd52a49f9c38068d0edc747c0aaffb15c4457b8a7eca2ab4259c3f","supported_scope_claim":"Wing Inspection Team members observe operations, evaluate processes, and identify strengths and gaps during readiness exercises.","title":"Wing Inspection Team supports readiness during Combat Readiness Exercise 2026","url":"https://www.18af.amc.af.mil/News/Article-Display/Article/4388635/wing-inspection-team-supports-readiness-during-combat-readiness-exercise-2026-a/"}],"schema_version":"1.1.0","source_truth_root_sha256":"f764b20958c8608610cd3411bf07bed0f55b6caf96288e3d79b7d1ecfc093998"},"spec":{"actions":[{"action_id":"receive_handoff","clinical_detail_policy":null,"duration_mode":"fixed","duration_seconds":45,"knowledge_grants":{"clinic_nurse":["field_handoff_reconciled"],"receiving_provider":["field_handoff_reconciled"],"wit_observer":["handoff_observed"]},"label":"Receive casualty and reconcile the field handoff","origin":"operational_workflow","phase_after":"reception","prerequisites":[],"repeatable":false,"required_event_ids":["prearrival_notice"],"source_action_id":null,"terminal_effect":null,"wit_category":"continuity"},{"action_id":"primary_assessment","clinical_detail_policy":null,"duration_mode":"fixed","duration_seconds":90,"knowledge_grants":{"clinic_nurse":["primary_assessment_complete"],"receiving_provider":["primary_assessment_complete"],"wit_observer":["assessment_sequence_observed"]},"label":"Perform primary assessment","origin":"source_template","phase_after":"assessment","prerequisites":["receive_handoff"],"repeatable":false,"required_event_ids":[],"source_action_id":"primary_assessment","terminal_effect":null,"wit_category":"assessment"},{"action_id":"monitor_vitals","clinical_detail_policy":null,"duration_mode":"fixed","duration_seconds":30,"knowledge_grants":{"clinic_nurse":["monitoring_established"],"receiving_provider":["monitoring_established"],"wit_observer":["monitoring_observed"]},"label":"Establish continuous monitoring","origin":"source_template","phase_after":"assessment","prerequisites":["primary_assessment"],"repeatable":false,"required_event_ids":[],"source_action_id":"monitor_vitals","terminal_effect":null,"wit_category":"monitoring"},{"action_id":"differential","clinical_detail_policy":null,"duration_mode":"fixed","duration_seconds":60,"knowledge_grants":{"receiving_provider":["working_differential_documented"],"wit_observer":["differential_documentation_observed"]},"label":"Document differential diagnosis","origin":"source_template","phase_after":"assessment","prerequisites":["primary_assessment"],"repeatable":false,"required_event_ids":[],"source_action_id":"differential","terminal_effect":null,"wit_category":"clinical_process"},{"action_id":"order_imaging","clinical_detail_policy":null,"duration_mode":"fixed","duration_seconds":30,"knowledge_grants":{"clinic_nurse":["imaging_ordered"],"diagnostics_tech":["imaging_ordered"],"receiving_provider":["imaging_ordered"],"wit_observer":["imaging_coordination_observed"]},"label":"Order chest imaging","origin":"source_template","phase_after":"diagnostics_pending","prerequisites":["primary_assessment"],"repeatable":false,"required_event_ids":[],"source_action_id":"order_imaging","terminal_effect":null,"wit_category":"diagnostics"},{"action_id":"order_labs","clinical_detail_policy":null,"duration_mode":"fixed","duration_seconds":30,"knowledge_grants":{"clinic_nurse":["labs_ordered"],"diagnostics_tech":["labs_ordered"],"receiving_provider":["labs_ordered"],"wit_observer":["laboratory_coordination_observed"]},"label":"Order relevant labs","origin":"source_template","phase_after":"diagnostics_pending","prerequisites":["primary_assessment"],"repeatable":false,"required_event_ids":[],"source_action_id":"order_labs","terminal_effect":null,"wit_category":"diagnostics"},{"action_id":"pain_management","clinical_detail_policy":"NO_GENERATED_DRUG_DOSE_OR_ROUTE","duration_mode":"fixed","duration_seconds":30,"knowledge_grants":{"clinic_nurse":["pain_objective_addressed"],"receiving_provider":["pain_objective_addressed"],"wit_observer":["pain_objective_observed"]},"label":"Address source-defined pain-management objective","origin":"source_template","phase_after":"diagnostics_pending","prerequisites":["primary_assessment"],"repeatable":false,"required_event_ids":[],"source_action_id":"pain_management","terminal_effect":null,"wit_category":"source_objective"},{"action_id":"confirm_surge_roles","clinical_detail_policy":null,"duration_mode":"fixed","duration_seconds":30,"knowledge_grants":{"clinic_nurse":["surge_roles_confirmed"],"receiving_provider":["surge_roles_confirmed"],"wit_observer":["surge_role_confirmation_observed"]},"label":"Acknowledge the surge notice and confirm receiving-team roles","origin":"operational_workflow","phase_after":"diagnostics_pending","prerequisites":["receive_handoff"],"repeatable":false,"required_event_ids":["second_casualty_inbound"],"source_action_id":null,"terminal_effect":null,"wit_category":"surge_response"},{"action_id":"documentation","clinical_detail_policy":null,"duration_mode":"fixed","duration_seconds":45,"knowledge_grants":{"clinic_nurse":["documentation_complete"],"receiving_provider":["documentation_complete"],"wit_observer":["documentation_observed"]},"label":"Document findings and plan","origin":"source_template","phase_after":"diagnostics_pending","prerequisites":["primary_assessment"],"repeatable":false,"required_event_ids":[],"source_action_id":"documentation","terminal_effect":null,"wit_category":"documentation"},{"action_id":"wait_for_diagnostics","clinical_detail_policy":null,"duration_mode":"until_diagnostics","duration_seconds":0,"knowledge_grants":{"receiving_provider":["diagnostic_event_awaited"],"wit_observer":["diagnostic_timing_observed"]},"label":"Advance to the next scheduled diagnostic event","origin":"operational_workflow","phase_after":"diagnostics_pending","prerequisites":["order_imaging","order_labs"],"repeatable":false,"required_event_ids":[],"source_action_id":null,"terminal_effect":null,"wit_category":"timing"},{"action_id":"review_diagnostics","clinical_detail_policy":null,"duration_mode":"fixed","duration_seconds":60,"knowledge_grants":{"clinic_nurse":["diagnostics_reviewed"],"receiving_provider":["diagnostics_reviewed"],"wit_observer":["reassessment_observed"]},"label":"Review returned results and reassess the casualty","origin":"operational_workflow","phase_after":"results_review","prerequisites":["wait_for_diagnostics"],"repeatable":false,"required_event_ids":["diagnostics_ready"],"source_action_id":null,"terminal_effect":null,"wit_category":"reassessment"},{"action_id":"escalation","clinical_detail_policy":null,"duration_mode":"fixed","duration_seconds":60,"knowledge_grants":{"clinic_nurse":["disposition_escalated"],"receiving_provider":["disposition_escalated"],"wit_observer":["escalation_observed"]},"label":"Escalate disposition / consult","origin":"source_template","phase_after":"disposition","prerequisites":["review_diagnostics"],"repeatable":false,"required_event_ids":["diagnostics_ready"],"source_action_id":"escalation","terminal_effect":null,"wit_category":"escalation"},{"action_id":"complete_handoff","clinical_detail_policy":null,"duration_mode":"fixed","duration_seconds":60,"knowledge_grants":{"clinic_nurse":["handoff_complete"],"receiving_provider":["handoff_complete"],"wit_observer":["handoff_closure_observed"]},"label":"Complete the receiving handoff to the next level of care","origin":"operational_workflow","phase_after":"complete","prerequisites":["escalation","documentation","confirm_surge_roles"],"repeatable":false,"required_event_ids":["diagnostics_ready"],"source_action_id":null,"terminal_effect":"completed","wit_category":"handoff"},{"action_id":"wait_60","clinical_detail_policy":null,"duration_mode":"fixed","duration_seconds":60,"knowledge_grants":{},"label":"Wait 60 seconds","origin":"operational_workflow","phase_after":null,"prerequisites":[],"repeatable":true,"required_event_ids":["prearrival_notice"],"source_action_id":null,"terminal_effect":null,"wit_category":"delay"},{"action_id":"discharge_without_workup","clinical_detail_policy":null,"duration_mode":"fixed","duration_seconds":10,"knowledge_grants":{"wit_observer":["unsafe_discharge_observed"]},"label":"Discharge without adequate workup","origin":"source_template","phase_after":"complete","prerequisites":["receive_handoff"],"repeatable":false,"required_event_ids":[],"source_action_id":"discharge_without_workup","terminal_effect":"failed","wit_category":"unsafe_action"},{"action_id":"remove_tourniquet","clinical_detail_policy":null,"duration_mode":"fixed","duration_seconds":10,"knowledge_grants":{"wit_observer":["unsafe_tourniquet_action_observed"]},"label":"Remove tourniquet without indication","origin":"source_template","phase_after":"complete","prerequisites":["receive_handoff"],"repeatable":false,"required_event_ids":[],"source_action_id":"remove_tourniquet","terminal_effect":"failed","wit_category":"unsafe_action"}],"actors":[{"actor_id":"receiving_provider","initial_knowledge":["casualty_inbound","prearrival_notice"],"role":"Receiving provider"},{"actor_id":"clinic_nurse","initial_knowledge":["casualty_inbound","prearrival_notice"],"role":"Clinic nurse"},{"actor_id":"diagnostics_tech","initial_knowledge":[],"role":"Diagnostics technician"},{"actor_id":"wit_observer","initial_knowledge":["exercise_started"],"role":"Wing Inspection Team process observer"}],"authority":{"automatic_clinical_rule_generation":false,"clinical_content_mode":"INHERITED_REPOSITORY_TEMPLATE","deployment_scope":"production_training_reference","evidence_mode":"IDENTITY_AND_SCOPE_ONLY","operational_content_mode":"DETERMINISTIC_EXERCISE_ORCHESTRATION","patient_care_use":"PROHIBITED"},"canonical_command_sequence":["receive_handoff","primary_assessment","monitor_vitals","differential","order_imaging","order_labs","pain_management","confirm_surge_roles","documentation","wait_for_diagnostics","review_diagnostics","escalation","complete_handoff"],"care_continuum_phase":"post_cuf_tfc_facility_reception","completion":{"required_event_ids":["prearrival_notice","second_casualty_inbound","diagnostics_ready"],"required_operational_actions":["receive_handoff","confirm_surge_roles","wait_for_diagnostics","review_diagnostics","complete_handoff"],"required_source_action_priorities":["critical","important"]},"events":[{"event_id":"prearrival_notice","knowledge_grants":{"clinic_nurse":["prearrival_notice"],"receiving_provider":["prearrival_notice"],"wit_observer":["prearrival_notification_observed"]},"label":"Pre-arrival notification received","reveal_source_hidden_findings":false,"terminal_effect":null,"trigger":{"kind":"initial"},"wit_category":"preparedness"},{"event_id":"second_casualty_inbound","knowledge_grants":{"clinic_nurse":["second_casualty_inbound"],"receiving_provider":["second_casualty_inbound"],"wit_observer":["surge_notice_observed"]},"label":"Second casualty reported inbound","reveal_source_hidden_findings":false,"terminal_effect":null,"trigger":{"at_elapsed_seconds":240,"kind":"elapsed_time_due"},"wit_category":"surge_response"},{"event_id":"diagnostics_ready","knowledge_grants":{"clinic_nurse":["diagnostic_results_received"],"diagnostics_tech":["diagnostic_results_delivered"],"receiving_provider":["diagnostic_results_received"],"wit_observer":["diagnostic_results_timing_observed"]},"label":"Ordered imaging and laboratory results are available","reveal_source_hidden_findings":true,"terminal_effect":null,"trigger":{"kind":"diagnostics_due"},"wit_category":"diagnostics"},{"event_id":"timeout_reached","knowledge_grants":{"wit_observer":["timeout_observed"]},"label":"Source-bound exercise timeout reached","reveal_source_hidden_findings":false,"terminal_effect":"timeout","trigger":{"kind":"timeout_due"},"wit_category":"timeliness"}],"example_id":"ASK-FACILITY-ARRIVAL-RC3-3","parameters":{"diagnostic_delay_seconds":{"calibration_status":"NOT_CALIBRATED","note":"Deterministic exercise-design delay after both diagnostic orders; not a real-world turnaround estimate.","origin":"exercise_assumption","unit":"seconds","value":180},"pass_threshold_bps":{"calibration_status":"NOT_CALIBRATED","note":"Reference training threshold; not a validated learner-outcome threshold.","origin":"exercise_policy","unit":"basis_points","value":8000},"timeout_seconds":{"calibration_status":"SOURCE_BOUND","note":"Inherited from ASK-D-001 end_conditions.timeout_minutes.","origin":"source_template","unit":"seconds","value":1200}},"profile_id":"BASE_CLINIC_TRAUMA_RECEPTION_RC3_3","schema_version":"1.1.0","sequence_assurance":{"selected_three_event_sequences":[["prearrival_notice","receive_handoff","primary_assessment"],["order_imaging","order_labs","diagnostics_ready"],["order_labs","order_imaging","diagnostics_ready"],["second_casualty_inbound","confirm_surge_roles","complete_handoff"],["diagnostics_ready","review_diagnostics","escalation"],["review_diagnostics","documentation","complete_handoff"],["wait_60","timeout_reached","timeout"]]},"source_scenario_id":"ASK-D-001","title":"Post-CUF/TFC blast casualty reception at a constrained base clinic"},"standalone_mode":"single_file_no_network"}</script>
+<script id="asklepios-engine">(function (root) {
+  "use strict";
+
+  const copy = (value) => JSON.parse(JSON.stringify(value));
+  const unique = (items) => [...new Set(items)];
+  const PROFILE_ACTION_IDS = Object.freeze(["establish_communications_relay", "coordinate_constrained_resource"]);
+  const actionMap = (data) => Object.fromEntries(data.spec.actions.map((item) => [item.action_id, item]));
+  const eventMap = (data) => Object.fromEntries(data.spec.events.map((item) => [item.event_id, item]));
+  const sourcePointMap = (data) => Object.fromEntries(data.source_snapshot.source_actions.map((item) => [item.id, item.points]));
+  const positiveMaximum = (data) => data.source_snapshot.source_actions.reduce((sum, item) => sum + Math.max(0, Number(item.points || 0)), 0);
+  const roleModelMap = (data) => Object.fromEntries((data.role_model_profiles || []).map((item) => [item.profile_id, item]));
+
+  function roleModelProfiles(data) {
+    return copy(data.role_model_profiles || []);
+  }
+
+  function profileAction(actionId, prerequisites) {
+    const definitions = {
+      establish_communications_relay: {
+        action_id: "establish_communications_relay",
+        clinical_detail_policy: null,
+        duration_mode: "fixed",
+        duration_seconds: 45,
+        knowledge_grants: {
+          clinic_nurse: ["communications_relay_confirmed"],
+          receiving_provider: ["communications_relay_confirmed"],
+          wit_observer: ["communications_relay_observed"],
+        },
+        label: "Establish a communications relay and confirm message receipt",
+        origin: "operational_workflow",
+        phase_after: "disposition",
+        prerequisites,
+        repeatable: false,
+        required_event_ids: ["second_casualty_inbound"],
+        source_action_id: null,
+        terminal_effect: null,
+        wit_category: "communication",
+      },
+      coordinate_constrained_resource: {
+        action_id: "coordinate_constrained_resource",
+        clinical_detail_policy: null,
+        duration_mode: "fixed",
+        duration_seconds: 45,
+        knowledge_grants: {
+          clinic_nurse: ["constrained_resource_coordinated"],
+          receiving_provider: ["constrained_resource_coordinated"],
+          wit_observer: ["resource_coordination_observed"],
+        },
+        label: "Coordinate the constrained resource and confirm ownership",
+        origin: "operational_workflow",
+        phase_after: "disposition",
+        prerequisites,
+        repeatable: false,
+        required_event_ids: ["second_casualty_inbound"],
+        source_action_id: null,
+        terminal_effect: null,
+        wit_category: "resource_coordination",
+      },
+    };
+    if (!definitions[actionId]) throw new Error(`unknown role-model action:${actionId}`);
+    return copy(definitions[actionId]);
+  }
+
+  function createProfiledData(baseData, profileId) {
+    const data = copy(baseData);
+    const profiles = roleModelMap(baseData);
+    const selectedId = profileId || baseData.default_role_model_profile_id;
+    const profile = profiles[selectedId];
+    if (!profile) throw new Error(`unknown role-model profile:${selectedId}`);
+    const required = copy(profile.required_operational_actions || []);
+    const baseActions = data.spec.actions.filter((item) => !PROFILE_ACTION_IDS.includes(item.action_id));
+    const extraActions = [];
+    if (required.includes("establish_communications_relay")) {
+      extraActions.push(profileAction("establish_communications_relay", ["confirm_surge_roles"]));
+    }
+    if (required.includes("coordinate_constrained_resource")) {
+      const prereqs = required.includes("establish_communications_relay")
+        ? ["establish_communications_relay"]
+        : ["confirm_surge_roles"];
+      extraActions.push(profileAction("coordinate_constrained_resource", prereqs));
+    }
+    data.spec.actions = [...baseActions, ...extraActions];
+    const handoff = data.spec.actions.find((item) => item.action_id === "complete_handoff");
+    if (!handoff) throw new Error("complete_handoff action missing");
+    handoff.prerequisites = unique([...(handoff.prerequisites || []), ...required]);
+    data.spec.completion.required_operational_actions = unique([
+      ...(data.spec.completion.required_operational_actions || []),
+      ...required,
+    ]);
+    const baseSequence = data.spec.canonical_command_sequence.filter((item) => !PROFILE_ACTION_IDS.includes(item));
+    const handoffIndex = baseSequence.indexOf("complete_handoff");
+    if (handoffIndex < 0) throw new Error("complete_handoff missing from canonical sequence");
+    data.spec.canonical_command_sequence = [
+      ...baseSequence.slice(0, handoffIndex),
+      ...required,
+      ...baseSequence.slice(handoffIndex),
+    ];
+    data.active_role_model_profile = copy(profile);
+    data.active_role_model_profile_id = selectedId;
+    return data;
+  }
+
+  function grantKnowledge(state, grants) {
+    for (const [actor, facts] of Object.entries(grants || {})) {
+      state.actor_knowledge[actor] = unique([...(state.actor_knowledge[actor] || []), ...facts]).sort();
+    }
+  }
+
+  function appendTimeline(state, entry) {
+    state.timeline.push({ sequence: state.timeline.length + 1, ...entry });
+  }
+
+  function applyEvent(state, event, data) {
+    if (state.events.includes(event.event_id)) return;
+    state.events.push(event.event_id);
+    state.events.sort();
+    grantKnowledge(state, event.knowledge_grants);
+    if (event.event_id === "second_casualty_inbound") {
+      state.alerts.push("Second casualty notification received; confirm surge roles.");
+    }
+    if (event.reveal_source_hidden_findings) {
+      state.visible_findings = copy(data.source_snapshot.patient.hidden_findings);
+    }
+    appendTimeline(state, {
+      elapsed_seconds: state.elapsed_seconds,
+      kind: "system_event",
+      id: event.event_id,
+      label: event.label,
+      origin: "system",
+      wit_category: event.wit_category,
+    });
+    state.wit_observations.push({
+      elapsed_seconds: state.elapsed_seconds,
+      category: event.wit_category,
+      observation: event.label,
+      process_only: true,
+      clinical_directive: null,
+    });
+    if (event.terminal_effect) {
+      state.terminal_status = event.terminal_effect;
+      state.terminal_reason = event.label;
+      state.phase = "complete";
+    }
+  }
+
+  function diagnosticDueAt(state, data) {
+    const imaging = state.action_completed_at.order_imaging;
+    const labs = state.action_completed_at.order_labs;
+    if (!Number.isFinite(imaging) || !Number.isFinite(labs)) return null;
+    return Math.max(imaging, labs) + Number(data.spec.parameters.diagnostic_delay_seconds.value);
+  }
+
+  function processDueEvents(state, data, afterActionId) {
+    const events = eventMap(data);
+    for (const event of data.spec.events) {
+      if (event.trigger.kind === "after_action" && event.trigger.action_id === afterActionId) {
+        applyEvent(state, event, data);
+      }
+      if (event.trigger.kind === "elapsed_time_due"
+          && state.elapsed_seconds >= Number(event.trigger.at_elapsed_seconds)) {
+        applyEvent(state, event, data);
+      }
+    }
+    const dueAt = diagnosticDueAt(state, data);
+    if (dueAt !== null && state.elapsed_seconds >= dueAt && !state.events.includes("diagnostics_ready")) {
+      applyEvent(state, events.diagnostics_ready, data);
+    }
+    const timeout = Number(data.spec.parameters.timeout_seconds.value);
+    if (state.elapsed_seconds >= timeout && state.terminal_status === "active") {
+      state.elapsed_seconds = timeout;
+      applyEvent(state, events.timeout_reached, data);
+    }
+  }
+
+  function scoreState(state, data) {
+    const points = sourcePointMap(data);
+    let raw = 0;
+    for (const id of state.completed_actions) {
+      const action = actionMap(data)[id];
+      if (action && action.source_action_id) raw += Number(points[action.source_action_id] || 0);
+    }
+    const maximum = positiveMaximum(data);
+    const bounded = Math.max(0, Math.min(maximum, raw));
+    state.raw_source_points = raw;
+    state.maximum_source_points = maximum;
+    state.normalized_score_bps = maximum > 0 ? Math.round((bounded / maximum) * 10000) : 0;
+  }
+
+  function initialKnowledge(data) {
+    const result = {};
+    for (const actor of data.spec.actors) result[actor.actor_id] = copy(actor.initial_knowledge || []);
+    return result;
+  }
+
+  function createSession(data) {
+    const profile = data.active_role_model_profile || roleModelMap(data)[data.default_role_model_profile_id];
+    if (!profile) throw new Error("active role-model profile missing");
+    const state = {
+      revision: 0,
+      elapsed_seconds: 0,
+      phase: "prearrival",
+      terminal_status: "active",
+      terminal_reason: null,
+      completed_actions: [],
+      action_completed_at: {},
+      events: [],
+      visible_findings: [],
+      actor_knowledge: initialKnowledge(data),
+      alerts: [
+        "Pre-arrival notification received. Prepare to receive a field-stabilized casualty.",
+        `Teamwork challenge: ${profile.challenge}`,
+      ],
+      raw_source_points: 0,
+      maximum_source_points: positiveMaximum(data),
+      normalized_score_bps: 0,
+      timeline: [],
+      wit_observations: [],
+      command_receipts: [],
+      operational_profile_id: profile.profile_id,
+      role_model_id: profile.role_model_id,
+      role_model_label: profile.label,
+      required_teamwork_actions: copy(profile.required_operational_actions || []),
+    };
+    applyEvent(state, eventMap(data).prearrival_notice, data);
+    return state;
+  }
+
+  function evaluateAction(state, actionId, data) {
+    const action = actionMap(data)[actionId];
+    const reasons = [];
+    if (!action) reasons.push("unknown_action");
+    if (state.terminal_status !== "active") reasons.push("terminal_state");
+    if (action && !action.repeatable && state.completed_actions.includes(actionId)) reasons.push("already_completed");
+    if (action) {
+      for (const prereq of action.prerequisites || []) {
+        if (!state.completed_actions.includes(prereq)) reasons.push(`missing_prerequisite:${prereq}`);
+      }
+      for (const eventId of action.required_event_ids || []) {
+        if (!state.events.includes(eventId)) reasons.push(`missing_event:${eventId}`);
+      }
+    }
+    return { enabled: reasons.length === 0, reasons, action };
+  }
+
+  function durationFor(state, action, data) {
+    if (action.duration_mode === "until_diagnostics") {
+      const dueAt = diagnosticDueAt(state, data);
+      return dueAt === null ? 0 : Math.max(0, dueAt - state.elapsed_seconds);
+    }
+    return Number(action.duration_seconds || 0);
+  }
+
+  function applyAction(previous, actionId, data, commandId) {
+    const state = copy(previous);
+    const evaluation = evaluateAction(state, actionId, data);
+    if (!evaluation.enabled) {
+      return { accepted: false, reasons: evaluation.reasons, state };
+    }
+    const action = evaluation.action;
+    const duration = durationFor(state, action, data);
+    state.elapsed_seconds += duration;
+    state.revision += 1;
+    state.completed_actions.push(actionId);
+    state.action_completed_at[actionId] = state.elapsed_seconds;
+    state.phase = action.phase_after || state.phase;
+    grantKnowledge(state, action.knowledge_grants);
+    appendTimeline(state, {
+      elapsed_seconds: state.elapsed_seconds,
+      kind: "learner_action",
+      id: actionId,
+      label: action.label,
+      origin: action.origin,
+      source_action_id: action.source_action_id,
+      clinical_points: action.source_action_id ? Number(sourcePointMap(data)[action.source_action_id] || 0) : 0,
+      wit_category: action.wit_category,
+    });
+    state.wit_observations.push({
+      elapsed_seconds: state.elapsed_seconds,
+      category: action.wit_category,
+      observation: action.label,
+      process_only: true,
+      clinical_directive: null,
+    });
+    state.command_receipts.push({
+      command_id: commandId || `standalone-${String(state.revision).padStart(3, "0")}-${actionId}`,
+      action_id: actionId,
+      revision: state.revision,
+      accepted: true,
+    });
+    if (actionId === "order_labs") state.alerts.push("Imaging and laboratory work are now both ordered.");
+    if (actionId === "review_diagnostics") state.alerts.push("Diagnostic findings reviewed; disposition decision is now available.");
+    if (actionId === "establish_communications_relay") state.alerts.push("Communications relay established and receipt confirmed.");
+    if (actionId === "coordinate_constrained_resource") state.alerts.push("Constrained resource coordinated and ownership confirmed.");
+    if (action.terminal_effect) {
+      state.terminal_status = action.terminal_effect;
+      state.terminal_reason = action.label;
+    }
+    processDueEvents(state, data, actionId);
+    scoreState(state, data);
+    return { accepted: true, reasons: [], state };
+  }
+
+  function availableActions(state, data) {
+    return data.spec.actions.filter((action) => evaluateAction(state, action.action_id, data).enabled);
+  }
+
+  function runSequence(sequence, data) {
+    let state = createSession(data);
+    for (const actionId of sequence) {
+      const result = applyAction(state, actionId, data);
+      if (!result.accepted) throw new Error(`sequence rejected at ${actionId}: ${result.reasons.join(",")}`);
+      state = result.state;
+    }
+    return state;
+  }
+
+  function runCanonical(data) {
+    return runSequence(data.spec.canonical_command_sequence, data);
+  }
+
+  function runUnsafe(actionId, data) {
+    return runSequence(["receive_handoff", actionId], data);
+  }
+
+  function runTimeout(data) {
+    let state = createSession(data);
+    let guard = 0;
+    while (state.terminal_status === "active" && guard < 30) {
+      const result = applyAction(state, "wait_60", data);
+      if (!result.accepted) throw new Error(`timeout branch rejected: ${result.reasons.join(",")}`);
+      state = result.state;
+      guard += 1;
+    }
+    return state;
+  }
+
+  function buildAar(state, data) {
+    const points = sourcePointMap(data);
+    const positiveSourceActions = data.source_snapshot.source_actions.filter((item) => Number(item.points) > 0);
+    const completedSourceIds = new Set(
+      state.completed_actions.map((id) => actionMap(data)[id]?.source_action_id).filter(Boolean),
+    );
+    const profile = data.active_role_model_profile;
+    const required = profile?.required_operational_actions || [];
+    const completedTeamwork = required.filter((id) => state.completed_actions.includes(id));
+    const missedTeamwork = required.filter((id) => !state.completed_actions.includes(id));
+    return {
+      terminal_status: state.terminal_status,
+      terminal_reason: state.terminal_reason,
+      elapsed_seconds: state.elapsed_seconds,
+      score_bps: state.normalized_score_bps,
+      raw_source_points: state.raw_source_points,
+      maximum_source_points: state.maximum_source_points,
+      completed_source_objectives: positiveSourceActions.filter((item) => completedSourceIds.has(item.id)).map((item) => item.label),
+      missed_source_objectives: positiveSourceActions.filter((item) => !completedSourceIds.has(item.id)).map((item) => item.label),
+      unsafe_actions: state.completed_actions.filter((id) => Number(points[actionMap(data)[id]?.source_action_id] || 0) < 0),
+      open_validity_obligations: copy(data.open_validity_obligations),
+      operational_profile_id: profile?.profile_id || null,
+      role_model_id: profile?.role_model_id || null,
+      role_model_label: profile?.label || null,
+      teamwork_challenge: profile?.challenge || null,
+      required_teamwork_actions: copy(required),
+      completed_teamwork_actions: completedTeamwork,
+      missed_teamwork_actions: missedTeamwork,
+      teamwork_status: missedTeamwork.length === 0 && state.terminal_status === "completed" ? "PASS" : "INCOMPLETE",
+      scoring_boundary: "SOURCE_CONFORMANCE_ONLY",
+      teamwork_actions_award_clinical_points: false,
+    };
+  }
+
+  root.AsklepiosStandaloneEngine = {
+    roleModelProfiles,
+    createProfiledData,
+    createSession,
+    evaluateAction,
+    applyAction,
+    availableActions,
+    runCanonical,
+    runUnsafe,
+    runTimeout,
+    buildAar,
+  };
+})(globalThis);
+</script>
+<script id="asklepios-ui">(function () {
+  "use strict";
+  const baseData = JSON.parse(document.getElementById("asklepios-scenario-data").textContent);
+  const engine = globalThis.AsklepiosStandaloneEngine;
+  let activeProfileId = baseData.default_role_model_profile_id;
+  let data = engine.createProfiledData(baseData, activeProfileId);
+  let session = engine.createSession(data);
+  let activeTab = "learner";
+  let autoplayToken = 0;
+  let runLabel = "manual learner-controlled run";
+
+  const $ = (id) => document.getElementById(id);
+  const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (char) => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"})[char]);
+  const formatTime = (seconds) => `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}`;
+  const titleCase = (value) => String(value).replaceAll("_", " ").replace(/\b\w/g, (letter) => letter.toUpperCase());
+
+  function badge(text, tone) {
+    return `<span class="badge badge-${tone}">${escapeHtml(text)}</span>`;
+  }
+
+  function renderProfileSelector() {
+    const profiles = engine.roleModelProfiles(baseData);
+    $("profile-selector").innerHTML = profiles.map((profile) => {
+      const selected = profile.profile_id === activeProfileId;
+      return `<button class="profile-option${selected ? " selected" : ""}" data-profile="${escapeHtml(profile.profile_id)}" aria-pressed="${String(selected)}"><strong>${escapeHtml(profile.label)}</strong><span>${escapeHtml(profile.short_description)}</span><small>${profile.required_operational_actions.length} added teamwork step${profile.required_operational_actions.length === 1 ? "" : "s"}</small></button>`;
+    }).join("");
+    for (const button of document.querySelectorAll("[data-profile]")) {
+      button.addEventListener("click", () => selectProfile(button.dataset.profile));
+    }
+    const profile = data.active_role_model_profile;
+    $("profile-brief").innerHTML = `<div><span class="eyebrow">Active role-model challenge</span><h3>${escapeHtml(profile.label)}</h3><p>${escapeHtml(profile.challenge)}</p><p><strong>Context:</strong> ${escapeHtml(profile.context.location)} · ${escapeHtml(profile.context.communications)} communications · ${escapeHtml(profile.context.resources)} resources</p><ul>${profile.learning_focus.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul><small>These operational steps carry zero clinical points. Timing is deterministic exercise timing and is not clinically calibrated.</small></div>`;
+  }
+
+  function renderHeader() {
+    const profile = data.active_role_model_profile;
+    $("status-badges").innerHTML = [
+      badge(`Release: ${data.scenario_evolution.release_id}`, "accent"),
+      badge(`Genome: ${data.scenario_evolution.scenario_genome.genome_id}`, "accent"),
+      badge(`Challenge: ${profile.label}`, "accent"),
+      badge(`Capability epoch ${data.scenario_evolution.capability_ratchet.ratchet_epoch}`, "success"),
+      badge(`Debt epoch ${data.scenario_evolution.technical_debt_ratchet.ratchet_epoch}`, "success"),
+      badge("Standalone · no server", "success"),
+      badge("Timings not calibrated", "warning"),
+      badge(`Run: ${runLabel}`, "muted"),
+      badge(session.terminal_status, session.terminal_status === "completed" ? "success" : session.terminal_status === "active" ? "accent" : "danger"),
+    ].join("");
+    $("elapsed").textContent = formatTime(session.elapsed_seconds);
+    $("phase").textContent = titleCase(session.phase);
+    $("score").textContent = `${(session.normalized_score_bps / 100).toFixed(2)}%`;
+  }
+
+  function renderVitals() {
+    const vitals = data.source_snapshot.patient.initial_vitals;
+    const profile = data.active_role_model_profile;
+    $("patient-brief").textContent = `${data.source_snapshot.patient.initial_presentation} Operational setting: ${profile.context.location}; communications ${profile.context.communications}; resources ${profile.context.resources}.`;
+    $("vitals").innerHTML = [
+      ["HR", vitals.hr], ["BP", `${vitals.bp_systolic}/${vitals.bp_diastolic}`],
+      ["RR", vitals.rr], ["SpO₂", `${vitals.spo2}%`], ["GCS", vitals.gcs], ["Temp", `${vitals.temp_c}°C`],
+    ].map(([label, value]) => `<div class="vital"><span>${label}</span><strong>${value}</strong></div>`).join("");
+  }
+
+  function renderActions() {
+    const actions = engine.availableActions(session, data);
+    $("actions").innerHTML = actions.length ? actions.map((action) => {
+      const tone = action.terminal_effect === "failed" ? "danger" : action.origin === "operational_workflow" ? "secondary" : "primary";
+      const pointText = action.source_action_id ? `${data.source_snapshot.source_actions.find((item) => item.id === action.source_action_id)?.points || 0} source points` : "0 clinical points";
+      return `<button class="action action-${tone}" data-action="${escapeHtml(action.action_id)}"><span>${escapeHtml(action.label)}</span><small>${escapeHtml(action.origin)} · ${escapeHtml(pointText)}</small></button>`;
+    }).join("") : `<div class="empty">No actions are enabled in this terminal state.</div>`;
+    for (const button of document.querySelectorAll("[data-action]")) {
+      button.addEventListener("click", () => apply(button.dataset.action));
+    }
+  }
+
+  function renderFindings() {
+    const findings = session.visible_findings;
+    $("findings").innerHTML = findings.length
+      ? findings.map((item) => `<li>${escapeHtml(item)}</li>`).join("")
+      : `<li class="muted">Hidden findings remain withheld until the diagnostics-ready event.</li>`;
+    $("alerts").innerHTML = session.alerts.slice(-5).map((item) => `<div class="alert">${escapeHtml(item)}</div>`).join("");
+  }
+
+  function renderTimeline() {
+    $("timeline").innerHTML = session.timeline.map((entry) => `
+      <article class="timeline-item">
+        <div class="timeline-seq">${entry.sequence}</div>
+        <div><div class="timeline-meta">${formatTime(entry.elapsed_seconds)} · ${escapeHtml(titleCase(entry.kind))}</div><strong>${escapeHtml(entry.label)}</strong><div class="timeline-origin">${escapeHtml(entry.origin || "system")}</div></div>
+      </article>`).join("");
+  }
+
+  function renderWit() {
+    $("wit-list").innerHTML = session.wit_observations.map((item, index) => `
+      <article class="wit-item"><span>${index + 1}</span><div><strong>${escapeHtml(titleCase(item.category))}</strong><p>${escapeHtml(item.observation)}</p><small>Process-only · no clinical directive</small></div></article>`).join("");
+    $("knowledge").innerHTML = Object.entries(session.actor_knowledge).map(([actor, facts]) => `
+      <details><summary>${escapeHtml(titleCase(actor))} <span>${facts.length} facts</span></summary><ul>${facts.map((fact) => `<li>${escapeHtml(fact)}</li>`).join("")}</ul></details>`).join("");
+  }
+
+  function renderProvenance() {
+    const profile = data.active_role_model_profile;
+    const rows = [
+      ["Release", data.scenario_evolution.release_id],
+      ["Engine evolution", data.scenario_evolution.engine_evolution],
+      ["Role-model challenge", `${profile.role_model_id} · ${profile.profile_id} · ${profile.profile_sha256}`],
+      ["Role-model profile contract", `${data.role_model_profile_contract.selection_profile} · ${data.role_model_profile_contract.playable_profile_count} playable profiles`],
+      ["Scenario Genome", `${data.scenario_evolution.scenario_genome.genome_id} · ${data.scenario_evolution.scenario_genome.genome_sha256}`],
+      ["Capability ratchet", `${data.scenario_evolution.capability_ratchet.ratchet_id} · epoch ${data.scenario_evolution.capability_ratchet.ratchet_epoch} · ${data.scenario_evolution.capability_ratchet.ratchet_anchor_sha256}`],
+      ["Technical-debt ratchet", `${data.scenario_evolution.technical_debt_ratchet.ratchet_id} · epoch ${data.scenario_evolution.technical_debt_ratchet.ratchet_epoch} · ${data.scenario_evolution.technical_debt_ratchet.ratchet_anchor_sha256}`],
+      ["Release graph", `${data.scenario_evolution.release_graph.graph_id} · ${data.scenario_evolution.release_graph.stage_count} stages · ${data.scenario_evolution.release_graph.target_count} targets`],
+      ["Source scenario", data.source_snapshot.source_scenario_id],
+      ["Source projection", data.source_snapshot.source_scenario_sha256],
+      ["Template record", data.source_snapshot.template_record_sha256],
+      ["Content registry root", data.source_snapshot.content_registry_merkle_root],
+      ["Source snapshot", data.source_snapshot.snapshot_sha256],
+      ["Specification file", data.provenance.spec_file_sha256],
+      ["Role-model policy", `${data.provenance.role_model_policy_path} · ${data.provenance.role_model_policy_sha256}`],
+      ["Standalone payload", data.provenance.payload_sha256],
+      ["Engine source", data.provenance.engine_sha256],
+      ["Mode", data.standalone_mode],
+    ];
+    $("provenance-table").innerHTML = rows.map(([key, value]) => `<tr><th>${escapeHtml(key)}</th><td><code>${escapeHtml(value)}</code></td></tr>`).join("");
+    $("scope-records").innerHTML = data.source_truth.records.map((record) => `<article><strong>${escapeHtml(record.title)}</strong><p>${escapeHtml(record.supported_scope_claim)}</p><small>${escapeHtml(record.relation)} · clinical rule entailment ${escapeHtml(record.clinical_rule_entailment)}</small></article>`).join("");
+  }
+
+  function renderAar() {
+    const aar = engine.buildAar(session, data);
+    $("aar").innerHTML = `
+      <div class="aar-grid">
+        <div><span>Outcome</span><strong>${escapeHtml(aar.terminal_status)}</strong></div>
+        <div><span>Elapsed</span><strong>${formatTime(aar.elapsed_seconds)}</strong></div>
+        <div><span>Source score</span><strong>${(aar.score_bps / 100).toFixed(2)}%</strong></div>
+        <div><span>Teamwork challenge</span><strong>${escapeHtml(aar.teamwork_status)}</strong></div>
+        <div><span>Role-model profile</span><strong>${escapeHtml(aar.role_model_label || "Unknown")}</strong></div>
+      </div>
+      <div class="aar-columns">
+        <section><h4>Completed source objectives</h4><ul>${aar.completed_source_objectives.map((item) => `<li>${escapeHtml(item)}</li>`).join("") || "<li>None</li>"}</ul></section>
+        <section><h4>Missed source objectives</h4><ul>${aar.missed_source_objectives.map((item) => `<li>${escapeHtml(item)}</li>`).join("") || "<li>None</li>"}</ul></section>
+      </div>
+      <div class="aar-columns">
+        <section><h4>Required teamwork actions</h4><ul>${aar.required_teamwork_actions.map((item) => `<li>${escapeHtml(titleCase(item))}</li>`).join("") || "<li>Direct closed-loop handoff; no added intermediate step.</li>"}</ul></section>
+        <section><h4>Completed teamwork actions</h4><ul>${aar.completed_teamwork_actions.map((item) => `<li>${escapeHtml(titleCase(item))}</li>`).join("") || "<li>None required or none completed.</li>"}</ul></section>
+      </div>
+      <p class="muted">Score boundary: ${escapeHtml(aar.scoring_boundary)}. Operational teamwork actions award zero clinical points.</p>
+      <details class="validity"><summary>Open validity obligations (${aar.open_validity_obligations.length})</summary><ul>${aar.open_validity_obligations.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul></details>`;
+  }
+
+  function renderTabs() {
+    for (const button of document.querySelectorAll("[data-tab]")) {
+      const selected = button.dataset.tab === activeTab;
+      button.setAttribute("aria-selected", String(selected));
+      button.classList.toggle("selected", selected);
+    }
+    for (const panel of document.querySelectorAll("[data-panel]")) panel.hidden = panel.dataset.panel !== activeTab;
+  }
+
+  function render() {
+    renderProfileSelector(); renderHeader(); renderVitals(); renderActions(); renderFindings(); renderTimeline(); renderWit(); renderProvenance(); renderAar(); renderTabs();
+  }
+
+  function apply(actionId) {
+    autoplayToken += 1;
+    const result = engine.applyAction(session, actionId, data);
+    if (!result.accepted) {
+      $("toast").textContent = `Action rejected: ${result.reasons.join(", ")}`;
+      $("toast").classList.add("show");
+      setTimeout(() => $("toast").classList.remove("show"), 2500);
+      return;
+    }
+    session = result.state;
+    render();
+  }
+
+  function reset(label = "manual learner-controlled run") {
+    autoplayToken += 1; runLabel = label; session = engine.createSession(data); render();
+  }
+
+  function selectProfile(profileId) {
+    autoplayToken += 1;
+    activeProfileId = profileId;
+    data = engine.createProfiledData(baseData, activeProfileId);
+    runLabel = `manual role-model run · ${data.active_role_model_profile.label}`;
+    session = engine.createSession(data);
+    activeTab = "learner";
+    render();
+  }
+
+  async function autoplay() {
+    reset(`timed canonical autoplay · ${data.active_role_model_profile.label}`);
+    const token = autoplayToken;
+    for (const actionId of data.spec.canonical_command_sequence) {
+      await new Promise((resolve) => setTimeout(resolve, 450));
+      if (token !== autoplayToken) return;
+      const result = engine.applyAction(session, actionId, data);
+      if (!result.accepted) throw new Error(`autoplay rejected at ${actionId}`);
+      session = result.state; render();
+    }
+  }
+
+  function loadBranch(label, next) { autoplayToken += 1; runLabel = `${label} · ${data.active_role_model_profile.label}`; session = next; render(); }
+
+  function saveReport() {
+    const payload = {
+      release_id: data.release_id,
+      exported_at: new Date().toISOString(),
+      run_label: runLabel,
+      role_model_profile: data.active_role_model_profile,
+      session,
+      aar: engine.buildAar(session, data),
+    };
+    const blob = new Blob([JSON.stringify(payload, null, 2) + "\n"], { type: "application/json" });
+    const anchor = document.createElement("a"); anchor.href = URL.createObjectURL(blob); anchor.download = `asklepios-${activeProfileId.toLowerCase()}-run-${Date.now()}.json`; anchor.click(); setTimeout(() => URL.revokeObjectURL(anchor.href), 1000);
+  }
+
+  for (const button of document.querySelectorAll("[data-tab]")) button.addEventListener("click", () => { activeTab = button.dataset.tab; renderTabs(); });
+  $("reset").addEventListener("click", () => reset());
+  $("autoplay").addEventListener("click", () => autoplay().catch((error) => { $("toast").textContent = error.message; $("toast").classList.add("show"); }));
+  $("canonical").addEventListener("click", () => loadBranch("complete canonical replay", engine.runCanonical(data)));
+  $("timeout").addEventListener("click", () => loadBranch("alternate branch · source-bound timeout", engine.runTimeout(data)));
+  $("unsafe-discharge").addEventListener("click", () => loadBranch("alternate branch · unsafe discharge", engine.runUnsafe("discharge_without_workup", data)));
+  $("unsafe-tourniquet").addEventListener("click", () => loadBranch("alternate branch · unsafe tourniquet action", engine.runUnsafe("remove_tourniquet", data)));
+  $("save").addEventListener("click", saveReport);
+  render();
+})();
+</script>
+</body>
+</html>

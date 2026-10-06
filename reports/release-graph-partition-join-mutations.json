@@ -1,0 +1,459 @@
+{
+  "accepted_attacks": 0,
+  "attacks": 36,
+  "cases": 37,
+  "classification": "PASS",
+  "errors": [],
+  "partition_join_profile": "AUTHENTICATED_RELEASE_GRAPH_ATTACK_PARTITION_JOIN_V2",
+  "results": [
+    {
+      "case_id": "baseline_partition_join",
+      "classification": "PASS",
+      "errors": [],
+      "expected_classification": "PASS",
+      "observed_classification": "PASS",
+      "observed_errors": [],
+      "pass": true,
+      "status": "PASS"
+    },
+    {
+      "case_id": "mutation_partition_kind_forged",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "mutation partition differs:FULL"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "heavy_partition_graph_hash_forged",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "heavy graph hash differs"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "mutation_case_removed_and_rehashed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "joined case unavailable:attestation-stage-bypassed",
+        "mutation case count differs",
+        "mutation case inventory hash differs",
+        "mutation required cases missing:attestation-stage-bypassed"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "heavy_case_duplicated_and_rehashed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "heavy case count differs",
+        "heavy case inventory hash differs",
+        "heavy result case ID duplicated:mutation-fixtures-have-no-shared-writable-inodes"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "common_case_evidence_disagrees",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "partition common-case evidence differs:stable-source-snapshot-acquisition"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "accepted_mutation_attack_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "mutation case did not pass:attestation-stage-bypassed:FAIL"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "partition_source_drift_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "heavy observed caller source drift"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "partition_source_roots_differ",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "partition repository inventory roots differ"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "source_closure_failure_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "source-closure attack suite is not PASS"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "source_closure_accepted_attack_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "source-closure attack was accepted"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "filtered_partition_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "mutation partition was not a complete unfiltered run"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "case_inventory_forgery_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "mutation case inventory hash differs"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "partition_isolation_weakened",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "heavy partition isolation differs"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "mutation_isolation_weakened",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "mutation partition mutation process isolation differs"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "mutation_worker_execution_weakened",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "mutation partition mutation worker execution boundary differs"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "mutation_worker_result_binding_weakened",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "mutation partition mutation worker result binding differs"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "mutation_timeout_weakened",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "mutation partition mutation case timeout differs"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "mutation_worker_script_hash_forged",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "mutation worker script hash differs:attestation-stage-bypassed"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "mutation_worker_executable_forged",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "mutation worker executable differs:attestation-stage-bypassed"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "mutation_checkpoint_profile_weakened",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "mutation partition mutation checkpoint profile differs"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "mutation_checkpoint_reuse_disabled",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "mutation partition mutation checkpoint reuse is disabled"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "mutation_checkpoint_digest_forged",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "mutation checkpoint digest is malformed:attestation-stage-bypassed"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "mutation_checkpoint_path_forged",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "mutation checkpoint path is malformed:attestation-stage-bypassed"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "heavy_checkpoint_profile_weakened",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "heavy partition heavyweight checkpoint profile differs"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "heavy_checkpoint_reuse_disabled",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "heavy partition heavyweight checkpoint reuse is disabled"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "heavy_checkpoint_digest_forged",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "heavyweight checkpoint digest is malformed:mutation-fixtures-have-no-shared-writable-inodes"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "heavy_checkpoint_path_forged",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "heavyweight checkpoint path is malformed:mutation-fixtures-have-no-shared-writable-inodes"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "heavy_scheduler_weakened",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "heavy heavyweight scheduler differs"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "heavy_worker_floor_widened",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "heavy heavyweight worker floor differs"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "exclusive_heavy_inventory_reduced",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "heavy exclusive heavyweight inventory differs"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "heavy_worker_execution_weakened",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "heavy heavyweight worker execution boundary differs"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "heavy_worker_result_binding_weakened",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "heavy heavyweight worker result binding differs"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "heavy_worker_script_hash_forged",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "heavy worker script hash differs:mutation-fixtures-have-no-shared-writable-inodes"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "heavy_worker_executable_forged",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "heavy worker executable differs:mutation-fixtures-have-no-shared-writable-inodes"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "stale_graph_identity_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "mutation graph ID differs"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "symlinked_partition_report_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_classification": "FAIL",
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "GenomeError:symlink forbidden in repository path:reports/release-graph-heavy-partition.json"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

@@ -1,0 +1,16 @@
+{
+  "checks": 195,
+  "classification": "PASS",
+  "errors": [],
+  "schema_version": "1.1.0",
+  "status": "PASS",
+  "workflow_jobs": [
+    "facility-formal",
+    "facility-reproducibility",
+    "facility-runtime-linux",
+    "facility-runtime-windows",
+    "facility-static-and-python",
+    "integrated-facility-gate"
+  ],
+  "workflow_parser": "strict-stdlib-yaml-subset-v1"
+}

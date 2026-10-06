@@ -1,0 +1,198 @@
+{
+  "accepted_escalations": 0,
+  "attacks": 16,
+  "cases": 17,
+  "classification": "PASS",
+  "errors": [],
+  "internal_errors": 0,
+  "results": [
+    {
+      "case_id": "baseline",
+      "checker_errors": [],
+      "classification": "PASS",
+      "expected_pass": true,
+      "observed_pass": true,
+      "pass": true,
+      "status": "PASS"
+    },
+    {
+      "case_id": "resource_calibration_promotion",
+      "checker_errors": [
+        "resource falsely calibrated:CHEST_IMAGING_SERVICE"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "empirical_distribution_without_registry",
+      "checker_errors": [
+        "undeclared empirical calibration field:resources[0].empirical_distribution"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "concrete_treatment_activation",
+      "checker_errors": [
+        "concrete treatment admitted:PAIN_MANAGEMENT_OBJECTIVE"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "treatment_rule_self_adjudication",
+      "checker_errors": [
+        "treatment rule self-adjudicated:PAIN_MANAGEMENT_OBJECTIVE"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "concrete_dose_field",
+      "checker_errors": [
+        "concrete treatment field declared:[0].fields[5].field_id:dose"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "dynamic_physiology_promotion",
+      "checker_errors": [
+        "dynamic physiology falsely validated"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "latent_state_exposure",
+      "checker_errors": [
+        "latent patient state exposed"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "human_probability_without_calibration",
+      "checker_errors": [
+        "undeclared human-behavior calibration field:[0].compliance_probability",
+        "undeclared human-behavior calibration field:decisions[0].compliance_probability"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "diagnostic_entailment_self_certified",
+      "checker_errors": [
+        "diagnostic entailment self-certified:CHEST_IMAGING_REPORT"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "diagnostic_source_escape",
+      "checker_errors": [
+        "diagnostic source pointer outside protected template:CHEST_IMAGING_REPORT"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "causal_claim_injection",
+      "checker_errors": [
+        "unsupported causal claim:examples/facility-decision/README.md:(?i)\\b(?:this|the)\\s+(?:learner\\s+)?(?:decision|action)\\s+caused\\s+(?:the|this)\\s+outcome\\b"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "manual_accessibility_boundary_removed",
+      "checker_errors": [
+        "manual accessibility boundary missing"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "signed_provenance_false_claim",
+      "checker_errors": [
+        "provenance builder signature state differs"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "treatment_attestation_requirement_removed",
+      "checker_errors": [
+        "critical activation requirement missing:treatment_legitimacy:independent_attestation"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "calibration_holdout_requirement_removed",
+      "checker_errors": [
+        "critical activation requirement missing:operational_calibration:held_out_evaluation"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "patient_care_authority_escalation",
+      "checker_errors": [
+        "patient-care authority escalated"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "observed_pass": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

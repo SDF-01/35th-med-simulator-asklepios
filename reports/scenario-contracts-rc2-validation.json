@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "status": "READY_FOR_MODEL_ASSISTED_BUILD",
+  "scenario_id": "ASK-V-F3A6E77080",
+  "source_scenario_id": "ASK-A-001",
+  "package_sha256": "7765e691316a19a0c4dd89622947f21ff153f87e7bd807963e7af519153d3388",
+  "evidence_references": 6,
+  "route_nodes": 7,
+  "route_edges": 7,
+  "local_checks": 41,
+  "independent_typescript_checks": 152,
+  "independent_python_checks": 51,
+  "generated_cases": 640,
+  "relation_checks": [
+    {
+      "id": "repeatability",
+      "pass": true
+    },
+    {
+      "id": "record_order_independence",
+      "pass": true
+    },
+    {
+      "id": "seed_changes_admitted_fields_only",
+      "pass": true
+    },
+    {
+      "id": "route_priority_is_deterministic",
+      "pass": true
+    }
+  ],
+  "pair_schedule_cases": 24,
+  "fault_challenges": 24,
+  "fault_challenges_rejected": 24,
+  "formal_modules": 5,
+  "deployment_scope": "research_sandbox_only",
+  "source_template_status": "repository_template_not_clinically_certified",
+  "clinical_rule_source": "inherited_template",
+  "evidence_authority": "supporting_only",
+  "evidence_scope": "citation_support_only",
+  "scoring_behavior": "inherited_unchanged",
+  "build_time_proposal_gate": "reviewed_source_bound_allowlist",
+  "formal_verification": "github_ci_kernel_build_fresh_replay_and_axiom_audit",
+  "errors": [],
+  "next_gate": "Connect a server-side model to the proposal schema, then require the same certificate and checker gates before publication."
+}

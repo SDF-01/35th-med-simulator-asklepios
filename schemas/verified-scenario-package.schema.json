@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://project-asklepios.invalid/schemas/verified-scenario-package.schema.json",
+  "title": "Verified Scenario Package",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "build",
+    "blueprint",
+    "authority",
+    "scenario",
+    "route",
+    "evidence",
+    "atoms",
+    "stages",
+    "field_origins",
+    "certificate"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "2.1.0"
+    },
+    "build": {
+      "type": "object"
+    },
+    "blueprint": {
+      "$ref": "scenario-blueprint.schema.json"
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "clinical_authority",
+        "deployment_scope",
+        "source_template_status",
+        "clinical_rule_source",
+        "evidence_authority",
+        "evidence_effect_scope",
+        "scoring_behavior"
+      ],
+      "properties": {
+        "clinical_authority": {
+          "const": "NOT_GRANTED"
+        },
+        "deployment_scope": {
+          "const": "research_sandbox_only"
+        },
+        "source_template_status": {
+          "const": "repository_template_not_clinically_certified"
+        },
+        "clinical_rule_source": {
+          "const": "inherited_template"
+        },
+        "evidence_authority": {
+          "const": "supporting_only"
+        },
+        "evidence_effect_scope": {
+          "const": "citation_support_only"
+        },
+        "scoring_behavior": {
+          "const": "inherited_unchanged"
+        }
+      }
+    },
+    "scenario": {
+      "type": "object"
+    },
+    "route": {
+      "type": "object"
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 6
+    },
+    "atoms": {
+      "type": "array",
+      "minItems": 1
+    },
+    "stages": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5
+    },
+    "field_origins": {
+      "type": "array",
+      "minItems": 1
+    },
+    "certificate": {
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "abstraction": "timed_automata_region_quotient_v1",
+  "clock_regions": {
+    "diagnostic_age_seconds": "absent | exact 0..179 | saturated >=180",
+    "reassessment_age_seconds": "absent | exact 0..179 | saturated >=180"
+  },
+  "dead_end_examples": [],
+  "differential_fixture_count": 300,
+  "differential_fixture_sha256": "2e127b5fbd79f6093c145ac5bed2742fa9eb4063f38b91506a1b5a114ff508fa",
+  "errors": [],
+  "independence_note": "The Python region model reconstructs decision and facility prerequisites, time-based events, diagnostic resources, results, timeout, and terminal behavior from JSON without importing the TypeScript runtime. A separate TypeScript differential checker must replay the committed fixtures.",
+  "max_decision_depth": 20,
+  "max_repeatable_waits": 20,
+  "named_terminal_witnesses": {
+    "completed_alternate": {
+      "final_projection": {
+        "available_decision_ids": [],
+        "completed_decision_ids": [
+          "complete_handoff",
+          "confirm_surge_roles",
+          "differential",
+          "documentation",
+          "escalation",
+          "monitor_vitals",
+          "order_imaging",
+          "order_labs",
+          "pain_management",
+          "primary_assessment",
+          "receive_handoff",
+          "review_diagnostics",
+          "wait_for_diagnostics"
+        ],
+        "elapsed_seconds": 675,
+        "fired_facility_event_ids": [
+          "diagnostics_ready",
+          "prearrival_notice",
+          "second_casualty_inbound"
+        ],
+        "orders": [
+          {
+            "age_region_seconds": 180,
+            "order_code": "CHEST_IMAGING",
+            "resource_id": "CHEST_IMAGING_SERVICE",
+            "status": "result_available"
+          },
+          {
+            "age_region_seconds": 180,
+            "order_code": "LACTATE",
+            "resource_id": "LABORATORY_SERVICE",
+            "status": "result_available"
+          }
+        ],
+        "reassessment_due": false,
+        "result_ids": [
+          "CHEST_IMAGING_REPORT",
+          "LACTATE_RESULT"
+        ],
+        "staleness_region_seconds": 150,
+        "terminal_status": "completed",
+        "timeout_seconds": 1200,
+        "visible_world_event_ids": [
+          "second_casualty_inbound"
+        ],
+        "wait_count": 0
+      },
+      "sequence": [
+        "receive_handoff",
+        "primary_assessment",
+        "differential",
+        "order_labs",
+        "monitor_vitals",
+        "order_imaging",
+        "documentation",
+        "pain_management",
+        "wait_for_diagnostics",
+        "review_diagnostics",
+        "confirm_surge_roles",
+        "escalation",
+        "complete_handoff"
+      ],
+      "terminal_status": "completed"
+    },
+    "completed_canonical": {
+      "final_projection": {
+        "available_decision_ids": [],
+        "completed_decision_ids": [
+          "complete_handoff",
+          "confirm_surge_roles",
+          "differential",
+          "documentation",
+          "escalation",
+          "monitor_vitals",
+          "order_imaging",
+          "order_labs",
+          "pain_management",
+          "primary_assessment",
+          "receive_handoff",
+          "review_diagnostics",
+          "wait_for_diagnostics"
+        ],
+        "elapsed_seconds": 675,
+        "fired_facility_event_ids": [
+          "diagnostics_ready",
+          "prearrival_notice",
+          "second_casualty_inbound"
+        ],
+        "orders": [
+          {
+            "age_region_seconds": 180,
+            "order_code": "CHEST_IMAGING",
+            "resource_id": "CHEST_IMAGING_SERVICE",
+            "status": "result_available"
+          },
+          {
+            "age_region_seconds": 180,
+            "order_code": "LACTATE",
+            "resource_id": "LABORATORY_SERVICE",
+            "status": "result_available"
+          }
+        ],
+        "reassessment_due": false,
+        "result_ids": [
+          "CHEST_IMAGING_REPORT",
+          "LACTATE_RESULT"
+        ],
+        "staleness_region_seconds": 150,
+        "terminal_status": "completed",
+        "timeout_seconds": 1200,
+        "visible_world_event_ids": [
+          "second_casualty_inbound"
+        ],
+        "wait_count": 0
+      },
+      "sequence": [
+        "receive_handoff",
+        "primary_assessment",
+        "monitor_vitals",
+        "differential",
+        "order_imaging",
+        "order_labs",
+        "pain_management",
+        "documentation",
+        "wait_for_diagnostics",
+        "review_diagnostics",
+        "confirm_surge_roles",
+        "escalation",
+        "complete_handoff"
+      ],
+      "terminal_status": "completed"
+    },
+    "failed_discharge": {
+      "final_projection": {
+        "available_decision_ids": [],
+        "completed_decision_ids": [
+          "discharge_without_workup",
+          "receive_handoff"
+        ],
+        "elapsed_seconds": 55,
+        "fired_facility_event_ids": [
+          "prearrival_notice"
+        ],
+        "orders": [],
+        "reassessment_due": false,
+        "result_ids": [],
+        "staleness_region_seconds": 55,
+        "terminal_status": "failed",
+        "timeout_seconds": 1200,
+        "visible_world_event_ids": [],
+        "wait_count": 0
+      },
+      "sequence": [
+        "receive_handoff",
+        "discharge_without_workup"
+      ],
+      "terminal_status": "failed"
+    },
+    "failed_tourniquet": {
+      "final_projection": {
+        "available_decision_ids": [],
+        "completed_decision_ids": [
+          "receive_handoff",
+          "remove_tourniquet"
+        ],
+        "elapsed_seconds": 55,
+        "fired_facility_event_ids": [
+          "prearrival_notice"
+        ],
+        "orders": [],
+        "reassessment_due": false,
+        "result_ids": [],
+        "staleness_region_seconds": 55,
+        "terminal_status": "failed",
+        "timeout_seconds": 1200,
+        "visible_world_event_ids": [],
+        "wait_count": 0
+      },
+      "sequence": [
+        "receive_handoff",
+        "remove_tourniquet"
+      ],
+      "terminal_status": "failed"
+    },
+    "timeout": {
+      "final_projection": {
+        "available_decision_ids": [],
+        "completed_decision_ids": [
+          "receive_handoff",
+          "wait_60"
+        ],
+        "elapsed_seconds": 1200,
+        "fired_facility_event_ids": [
+          "prearrival_notice",
+          "second_casualty_inbound",
+          "timeout_reached"
+        ],
+        "orders": [],
+        "reassessment_due": false,
+        "result_ids": [],
+        "staleness_region_seconds": 180,
+        "terminal_status": "timeout",
+        "timeout_seconds": 1200,
+        "visible_world_event_ids": [
+          "second_casualty_inbound"
+        ],
+        "wait_count": 20
+      },
+      "sequence": [
+        "receive_handoff",
+        "wait_60",
+        "wait_60",
+        "wait_60",
+        "wait_60",
+        "wait_60",
+        "wait_60",
+        "wait_60",
+        "wait_60",
+        "wait_60",
+        "wait_60",
+        "wait_60",
+        "wait_60",
+        "wait_60",
+        "wait_60",
+        "wait_60",
+        "wait_60",
+        "wait_60",
+        "wait_60",
+        "wait_60",
+        "wait_60"
+      ],
+      "terminal_status": "timeout"
+    }
+  },
+  "reachable_active_dead_ends": 0,
+  "schema_version": "1.0.0",
+  "semantic_states": 493866,
+  "soundness_scope": "The quotient preserves all executable comparisons against the 180-second diagnostic and information-staleness thresholds while discarding history-only absolute completion timestamps after those thresholds are crossed.",
+  "state_limit": 1000000,
+  "state_limit_reached": false,
+  "status": "PASS",
+  "transitions_explored": 940403
+}

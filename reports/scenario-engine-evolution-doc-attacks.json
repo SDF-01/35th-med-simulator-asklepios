@@ -1,0 +1,675 @@
+{
+  "accepted_attacks": 0,
+  "attacks": 24,
+  "boundary": "Every active RC3.7A.3 documentation surface is independently checked for exact identity, semantic guardrails, artifact binding, and prohibited deployment or clinical claims.",
+  "cases": 25,
+  "checker_source_closure": [
+    "scripts/check_engine_evolution_documentation.mjs",
+    "scripts/check_engine_evolution_documentation.py",
+    "scripts/engine_evolution_common.py",
+    "scripts/engine_evolution_documentation_common.mjs",
+    "scripts/node_checker_cli.mjs",
+    "scripts/offline_scenario_release_common.py",
+    "scripts/release_identity_common.py",
+    "scripts/release_result.py",
+    "scripts/scenario_genome_common.py"
+  ],
+  "checker_source_closure_files": 9,
+  "classification": "PASS",
+  "errors": [],
+  "results": [
+    {
+      "accepted_attack": false,
+      "case_id": "baseline",
+      "classification": "PASS",
+      "errors": [],
+      "expected_pass": true,
+      "node_classification": "PASS",
+      "node_errors": [],
+      "node_exit_status": 0,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"PASS\",\n  \"status\": \"PASS\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": []\n}\n",
+      "observed_pass": true,
+      "pass": true,
+      "python_classification": "PASS",
+      "python_errors": [],
+      "python_exit_status": 0,
+      "python_tail": "{\n  \"capability_ratchet_epoch\": 2,\n  \"checker_profile\": \"PYTHON_ENGINE_EVOLUTION_DOCUMENTATION_V3\",\n  \"classification\": \"PASS\",\n  \"documents\": 4,\n  \"errors\": [],\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"PASS\",\n  \"technical_debt_ratchet_epoch\": 4\n}\n",
+      "status": "PASS"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "root_start_marker_removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "documentation marker inventory differs:root",
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"documentation marker inventory differs:root\",\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "documentation marker inventory differs:<!-- asklepios-facility-arrival:start -->:<!-- asklepios-facility-arrival:end -->"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"classification\": \"FAIL\",\n  \"errors\": [\n    \"documentation marker inventory differs:<!-- asklepios-facility-arrival:start -->:<!-- asklepios-facility-arrival:end -->\"\n  ],\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\"\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "root_end_marker_duplicated",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "documentation marker inventory differs:root",
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"documentation marker inventory differs:root\",\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "documentation marker inventory differs:<!-- asklepios-facility-arrival:start -->:<!-- asklepios-facility-arrival:end -->"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"classification\": \"FAIL\",\n  \"errors\": [\n    \"documentation marker inventory differs:<!-- asklepios-facility-arrival:start -->:<!-- asklepios-facility-arrival:end -->\"\n  ],\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\"\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "facility_evolution_heading_removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution block differs:facility",
+        "engine-evolution document byte count differs:examples/facility-arrival/README.md",
+        "engine-evolution document hash differs:examples/facility-arrival/README.md",
+        "offline documentation required literal missing:facility:## Engine evolution binding"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"canonical engine-evolution block differs:facility\",\n    \"engine-evolution document byte count differs:examples/facility-arrival/README.md\",\n    \"engine-evolution document hash differs:examples/facility-arrival/README.md\",\n    \"offline documentation required literal missing:facility:## Engine evolution binding\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "canonical engine-evolution block differs:facility",
+        "engine-evolution document byte count differs:examples/facility-arrival/README.md",
+        "engine-evolution document hash differs:examples/facility-arrival/README.md",
+        "engine-evolution guardrail missing:facility:## Engine evolution binding",
+        "offline documentation required literal missing:facility:## Engine evolution binding"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"capability_ratchet_epoch\": 2,\n  \"checker_profile\": \"PYTHON_ENGINE_EVOLUTION_DOCUMENTATION_V3\",\n  \"classification\": \"FAIL\",\n  \"documents\": 4,\n  \"errors\": [\n    \"canonical engine-evolution block differs:facility\",\n    \"engine-evolution document byte count differs:examples/facility-arrival/README.md\",\n    \"engine-evolution document hash differs:examples/facility-arrival/README.md\",\n    \"engine-evolution guardrail missing:facility:## Engine evolution binding\",\n    \"offline documentation required literal missing:facility:## Engine evolution binding\"\n  ],\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\",\n  \"technical_debt_ratchet_epoch\": 4\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "verified_debt_ratchet_removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution block differs:verified",
+        "engine-evolution document byte count differs:examples/verified-scenario/README.md",
+        "engine-evolution document hash differs:examples/verified-scenario/README.md",
+        "offline documentation required literal missing:verified:- Technical-debt ratchet:"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"canonical engine-evolution block differs:verified\",\n    \"engine-evolution document byte count differs:examples/verified-scenario/README.md\",\n    \"engine-evolution document hash differs:examples/verified-scenario/README.md\",\n    \"offline documentation required literal missing:verified:- Technical-debt ratchet:\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "canonical engine-evolution block differs:verified",
+        "engine-evolution document byte count differs:examples/verified-scenario/README.md",
+        "engine-evolution document hash differs:examples/verified-scenario/README.md",
+        "offline documentation required literal missing:verified:- Technical-debt ratchet:"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"capability_ratchet_epoch\": 2,\n  \"checker_profile\": \"PYTHON_ENGINE_EVOLUTION_DOCUMENTATION_V3\",\n  \"classification\": \"FAIL\",\n  \"documents\": 4,\n  \"errors\": [\n    \"canonical engine-evolution block differs:verified\",\n    \"engine-evolution document byte count differs:examples/verified-scenario/README.md\",\n    \"engine-evolution document hash differs:examples/verified-scenario/README.md\",\n    \"offline documentation required literal missing:verified:- Technical-debt ratchet:\"\n  ],\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\",\n  \"technical_debt_ratchet_epoch\": 4\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "standalone_title_removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution document differs:docs/FACILITY_ARRIVAL_STANDALONE.md",
+        "engine-evolution document byte count differs:docs/FACILITY_ARRIVAL_STANDALONE.md",
+        "engine-evolution document hash differs:docs/FACILITY_ARRIVAL_STANDALONE.md",
+        "offline documentation required literal missing:standalone:## Engine evolution and reproducibility boundary"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"canonical engine-evolution document differs:docs/FACILITY_ARRIVAL_STANDALONE.md\",\n    \"engine-evolution document byte count differs:docs/FACILITY_ARRIVAL_STANDALONE.md\",\n    \"engine-evolution document hash differs:docs/FACILITY_ARRIVAL_STANDALONE.md\",\n    \"offline documentation required literal missing:standalone:## Engine evolution and reproducibility boundary\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "canonical engine-evolution document differs:docs/FACILITY_ARRIVAL_STANDALONE.md",
+        "engine-evolution document byte count differs:docs/FACILITY_ARRIVAL_STANDALONE.md",
+        "engine-evolution document hash differs:docs/FACILITY_ARRIVAL_STANDALONE.md",
+        "engine-evolution guardrail missing:standalone:## Engine evolution and reproducibility boundary",
+        "offline documentation required literal missing:standalone:## Engine evolution and reproducibility boundary"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"capability_ratchet_epoch\": 2,\n  \"checker_profile\": \"PYTHON_ENGINE_EVOLUTION_DOCUMENTATION_V3\",\n  \"classification\": \"FAIL\",\n  \"documents\": 4,\n  \"errors\": [\n    \"canonical engine-evolution document differs:docs/FACILITY_ARRIVAL_STANDALONE.md\",\n    \"engine-evolution document byte count differs:docs/FACILITY_ARRIVAL_STANDALONE.md\",\n    \"engine-evolution document hash differs:docs/FACILITY_ARRIVAL_STANDALONE.md\",\n    \"engine-evolution guardrail missing:standalone:## Engine evolution and reproducibility boundary\",\n    \"offline documentation required literal missing:standalone:## Engine evolution and reproducibility boundary\"\n  ],\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\",\n  \"technical_debt_ratchet_epoch\": 4\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "canonical_repository_declaration_changed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical repository declaration differs",
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md",
+        "offline documentation required literal missing:root:Canonical repository: https://github.com/SDF-01/ProjectAsklepios"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"canonical repository declaration differs\",\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\",\n    \"offline documentation required literal missing:root:Canonical repository: https://github.com/SDF-01/ProjectAsklepios\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "canonical repository declaration differs",
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md",
+        "offline documentation required literal missing:root:Canonical repository: https://github.com/SDF-01/ProjectAsklepios"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"capability_ratchet_epoch\": 2,\n  \"checker_profile\": \"PYTHON_ENGINE_EVOLUTION_DOCUMENTATION_V3\",\n  \"classification\": \"FAIL\",\n  \"documents\": 4,\n  \"errors\": [\n    \"canonical repository declaration differs\",\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\",\n    \"offline documentation required literal missing:root:Canonical repository: https://github.com/SDF-01/ProjectAsklepios\"\n  ],\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\",\n  \"technical_debt_ratchet_epoch\": 4\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "catalog_conflated_with_generated_scenarios",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md",
+        "offline documentation forbidden claim:root:generated scenario catalog (107 toon-authored exercises)",
+        "offline documentation required literal missing:root:## Static exercise catalog (100 TOON-authored exercises)"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\",\n    \"offline documentation forbidden claim:root:generated scenario catalog (107 toon-authored exercises)\",\n    \"offline documentation required literal missing:root:## Static exercise catalog (100 TOON-authored exercises)\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md",
+        "offline documentation forbidden claim:root:generated scenario catalog (107 toon-authored exercises)",
+        "offline documentation required literal missing:root:## Static exercise catalog (100 TOON-authored exercises)",
+        "static exercise catalog conflated with generated scenarios",
+        "static exercise catalog identity differs"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"capability_ratchet_epoch\": 2,\n  \"checker_profile\": \"PYTHON_ENGINE_EVOLUTION_DOCUMENTATION_V3\",\n  \"classification\": \"FAIL\",\n  \"documents\": 4,\n  \"errors\": [\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\",\n    \"offline documentation forbidden claim:root:generated scenario catalog (107 toon-authored exercises)\",\n    \"offline documentation required literal missing:root:## Static exercise catalog (100 TOON-authored exercises)\",\n    \"static exercise catalog conflated with generated scenarios\",\n    \"static exercise catalog identity differs\"\n  ],\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\",\n  \"technical_debt_ratchet_epoch\": 4\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "live_deployment_claim_injected",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md",
+        "offline documentation forbidden claim:root:the live deployment is healthy"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"canonical engine-evolution document differs:README.md\",\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\",\n    \"offline documentation forbidden claim:root:the live deployment is healthy\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md",
+        "offline documentation forbidden claim:root:the live deployment is healthy",
+        "unsupported live deployment claim:the live deployment is healthy"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"capability_ratchet_epoch\": 2,\n  \"checker_profile\": \"PYTHON_ENGINE_EVOLUTION_DOCUMENTATION_V3\",\n  \"classification\": \"FAIL\",\n  \"documents\": 4,\n  \"errors\": [\n    \"canonical engine-evolution document differs:README.md\",\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\",\n    \"offline documentation forbidden claim:root:the live deployment is healthy\",\n    \"unsupported live deployment claim:the live deployment is healthy\"\n  ],\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\",\n  \"technical_debt_ratchet_epoch\": 4\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "checker_boundary_removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md",
+        "offline documentation required literal missing:root:- Checker boundary:"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"canonical engine-evolution document differs:README.md\",\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\",\n    \"offline documentation required literal missing:root:- Checker boundary:\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md",
+        "offline documentation required literal missing:root:- Checker boundary:"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"capability_ratchet_epoch\": 2,\n  \"checker_profile\": \"PYTHON_ENGINE_EVOLUTION_DOCUMENTATION_V3\",\n  \"classification\": \"FAIL\",\n  \"documents\": 4,\n  \"errors\": [\n    \"canonical engine-evolution document differs:README.md\",\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\",\n    \"offline documentation required literal missing:root:- Checker boundary:\"\n  ],\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\",\n  \"technical_debt_ratchet_epoch\": 4\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "artifact_authority_removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md",
+        "offline documentation required literal missing:root:- Artifact authority:"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"canonical engine-evolution document differs:README.md\",\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\",\n    \"offline documentation required literal missing:root:- Artifact authority:\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md",
+        "offline documentation required literal missing:root:- Artifact authority:"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"capability_ratchet_epoch\": 2,\n  \"checker_profile\": \"PYTHON_ENGINE_EVOLUTION_DOCUMENTATION_V3\",\n  \"classification\": \"FAIL\",\n  \"documents\": 4,\n  \"errors\": [\n    \"canonical engine-evolution document differs:README.md\",\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\",\n    \"offline documentation required literal missing:root:- Artifact authority:\"\n  ],\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\",\n  \"technical_debt_ratchet_epoch\": 4\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "evidence_freshness_removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md",
+        "offline documentation required literal missing:root:- Evidence freshness:"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"canonical engine-evolution document differs:README.md\",\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\",\n    \"offline documentation required literal missing:root:- Evidence freshness:\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md",
+        "offline documentation required literal missing:root:- Evidence freshness:"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"capability_ratchet_epoch\": 2,\n  \"checker_profile\": \"PYTHON_ENGINE_EVOLUTION_DOCUMENTATION_V3\",\n  \"classification\": \"FAIL\",\n  \"documents\": 4,\n  \"errors\": [\n    \"canonical engine-evolution document differs:README.md\",\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\",\n    \"offline documentation required literal missing:root:- Evidence freshness:\"\n  ],\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\",\n  \"technical_debt_ratchet_epoch\": 4\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "release_identity_dag_removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md",
+        "offline documentation required literal missing:root:- Release-identity DAG:"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"canonical engine-evolution document differs:README.md\",\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\",\n    \"offline documentation required literal missing:root:- Release-identity DAG:\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md",
+        "offline documentation required literal missing:root:- Release-identity DAG:"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"capability_ratchet_epoch\": 2,\n  \"checker_profile\": \"PYTHON_ENGINE_EVOLUTION_DOCUMENTATION_V3\",\n  \"classification\": \"FAIL\",\n  \"documents\": 4,\n  \"errors\": [\n    \"canonical engine-evolution document differs:README.md\",\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\",\n    \"offline documentation required literal missing:root:- Release-identity DAG:\"\n  ],\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\",\n  \"technical_debt_ratchet_epoch\": 4\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "route_topology_removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md",
+        "offline documentation required literal missing:root:- Route topology:"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"canonical engine-evolution document differs:README.md\",\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\",\n    \"offline documentation required literal missing:root:- Route topology:\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md",
+        "offline documentation required literal missing:root:- Route topology:"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"capability_ratchet_epoch\": 2,\n  \"checker_profile\": \"PYTHON_ENGINE_EVOLUTION_DOCUMENTATION_V3\",\n  \"classification\": \"FAIL\",\n  \"documents\": 4,\n  \"errors\": [\n    \"canonical engine-evolution document differs:README.md\",\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\",\n    \"offline documentation required literal missing:root:- Route topology:\"\n  ],\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\",\n  \"technical_debt_ratchet_epoch\": 4\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "technical_debt_guardrail_removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"canonical engine-evolution document differs:README.md\",\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"capability_ratchet_epoch\": 2,\n  \"checker_profile\": \"PYTHON_ENGINE_EVOLUTION_DOCUMENTATION_V3\",\n  \"classification\": \"FAIL\",\n  \"documents\": 4,\n  \"errors\": [\n    \"canonical engine-evolution document differs:README.md\",\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\"\n  ],\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\",\n  \"technical_debt_ratchet_epoch\": 4\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "diagnostic_model_removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md",
+        "offline documentation required literal missing:root:- Diagnostic model:"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"canonical engine-evolution document differs:README.md\",\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\",\n    \"offline documentation required literal missing:root:- Diagnostic model:\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md",
+        "offline documentation required literal missing:root:- Diagnostic model:"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"capability_ratchet_epoch\": 2,\n  \"checker_profile\": \"PYTHON_ENGINE_EVOLUTION_DOCUMENTATION_V3\",\n  \"classification\": \"FAIL\",\n  \"documents\": 4,\n  \"errors\": [\n    \"canonical engine-evolution document differs:README.md\",\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\",\n    \"offline documentation required literal missing:root:- Diagnostic model:\"\n  ],\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\",\n  \"technical_debt_ratchet_epoch\": 4\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "active_release_version_stale",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "engine-evolution document hash differs:README.md",
+        "stale active engine-evolution version:root"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"canonical engine-evolution document differs:README.md\",\n    \"engine-evolution document hash differs:README.md\",\n    \"stale active engine-evolution version:root\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "engine-evolution document hash differs:README.md",
+        "stale active engine-evolution version:root"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"capability_ratchet_epoch\": 2,\n  \"checker_profile\": \"PYTHON_ENGINE_EVOLUTION_DOCUMENTATION_V3\",\n  \"classification\": \"FAIL\",\n  \"documents\": 4,\n  \"errors\": [\n    \"canonical engine-evolution document differs:README.md\",\n    \"engine-evolution document hash differs:README.md\",\n    \"stale active engine-evolution version:root\"\n  ],\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\",\n  \"technical_debt_ratchet_epoch\": 4\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "standalone_blank_line_at_eof",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "engine-evolution document byte count differs:docs/FACILITY_ARRIVAL_STANDALONE.md",
+        "engine-evolution document has blank line at EOF:docs/FACILITY_ARRIVAL_STANDALONE.md",
+        "engine-evolution document hash differs:docs/FACILITY_ARRIVAL_STANDALONE.md"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"engine-evolution document byte count differs:docs/FACILITY_ARRIVAL_STANDALONE.md\",\n    \"engine-evolution document has blank line at EOF:docs/FACILITY_ARRIVAL_STANDALONE.md\",\n    \"engine-evolution document hash differs:docs/FACILITY_ARRIVAL_STANDALONE.md\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "canonical engine-evolution document differs:docs/FACILITY_ARRIVAL_STANDALONE.md",
+        "engine-evolution document byte count differs:docs/FACILITY_ARRIVAL_STANDALONE.md",
+        "engine-evolution document has blank line at EOF:docs/FACILITY_ARRIVAL_STANDALONE.md",
+        "engine-evolution document hash differs:docs/FACILITY_ARRIVAL_STANDALONE.md"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"capability_ratchet_epoch\": 2,\n  \"checker_profile\": \"PYTHON_ENGINE_EVOLUTION_DOCUMENTATION_V3\",\n  \"classification\": \"FAIL\",\n  \"documents\": 4,\n  \"errors\": [\n    \"canonical engine-evolution document differs:docs/FACILITY_ARRIVAL_STANDALONE.md\",\n    \"engine-evolution document byte count differs:docs/FACILITY_ARRIVAL_STANDALONE.md\",\n    \"engine-evolution document has blank line at EOF:docs/FACILITY_ARRIVAL_STANDALONE.md\",\n    \"engine-evolution document hash differs:docs/FACILITY_ARRIVAL_STANDALONE.md\"\n  ],\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\",\n  \"technical_debt_ratchet_epoch\": 4\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "root_terminal_lf_removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md",
+        "engine-evolution document missing terminal LF:README.md"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\",\n    \"engine-evolution document missing terminal LF:README.md\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "canonical engine-evolution document differs:README.md",
+        "engine-evolution document byte count differs:README.md",
+        "engine-evolution document hash differs:README.md",
+        "engine-evolution document missing terminal LF:README.md"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"capability_ratchet_epoch\": 2,\n  \"checker_profile\": \"PYTHON_ENGINE_EVOLUTION_DOCUMENTATION_V3\",\n  \"classification\": \"FAIL\",\n  \"documents\": 4,\n  \"errors\": [\n    \"canonical engine-evolution document differs:README.md\",\n    \"engine-evolution document byte count differs:README.md\",\n    \"engine-evolution document hash differs:README.md\",\n    \"engine-evolution document missing terminal LF:README.md\"\n  ],\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\",\n  \"technical_debt_ratchet_epoch\": 4\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "document_hash_stale",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "engine-evolution document byte count differs:examples/facility-arrival/README.md",
+        "engine-evolution document has trailing whitespace:examples/facility-arrival/README.md:93",
+        "engine-evolution document hash differs:examples/facility-arrival/README.md",
+        "engine-evolution document missing terminal LF:examples/facility-arrival/README.md"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"engine-evolution document byte count differs:examples/facility-arrival/README.md\",\n    \"engine-evolution document has trailing whitespace:examples/facility-arrival/README.md:93\",\n    \"engine-evolution document hash differs:examples/facility-arrival/README.md\",\n    \"engine-evolution document missing terminal LF:examples/facility-arrival/README.md\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "engine-evolution document byte count differs:examples/facility-arrival/README.md",
+        "engine-evolution document has trailing whitespace:examples/facility-arrival/README.md:93",
+        "engine-evolution document hash differs:examples/facility-arrival/README.md",
+        "engine-evolution document missing terminal LF:examples/facility-arrival/README.md"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"capability_ratchet_epoch\": 2,\n  \"checker_profile\": \"PYTHON_ENGINE_EVOLUTION_DOCUMENTATION_V3\",\n  \"classification\": \"FAIL\",\n  \"documents\": 4,\n  \"errors\": [\n    \"engine-evolution document byte count differs:examples/facility-arrival/README.md\",\n    \"engine-evolution document has trailing whitespace:examples/facility-arrival/README.md:93\",\n    \"engine-evolution document hash differs:examples/facility-arrival/README.md\",\n    \"engine-evolution document missing terminal LF:examples/facility-arrival/README.md\"\n  ],\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\",\n  \"technical_debt_ratchet_epoch\": 4\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "descriptor_document_binding_removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "engine-evolution document absent from offline artifact inventory:README.md"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"engine-evolution document absent from offline artifact inventory:README.md\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "engine-evolution document absent from offline artifact inventory:README.md"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"capability_ratchet_epoch\": 2,\n  \"checker_profile\": \"PYTHON_ENGINE_EVOLUTION_DOCUMENTATION_V3\",\n  \"classification\": \"FAIL\",\n  \"documents\": 4,\n  \"errors\": [\n    \"engine-evolution document absent from offline artifact inventory:README.md\"\n  ],\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\",\n  \"technical_debt_ratchet_epoch\": 4\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "policy_required_literal_floor_weakened",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "engine-evolution documentation required-literal contract differs"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"engine-evolution documentation required-literal contract differs\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "offline documentation required-literal contract differs"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"classification\": \"FAIL\",\n  \"errors\": [\n    \"offline documentation required-literal contract differs\"\n  ],\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\"\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "policy_graph_binding_mode_weakened",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "engine-evolution graph binding mode differs"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"engine-evolution graph binding mode differs\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "offline graph binding mode differs"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"classification\": \"FAIL\",\n  \"errors\": [\n    \"offline graph binding mode differs\"\n  ],\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\"\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "policy_forbidden_claim_floor_weakened",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "engine-evolution documentation forbidden-phrase contract differs"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"documents\": 4,\n  \"release_id\": \"ASK-OFFLINE-RC3.7A.3\",\n  \"genome_id\": \"ASK-GENOME-17BD61FD1C616438\",\n  \"capability_ratchet_epoch\": 2,\n  \"technical_debt_ratchet_epoch\": 4,\n  \"graph_id\": \"asklepios-rc3.7a.3-evidence-calibrated-evolution-graph\",\n  \"errors\": [\n    \"engine-evolution documentation forbidden-phrase contract differs\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "offline documentation forbidden-phrase contract differs"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"classification\": \"FAIL\",\n  \"errors\": [\n    \"offline documentation forbidden-phrase contract differs\"\n  ],\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\"\n}\n",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "accepted_attack": false,
+      "case_id": "symlink_document_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "expected_pass": false,
+      "node_classification": "FAIL",
+      "node_errors": [
+        "CheckerContractError:path parent is unsafe:README.md"
+      ],
+      "node_exit_status": 3,
+      "node_tail": "{\n  \"schema_version\": \"1.1.0\",\n  \"classification\": \"FAIL\",\n  \"status\": \"FAIL\",\n  \"checker_profile\": \"INDEPENDENT_NODE_ENGINE_EVOLUTION_DOCUMENTATION_V4\",\n  \"errors\": [\n    \"CheckerContractError:path parent is unsafe:README.md\"\n  ]\n}\n",
+      "observed_pass": false,
+      "pass": true,
+      "python_classification": "FAIL",
+      "python_errors": [
+        "symlink forbidden in repository path:README.md"
+      ],
+      "python_exit_status": 3,
+      "python_tail": "{\n  \"classification\": \"FAIL\",\n  \"errors\": [\n    \"symlink forbidden in repository path:README.md\"\n  ],\n  \"schema_version\": \"1.1.0\",\n  \"status\": \"FAIL\"\n}\n",
+      "status": "EXPECTED_REJECTION"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

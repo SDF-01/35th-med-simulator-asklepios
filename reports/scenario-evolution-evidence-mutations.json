@@ -1,0 +1,307 @@
+{
+  "accepted_attacks": 0,
+  "cases": 21,
+  "classification": "PASS",
+  "errors": [],
+  "expected_rejections": 19,
+  "results": [
+    {
+      "authenticated_receipts": 0,
+      "case_id": "standalone_report_hash_mode",
+      "checker_errors": [],
+      "classification": "PASS",
+      "exit_status": 0,
+      "expected_pass": true,
+      "observed_classification": "PASS",
+      "observed_pass": true,
+      "pass": true,
+      "receipt_binding_mode": "STANDALONE_REPORT_HASH_ONLY"
+    },
+    {
+      "authenticated_receipts": 24,
+      "case_id": "graph_bound_receipt_baseline",
+      "checker_errors": [],
+      "classification": "PASS",
+      "exit_status": 0,
+      "expected_pass": true,
+      "observed_classification": "PASS",
+      "observed_pass": true,
+      "pass": true,
+      "receipt_binding_mode": "GRAPH_RECEIPTS_REQUIRED"
+    },
+    {
+      "authenticated_receipts": 0,
+      "case_id": "production_policy_stage_floor_regression_rejected",
+      "checker_errors": [
+        "scenario evolution production-policy graph stage floor regressed"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "exit_status": 3,
+      "expected_pass": false,
+      "observed_classification": "FAIL",
+      "observed_pass": false,
+      "pass": true,
+      "receipt_binding_mode": "STANDALONE_REPORT_HASH_ONLY"
+    },
+    {
+      "authenticated_receipts": 0,
+      "case_id": "graph_below_production_policy_stage_floor_rejected",
+      "checker_errors": [
+        "scenario evolution graph stage count is below the production-policy floor"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "exit_status": 3,
+      "expected_pass": false,
+      "observed_classification": "FAIL",
+      "observed_pass": false,
+      "pass": true,
+      "receipt_binding_mode": "STANDALONE_REPORT_HASH_ONLY"
+    },
+    {
+      "authenticated_receipts": 23,
+      "case_id": "behavior_archive_receipt_missing",
+      "checker_errors": [
+        "scenario evolution receipt invalid or missing:scenario.contracts"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "exit_status": 3,
+      "expected_pass": false,
+      "observed_classification": "FAIL",
+      "observed_pass": false,
+      "pass": true,
+      "receipt_binding_mode": "GRAPH_RECEIPTS_REQUIRED"
+    },
+    {
+      "authenticated_receipts": 23,
+      "case_id": "behavior_archive_checker_receipt_missing",
+      "checker_errors": [
+        "scenario evolution receipt invalid or missing:scenario.behavior-archive-check"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "exit_status": 3,
+      "expected_pass": false,
+      "observed_classification": "FAIL",
+      "observed_pass": false,
+      "pass": true,
+      "receipt_binding_mode": "GRAPH_RECEIPTS_REQUIRED"
+    },
+    {
+      "authenticated_receipts": 23,
+      "case_id": "behavior_archive_attack_receipt_missing",
+      "checker_errors": [
+        "scenario evolution receipt invalid or missing:scenario.behavior-archive-attacks"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "exit_status": 3,
+      "expected_pass": false,
+      "observed_classification": "FAIL",
+      "observed_pass": false,
+      "pass": true,
+      "receipt_binding_mode": "GRAPH_RECEIPTS_REQUIRED"
+    },
+    {
+      "authenticated_receipts": 23,
+      "case_id": "missing_genome_receipt_rejected",
+      "checker_errors": [
+        "scenario evolution receipt invalid or missing:scenario.genome-node"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "exit_status": 3,
+      "expected_pass": false,
+      "observed_classification": "FAIL",
+      "observed_pass": false,
+      "pass": true,
+      "receipt_binding_mode": "GRAPH_RECEIPTS_REQUIRED"
+    },
+    {
+      "authenticated_receipts": 23,
+      "case_id": "missing_offline_receipt_rejected",
+      "checker_errors": [
+        "scenario evolution receipt invalid or missing:offline.release-attacks"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "exit_status": 3,
+      "expected_pass": false,
+      "observed_classification": "FAIL",
+      "observed_pass": false,
+      "pass": true,
+      "receipt_binding_mode": "GRAPH_RECEIPTS_REQUIRED"
+    },
+    {
+      "authenticated_receipts": 23,
+      "case_id": "missing_engine_docs_receipt_rejected",
+      "checker_errors": [
+        "scenario evolution receipt invalid or missing:scenario.engine-evolution-doc-attacks"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "exit_status": 3,
+      "expected_pass": false,
+      "observed_classification": "FAIL",
+      "observed_pass": false,
+      "pass": true,
+      "receipt_binding_mode": "GRAPH_RECEIPTS_REQUIRED"
+    },
+    {
+      "authenticated_receipts": 23,
+      "case_id": "missing_node_cli_receipt_rejected",
+      "checker_errors": [
+        "scenario evolution receipt invalid or missing:scenario.node-checker-cli-attacks"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "exit_status": 3,
+      "expected_pass": false,
+      "observed_classification": "FAIL",
+      "observed_pass": false,
+      "pass": true,
+      "receipt_binding_mode": "GRAPH_RECEIPTS_REQUIRED"
+    },
+    {
+      "authenticated_receipts": 23,
+      "case_id": "missing_debt_ratchet_receipt_rejected",
+      "checker_errors": [
+        "scenario evolution receipt invalid or missing:release.debt-ratchet-attacks"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "exit_status": 3,
+      "expected_pass": false,
+      "observed_classification": "FAIL",
+      "observed_pass": false,
+      "pass": true,
+      "receipt_binding_mode": "GRAPH_RECEIPTS_REQUIRED"
+    },
+    {
+      "authenticated_receipts": 23,
+      "case_id": "missing_standalone_receipt_rejected",
+      "checker_errors": [
+        "scenario evolution receipt invalid or missing:standalone.contracts"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "exit_status": 3,
+      "expected_pass": false,
+      "observed_classification": "FAIL",
+      "observed_pass": false,
+      "pass": true,
+      "receipt_binding_mode": "GRAPH_RECEIPTS_REQUIRED"
+    },
+    {
+      "authenticated_receipts": 23,
+      "case_id": "forged_receipt_digest_rejected",
+      "checker_errors": [
+        "scenario evolution receipt invalid or missing:scenario.verified-example-python"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "exit_status": 3,
+      "expected_pass": false,
+      "observed_classification": "FAIL",
+      "observed_pass": false,
+      "pass": true,
+      "receipt_binding_mode": "GRAPH_RECEIPTS_REQUIRED"
+    },
+    {
+      "authenticated_receipts": 24,
+      "case_id": "stale_behavior_archive_output",
+      "checker_errors": [
+        "scenario evolution receipt differs:scenario.contracts:output_inventory",
+        "scenario evolution receipt differs:scenario.contracts:output_root_sha256"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "exit_status": 3,
+      "expected_pass": false,
+      "observed_classification": "FAIL",
+      "observed_pass": false,
+      "pass": true,
+      "receipt_binding_mode": "GRAPH_RECEIPTS_REQUIRED"
+    },
+    {
+      "authenticated_receipts": 24,
+      "case_id": "stale_genome_report_rejected",
+      "checker_errors": [
+        "scenario evolution receipt differs:scenario.genome-node:output_inventory",
+        "scenario evolution receipt differs:scenario.genome-node:output_root_sha256"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "exit_status": 3,
+      "expected_pass": false,
+      "observed_classification": "FAIL",
+      "observed_pass": false,
+      "pass": true,
+      "receipt_binding_mode": "GRAPH_RECEIPTS_REQUIRED"
+    },
+    {
+      "authenticated_receipts": 24,
+      "case_id": "stale_offline_descriptor_rejected",
+      "checker_errors": [
+        "scenario evolution receipt differs:offline.release-generate:output_inventory",
+        "scenario evolution receipt differs:offline.release-generate:output_root_sha256"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "exit_status": 3,
+      "expected_pass": false,
+      "observed_classification": "FAIL",
+      "observed_pass": false,
+      "pass": true,
+      "receipt_binding_mode": "GRAPH_RECEIPTS_REQUIRED"
+    },
+    {
+      "authenticated_receipts": 24,
+      "case_id": "stale_engine_document_rejected",
+      "checker_errors": [
+        "scenario evolution receipt differs:offline.release-generate:output_inventory",
+        "scenario evolution receipt differs:offline.release-generate:output_root_sha256"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "exit_status": 3,
+      "expected_pass": false,
+      "observed_classification": "FAIL",
+      "observed_pass": false,
+      "pass": true,
+      "receipt_binding_mode": "GRAPH_RECEIPTS_REQUIRED"
+    },
+    {
+      "authenticated_receipts": 24,
+      "case_id": "wrong_graph_identity_rejected",
+      "checker_errors": [
+        "scenario evolution receipt differs:scenario.capability-ratchet:graph_id"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "exit_status": 3,
+      "expected_pass": false,
+      "observed_classification": "FAIL",
+      "observed_pass": false,
+      "pass": true,
+      "receipt_binding_mode": "GRAPH_RECEIPTS_REQUIRED"
+    },
+    {
+      "authenticated_receipts": 24,
+      "case_id": "failed_receipt_rejected_even_when_rehashed",
+      "checker_errors": [
+        "scenario evolution receipt differs:scenario.engine-evolution-doc-attacks:classification",
+        "scenario evolution receipt differs:scenario.engine-evolution-doc-attacks:exit_status"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "exit_status": 3,
+      "expected_pass": false,
+      "observed_classification": "FAIL",
+      "observed_pass": false,
+      "pass": true,
+      "receipt_binding_mode": "GRAPH_RECEIPTS_REQUIRED"
+    },
+    {
+      "authenticated_receipts": 24,
+      "case_id": "stage_configuration_forgery_rejected",
+      "checker_errors": [
+        "scenario evolution receipt differs:offline.release-node:stage_config_sha256"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "exit_status": 3,
+      "expected_pass": false,
+      "observed_classification": "FAIL",
+      "observed_pass": false,
+      "pass": true,
+      "receipt_binding_mode": "GRAPH_RECEIPTS_REQUIRED"
+    }
+  ],
+  "schema_version": "1.2.0",
+  "status": "PASS",
+  "truth_boundary": "Report hashes alone are informative; graph-bound release evidence additionally requires current, authenticated predecessor receipts."
+}

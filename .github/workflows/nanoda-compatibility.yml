@@ -1,0 +1,47 @@
+name: nanoda-compatibility-monitor
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compatibility:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+      - name: Run the independent checker compatibility probe
+        id: nanoda
+        continue-on-error: true
+        uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9
+        with:
+          auto-config: false
+          build: true
+          nanoda: true
+          nanoda-allow-sorry: false
+          use-github-cache: false
+      - name: Record compatibility status
+        env:
+          STEP_OUTCOME: ${{ steps.nanoda.outcome }}
+          NANODA_STATUS: ${{ steps.nanoda.outputs.nanoda-status }}
+        run: |
+          mkdir -p reports
+          python3 - <<'PY'
+          import json, os, pathlib
+          report = {
+              "schema_version": "1.0.0",
+              "purpose": "Independent-checker compatibility monitoring only",
+              "step_outcome": os.environ.get("STEP_OUTCOME", ""),
+              "nanoda_status": os.environ.get("NANODA_STATUS", ""),
+              "certification_effect": "none"
+          }
+          pathlib.Path("reports/nanoda-compatibility.json").write_text(
+              json.dumps(report, indent=2) + "\n", encoding="utf-8"
+          )
+          PY
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: nanoda-compatibility
+          path: reports/nanoda-compatibility.json

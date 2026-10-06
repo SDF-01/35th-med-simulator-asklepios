@@ -1,0 +1,105 @@
+{
+  "manual_validation": {
+    "accessibility_user_validation": "REQUIRED_FOR_CONFORMANCE_CLAIM",
+    "educational_effectiveness_study": "REQUIRED_FOR_EFFECTIVENESS_CLAIM",
+    "facilitator_pilot": "REQUIRED_BEFORE_PROGRAM_ADOPTION",
+    "representative_learner_review": "REQUIRED_BEFORE_PROGRAM_ADOPTION"
+  },
+  "minimum_engine_evidence": {
+    "learner_answer_leakage_findings": 0,
+    "multiple_valid_routes": 2,
+    "reachable_active_dead_ends": 0,
+    "required_strength_three_coverage_ratio": 1.0,
+    "unsafe_branches": 2
+  },
+  "profile_id": "asklepios-simulation-quality-v1",
+  "required_domains": {
+    "debriefing": {
+      "required": true,
+      "required_elements": [
+        "reaction_prompt",
+        "analysis_prompt",
+        "summary_prompt",
+        "action_commitment",
+        "traceable_event_timeline"
+      ]
+    },
+    "evaluation": {
+      "required": true,
+      "required_elements": [
+        "source_bound_observations",
+        "scoring_boundary",
+        "uncertainty_disclosure",
+        "not_high_stakes_without_validation"
+      ]
+    },
+    "facilitation": {
+      "required": true,
+      "required_elements": [
+        "manual_start",
+        "manual_pause_or_reset",
+        "explicit_cues",
+        "fail_closed_invalid_transition",
+        "facilitator_event_trace"
+      ]
+    },
+    "learner_experience": {
+      "required": true,
+      "required_elements": [
+        "plain_language",
+        "keyboard_operability",
+        "focus_feedback",
+        "error_recovery",
+        "no_answer_leakage",
+        "role_separation",
+        "progress_visibility"
+      ]
+    },
+    "operations": {
+      "required": true,
+      "required_elements": [
+        "version_identity",
+        "deterministic_replay",
+        "incident_evidence",
+        "rollback_path",
+        "health_check",
+        "access_control"
+      ]
+    },
+    "outcomes_and_objectives": {
+      "minimum_objectives": 1,
+      "objective_properties": [
+        "observable",
+        "scenario_relevant",
+        "debriefable"
+      ],
+      "required": true
+    },
+    "prebriefing": {
+      "required": true,
+      "required_elements": [
+        "intended_use",
+        "fiction_contract",
+        "roles",
+        "psychological_safety",
+        "technical_orientation",
+        "confidentiality_expectation",
+        "limitations"
+      ]
+    },
+    "scenario_design": {
+      "required": true,
+      "required_elements": [
+        "source_identity",
+        "bounded_state_model",
+        "deterministic_seed_or_fixed_case",
+        "operational_context",
+        "unsafe_branch",
+        "terminal_state",
+        "provenance"
+      ]
+    }
+  },
+  "schema_version": "1.0.0",
+  "scope": "reviewed_healthcare_simulation_scenarios"
+}

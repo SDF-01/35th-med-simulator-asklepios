@@ -1,0 +1,881 @@
+{
+  "schema_version": "1.2.0",
+  "classification": "PASS",
+  "status": "PASS",
+  "assurance_profile": "CONSTRAINT_AWARE_THREE_WAY_COVERING_ARRAY_AND_BIJECTIVE_CONTEXT_CYCLE_V1",
+  "generated_cases": 107,
+  "topics_checked": 5,
+  "deterministic_repeats": 107,
+  "unique_certified_packages": 107,
+  "unique_operational_contexts": 106,
+  "total_operational_context_space_per_topic": 1152,
+  "complete_assignment_cycle_verified_for_each_topic": true,
+  "missing_reviewed_factor_values": [],
+  "experience_checks": 12733,
+  "independent_checks": 16207,
+  "evidence_non_authoring_cases": 107,
+  "covering_array": {
+    "schema_version": "1.0.0",
+    "status": "PASS",
+    "strength": 3,
+    "factor_names": [
+      "communications",
+      "location",
+      "resource_event",
+      "resources",
+      "topic",
+      "visibility",
+      "weather"
+    ],
+    "factor_value_counts": {
+      "communications": 3,
+      "location": 4,
+      "resource_event": 4,
+      "resources": 2,
+      "topic": 5,
+      "visibility": 3,
+      "weather": 4
+    },
+    "constraint_ids": [],
+    "total_cartesian_assignments": 5760,
+    "feasible_assignments": 5760,
+    "infeasible_assignments": 0,
+    "potential_interactions": 1543,
+    "required_feasible_interactions": 1543,
+    "infeasible_interactions": 0,
+    "covered_interactions": 1543,
+    "schedule_rows": 107,
+    "constraint_evaluations": 0,
+    "assignment_space_sha256": "cb3aeccd4e6779af8263c7b8381bb1e93cbcf116e53d1be20acdd5df947fd9c1",
+    "schedule_sha256": "2c530c6693f7dd229b262908ac922b7531fc190392d3788f39161a429d34bba3"
+  },
+  "assignment_cycles": {
+    "massive_hemorrhage": {
+      "schema_version": "1.0.0",
+      "status": "PASS",
+      "selection_profile": "CONSTRAINT_AWARE_AFFINE_PERMUTATION_V1",
+      "selection_key_sha256": "84e1dfadb5864554a5ce6c8790ef9b30bc824d3e05f0c05a42892857bbab9f2e",
+      "assignment_space_sha256": "d626786bdec6cac21a0c6e67b92aeb53888361e5a13dfd13499da5c53efad358",
+      "cycle_sha256": "1988724c043a56b50f4687ea63e38638697b5d1db1fd4e890f42299038744ec8",
+      "cycle_length": 1152,
+      "offset": 45,
+      "stride": 85,
+      "constraint_ids": [],
+      "constraint_evaluations": 0
+    },
+    "airway": {
+      "schema_version": "1.0.0",
+      "status": "PASS",
+      "selection_profile": "CONSTRAINT_AWARE_AFFINE_PERMUTATION_V1",
+      "selection_key_sha256": "4dc9e492e7ab1cf4ec008d90d065b37eafd4cf721ab3c6f48da0053ecbb034ce",
+      "assignment_space_sha256": "d626786bdec6cac21a0c6e67b92aeb53888361e5a13dfd13499da5c53efad358",
+      "cycle_sha256": "2edefe141c6f643655bfe6a519cb201da7dcf432e868bde05f23185826c6a78c",
+      "cycle_length": 1152,
+      "offset": 274,
+      "stride": 887,
+      "constraint_ids": [],
+      "constraint_evaluations": 0
+    },
+    "respiration_chest": {
+      "schema_version": "1.0.0",
+      "status": "PASS",
+      "selection_profile": "CONSTRAINT_AWARE_AFFINE_PERMUTATION_V1",
+      "selection_key_sha256": "0f509614d1728d6ef1f2341c4613780253dc59bb51e6cea441e589ca733b77c1",
+      "assignment_space_sha256": "d626786bdec6cac21a0c6e67b92aeb53888361e5a13dfd13499da5c53efad358",
+      "cycle_sha256": "59fd9f780c1ef0cadee96ef6df900c6ed8bbe9768fbfa9c2db7deeb050869a4b",
+      "cycle_length": 1152,
+      "offset": 916,
+      "stride": 1007,
+      "constraint_ids": [],
+      "constraint_evaluations": 0
+    },
+    "evacuation_transport": {
+      "schema_version": "1.0.0",
+      "status": "PASS",
+      "selection_profile": "CONSTRAINT_AWARE_AFFINE_PERMUTATION_V1",
+      "selection_key_sha256": "53a785a4ac7adaccfb4bc255c462407896fb5efe047f9a94b4f60fad2521608b",
+      "assignment_space_sha256": "d626786bdec6cac21a0c6e67b92aeb53888361e5a13dfd13499da5c53efad358",
+      "cycle_sha256": "17d3bec1f446a6910145d4472b48ada149700644841f8f06cf4b119ae01c7b88",
+      "cycle_length": 1152,
+      "offset": 292,
+      "stride": 719,
+      "constraint_ids": [],
+      "constraint_evaluations": 0
+    },
+    "documentation_aar": {
+      "schema_version": "1.0.0",
+      "status": "PASS",
+      "selection_profile": "CONSTRAINT_AWARE_AFFINE_PERMUTATION_V1",
+      "selection_key_sha256": "79b4be730db154de46bfc10eb2d3558aec34abd837c2ceba11d98b21dd8a95f0",
+      "assignment_space_sha256": "d626786bdec6cac21a0c6e67b92aeb53888361e5a13dfd13499da5c53efad358",
+      "cycle_sha256": "338a3eda40708332c79fa33305464dd8e4b7437d17da068aaf2d96b02b850cd8",
+      "cycle_length": 1152,
+      "offset": 627,
+      "stride": 479,
+      "constraint_ids": [],
+      "constraint_evaluations": 0
+    }
+  },
+  "realized_rows": [
+    {
+      "topic": "airway",
+      "seed": 514,
+      "row_sha256": "29ddcea48dd7905eb601ef2a44458b2360a99e8cb058b78f81e7c5a95bde6aec",
+      "package_sha256": "dccb4d396271f0ae2f2f28c53a9b84dc591452a7973387ae3492f7a4c80665c7"
+    },
+    {
+      "topic": "documentation_aar",
+      "seed": 778,
+      "row_sha256": "2a59c9765feb3bf033141493bd573850e88c4621506124ec17e8f0c12b2cbc41",
+      "package_sha256": "5f25aa7f23fec57f0dcc2c0e47fe8db5960f3e8426e44765d8fa4a97e114ec64"
+    },
+    {
+      "topic": "evacuation_transport",
+      "seed": 1038,
+      "row_sha256": "09b8663ea114002ed330a8980cf28f8fc4d534fe5ecd3bf49578be8ba45cd7b5",
+      "package_sha256": "fcaae19933dd1a18aa8cd674ba054e2630d1b4947bbdcad06a7738b81ebc165d"
+    },
+    {
+      "topic": "massive_hemorrhage",
+      "seed": 706,
+      "row_sha256": "ca2afb8d277f879f5ebc17f9e0eeaef0643dd6ec4d2bb260887dfd649871c2d3",
+      "package_sha256": "e02b0437e068767d99a707802d3e21c46004d9b295cb2bdc468c3b521a0089d6"
+    },
+    {
+      "topic": "respiration_chest",
+      "seed": 211,
+      "row_sha256": "37b38a9da03dd73f42e77026dc893ee2b79750aab37fe5da93f52d020ad621cc",
+      "package_sha256": "23f37afd8e34d42042605448b9d02b30df73f9d059de83dea8426504caf4436f"
+    },
+    {
+      "topic": "evacuation_transport",
+      "seed": 593,
+      "row_sha256": "a8f6857b6d7df5d5f287d81f3bd4e49bb1cec8f465f2a2fb44bc1c8a0602a592",
+      "package_sha256": "9d31b3ea584e2190442e1f8d49635811eaf84017205f5c19508b0e2fa2958bba"
+    },
+    {
+      "topic": "massive_hemorrhage",
+      "seed": 845,
+      "row_sha256": "f457674a7db313fc5d0579077accae0dc22ee56e8ddf79f436a7df5c4cd83814",
+      "package_sha256": "83554d7087c4de8d03ae0f394067605ba8ed9fc60de8ba2f604eee087fd34385"
+    },
+    {
+      "topic": "airway",
+      "seed": 138,
+      "row_sha256": "5be2bb858bf522374123f8575845d9e0d4e0b94ba2b7f71f09ad7e38b860a70c",
+      "package_sha256": "3cd1c4c23272044722db6861403471f5fb22aaa5412dd58d3106c4f7d7064425"
+    },
+    {
+      "topic": "documentation_aar",
+      "seed": 909,
+      "row_sha256": "0c2e55323155fdc8bac4963b95ecf22ec871ca37e20940e63abc5f67f6cc089b",
+      "package_sha256": "5f6bf6a6ab1cc6a446c317e85ccc1c3a7a011637d9f466c3f563c0cf52c63b24"
+    },
+    {
+      "topic": "respiration_chest",
+      "seed": 890,
+      "row_sha256": "e083e3e0d312cb690ea8d1fa270e2d167085377db63dff61995f71bcd3800f59",
+      "package_sha256": "4917adb699815268a4e309f1e13c2c9504117916d6294adef1ea91d47cc4066d"
+    },
+    {
+      "topic": "massive_hemorrhage",
+      "seed": 323,
+      "row_sha256": "d675197983e6c2b0ff0de238d55ac35739071886fe0b349d94cf4f2e51a1abc7",
+      "package_sha256": "73b17a67c9ae9323d316a0ccbf490a2c9e3ff5b57206d710d1b988a7323b9121"
+    },
+    {
+      "topic": "documentation_aar",
+      "seed": 708,
+      "row_sha256": "8f6f30a3906c0b6349e293905e1f9d4ad39a803e95207ea965e1ee43bf2a8d39",
+      "package_sha256": "5d5b32426c10d2dbd728fc7421a83ad9ba243e4ad2246df45a3405cdd59084c5"
+    },
+    {
+      "topic": "airway",
+      "seed": 149,
+      "row_sha256": "1ad115b86a48f2de9ea7124e175388f8721d078ccf4cffd846a8ab13c497af7b",
+      "package_sha256": "0aada7a34618088bb6eba27e8addd2f6887ffe2220f56bcd838b04f1e655f5a2"
+    },
+    {
+      "topic": "evacuation_transport",
+      "seed": 157,
+      "row_sha256": "2ebfb2ce3c44dd23681dc41ba3caf882b2fa86610c390e336fb3cb2966418e01",
+      "package_sha256": "2a0d0f3c43a730146d139ca63f1864f2f820246b54483a940133fb7b667b3a56"
+    },
+    {
+      "topic": "respiration_chest",
+      "seed": 560,
+      "row_sha256": "cbf95939a52fc794098eb608375a5e89d742962ce0b73a2e6c47d9356ff1042e",
+      "package_sha256": "e4ddae407c1f86e2dba04fb54bfd3793f480c9a317c2f0ce820b4071b3923ab3"
+    },
+    {
+      "topic": "massive_hemorrhage",
+      "seed": 591,
+      "row_sha256": "b1fa9230c654c27dcb5532bda361b7ed41f63b98e6420b57fe77512271fc7384",
+      "package_sha256": "1edb7d7e154a7f0bbeebeb1dd6194b0b5434d19308c8cfb40a2081d376c3ff8d"
+    },
+    {
+      "topic": "documentation_aar",
+      "seed": 1025,
+      "row_sha256": "44fefd29f2e3d01d7ececc78ecf453d2cb3cef22e59207d785910ab8f33f082f",
+      "package_sha256": "af3d73bc1996587a565d33675ab6da6c98fc27a2a9d94fc9334e461a831aefcd"
+    },
+    {
+      "topic": "respiration_chest",
+      "seed": 567,
+      "row_sha256": "6f3aac1b89fdddbb5bb6030e8fdac8c3d502efd0f57c3d862fb71e20c0a0d06f",
+      "package_sha256": "f2c1f2f0ac8f1d8f817ea7fcf81a90e522c5256fe20c732022bc51b6ccdd08bb"
+    },
+    {
+      "topic": "respiration_chest",
+      "seed": 1065,
+      "row_sha256": "488cce8e9e20175a765ff013e1f3ad960ac86ed7d9e5409e8ca0bfe3bf76eef9",
+      "package_sha256": "c19560ebb8fda44e8ac249b5698c4b2c1070f01bdc243c209b9af9c08759917a"
+    },
+    {
+      "topic": "evacuation_transport",
+      "seed": 1012,
+      "row_sha256": "b83b0047302a9e3dccc6665e73049dba964f83aa38bab09c6c9d092e6f18367c",
+      "package_sha256": "13c6ac58e9c0e7bc2bbf076d3bfa67d2f05889ccf35e5ac42805a9304c605338"
+    },
+    {
+      "topic": "airway",
+      "seed": 755,
+      "row_sha256": "5feda8de42c8ed3af9ad925b5d9ab984cb2c046b3ae0d931440601e3b16a104f",
+      "package_sha256": "f78e42e6309068f7e426f8b99efd88d353fbaa3ea32752d106527246c8e49ce3"
+    },
+    {
+      "topic": "evacuation_transport",
+      "seed": 1018,
+      "row_sha256": "63b965bf0b19982ab8bb6fdf491dc68867f63373b585b1269daeff01df46ca9e",
+      "package_sha256": "1061deb02197ff02e4a6fbc35e1244d5ca2082d40d3a5aa9f3f38dfb32a8a254"
+    },
+    {
+      "topic": "documentation_aar",
+      "seed": 666,
+      "row_sha256": "ce6739d61ef66337d6f1804c337896bb4f1e07e64da7f48136481c6cf53ab965",
+      "package_sha256": "c21fae5ca54b1d6ef0f661fa0751b204903266ca22abaf0907b046d041fdce08"
+    },
+    {
+      "topic": "massive_hemorrhage",
+      "seed": 876,
+      "row_sha256": "e7f18999d271813ae0ed673fa634d0fc603f2e9f8ea3bcecc4117d765a7f66ac",
+      "package_sha256": "c7bd9ec66bb604511a208e17d835ba2cebb265319a5dfb2ff27a12481edd7b23"
+    },
+    {
+      "topic": "airway",
+      "seed": 1104,
+      "row_sha256": "2dabd934ee8253a5fe9c602f24337a71a2cfd5156a01b1e0ef3c2a1ecb8f950d",
+      "package_sha256": "5f7f8c38634d5cb29d94331a1341e7df058597893389b2c6cd21291f94867ae1"
+    },
+    {
+      "topic": "respiration_chest",
+      "seed": 480,
+      "row_sha256": "02728a3874bbe921f61645495ff881d41738a67699cec9facf2a4a365f5668d3",
+      "package_sha256": "ee1b82e30b5bc90a3596e6b721f7e342d79016e33edc92ed5d84a3dbb8d23086"
+    },
+    {
+      "topic": "evacuation_transport",
+      "seed": 727,
+      "row_sha256": "6599629f7424c178c32c968f44f8f1bf53eadf844a4faa50ec56708835a75f10",
+      "package_sha256": "d7d517737e3498f1ba1b645ccbf09a4dbf88a07186aaa7f026b472aaa45e3549"
+    },
+    {
+      "topic": "documentation_aar",
+      "seed": 795,
+      "row_sha256": "5b66a3a72720fc125e6442aca278214afb8247906601fc0cb48bad919bd438ce",
+      "package_sha256": "c0f1d3d351023abfd30015b2fb3b4b0ca9f1123958c5ab100000bca8c6c0e71b"
+    },
+    {
+      "topic": "massive_hemorrhage",
+      "seed": 151,
+      "row_sha256": "83c2bac1041458b600bdf1774bf5f7936d25eea560eeda3db093d3ae28aceae4",
+      "package_sha256": "e6daac6c728126c69c245d54c53ffd83f37c5b3df8973b9a2813bb9e3c0cbc77"
+    },
+    {
+      "topic": "airway",
+      "seed": 177,
+      "row_sha256": "7396cca99db3fa11d05e541fe62c362d807a77334127b9b3450fb23798837d9f",
+      "package_sha256": "86d0716c179012865a92db1501e62a6ea2e6fcdf3d9e1da48e332d57fc443440"
+    },
+    {
+      "topic": "respiration_chest",
+      "seed": 89,
+      "row_sha256": "be157f858be6be3503af9c44e23bffb95d799a7db8c3e73dd66fb175b7311e61",
+      "package_sha256": "01727147d47233b8a91d1e86137edab669cc9c62dd0d8a172366cb246be753e0"
+    },
+    {
+      "topic": "airway",
+      "seed": 115,
+      "row_sha256": "d7dd51c38676cabe88a02dc718f50850437758998abb8e38ae90db504f65100a",
+      "package_sha256": "1b27b8d484e6691f082e31ac767c0716b1b316c02b8007c1236ed7acf2e5aa39"
+    },
+    {
+      "topic": "documentation_aar",
+      "seed": 561,
+      "row_sha256": "a71bba50a107bd20b928fe882657664c9c947d630977282c559d0a8a25e641eb",
+      "package_sha256": "d91528e66401e4b0573c419d615f9dfdced95cc606b3a2e7bbf9fb205846197a"
+    },
+    {
+      "topic": "evacuation_transport",
+      "seed": 551,
+      "row_sha256": "86d32b08dc230420d06f42c5896214135254df64a58395542649c9038e51576e",
+      "package_sha256": "85c7a9216faf42c57d9746d9516a835febfe9214a0771f495db829f416432b1f"
+    },
+    {
+      "topic": "airway",
+      "seed": 952,
+      "row_sha256": "6af158856a29d6d16ff86fe6d614441af1b2a06bc8887d7a57f5ebd282abd5c3",
+      "package_sha256": "180e1f2c3bb5175514a79d38f1fb6ceea9f8208000aca2ca403e39293c709278"
+    },
+    {
+      "topic": "massive_hemorrhage",
+      "seed": 112,
+      "row_sha256": "2f2dcdf443a88bffa3e1de9b2fc334ed6cbfd8ba3ae7d465ebb2965e92f376dc",
+      "package_sha256": "36cb5f6ac5eb2939cd5ca68398c21418e18dd62db5f295b988520ec9e57f6814"
+    },
+    {
+      "topic": "documentation_aar",
+      "seed": 127,
+      "row_sha256": "e2dabbfeff9981c57ca868b0b07aea4240546147d44a9c3bb863c2057d9b4936",
+      "package_sha256": "f170d4c1fe8a6d565483075d7dc3d86d2ac850eefaa0d96494dd0d5925d675bc"
+    },
+    {
+      "topic": "massive_hemorrhage",
+      "seed": 74,
+      "row_sha256": "1fc5488a2b77b132d6a8f3f571e293a2c3e62ba0cd641d9b4244d2d4e19adc51",
+      "package_sha256": "6a672d3ebedaf92d3071f54bbb2be6e4a8e118750110a81cabd69eea3215948c"
+    },
+    {
+      "topic": "evacuation_transport",
+      "seed": 621,
+      "row_sha256": "3cb078b517d456278775a0367d00f3c4e2cd08d81e800d5b71e1ba2a78d17ef7",
+      "package_sha256": "4e5acd35dab6745fd486c5e1507ba9940af15dcb0a9ab77cc34cc50e35799cce"
+    },
+    {
+      "topic": "documentation_aar",
+      "seed": 644,
+      "row_sha256": "febeaa0a37958039198bfa7c03d475c051cd1d8778b42c85749a22c84dc5ace2",
+      "package_sha256": "dc376964a4dbd1e4919f6c9db4e4e26e043e9ff16ca8dd42d40fb18a0ccac10b"
+    },
+    {
+      "topic": "airway",
+      "seed": 602,
+      "row_sha256": "b6dd1d56a66905c19ccf1b86a3237637ec10a663b0ca629a1ac7b2c28821c823",
+      "package_sha256": "7063193d35bd332c2d65f1233fbd8874f5b536e179d3a4168f5774454bd5ef9b"
+    },
+    {
+      "topic": "documentation_aar",
+      "seed": 542,
+      "row_sha256": "864593721b13fbe95d3d0c58943a910957ebc0907decb7d25235d912cbf23335",
+      "package_sha256": "2390ebce667a83b6da45c66e664547c6a3f272ee3055c7059de99abf161ddbf9"
+    },
+    {
+      "topic": "respiration_chest",
+      "seed": 537,
+      "row_sha256": "c02183a71f0231b494405b5f2414281e7e896be4a0ef203c8cd051f118d31cee",
+      "package_sha256": "d5d92f6a6c6e743088044dc30cc71912ce918ace5ba8b29721a73b776674bbbb"
+    },
+    {
+      "topic": "massive_hemorrhage",
+      "seed": 717,
+      "row_sha256": "aac807105ad9879573e9beee3c52bf3941f5b2eb9dfd9a555a30c68c1cf081a8",
+      "package_sha256": "acd204c3be8c8b7ce804b205a8b6389f159cc9c5b1b656d30f1e9b72105a0465"
+    },
+    {
+      "topic": "evacuation_transport",
+      "seed": 522,
+      "row_sha256": "46098217cce694f17150868b7dd9ff61f84fd6aefa13aa6d65e1e8afa61e0f00",
+      "package_sha256": "214ae3082c67b43a4d83a73461e3a105401e19715ccab0823c69912a1f0c34b8"
+    },
+    {
+      "topic": "evacuation_transport",
+      "seed": 255,
+      "row_sha256": "54cca80dc7f56cb12d5331bbe40dcae3025669d78a53bbf7ee95faa9144401ca",
+      "package_sha256": "c436ba980814044cd93a30711171643454e0ce7187162e45a20ae12e74ce3f0e"
+    },
+    {
+      "topic": "airway",
+      "seed": 281,
+      "row_sha256": "3560f1eb21e4ca07b4f2efda90c3f9d715e7404f03769dd0869b14650622061b",
+      "package_sha256": "ab87866b06453bf69ab7dade99eaa6d1126067ed9051f645f15f5462561041fe"
+    },
+    {
+      "topic": "respiration_chest",
+      "seed": 38,
+      "row_sha256": "36fda3d8d16561c9d906dd0f08aabfb5433221242c3bd06b6526f13807fa6687",
+      "package_sha256": "2559c445ea8c582e9c756744fd84b22a07cd30ce42ef8914ceb9de406a6665f8"
+    },
+    {
+      "topic": "documentation_aar",
+      "seed": 192,
+      "row_sha256": "b6f08ec56a2aed1e75c968960fd7e2a96ee08b18820223d9657598c6107456af",
+      "package_sha256": "d04632bc628d9b6b061090ffb02e86fa8a8a377ffc1363f4f18c55d13b7b4cf4"
+    },
+    {
+      "topic": "evacuation_transport",
+      "seed": 640,
+      "row_sha256": "93d2d54c2f123bb001843e35f96bec758afe2bfbaae7b6ae04111b2e9c46e448",
+      "package_sha256": "7b86e6b28e7eb88affd5195f8c417d9397c301811db7054dfd2992b2da1e9616"
+    },
+    {
+      "topic": "airway",
+      "seed": 1031,
+      "row_sha256": "9cfedc64101aa0999a5530311624903948e6ba0e4b5aa872ec1c9fcf1dfb7c7d",
+      "package_sha256": "4ad5a273e88ec29a45053b46f300895fb516b767ea4cc619524e32b64f8c1cd3"
+    },
+    {
+      "topic": "massive_hemorrhage",
+      "seed": 224,
+      "row_sha256": "d6941d52d980c00fa690c7c39194940ed1af3952e50f121422cf9b6594bd7af5",
+      "package_sha256": "84421f2752e09d1d9783dd0fff0f86ae41dcd0c5feb8c3b0c9e9466e674a48bd"
+    },
+    {
+      "topic": "respiration_chest",
+      "seed": 1034,
+      "row_sha256": "a6286a4b3be35b3ac2782e31c3ccd00163f68945503ca1af2b908789db6b72f0",
+      "package_sha256": "8b3783f069ddc97e3c93abfc96725ecde7fed6496f27098dd592bd7e4d25a10d"
+    },
+    {
+      "topic": "respiration_chest",
+      "seed": 762,
+      "row_sha256": "be9588eceae98a37f32059736a0023a6d6fe20eedeeea9f90ce50178330f047e",
+      "package_sha256": "bc07d11f972b39182f441a9828875e7f4b59aac7469e26c86ae0f028cbdd53fc"
+    },
+    {
+      "topic": "evacuation_transport",
+      "seed": 580,
+      "row_sha256": "a6244b92a1c758e078c89dc962bfc070744174a75f1a28f56ffb493d55ef2f37",
+      "package_sha256": "33b539e2b85718c7078da316304145219965c5c37044f78ef9de30f79bc5e54d"
+    },
+    {
+      "topic": "massive_hemorrhage",
+      "seed": 796,
+      "row_sha256": "9c79f013f81aeeb8b161c3b17ccbfb8dc2ee4969fa9976c9545f2ffc54562d45",
+      "package_sha256": "b18538f404a44e8fb871883dbf505878e2f72d576a5caf2c253a81b9bf587eee"
+    },
+    {
+      "topic": "documentation_aar",
+      "seed": 215,
+      "row_sha256": "592c8b3920abacb9c447bc5dd662806940de7c439a3ed360228985a4358822ef",
+      "package_sha256": "bc7935afdcc8049cabdc3581dc99002c7bfdf8c9378489ccc19bff3f312c6cd2"
+    },
+    {
+      "topic": "airway",
+      "seed": 808,
+      "row_sha256": "9ba524fafacdc9f189f342dbb933abd5f58aaf5d9c2f7e157d8e6fc289cbb362",
+      "package_sha256": "1d5023b6b32a15728ad67340a31e9fe4cf9c2de5c9abee597c82e2855800d7d7"
+    },
+    {
+      "topic": "evacuation_transport",
+      "seed": 904,
+      "row_sha256": "6f8d4f61a09ce7acc57e8a5dbff242692309b19ce27bcbc64fabc3da05476fea",
+      "package_sha256": "1929f4f1adeaf8ea9a3d6e1a51dbd27ddd287149ab99ac701c5380240f7a9ad8"
+    },
+    {
+      "topic": "massive_hemorrhage",
+      "seed": 407,
+      "row_sha256": "ff7b3454b4ed939aa78d815d811a83de181f99358e3c06baeaabda728e8c2e1c",
+      "package_sha256": "f0d50b159dfd2823550e57feaf27671d11e331e205c9d226c1fcf67914a61beb"
+    },
+    {
+      "topic": "documentation_aar",
+      "seed": 1002,
+      "row_sha256": "725c6968210ca8db38b151357800c4600cba07cf395cecba9d7af6e3366b1ece",
+      "package_sha256": "439a8ea8921d5a91a364d2a2835b90c5bc7189f7a63ada1b1853333636fdf70d"
+    },
+    {
+      "topic": "respiration_chest",
+      "seed": 980,
+      "row_sha256": "ede399828456daea4646217f01db7b0899ca0542cf8eaa41c9510a23f2865ae4",
+      "package_sha256": "f605a62d3d7923d3e9890b5164a4dba4bbfbf2f4ef1b86d8262f6723aadd3743"
+    },
+    {
+      "topic": "respiration_chest",
+      "seed": 916,
+      "row_sha256": "6c1c4da7a4ccb30dabf6a68b3b50c1116f657d30323f4c63f977066904419f1b",
+      "package_sha256": "09147364298ed4057acd4cadac03afd9925e58d7af328d90c0bcb944bd94ec97"
+    },
+    {
+      "topic": "airway",
+      "seed": 680,
+      "row_sha256": "1a089c4ddb210e59ae4ac1bbb7babc085333fb424f519ccc8b909b8800a218c5",
+      "package_sha256": "39229f11a213384c6d3a76a093c64e306145d62259c862df45ad100e5748a894"
+    },
+    {
+      "topic": "respiration_chest",
+      "seed": 1127,
+      "row_sha256": "eaedb072f2979cc2a5a9524be16a6d79db04ea72d2bb9e8f955254de85bfa22c",
+      "package_sha256": "2cf91f18783a8e03898e47e12834ef0a31c97b5043d0495cbc8394f09df27d09"
+    },
+    {
+      "topic": "massive_hemorrhage",
+      "seed": 758,
+      "row_sha256": "b85bd252bd5dc701b4b300eaeb32a1dfd253b4bae21be8290fdcc4a6567b4182",
+      "package_sha256": "3583fa753c2b408913dce90b2a2152250c29efdc51af765f699d152abdcaa462"
+    },
+    {
+      "topic": "respiration_chest",
+      "seed": 93,
+      "row_sha256": "173574ffe626ad4adc4bc52c4e86f913682307a4987b3e39abd978e215eb1a14",
+      "package_sha256": "638fe7d538eedd66abaea31aa430dbf6df9e17b0a0b20d9065ef43a28ec09fa8"
+    },
+    {
+      "topic": "massive_hemorrhage",
+      "seed": 370,
+      "row_sha256": "e15d4f89991250995bffc0fcb9d93261c8833f422606e53300ee3a4d87f97992",
+      "package_sha256": "3a55f556629560bfb8c5826fbbcd817456e5b3a2db61d36559b0bc441dfe851a"
+    },
+    {
+      "topic": "documentation_aar",
+      "seed": 17,
+      "row_sha256": "d2555356714145af4e94b394deca2660e1cc35478cd4cd76fade52fa32e6c30b",
+      "package_sha256": "7d12bac2916bf4172141fb33b1f08018ee3dbe5996f52bc29bbc7a3f9e9d99df"
+    },
+    {
+      "topic": "airway",
+      "seed": 153,
+      "row_sha256": "61d65915e657adf83e3b4a37f936a4362f9b8e7d8422f4ca1a2a256bc19368a9",
+      "package_sha256": "9b503cf2341f8c9d11f4839763994121283cd31d14a438787b4f70c0e2878298"
+    },
+    {
+      "topic": "massive_hemorrhage",
+      "seed": 449,
+      "row_sha256": "7182136898e090a366ffeb85485c08fd281d035b7152f8b27dd18c62a9f08387",
+      "package_sha256": "ba7c7d091ff8c2956416fc1e75a6807f48ff78a9cce8908e7fcc7775cab8be17"
+    },
+    {
+      "topic": "evacuation_transport",
+      "seed": 1075,
+      "row_sha256": "02655f917c8d54c9427b692deeedd77258ee41c0a1cd6c15351d427b6c92dd76",
+      "package_sha256": "0b7174700ef6eed67cf39ea2ceab12cc10f7adc7e426cec23bf8d9e322613f46"
+    },
+    {
+      "topic": "documentation_aar",
+      "seed": 1055,
+      "row_sha256": "a6edc71d287a7920176d04800cf8b62f76fa7ee06ab2817ef18fba58f3418861",
+      "package_sha256": "261a4c562141c1c78243dd5a2a7c7bac32c972a831960c7066c3e5663b1de352"
+    },
+    {
+      "topic": "massive_hemorrhage",
+      "seed": 342,
+      "row_sha256": "90bff6feffd0a0d3624db72621b819b4c0340e895dbfbfdf9deae9ff5fcd29a1",
+      "package_sha256": "b30ac3c56c15235d9a9179eeab1e813f8c9e5d4e6c80e1162f96cb6a258becd9"
+    },
+    {
+      "topic": "evacuation_transport",
+      "seed": 861,
+      "row_sha256": "f9f91bd5eac987de5d3e539ca1328abb8878e9640391fdb1d457c8343ce20cf4",
+      "package_sha256": "362c9a09abc04809fd8213264559079d6f8ce319aaba40062f2564612ad555ab"
+    },
+    {
+      "topic": "airway",
+      "seed": 1009,
+      "row_sha256": "5e32e64b622d6e8b795c6c6c4f42336e84a77708bc9c4a9de716bf4d1bbea033",
+      "package_sha256": "0e3ab6b2c37bced48b3b0d1a7a496b521dcd7533d053ab381be406477ae3c40c"
+    },
+    {
+      "topic": "respiration_chest",
+      "seed": 625,
+      "row_sha256": "29a5864f2bcf0baee3169b0d6ba53b00e15a82ee576b956399b7cdb2cbadd257",
+      "package_sha256": "db650216dd43badbf717cfd0fd755955647b35da03162691c28cf3a26e4a97de"
+    },
+    {
+      "topic": "documentation_aar",
+      "seed": 889,
+      "row_sha256": "a2d269348e239f942a68e7746e24ccb3925ed5abe61c4fea9e7c5a9498808630",
+      "package_sha256": "f87ccc9b29a3267a3acc731f717dbb79f24bc2e037b498793faf81b5db39900c"
+    },
+    {
+      "topic": "evacuation_transport",
+      "seed": 1056,
+      "row_sha256": "54a754cf8982835836c9e760847173f986c6621b5acd7b330deba0d1d1a7c6b7",
+      "package_sha256": "c3f9da978239c53a32d352e6b0a55905b92089b34149e0729807e03defbce7eb"
+    },
+    {
+      "topic": "massive_hemorrhage",
+      "seed": 73,
+      "row_sha256": "cd18c7c178cf6a6d40601a11ff32a5300a86db2ce8d8dbe1c7489918dace8cd1",
+      "package_sha256": "92cc192339519df542b0b8330cfa0def7cc04b0c6743367a20b506294f3d9090"
+    },
+    {
+      "topic": "documentation_aar",
+      "seed": 832,
+      "row_sha256": "c64738e89399591b01201c8764202e85e7b588ad515325a481b043bd26681d00",
+      "package_sha256": "8d2027062d0fcd72ef769e47c9e426ae0002bce753e38773c0d6bac6230073ef"
+    },
+    {
+      "topic": "evacuation_transport",
+      "seed": 1082,
+      "row_sha256": "e36d2e596ba79d6a34f01468c1efbdd1c250011d6dcbf1a8d00ff007cbf76895",
+      "package_sha256": "e0729d4e0564ea48a229a13343286d00a9d68137989467f9f6b38800948b54b4"
+    },
+    {
+      "topic": "respiration_chest",
+      "seed": 811,
+      "row_sha256": "b8cf0a6a3a63751a58444c1d94f27806e0548f7b1ffac13c0b523e2cd78541a5",
+      "package_sha256": "306594bcbb8d8bbe3646370cbf5089d4140cf78caa8b847053cafd8a997a57b8"
+    },
+    {
+      "topic": "evacuation_transport",
+      "seed": 262,
+      "row_sha256": "19536240dbbca08b848637975ec2e76b8fa56ef5be3cd8952bf4406e7446e0cf",
+      "package_sha256": "82bfd15f97dc8a8f711469715ffb74331879e9d45a702b79e66f236c76c57489"
+    },
+    {
+      "topic": "respiration_chest",
+      "seed": 556,
+      "row_sha256": "f4843d54bd5e2b3aee51bfa7f5f427b0d103aaeda9e5f25c0957005f89617d38",
+      "package_sha256": "4fe9b0847216f5ee43579ea4bf6b4f7b71060aee8e8a4650d51ccd316038bfe4"
+    },
+    {
+      "topic": "airway",
+      "seed": 80,
+      "row_sha256": "acf2c9655a0773df9af940b71639a6a59deaa7ddc53206b0a06a477085a9b036",
+      "package_sha256": "254b52e4311d44d6edbaf50c3bf5fb00421f45d3997f73a5ab013b87963effba"
+    },
+    {
+      "topic": "evacuation_transport",
+      "seed": 596,
+      "row_sha256": "d2a46f4b557d65c4ffad751fb849d03094bad2304eb35978fa03d7ccdb05fd35",
+      "package_sha256": "d6ad8a1adf826e15ae2c145156b4e23c162995fef1b1fa8b47d54aaefcfaab45"
+    },
+    {
+      "topic": "airway",
+      "seed": 439,
+      "row_sha256": "0dd652bd3887b8b804bfa7aceb8f08f1f3f9da28b693116e7483b869afa475b2",
+      "package_sha256": "6c6e2e9aca76b904d9c32cf8473997785268f8c65119ad63e07273ca7ab05379"
+    },
+    {
+      "topic": "respiration_chest",
+      "seed": 142,
+      "row_sha256": "6fcb3624303d8c48e1d4b3c350fc5ec6958ece305f885a9164b85dbb2b18ac53",
+      "package_sha256": "f797c8b8012cca38f2e9b6550c84b03d57a2a1c26478e85af96642f6c581783a"
+    },
+    {
+      "topic": "massive_hemorrhage",
+      "seed": 855,
+      "row_sha256": "9a5e547b1ddd3b48ac5f170a63e970d4851af5ce830ce5836fe3a4538a9d0192",
+      "package_sha256": "fdb4afa77b0fdb77e834afb9bb202e39ae49186b7e8450d207b33bd0cd6793d1"
+    },
+    {
+      "topic": "airway",
+      "seed": 874,
+      "row_sha256": "736aee763d541386af76c119c0047948be356a70488342193cd61083475478ab",
+      "package_sha256": "fb7c9a956242cedc31a2e029193c386303af97569687658dc8f2e0e6238e348d"
+    },
+    {
+      "topic": "documentation_aar",
+      "seed": 408,
+      "row_sha256": "864f9ce4c40729baf7fc9c446c4449c1defc88dd68406aefab87f75d8a2060fb",
+      "package_sha256": "0c1470355682a71e7abe85aaeb513039f2df9b7e1a9b835009b6d653c2b35cda"
+    },
+    {
+      "topic": "evacuation_transport",
+      "seed": 1059,
+      "row_sha256": "1cb1dbc5958af64ecdcc9b768122aafe0530716f7e0db0b8c06d1f8617e2095f",
+      "package_sha256": "ace4e3def30a7297f993932f67f3fbdb047797ab0fc37bddffac2eb222901c82"
+    },
+    {
+      "topic": "massive_hemorrhage",
+      "seed": 558,
+      "row_sha256": "e65674610b988466a66b08deca23068c28d01ede4ddb8660f24bc4eb7a86b436",
+      "package_sha256": "39ce0864ccb20ea3ba516ea9b92067850d3da36b196e4801d036af00624734c4"
+    },
+    {
+      "topic": "airway",
+      "seed": 178,
+      "row_sha256": "1862e817084265230acebec44c77aa4d4bf205babd2c18bacdacb3db9af531a7",
+      "package_sha256": "a44bfe3c78cbb4abf908e76d8e0d15bd5d8a53c1df44b554afc6605d9dcfdb26"
+    },
+    {
+      "topic": "airway",
+      "seed": 704,
+      "row_sha256": "b81b0e5386b620eb4017ab1af6a8ada5e161f0bf849bbc3c793a8d87e4f1797b",
+      "package_sha256": "d7db4b0489394f424a284eeba2ecc15b46c7869bb6f6eb04e5bc45cf7dfa9f69"
+    },
+    {
+      "topic": "documentation_aar",
+      "seed": 98,
+      "row_sha256": "463a84c1649f8fbbc5fe463aca08c19e3f3cf7b3e4b7d49a2f0a5394923bc5dd",
+      "package_sha256": "5a01ae28f7df547d8e0f42acf2eed61d7ecf0340ddb3a78e611b4471787908ac"
+    },
+    {
+      "topic": "airway",
+      "seed": 417,
+      "row_sha256": "f920e0c619e6cac2258bad6e0de66790d2637b5ed2f592f83921f45a976eaabc",
+      "package_sha256": "a9599bdd5119d9eb4446a23a2698d8853d17b45beda3479186fe52d9aa762b8b"
+    },
+    {
+      "topic": "massive_hemorrhage",
+      "seed": 831,
+      "row_sha256": "25ca7e6f08d8c2e5c3e625842ceeaff2539d4d178295a6b872137531cc62b48b",
+      "package_sha256": "b5e13a7f3e46dda53b4ec31792d0443c1ec8251341b26ab2e9c722f539f5fac2"
+    },
+    {
+      "topic": "airway",
+      "seed": 1011,
+      "row_sha256": "caf1e96d9eb0394262ec37206616a81c99ab62fcc661364d9b02ae3409789dd9",
+      "package_sha256": "84c92e5da62dfc8b8ed3bba4cf630a18776103e1874de7b583213bdb6f522336"
+    },
+    {
+      "topic": "massive_hemorrhage",
+      "seed": 809,
+      "row_sha256": "85bbdd300b4092ef3b2e826856087f95c27c0cdd70330c3a7f5cf4891159802a",
+      "package_sha256": "eef303345680700a6b3d495b0c33d855bf74cc36a28ba42a082e3f728f97010e"
+    },
+    {
+      "topic": "evacuation_transport",
+      "seed": 147,
+      "row_sha256": "4fe68e87607562ea30a09a0dc3b91fb2d8443437b3e3b716e6c6c26f269625f1",
+      "package_sha256": "857155af53d0768df6921f27b927e18879d17a8c7630e471fc32b6e167ccf40a"
+    },
+    {
+      "topic": "respiration_chest",
+      "seed": 316,
+      "row_sha256": "8f78372933ee6f96b7acd4ae76d5e8cde4bde5e0a2cfd5ac1498e2aeea37a34f",
+      "package_sha256": "ee498a8dca895a17da1bd529080d47212e3a69e08eaec121c3fb28361237d138"
+    },
+    {
+      "topic": "documentation_aar",
+      "seed": 843,
+      "row_sha256": "11fdcd5c75dfcae308ced5e9f051498938a2ae515679a6331f00f19f08fd643a",
+      "package_sha256": "12b927065812b60fbc0e675573d90eaec3ecc0c8f1d68841d609e876b80c21fe"
+    },
+    {
+      "topic": "documentation_aar",
+      "seed": 819,
+      "row_sha256": "5ab4bcaad88f7173ca2066c2fe2a5ed11b35c008264e83e4a597dfbe989cd8b8",
+      "package_sha256": "68acbd02f9f27a3dd2046a08c8c4cd29069761ddabddeffec6279da0db75e85c"
+    },
+    {
+      "topic": "evacuation_transport",
+      "seed": 913,
+      "row_sha256": "3e8fd1f0602cefad02692bf96890f46370b6c33c5494bcf2c729d1ef54cda9d3",
+      "package_sha256": "d29e26e7467063530f3684286c1296d8e1d0614b60a4a0ef1dc9d4904ab52937"
+    },
+    {
+      "topic": "massive_hemorrhage",
+      "seed": 423,
+      "row_sha256": "0bfc42437dc5795eff38569150bf070f50b38c3fb9a82fe16d26c685724ebd17",
+      "package_sha256": "62da08d76620f5877bc67e38572e2080fd781b7becfd0bacc68a373bac38f547"
+    }
+  ],
+  "relation_checks": [
+    {
+      "id": "bridge_record_order_independence",
+      "pass": true
+    },
+    {
+      "id": "unrelated_source_changes_provenance_not_scenario_behavior",
+      "pass": true
+    },
+    {
+      "id": "retriever_changes_evidence_not_operational_behavior",
+      "pass": true
+    },
+    {
+      "id": "provenance_only_change_does_not_create_new_behavior",
+      "pass": true
+    },
+    {
+      "id": "retriever_only_change_does_not_create_new_behavior",
+      "pass": true
+    },
+    {
+      "id": "narrative_only_change_does_not_create_new_behavior",
+      "pass": true
+    },
+    {
+      "id": "operational_factor_change_creates_new_behavior",
+      "pass": true
+    },
+    {
+      "id": "successful_route_witness_inventory_is_complete",
+      "pass": true,
+      "detail": "route=ASK-ROUTE-FIELD-001-f3a6e77080:RESOURCE_COORDINATION_REQUIRED;valid=true;witnesses=briefing>approach>contact>pressure>resource-coordination>handoff>complete | briefing>approach>contact>resource-coordination>handoff>complete;required=resource-coordination;inventory_stable=true;replay_stable=true;converges=true"
+    },
+    {
+      "id": "pressure_branch_reaches_completion",
+      "pass": true,
+      "detail": "briefing>approach>contact>pressure>resource-coordination>handoff>complete"
+    },
+    {
+      "id": "direct_handoff_branch_reaches_completion",
+      "pass": true,
+      "detail": "briefing>approach>contact>resource-coordination>handoff>complete"
+    },
+    {
+      "id": "route_witness_replay_is_edge_order_independent",
+      "pass": true,
+      "detail": "route=ASK-ROUTE-FIELD-001-f3a6e77080:RESOURCE_COORDINATION_REQUIRED;valid=true;witnesses=briefing>approach>contact>pressure>resource-coordination>handoff>complete | briefing>approach>contact>resource-coordination>handoff>complete;required=resource-coordination;inventory_stable=true;replay_stable=true;converges=true"
+    },
+    {
+      "id": "every_successful_route_preserves_teamwork_requirements",
+      "pass": true,
+      "detail": "required=resource-coordination"
+    },
+    {
+      "id": "optional_pressure_branch_converges_before_required_teamwork",
+      "pass": true,
+      "detail": "route=ASK-ROUTE-FIELD-001-f3a6e77080:RESOURCE_COORDINATION_REQUIRED;valid=true;witnesses=briefing>approach>contact>pressure>resource-coordination>handoff>complete | briefing>approach>contact>resource-coordination>handoff>complete;required=resource-coordination;inventory_stable=true;replay_stable=true;converges=true"
+    },
+    {
+      "id": "profile_direct_handoff_baseline_graph_derived_witnesses_preserve_requirements",
+      "pass": true,
+      "detail": "route=ASK-EXPERIENCE-PROFILE-DIRECT_HANDOFF_BASELINE:DIRECT_HANDOFF_BASELINE;valid=true;witnesses=briefing>approach>contact>pressure>handoff>complete | briefing>approach>contact>handoff>complete;required=none;inventory_stable=true;replay_stable=true;converges=true"
+    },
+    {
+      "id": "profile_communication_relay_required_graph_derived_witnesses_preserve_requirements",
+      "pass": true,
+      "detail": "route=ASK-EXPERIENCE-PROFILE-COMMUNICATION_RELAY_REQUIRED:COMMUNICATION_RELAY_REQUIRED;valid=true;witnesses=briefing>approach>contact>pressure>communications-relay>handoff>complete | briefing>approach>contact>communications-relay>handoff>complete;required=communications-relay;inventory_stable=true;replay_stable=true;converges=true"
+    },
+    {
+      "id": "profile_resource_coordination_required_graph_derived_witnesses_preserve_requirements",
+      "pass": true,
+      "detail": "route=ASK-EXPERIENCE-PROFILE-RESOURCE_COORDINATION_REQUIRED:RESOURCE_COORDINATION_REQUIRED;valid=true;witnesses=briefing>approach>contact>pressure>resource-coordination>handoff>complete | briefing>approach>contact>resource-coordination>handoff>complete;required=resource-coordination;inventory_stable=true;replay_stable=true;converges=true"
+    },
+    {
+      "id": "profile_dual_constraint_relay_and_coordination_graph_derived_witnesses_preserve_requirements",
+      "pass": true,
+      "detail": "route=ASK-EXPERIENCE-PROFILE-DUAL_CONSTRAINT_RELAY_AND_COORDINATION:DUAL_CONSTRAINT_RELAY_AND_COORDINATION;valid=true;witnesses=briefing>approach>contact>pressure>communications-relay>resource-coordination>handoff>complete | briefing>approach>contact>communications-relay>resource-coordination>handoff>complete;required=communications-relay>resource-coordination;inventory_stable=true;replay_stable=true;converges=true"
+    },
+    {
+      "id": "operational_assignment_cycle_is_complete_and_periodic",
+      "pass": true,
+      "detail": "cycle_length=1152"
+    }
+  ],
+  "behavior_archive": {
+    "path": "reports/scenario-behavior-archive.json",
+    "archive_root_sha256": "215083927f434c6fd38f7e6deff709eaa34d1fe13606b6a76bd1dace924112be",
+    "archive_profile": "DETERMINISTIC_QUALITY_DIVERSITY_ARCHIVE_V1",
+    "behavior_descriptor_profile": "INTERPRETABLE_OPERATIONAL_BEHAVIOR_DESCRIPTOR_V1",
+    "cell_profile": "TOPIC_COMMUNICATIONS_RESOURCES_ROUTE_SHAPE_V1",
+    "quality_profile": "NONCLINICAL_ASSURANCE_AND_COVERAGE_VECTOR_V1",
+    "selection_boundary": "SCENARIO_SELECTION_ONLY_NOT_LEARNER_SCORING",
+    "candidate_count": 107,
+    "unique_behavior_signatures": 107,
+    "duplicate_behavior_candidates": 0,
+    "occupied_cells": 30,
+    "possible_cells_in_observed_domain": 30,
+    "feasible_operational_policy_shapes": 6,
+    "marginal_cartesian_cells_in_observed_domain": 90,
+    "infeasible_cartesian_cells_excluded": 60,
+    "occupied_cell_ratio_bps": 10000,
+    "elite_count": 30,
+    "minimum_cell_occupancy": 1,
+    "maximum_cell_occupancy": 10,
+    "total_strength_three_interactions_observed": 1543,
+    "candidates_with_unique_interaction_contribution": 107,
+    "narrative_or_provenance_only_variants_create_new_behavior": false
+  },
+  "truth_boundaries": {
+    "clinical_authority": "NOT_GRANTED",
+    "patient_care_use": "PROHIBITED",
+    "operational_timing": "NOT_CALIBRATED",
+    "human_team_behavior": "STRUCTURAL_ONLY_NOT_CALIBRATED",
+    "patient_dynamics": "SOURCE_BOUND_STATIC_OBSERVATIONS_ONLY",
+    "quality_vector_use": "SCENARIO_SELECTION_ONLY_NOT_LEARNER_SCORING",
+    "source_templates_clinically_certified": 0
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "generated_cases": 640,
+  "topics": 5,
+  "unique_packages": 640,
+  "unique_operational_contexts": 499,
+  "local_checks": 26240,
+  "independent_checks": 12190,
+  "relation_checks": [
+    {
+      "id": "repeatability",
+      "pass": true
+    },
+    {
+      "id": "record_order_independence",
+      "pass": true
+    },
+    {
+      "id": "seed_changes_admitted_fields_only",
+      "pass": true
+    },
+    {
+      "id": "route_priority_is_deterministic",
+      "pass": true
+    }
+  ],
+  "pair_schedule_cases": 24,
+  "uncovered_pairs": 0,
+  "fault_challenges": 24,
+  "fault_challenges_rejected": 24,
+  "protected_source_scenario": "ASK-A-001"
+}

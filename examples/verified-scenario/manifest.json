@@ -1,0 +1,446 @@
+{
+  "authority": {
+    "clinical_authority": "NOT_GRANTED",
+    "clinical_rule_source": "inherited_template",
+    "deployment_scope": "research_sandbox_only",
+    "evidence_authority": "supporting_only",
+    "evidence_effect_scope": "citation_support_only",
+    "scoring_behavior": "inherited_unchanged",
+    "source_template_status": "repository_template_not_clinically_certified"
+  },
+  "certificate": {
+    "base_protected_sha256": "f0381ea104694a82a613a5726fddc00520bee41ca5cfcf86a86e57f948220b62",
+    "base_scenario_sha256": "dc30fe24bdb6eab40c5e380b6dea2e0122c8869287be70ac8b437affed9cd81a",
+    "certificate_version": "1.1.0",
+    "checker_profile": "scenario-contract-v1",
+    "checks": {
+      "evidence_scope_preserved": true,
+      "field_origins_complete": true,
+      "protected_fields_unchanged": true,
+      "route_has_no_dead_end": true,
+      "route_has_reachable_terminal": true,
+      "stage_chain_contiguous": true,
+      "stage_payloads_verified": true
+    },
+    "evidence_sha256": "a86d10d683aded97af37d0b2a64c7ac4986026d0087da4fcd5e4263465a63469",
+    "field_origin_sha256": "f594af9289832b81478a2d98e3af1d84f3febdbcc7d0405bf3130d5f7de96b3f",
+    "output_protected_sha256": "f0381ea104694a82a613a5726fddc00520bee41ca5cfcf86a86e57f948220b62",
+    "package_sha256": "7765e691316a19a0c4dd89622947f21ff153f87e7bd807963e7af519153d3388",
+    "route_sha256": "952d73efa7436d15ba1f9083b6c4559fe3389ab5bda3dbe3523cbb715cb60f53"
+  },
+  "citations": [
+    {
+      "attestation_id": "attestation:els_793b1a1a5b33ed88-chunk-0001-5a45546e7d",
+      "attestation_sha256": "42ea916360cd71038e08487c8a1340dce02d66aad5cdeb422521385446fdf578",
+      "authority_tier": 3,
+      "chunk_sha256": "5a45546e7ddd90680572569bd6f73fb85b31b4b8e88a1af8d80e5d7d3824389f",
+      "clinical_authority": "NOT_GRANTED",
+      "contradiction_status": "NOT_SEARCHED",
+      "doi": "10.1016/j.injury.2024.111771",
+      "entailment_status": "NOT_ADJUDICATED",
+      "evidence_asset_id": "evidence:els_793b1a1a5b33ed88-chunk-0001-5a45546e7d",
+      "evidence_asset_record_sha256": "bf5f382ec59c5891b93e812717709ec120ee0c72b96068b76f91a0e02cdaf5d3",
+      "evidence_id": "els_793b1a1a5b33ed88-chunk-0001-5a45546e7d",
+      "human_review_status": "NOT_REVIEWED",
+      "identity_verification": "PASS",
+      "journal": "Injury",
+      "locator": "Introduction",
+      "order": 1,
+      "relation": "REFERENCE_ONLY",
+      "source_asset_id": "research-source:doi:10.1016/j.injury.2024.111771",
+      "source_asset_record_sha256": "d239571faf9ed01515991fc7604ab3819e0e022f6dcd556095f88cc198fbc840",
+      "source_file_sha256": "0fe1eed2161595cc94a08865f180688a86219d1e369163be02600673bd18bcbb",
+      "title": "Blood far forward: A cross-sectional analysis of prehospital transfusion practices in the Canadian Armed Forces"
+    },
+    {
+      "attestation_id": "attestation:els_793b1a1a5b33ed88-chunk-0005-1182b1d2b1",
+      "attestation_sha256": "759ca365059621e9e2177c3bc9aac8e9100ff0c919e9614c19b84aa22a5be618",
+      "authority_tier": 3,
+      "chunk_sha256": "1182b1d2b1d165c3c5b3956978efc9322c92c4e793f762948a60d8e8f46c4e2a",
+      "clinical_authority": "NOT_GRANTED",
+      "contradiction_status": "NOT_SEARCHED",
+      "doi": "10.1016/j.injury.2024.111771",
+      "entailment_status": "NOT_ADJUDICATED",
+      "evidence_asset_id": "evidence:els_793b1a1a5b33ed88-chunk-0005-1182b1d2b1",
+      "evidence_asset_record_sha256": "1730103eb159a2d90efa34c655fff435182bab6ce50b28dc93285bb9a95a9a49",
+      "evidence_id": "els_793b1a1a5b33ed88-chunk-0005-1182b1d2b1",
+      "human_review_status": "NOT_REVIEWED",
+      "identity_verification": "PASS",
+      "journal": "Injury",
+      "locator": "Results > Initiation of prehospital transfusion; Results > Types of blood products and adjuncts; Results > Delivery and monitoring of prehospital transfusion; Results > Indications for and use of transfusion adjuncts; Results > Resuscitation targets to halt ongoing transfusion",
+      "order": 2,
+      "relation": "REFERENCE_ONLY",
+      "source_asset_id": "research-source:doi:10.1016/j.injury.2024.111771",
+      "source_asset_record_sha256": "d239571faf9ed01515991fc7604ab3819e0e022f6dcd556095f88cc198fbc840",
+      "source_file_sha256": "0fe1eed2161595cc94a08865f180688a86219d1e369163be02600673bd18bcbb",
+      "title": "Blood far forward: A cross-sectional analysis of prehospital transfusion practices in the Canadian Armed Forces"
+    },
+    {
+      "attestation_id": "attestation:els_0a990bd7b22f1362-chunk-0001-08cdbaefa7",
+      "attestation_sha256": "da3154c678e98bc23a96d929d52057aa358eb713fb3840b9bc08fa2377ae835b",
+      "authority_tier": 3,
+      "chunk_sha256": "08cdbaefa7f4432728262cc1fe7827b4d04ff442b1c93ab0fad0aa129d752e1a",
+      "clinical_authority": "NOT_GRANTED",
+      "contradiction_status": "NOT_SEARCHED",
+      "doi": "10.1016/j.injury.2025.112331",
+      "entailment_status": "NOT_ADJUDICATED",
+      "evidence_asset_id": "evidence:els_0a990bd7b22f1362-chunk-0001-08cdbaefa7",
+      "evidence_asset_record_sha256": "7013c51213a460507fcd0e9c0d99ce52b505b63f744bdbe675a78c4882980e7b",
+      "evidence_id": "els_0a990bd7b22f1362-chunk-0001-08cdbaefa7",
+      "human_review_status": "NOT_REVIEWED",
+      "identity_verification": "PASS",
+      "journal": "Injury",
+      "locator": "Background",
+      "order": 3,
+      "relation": "REFERENCE_ONLY",
+      "source_asset_id": "research-source:doi:10.1016/j.injury.2025.112331",
+      "source_asset_record_sha256": "6886b98a315fda79afe344800ef964baedb7e78b9dd91abd541a4f2a8ac30118",
+      "source_file_sha256": "77dbac7a70daa858d49f65a1c1733246943dd89d29af0c2fa26aa957904168d5",
+      "title": "Prehospital emergency finger thoracostomy in compensated obstructive shock: Benefits and outcomes"
+    },
+    {
+      "attestation_id": "attestation:els_85e3017962aa3214-chunk-0003-47c49b3dd8",
+      "attestation_sha256": "b327b73ece2c87cbdb6da49c3722a2240f7c450f7de86909722b43e81956a765",
+      "authority_tier": 3,
+      "chunk_sha256": "47c49b3dd8d0911c6959fdc17024d83b635f2861a9379d01e49fd7d2411f8d4b",
+      "clinical_authority": "NOT_GRANTED",
+      "contradiction_status": "NOT_SEARCHED",
+      "doi": "10.1016/j.injury.2025.112535",
+      "entailment_status": "NOT_ADJUDICATED",
+      "evidence_asset_id": "evidence:els_85e3017962aa3214-chunk-0003-47c49b3dd8",
+      "evidence_asset_record_sha256": "178be3b899e960179ad0831de2203a11168286aaa5513770b0702e7030154099",
+      "evidence_id": "els_85e3017962aa3214-chunk-0003-47c49b3dd8",
+      "human_review_status": "NOT_REVIEWED",
+      "identity_verification": "PASS",
+      "journal": "Injury",
+      "locator": "The acute care phase",
+      "order": 4,
+      "relation": "REFERENCE_ONLY",
+      "source_asset_id": "research-source:doi:10.1016/j.injury.2025.112535",
+      "source_asset_record_sha256": "7dde24e54d507518df8e0d2ba2d349f64325467106ddf241f65deab0e400f780",
+      "source_file_sha256": "39925032b64e18924758b60a9818516b84d35d5fa078048438f0acea929eded4",
+      "title": "Amputation versus limb salvage after gunshot wounds and combat injuries: Considerations for an integrative concept of surgical care and rehabilitation therapy"
+    },
+    {
+      "attestation_id": "attestation:els_b4d5e9284c3d7e59-chunk-0002-35345f37e7",
+      "attestation_sha256": "084f3907634c52cd3ffd94fa8dfe7317a19bbac726353729e4c8490f9ab72633",
+      "authority_tier": 3,
+      "chunk_sha256": "35345f37e76646ee08b7aca65fd8aebc508df9f500b5182742d9d451915bd2cb",
+      "clinical_authority": "NOT_GRANTED",
+      "contradiction_status": "NOT_SEARCHED",
+      "doi": "10.1016/j.ajem.2025.06.050",
+      "entailment_status": "NOT_ADJUDICATED",
+      "evidence_asset_id": "evidence:els_b4d5e9284c3d7e59-chunk-0002-35345f37e7",
+      "evidence_asset_record_sha256": "c3c5ef5e19746919248db36b786ea377d6fdb3fcb62f01dc432fcede32d86230",
+      "evidence_id": "els_b4d5e9284c3d7e59-chunk-0002-35345f37e7",
+      "human_review_status": "NOT_REVIEWED",
+      "identity_verification": "PASS",
+      "journal": "The American Journal of Emergency Medicine",
+      "locator": "2; 2 > 2.1; 2 > 2.2; 2 > 2.3",
+      "order": 5,
+      "relation": "REFERENCE_ONLY",
+      "source_asset_id": "research-source:doi:10.1016/j.ajem.2025.06.050",
+      "source_asset_record_sha256": "a9de2d9b6e8c307fc70f456cc943509e5a38996d72206f8dc0b91df29fdd1277",
+      "source_file_sha256": "d60695a1341acb6f3a29c2fd0d2b2749f0540eabd530372b0849a91f51cf3550",
+      "title": "Association of fission 1 with multiple organ dysfunction syndrome after multiple trauma: A prospective case control study"
+    },
+    {
+      "attestation_id": "attestation:els_f73b3240e4c54f49-chunk-0002-2cf4284e48",
+      "attestation_sha256": "0ea45ca0bd3788c1410156aa7e301e40fda91153ec58aca1ba65befc4137ac60",
+      "authority_tier": 3,
+      "chunk_sha256": "2cf4284e48dbd30dad816c1f963e1532179ccfe38faf328825867de3e838a463",
+      "clinical_authority": "NOT_GRANTED",
+      "contradiction_status": "NOT_SEARCHED",
+      "doi": "10.1016/j.injury.2025.112729",
+      "entailment_status": "NOT_ADJUDICATED",
+      "evidence_asset_id": "evidence:els_f73b3240e4c54f49-chunk-0002-2cf4284e48",
+      "evidence_asset_record_sha256": "ecf5ec6500934e3982989459a1b4d718a495e11241f4f129f8fe437ec043b5a9",
+      "evidence_id": "els_f73b3240e4c54f49-chunk-0002-2cf4284e48",
+      "human_review_status": "NOT_REVIEWED",
+      "identity_verification": "PASS",
+      "journal": "Injury",
+      "locator": "Material and methods; Material and methods > All patients were managed according to the Ruihua Protocol > Prehospital phase; Material and methods > All patients were managed according to the Ruihua Protocol > In-hospital phase > ER (Emergency Room)-to-Or; Material and methods > All patients were managed according to the Ruihua Protocol > In-hospital phase > OR preparation; Material and methods > All patients were managed according to the Ruihua Protocol > In-hospital phase > Surgery; Material and methods > Follow-up; Material and methods > Statistical analysis",
+      "order": 6,
+      "relation": "REFERENCE_ONLY",
+      "source_asset_id": "research-source:doi:10.1016/j.injury.2025.112729",
+      "source_asset_record_sha256": "82e55dccd9a8ae4ab46498e51f95e6c031c733902672eb6891fecd23e2782d85",
+      "source_file_sha256": "c1909a4044b00b457c42dc6acdc7443ed5a08570588194608550edd3718d12c6",
+      "title": "A multidisciplinary emergency protocol reduces revascularization time in major upper and lower limb replantations"
+    }
+  ],
+  "claim_language": {
+    "prohibited_claims": [
+      "clinically certified",
+      "real-world validated",
+      "citation entailment verified",
+      "authoritative treatment guidance"
+    ],
+    "strongest_supported_claim": "This repository contains a deterministic, certificate-bound research-sandbox scenario example whose protected template and citation identities are traceable to the content registry."
+  },
+  "documentation": {
+    "content_registry_path": "public/data/content_registry/content_registry.json",
+    "readme_path": "examples/verified-scenario/README.md",
+    "root_readme_path": "README.md",
+    "source_package_path": "public/data/scenario_core/verified_scenario_package.json"
+  },
+  "example_id": "ASK-EXAMPLE-RC3-2",
+  "example_manifest_sha256": "d0eaf01761228bececea1fd3af9969472534ddd94458779bc9bac63bd19d25a1",
+  "hashing": {
+    "canonicalization": "UTF-8 JSON with lexicographically sorted object keys, no insignificant whitespace, no floats, and JavaScript-safe integers",
+    "hash_algorithm": "SHA-256"
+  },
+  "protected_template": {
+    "asset_id": "template:ASK-A-001",
+    "clinical_certification": "NOT_GRANTED",
+    "record_sha256": "bae043ec37056ea692dd83cbc203b374e9fe5fb266523df8a962ebb8ae0640f3",
+    "review_record_status": "PENDING",
+    "source_file_sha256": "22cccf6addc345deeceb79547d51bae0202b5382c327c69fd314754875b09a45",
+    "source_path": "src/content/scenarios.ts",
+    "title": "Flightline Fragmentation Casualty After Missile Warning"
+  },
+  "purpose": "Canonical human-readable entry point for the existing verified template-locked scenario package.",
+  "route_summary": {
+    "edge_count": 7,
+    "edges": [
+      {
+        "edge_id": "e1",
+        "from": "briefing",
+        "priority": 100,
+        "to": "approach",
+        "trigger": "start"
+      },
+      {
+        "edge_id": "e2",
+        "from": "approach",
+        "priority": 100,
+        "to": "contact",
+        "trigger": "arrive"
+      },
+      {
+        "edge_id": "e3",
+        "from": "contact",
+        "priority": 100,
+        "to": "pressure",
+        "trigger": "facilitator_event"
+      },
+      {
+        "edge_id": "e4",
+        "from": "contact",
+        "priority": 90,
+        "to": "resource-coordination",
+        "trigger": "handoff_ready"
+      },
+      {
+        "edge_id": "e5",
+        "from": "pressure",
+        "priority": 100,
+        "to": "resource-coordination",
+        "trigger": "handoff_ready"
+      },
+      {
+        "edge_id": "e6",
+        "from": "resource-coordination",
+        "priority": 100,
+        "to": "handoff",
+        "trigger": "handoff_ready"
+      },
+      {
+        "edge_id": "e7",
+        "from": "handoff",
+        "priority": 100,
+        "to": "complete",
+        "trigger": "close"
+      }
+    ],
+    "node_count": 7,
+    "nodes": [
+      {
+        "label": "Receive the operational brief",
+        "node_id": "briefing",
+        "node_kind": "briefing",
+        "terminal": false
+      },
+      {
+        "label": "Move to the casualty location",
+        "node_id": "approach",
+        "node_kind": "movement",
+        "terminal": false
+      },
+      {
+        "label": "Establish contact and observe the scene",
+        "node_id": "contact",
+        "node_kind": "observation",
+        "terminal": false
+      },
+      {
+        "label": "Respond to an operational constraint",
+        "node_id": "pressure",
+        "node_kind": "pressure",
+        "terminal": false
+      },
+      {
+        "label": "Coordinate constrained response resources",
+        "node_id": "resource-coordination",
+        "node_kind": "pressure",
+        "terminal": false
+      },
+      {
+        "label": "Prepare a traceable closed loop handoff",
+        "node_id": "handoff",
+        "node_kind": "handoff",
+        "terminal": false
+      },
+      {
+        "label": "Close the training evolution",
+        "node_id": "complete",
+        "node_kind": "complete",
+        "terminal": true
+      }
+    ],
+    "route_id": "ASK-ROUTE-FIELD-001-f3a6e77080:RESOURCE_COORDINATION_REQUIRED",
+    "start_node_id": "briefing",
+    "terminal_node_ids": [
+      "complete"
+    ]
+  },
+  "scenario": {
+    "mode": "template_locked",
+    "operational_context": {
+      "comms_status": "degraded",
+      "location_type": "flightline maintenance lane",
+      "resource_status": "overwhelmed",
+      "visibility": "Variable",
+      "weather": "clear with cold crosswind"
+    },
+    "patient_summary": {
+      "initial_presentation": "Conscious male lying supine near equipment. Yelling in pain. Obvious bleeding from right thigh. Rapid, shallow breathing. Clutching chest but primary visible injury is lower extremity.",
+      "initial_vitals": {
+        "bp_diastolic": 58,
+        "bp_systolic": 92,
+        "gcs": 14,
+        "hr": 128,
+        "rr": 28,
+        "spo2": 91,
+        "temp_c": "36.2"
+      },
+      "mechanism_of_injury": "Fragmentation wound from nearby blast",
+      "patient_id": "P1",
+      "role_context": "Maintenance Airman"
+    },
+    "scenario_id": "ASK-V-F3A6E77080",
+    "seed": 41027,
+    "source_scenario_id": "ASK-A-001",
+    "title": "Flightline Fragmentation Casualty After Missile Warning — Operational Variant",
+    "topic_id": "massive_hemorrhage"
+  },
+  "schema_version": "1.0.0",
+  "source_bindings": {
+    "content_registry_file_sha256": "fd9054c9bb464cf1968631d1c9b9ab72a73a53a0f8773ef66477ca4e1ced8cf9",
+    "content_registry_merkle_root": "9db5b82df90426da8c1543b9ef67464dec59aff90d9731a5be26fff83f621841",
+    "content_registry_path": "public/data/content_registry/content_registry.json",
+    "scenario_package_file_sha256": "5a445d89a7096768d9a892468ad6e1a95a6117f574500a0b72cf33c68b689719",
+    "scenario_package_path": "public/data/scenario_core/verified_scenario_package.json",
+    "scenario_package_sha256": "7765e691316a19a0c4dd89622947f21ff153f87e7bd807963e7af519153d3388",
+    "source_bridge_sha256": "f7782ee749e19ed54d52a308f20a74227a821c3a29ea409b2bd5ca55d8bed338",
+    "source_database_sha256": "5ef6ab73f8a546ffbc2f5db2588113e70b9faa3ac811f171e8b39a132586907e"
+  },
+  "validity_ledger": [
+    {
+      "evidence_paths": [
+        "public/data/content_registry/content_registry.json",
+        "public/data/scenario_core/verified_scenario_package.json"
+      ],
+      "gate_id": "source_template_binding",
+      "scope": "The example resolves to the protected-template registry asset and source file hash.",
+      "status": "DEMONSTRATED"
+    },
+    {
+      "evidence_paths": [
+        "public/data/scenario_core/verified_scenario_package.json"
+      ],
+      "gate_id": "protected_projection_preservation",
+      "scope": "The scenario certificate reports identical base and output protected hashes.",
+      "status": "DEMONSTRATED"
+    },
+    {
+      "evidence_paths": [
+        "public/data/scenario_core/verified_scenario_package.json"
+      ],
+      "gate_id": "deterministic_package_certificate",
+      "scope": "The existing scenario-contract generator and independent checkers bind the package hash.",
+      "status": "DEMONSTRATED"
+    },
+    {
+      "evidence_paths": [
+        "public/data/content_registry/content_registry.json",
+        "public/data/scenario_core/verified_scenario_package.json"
+      ],
+      "gate_id": "citation_identity_provenance",
+      "scope": "Every citation matches a registry evidence asset, source asset, and identity-only attestation.",
+      "status": "DEMONSTRATED"
+    },
+    {
+      "evidence_paths": [
+        "public/data/content_registry/content_registry.json",
+        "public/data/scenario_core/verified_scenario_package.json"
+      ],
+      "gate_id": "authority_non_escalation",
+      "scope": "The example remains research-sandbox-only with supporting-only evidence and inherited scoring.",
+      "status": "DEMONSTRATED"
+    },
+    {
+      "evidence_paths": [],
+      "gate_id": "clinical_template_certification",
+      "scope": "Independent clinical certification of the inherited source template.",
+      "status": "OPEN"
+    },
+    {
+      "evidence_paths": [],
+      "gate_id": "claim_level_evidence_entailment",
+      "scope": "Atomic scenario claims have not yet been adjudicated against exact source spans.",
+      "status": "OPEN"
+    },
+    {
+      "evidence_paths": [],
+      "gate_id": "contradiction_search",
+      "scope": "Contradictory or superseding sources have not yet been exhaustively reviewed.",
+      "status": "OPEN"
+    },
+    {
+      "evidence_paths": [],
+      "gate_id": "real_world_operational_calibration",
+      "scope": "Generated operational frequencies are not calibrated against held-out real-world data.",
+      "status": "OPEN"
+    },
+    {
+      "evidence_paths": [],
+      "gate_id": "human_policy_calibration",
+      "scope": "Actor and learner behavior models are not calibrated against observed team behavior.",
+      "status": "OPEN"
+    },
+    {
+      "evidence_paths": [],
+      "gate_id": "executable_to_formal_refinement",
+      "scope": "The executable implementation is not yet mechanized as a refinement of the Lean model.",
+      "status": "OPEN"
+    },
+    {
+      "evidence_paths": [],
+      "gate_id": "independent_proof_kernel",
+      "scope": "A compatible separately implemented proof kernel has not accepted the full release.",
+      "status": "OPEN"
+    },
+    {
+      "evidence_paths": [],
+      "gate_id": "multi_template_clinical_breadth",
+      "scope": "This example is based on one inherited clinical template.",
+      "status": "OPEN"
+    },
+    {
+      "evidence_paths": [],
+      "gate_id": "training_effectiveness_validation",
+      "scope": "Learner outcome and instructor usability studies remain open.",
+      "status": "OPEN"
+    }
+  ]
+}

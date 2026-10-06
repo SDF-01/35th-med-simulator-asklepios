@@ -1,0 +1,155 @@
+{
+  "attacks": 15,
+  "cases": 16,
+  "errors": [],
+  "rehashed_semantic_attacks": 10,
+  "results": [
+    {
+      "case_id": "baseline",
+      "checker_errors": [],
+      "expected_artifact_pass": true,
+      "observed_artifact_pass": true,
+      "pass": true
+    },
+    {
+      "case_id": "external_script_rejected",
+      "checker_errors": [
+        "network/server dependency forbidden:external script"
+      ],
+      "expected_artifact_pass": false,
+      "observed_artifact_pass": false,
+      "pass": true
+    },
+    {
+      "case_id": "network_fetch_rejected",
+      "checker_errors": [
+        "network/server dependency forbidden:fetch API",
+        "provenance hash differs:ui_sha256"
+      ],
+      "expected_artifact_pass": false,
+      "observed_artifact_pass": false,
+      "pass": true
+    },
+    {
+      "case_id": "weakened_csp_rejected",
+      "checker_errors": [
+        "strict offline CSP differs"
+      ],
+      "expected_artifact_pass": false,
+      "observed_artifact_pass": false,
+      "pass": true
+    },
+    {
+      "case_id": "patient_care_escalation_rehashed",
+      "checker_errors": [
+        "authority boundary differs"
+      ],
+      "expected_artifact_pass": false,
+      "observed_artifact_pass": false,
+      "pass": true
+    },
+    {
+      "case_id": "automatic_rule_generation_rehashed",
+      "checker_errors": [
+        "authority boundary differs"
+      ],
+      "expected_artifact_pass": false,
+      "observed_artifact_pass": false,
+      "pass": true
+    },
+    {
+      "case_id": "unsafe_discharge_neutralized_rehashed",
+      "checker_errors": [
+        "embedded source differs:spec",
+        "unsafe discharge no longer fails closed"
+      ],
+      "expected_artifact_pass": false,
+      "observed_artifact_pass": false,
+      "pass": true
+    },
+    {
+      "case_id": "source_points_forged_rehashed",
+      "checker_errors": [
+        "embedded source differs:source_snapshot"
+      ],
+      "expected_artifact_pass": false,
+      "observed_artifact_pass": false,
+      "pass": true
+    },
+    {
+      "case_id": "canonical_sequence_weakened_rehashed",
+      "checker_errors": [
+        "embedded source differs:spec"
+      ],
+      "expected_artifact_pass": false,
+      "observed_artifact_pass": false,
+      "pass": true
+    },
+    {
+      "case_id": "source_binding_forged_rehashed",
+      "checker_errors": [
+        "embedded source differs:source_snapshot"
+      ],
+      "expected_artifact_pass": false,
+      "observed_artifact_pass": false,
+      "pass": true
+    },
+    {
+      "case_id": "release_graph_binding_mode_forged_rehashed",
+      "checker_errors": [
+        "standalone release graph binding mode differs",
+        "standalone scenario evolution binding differs"
+      ],
+      "expected_artifact_pass": false,
+      "observed_artifact_pass": false,
+      "pass": true
+    },
+    {
+      "case_id": "release_graph_contract_hash_forged_rehashed",
+      "checker_errors": [
+        "standalone scenario evolution binding differs"
+      ],
+      "expected_artifact_pass": false,
+      "observed_artifact_pass": false,
+      "pass": true
+    },
+    {
+      "case_id": "timeout_semantics_removed_rehashed",
+      "checker_errors": [
+        "timeout transition missing"
+      ],
+      "expected_artifact_pass": false,
+      "observed_artifact_pass": false,
+      "pass": true
+    },
+    {
+      "case_id": "elapsed_clock_runtime_removed_rehashed",
+      "checker_errors": [
+        "elapsed-time event transition missing"
+      ],
+      "expected_artifact_pass": false,
+      "observed_artifact_pass": false,
+      "pass": true
+    },
+    {
+      "case_id": "clock_regressed_to_action_trigger_rehashed",
+      "checker_errors": [
+        "elapsed-time event transition missing"
+      ],
+      "expected_artifact_pass": false,
+      "observed_artifact_pass": false,
+      "pass": true
+    },
+    {
+      "case_id": "hidden_findings_exposed_early_rehashed",
+      "checker_errors": [
+        "initial hidden findings boundary missing"
+      ],
+      "expected_artifact_pass": false,
+      "observed_artifact_pass": false,
+      "pass": true
+    }
+  ],
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

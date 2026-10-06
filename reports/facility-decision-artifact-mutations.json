@@ -1,0 +1,268 @@
+{
+  "schema_version": "1.2.0",
+  "status": "PASS",
+  "cases": 15,
+  "attacks": 13,
+  "globally_rehashed_attacks": 10,
+  "fixture_inventory_mode": "MANIFEST_DECLARED_CLOSED_REGULAR_FILE_INVENTORY_V1",
+  "checker_result_mode": "UNIQUE_REPORT_FILES_NOT_STDOUT_V1",
+  "checker_timeout_seconds": 90,
+  "independent_rejection_policy": "EVERY_ATTACK_REJECTED_BY_BOTH_CHECKERS",
+  "accepted_forgery_count": 0,
+  "single_checker_only_rejections": 0,
+  "baseline_preflight": {
+    "python": "PASS",
+    "node": "PASS"
+  },
+  "results": [
+    {
+      "case_id": "ambient_artifact_directory_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "status": "EXPECTED_REJECTION",
+      "expected_pass": false,
+      "pass": true,
+      "errors": [],
+      "observed_errors": [
+        "fixture artifact inventory unexpected:['unexpected-artifact-directory']"
+      ]
+    },
+    {
+      "case_id": "baseline",
+      "expected_pass": true,
+      "python_classification": "PASS",
+      "node_classification": "PASS",
+      "pass": true,
+      "python_errors": [],
+      "node_errors": [],
+      "python_diagnostics": null,
+      "node_diagnostics": null,
+      "classification": "PASS",
+      "status": "PASS"
+    },
+    {
+      "case_id": "checker_stdout_noise_tolerated",
+      "expected_pass": true,
+      "python_classification": "PASS",
+      "node_classification": "PASS",
+      "pass": true,
+      "python_errors": [],
+      "node_errors": [],
+      "python_diagnostics": null,
+      "node_diagnostics": null,
+      "classification": "PASS",
+      "status": "PASS"
+    },
+    {
+      "case_id": "learner_score_leak_rehashed",
+      "expected_pass": false,
+      "python_classification": "REJECTED",
+      "node_classification": "REJECTED",
+      "pass": true,
+      "python_errors": [
+        "learner leakage:learner-projection.json:['normalized_source_score_bps']"
+      ],
+      "node_errors": [
+        "learner leakage:learner-projection.json"
+      ],
+      "python_diagnostics": null,
+      "node_diagnostics": null,
+      "classification": "EXPECTED_REJECTION",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "learner_provenance_leak_rehashed",
+      "expected_pass": false,
+      "python_classification": "REJECTED",
+      "node_classification": "REJECTED",
+      "pass": true,
+      "python_errors": [
+        "learner leakage:learner-projection.json:['source_binding']"
+      ],
+      "node_errors": [
+        "learner leakage:learner-projection.json"
+      ],
+      "python_diagnostics": null,
+      "node_diagnostics": null,
+      "classification": "EXPECTED_REJECTION",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "patient_care_escalation_rehashed",
+      "expected_pass": false,
+      "python_classification": "REJECTED",
+      "node_classification": "REJECTED",
+      "pass": true,
+      "python_errors": [
+        "authority binding"
+      ],
+      "node_errors": [
+        "patient-care escalation"
+      ],
+      "python_diagnostics": null,
+      "node_diagnostics": null,
+      "classification": "EXPECTED_REJECTION",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "concrete_treatment_escalation_rehashed",
+      "expected_pass": false,
+      "python_classification": "REJECTED",
+      "node_classification": "REJECTED",
+      "pass": true,
+      "python_errors": [
+        "authority binding"
+      ],
+      "node_errors": [
+        "treatment escalation"
+      ],
+      "python_diagnostics": null,
+      "node_diagnostics": null,
+      "classification": "EXPECTED_REJECTION",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "collapsed_sequences_rehashed",
+      "expected_pass": false,
+      "python_classification": "REJECTED",
+      "node_classification": "REJECTED",
+      "pass": true,
+      "python_errors": [
+        "alternate sequence binding",
+        "reference sequences collapsed"
+      ],
+      "node_errors": [
+        "alternate sequence",
+        "sequences collapsed"
+      ],
+      "python_diagnostics": null,
+      "node_diagnostics": null,
+      "classification": "EXPECTED_REJECTION",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "canonical_root_forgery_rehashed",
+      "expected_pass": false,
+      "python_classification": "REJECTED",
+      "node_classification": "REJECTED",
+      "pass": true,
+      "python_errors": [
+        "canonical root binding"
+      ],
+      "node_errors": [
+        "canonical binding"
+      ],
+      "python_diagnostics": null,
+      "node_diagnostics": null,
+      "classification": "EXPECTED_REJECTION",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "reference_session_score_forgery_rehashed",
+      "expected_pass": false,
+      "python_classification": "REJECTED",
+      "node_classification": "REJECTED",
+      "pass": true,
+      "python_errors": [
+        "canonical:decision root mismatch",
+        "canonical:source score"
+      ],
+      "node_errors": [
+        "canonical:decision root",
+        "canonical:score"
+      ],
+      "python_diagnostics": null,
+      "node_diagnostics": null,
+      "classification": "EXPECTED_REJECTION",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "reference_session_chain_forgery_rehashed",
+      "expected_pass": false,
+      "python_classification": "REJECTED",
+      "node_classification": "REJECTED",
+      "pass": true,
+      "python_errors": [
+        "canonical:chain root mismatch",
+        "canonical:decision root mismatch"
+      ],
+      "node_errors": [
+        "canonical:chain",
+        "canonical:decision root"
+      ],
+      "python_diagnostics": null,
+      "node_diagnostics": null,
+      "classification": "EXPECTED_REJECTION",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "readme_route_removed_rehashed",
+      "expected_pass": false,
+      "python_classification": "REJECTED",
+      "node_classification": "REJECTED",
+      "pass": true,
+      "python_errors": [
+        "README route missing:/examples/facility-decision/learner"
+      ],
+      "node_errors": [
+        "README route:/examples/facility-decision/learner"
+      ],
+      "python_diagnostics": null,
+      "node_diagnostics": null,
+      "classification": "EXPECTED_REJECTION",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "instructor_demo_escalation_rehashed",
+      "expected_pass": false,
+      "python_classification": "REJECTED",
+      "node_classification": "REJECTED",
+      "pass": true,
+      "python_errors": [
+        "instructor projection boundary"
+      ],
+      "node_errors": [
+        "instructor boundary"
+      ],
+      "python_diagnostics": null,
+      "node_diagnostics": null,
+      "classification": "EXPECTED_REJECTION",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "demo_privilege_removed_rehashed",
+      "expected_pass": false,
+      "python_classification": "REJECTED",
+      "node_classification": "REJECTED",
+      "pass": true,
+      "python_errors": [
+        "demo projection boundary"
+      ],
+      "node_errors": [
+        "demo boundary"
+      ],
+      "python_diagnostics": null,
+      "node_diagnostics": null,
+      "classification": "EXPECTED_REJECTION",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "manifest_file_hash_forgery",
+      "expected_pass": false,
+      "python_classification": "REJECTED",
+      "node_classification": "REJECTED",
+      "pass": true,
+      "python_errors": [
+        "manifest hash:learner-projection.json"
+      ],
+      "node_errors": [
+        "file hash:learner-projection.json"
+      ],
+      "python_diagnostics": null,
+      "node_diagnostics": null,
+      "classification": "EXPECTED_REJECTION",
+      "status": "EXPECTED_REJECTION"
+    }
+  ],
+  "errors": [],
+  "classification": "PASS"
+}

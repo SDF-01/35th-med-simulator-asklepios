@@ -1,0 +1,18 @@
+{
+  "actions": 16,
+  "actors": 4,
+  "attestation_kind": "verification",
+  "attestation_sha256": "a9a05cecdd7e1663120eb58b10354de670e7b895dfdc303f45ed1e1c5589824d",
+  "events": 4,
+  "expected_target_sha256": "06c23c3f96c9122c383cd8de2abcac8088fff21c3d35fe843e00c12b7319dfee",
+  "mismatches": [],
+  "mode": "check",
+  "schema_version": "1.2.0",
+  "selected_sequence_triples": 7,
+  "source": "config/facility-arrival/ASK-D-001.json",
+  "source_file_sha256": "0d3fce8af407703c006787c3f55b6e14b6c5172b4e3dec45e8020ffba0fce7f5",
+  "spec_sha256": "a13ee903414743d971edb1fbb53b2f624defc59a995cfd88235040766c0e54f8",
+  "status": "PASS",
+  "target": "src/facility-arrival/specification.generated.ts",
+  "target_file_sha256": "06c23c3f96c9122c383cd8de2abcac8088fff21c3d35fe843e00c12b7319dfee"
+}
