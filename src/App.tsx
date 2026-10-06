@@ -20,6 +20,7 @@ import {
 } from '@/pages/FacilityDecisionSessionPage';
 import { FacilityArrivalExamplePage } from '@/pages/FacilityArrivalExamplePage';
 import { ScenarioLibraryPage } from '@/pages/ScenarioLibraryPage';
+import { SoloPracticePage } from '@/pages/SoloPracticePage';
 import { getSavedLobbyCode, buildJoinPath } from '@/utils/lobbyCode';
 
 function HomeRoute() {
@@ -63,6 +64,7 @@ export default function App() {
 
         <Route path="/host" element={<HostExercisePage />} />
         <Route path="/host/:code" element={<HostExercisePage />} />
+        <Route path="/solo" element={<SoloPracticePage />} />
         <Route path="/scenarios" element={<ScenarioLibraryPage />} />
         <Route path="/scenario-library" element={<ScenarioLibraryPage />} />
         <Route path="/scenario-science" element={<ScenarioLibraryPage />} />

@@ -3,11 +3,13 @@ services:
     name: asklepios-hub
     runtime: node
     plan: free
-    buildCommand: npm install
+    # Include devDependencies so tsx is available for start:hub on the free tier.
+    buildCommand: npm ci --include=dev
     startCommand: npm run start:hub
     healthCheckPath: /api/health
     envVars:
       - key: NODE_ENV
         value: production
       - key: ASKLEPIOS_CORS_ORIGIN
+        # Set this to your real frontend origin after deploy (Cloudflare Pages / Vercel / Render static).
         value: https://project-asklepios.vercel.app

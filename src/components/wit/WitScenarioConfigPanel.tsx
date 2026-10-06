@@ -91,6 +91,7 @@ interface WitScenarioConfigPanelProps {
   onDeploy?: () => void;
   deployDisabled?: boolean;
   hideDeployButton?: boolean;
+  deployButtonLabel?: string;
 }
 
 export function WitScenarioConfigPanel({
@@ -101,6 +102,7 @@ export function WitScenarioConfigPanel({
   onDeploy,
   deployDisabled = false,
   hideDeployButton = false,
+  deployButtonLabel = 'Deploy Scenario to Device',
 }: WitScenarioConfigPanelProps) {
   const selection = config.scenarioSelection;
   const category = SCENARIO_CATEGORIES.find((item) => item.id === selection.categoryId);
@@ -596,7 +598,7 @@ export function WitScenarioConfigPanel({
       {!hideDeployButton && onDeploy && (
         <div className="mt-6">
           <Button onClick={onDeploy} disabled={deployDisabled || !triageValid}>
-            Deploy Scenario to Device
+            {deployButtonLabel}
           </Button>
         </div>
       )}

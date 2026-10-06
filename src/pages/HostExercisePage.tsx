@@ -18,6 +18,7 @@ import type { ProviderDevice } from '@/types/device';
 import type { ActiveExerciseState } from '@/types/exercise';
 import { buildJoinPath, isValidLobbyCode, normalizeLobbyCode, saveLobbyCode } from '@/utils/lobbyCode';
 import { getHubSetupIssue } from '@/utils/hubMessages';
+import { disableSoloMode } from '@/utils/soloMode';
 
 export function HostExercisePage() {
   const navigate = useNavigate();
@@ -34,6 +35,10 @@ export function HostExercisePage() {
 
   const displayCode = routeCode ? normalizeLobbyCode(routeCode) : '';
   const inLobby = isValidLobbyCode(displayCode);
+
+  useEffect(() => {
+    disableSoloMode();
+  }, []);
 
   useEffect(() => {
     if (!inLobby || !displayCode) return;

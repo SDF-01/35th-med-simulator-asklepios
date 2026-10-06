@@ -239,7 +239,16 @@ export const useSimulationStore = create<SimulationStore>((set, get) => ({
     const base = scenariosById[config.baseScenarioId];
     if (!base) return;
     const scenario = applyScenarioConfiguration(base, config);
-    set({ scenarioConfig: config, scenario, session: null, aar: null });
+    set({
+      scenarioConfig: config,
+      scenario,
+      session: null,
+      aar: null,
+      pendingHandoff: null,
+      exerciseMeta: null,
+      role: 'provider',
+      endexWarning: null,
+    });
   },
 
   startSession: () => {
