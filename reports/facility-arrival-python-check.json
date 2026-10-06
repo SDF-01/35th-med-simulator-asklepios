@@ -1,9 +1,0 @@
-{
-  "checks": 371,
-  "errors": [],
-  "example_id": "ASK-FACILITY-ARRIVAL-RC3-3",
-  "schema_version": "1.0.0",
-  "session_sha256": "5d22d201964725a31c36f27b1cfc5c671869917dcc3a887d7bbcba6bcc5d26f0",
-  "status": "PASS",
-  "transitions": 16
-}
