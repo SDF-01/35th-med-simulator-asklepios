@@ -1,0 +1,24 @@
+{
+  "absolute_debt_free_claim_permitted": false,
+  "accepted_risks": [],
+  "authenticated_receipt_count": 0,
+  "authenticated_receipts": {},
+  "checks": 223,
+  "classification": "PASS",
+  "entries": 15,
+  "errors": [],
+  "evidence_root_sha256": "adc0a3ce896ba0bcb309a61dc533ce3094b94169cb2b61ac9790d919b50989a5",
+  "known_release_blockers_remaining": 0,
+  "mode": "source",
+  "out_of_scope_items": [
+    "TD-DIRECT-PATIENT-CARE-007",
+    "TD-REAL-CLINICAL-TIMING-006"
+  ],
+  "permitted_release_claim": "No known release-blocking technical debt remains within the machine-checked scope and current authenticated evidence.",
+  "receipt_chain_root_sha256": null,
+  "register_id": "asklepios-release-debt-v1",
+  "required_receipt_count": 26,
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "terminal_evidence_stage": "final.decision-evidence"
+}

@@ -1,0 +1,13 @@
+{
+  "decision_count": 16,
+  "diagnostic_count": 2,
+  "errors": [],
+  "mode": "check",
+  "schema_version": "1.0.0",
+  "source": "config/facility-decision/ASK-D-001.json",
+  "source_sha256": "6dcd30ec0cd2e98a8c0b3674a92645bdef3dbbb532f5a1c23ebcf6ac2418fcf3",
+  "status": "PASS",
+  "target": "src/facility-decision/contracts.generated.ts",
+  "target_sha256": "c6885d70d7494b6944649691bc7e51f3e259cb3b911106d82b5ebd6dbb5bd470",
+  "treatment_policy_count": 2
+}

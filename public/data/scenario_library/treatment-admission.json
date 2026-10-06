@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "classification": "PASS",
+  "status": "PASS",
+  "registry_id": "asklepios-treatment-admission-registry-v1",
+  "registry_epoch": 1,
+  "registry_sha256": "a2e75c7a55b71de0755fceabf6252f5a807f7a2730d03c4a12d605d0079356cb",
+  "admission_profile": "SOURCE_SPAN_APPLICABILITY_SCOPE_EFFECT_AND_INDEPENDENT_ATTESTATION_V1",
+  "state_order": [
+    "DISCOVERED",
+    "SOURCE_BYTES_VERIFIED",
+    "EVIDENCE_SPAN_BOUND",
+    "APPLICABILITY_REVIEWED",
+    "CONTRAINDICATION_MODEL_REVIEWED",
+    "ROLE_SCOPE_BOUND",
+    "SIMULATED_EFFECT_ADJUDICATED",
+    "INDEPENDENTLY_ATTESTED",
+    "SIMULATION_ADMITTED"
+  ],
+  "entry_count": 2,
+  "simulation_admitted_count": 0,
+  "active_learner_choice_count": 0,
+  "entries": [
+    {
+      "treatment_id": "PAIN_MANAGEMENT_OBJECTIVE",
+      "display_name": "Pain-management objective",
+      "facility_action_id": "pain_management",
+      "admission_state": "DISCOVERED",
+      "simulation_admitted": false,
+      "learner_choice_status": "BLOCKED_PENDING_ADJUDICATION",
+      "governing_rule_status": "NOT_ADJUDICATED",
+      "effect_model_status": "BLOCKED",
+      "missing_requirements": [
+        "exact_governing_source_locator",
+        "source_bytes_verified",
+        "evidence_span_bound",
+        "source_version_and_supersession_status",
+        "provider_scope_binding",
+        "patient_specific_eligibility",
+        "contraindication_logic",
+        "resource_availability",
+        "monitoring_plan",
+        "reassessment_plan",
+        "independent_clinical_attestation"
+      ],
+      "source_profile_activation_state": "ABSTRACT_OBJECTIVE_ONLY",
+      "plain_language_limitation": "This treatment is not yet an active learner choice because its governing evidence, applicability, scope, contraindications, simulated effect, and independent clinical review have not all been admitted."
+    },
+    {
+      "treatment_id": "TOURNIQUET_MODIFICATION",
+      "display_name": "Tourniquet-modification decision",
+      "facility_action_id": "remove_tourniquet",
+      "admission_state": "DISCOVERED",
+      "simulation_admitted": false,
+      "learner_choice_status": "BLOCKED_PENDING_ADJUDICATION",
+      "governing_rule_status": "NOT_ADJUDICATED",
+      "effect_model_status": "BLOCKED",
+      "missing_requirements": [
+        "exact_governing_source_locator",
+        "source_bytes_verified",
+        "evidence_span_bound",
+        "application_time",
+        "wound_and_bleeding_assessment",
+        "distal_assessment",
+        "resuscitation_status",
+        "monitoring_capability",
+        "receiving_capability",
+        "provider_scope_binding",
+        "independent_clinical_attestation"
+      ],
+      "source_profile_activation_state": "BLOCKED_MISSING_ELIGIBILITY_MODEL",
+      "plain_language_limitation": "This treatment is not yet an active learner choice because its governing evidence, applicability, scope, contraindications, simulated effect, and independent clinical review have not all been admitted."
+    }
+  ],
+  "boundaries": {
+    "automatic_treatment_activation": false,
+    "clinical_decision_support": "PROHIBITED",
+    "direct_patient_care": "PROHIBITED",
+    "healthcare_simulation": "PERMITTED_WITHIN_VALIDATED_SCOPE",
+    "patient_care_authority": "NONE",
+    "unadjudicated_treatment_visible_as_active_choice": false
+  },
+  "truth_boundary": "A discovered or source-mentioned treatment is not an active simulation choice. Activation requires exact source bytes, a bound evidence span, applicability and contraindication review, role/scope binding, an adjudicated simulated effect, and independent attestation. Direct patient care and clinical decision support remain prohibited.",
+  "projection_sha256": "23237fa5a26cb4e6c7a608f74f594cbdce506609502bf362e8628c48aedf3260"
+}

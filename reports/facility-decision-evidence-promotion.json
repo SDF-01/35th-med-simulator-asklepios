@@ -1,0 +1,18 @@
+{
+  "activated_treatments": 0,
+  "admitted_clinical_rules": 0,
+  "byte_bound_spans": 0,
+  "calibrated_parameters": 0,
+  "calibration_slots": 5,
+  "checks": 338,
+  "claim_records": 2,
+  "errors": [],
+  "identity_verified_official_documents": 0,
+  "located_official_documents": 6,
+  "schema_version": "1.1.0",
+  "source_candidates": 6,
+  "span_candidates": 7,
+  "status": "PASS",
+  "treatment_slots": 2,
+  "truth_boundary": "Official-document discovery and locator review do not establish byte identity, span binding, applicability, entailment, treatment authority, or calibration."
+}

@@ -1,0 +1,2134 @@
+{
+  "authority": {
+    "automatic_clinical_rule_generation": false,
+    "clinical_content_mode": "INHERITED_REPOSITORY_TEMPLATE",
+    "deployment_scope": "production_training_reference",
+    "evidence_mode": "IDENTITY_AND_SCOPE_ONLY",
+    "operational_content_mode": "DETERMINISTIC_EXERCISE_ORCHESTRATION",
+    "patient_care_use": "PROHIBITED"
+  },
+  "care_continuum_phase": "post_cuf_tfc_facility_reception",
+  "certificate": {
+    "certificate_version": "1.0.0",
+    "checks": {
+      "actor_knowledge_authorized": true,
+      "diagnostics_precede_hidden_findings": true,
+      "patient_care_use_prohibited": true,
+      "replay_chain_complete": true,
+      "required_source_actions_complete": true,
+      "score_within_bounds": true,
+      "source_action_subset_preserved": true,
+      "source_binding_matches": true,
+      "terminal_handoff_reached": true,
+      "timeout_is_event_sourced": true,
+      "transition_states_bound": true,
+      "uncalibrated_parameters_disclosed": true,
+      "unsafe_source_actions_fail_closed": true,
+      "wit_observations_process_only": true
+    },
+    "claim_ledger_sha256": "8fc0336e161c8dca55b06e4937289ce3d72ffee0ebbe576e2d6d25dcaa8077d8",
+    "final_state_sha256": "bc7bacdaa42f81d75a31357966a4190e650dc8b2318edf06f8cac6a3ae544130",
+    "initial_state_sha256": "6a2843f21aab46f28b29bd262e0effb6d7f491a2f659d778df2f8964f7b871b6",
+    "replay_root_sha256": "8bc19cc15011716a475ba39b8daac8e38089179c73db5dddba5716470de4b183",
+    "session_sha256": "5d22d201964725a31c36f27b1cfc5c671869917dcc3a887d7bbcba6bcc5d26f0",
+    "source_binding_sha256": "6bb454ccf779b5dba62b212fe04f47c1073cc1f6ef2ac573b592bf2d1809e523",
+    "spec_sha256": "a13ee903414743d971edb1fbb53b2f624defc59a995cfd88235040766c0e54f8",
+    "transition_root_sha256": "733009c9b0de2562bc2a0110261e2450bb9ad87dbe7886fef377bbad18e87dd9"
+  },
+  "command_receipts": [
+    {
+      "action_id": "receive_handoff",
+      "command_id": "canonical-01-receive_handoff",
+      "command_sha256": "a2cb9b28e4f1d25057de8c6a587f91d96cf7bb1db8baae8b3ffcb0e7bdf30510",
+      "final_transition_sequence": 2,
+      "first_transition_sequence": 2
+    },
+    {
+      "action_id": "primary_assessment",
+      "command_id": "canonical-02-primary_assessment",
+      "command_sha256": "5115632959c6f4743522af2ea5382d1273ec7dc51cfea1b6054441d459c7ffb2",
+      "final_transition_sequence": 3,
+      "first_transition_sequence": 3
+    },
+    {
+      "action_id": "monitor_vitals",
+      "command_id": "canonical-03-monitor_vitals",
+      "command_sha256": "04bb25e9d458dc796dc86c0e57634f1da557d7b938d679b851e62c3ed2b2a1ef",
+      "final_transition_sequence": 4,
+      "first_transition_sequence": 4
+    },
+    {
+      "action_id": "differential",
+      "command_id": "canonical-04-differential",
+      "command_sha256": "84bc4e7ea1d3e4e0266e45538b18b992abea16536009f7e59f6825de5750b71a",
+      "final_transition_sequence": 5,
+      "first_transition_sequence": 5
+    },
+    {
+      "action_id": "order_imaging",
+      "command_id": "canonical-05-order_imaging",
+      "command_sha256": "6a5081ccc5fbf5e6c0a664e63a041039b54c7fe0248af8248f29976fb424c6ad",
+      "final_transition_sequence": 7,
+      "first_transition_sequence": 6
+    },
+    {
+      "action_id": "order_labs",
+      "command_id": "canonical-06-order_labs",
+      "command_sha256": "ae5e37b34661ac5c498e9a1db74bb8a37ae68b1e2a9daedc4d101d041ce04e7c",
+      "final_transition_sequence": 8,
+      "first_transition_sequence": 8
+    },
+    {
+      "action_id": "pain_management",
+      "command_id": "canonical-07-pain_management",
+      "command_sha256": "8d528e5263ea2683df508036098334fcbd9d9712ce94e9c7071433e4b308b9e6",
+      "final_transition_sequence": 9,
+      "first_transition_sequence": 9
+    },
+    {
+      "action_id": "confirm_surge_roles",
+      "command_id": "canonical-08-confirm_surge_roles",
+      "command_sha256": "e8e6d6e45ec92bf274e81525799fbcc5d275995acd45faee08a4b6004391834c",
+      "final_transition_sequence": 10,
+      "first_transition_sequence": 10
+    },
+    {
+      "action_id": "documentation",
+      "command_id": "canonical-09-documentation",
+      "command_sha256": "6bb4da17f75c26cdb2aed6fd4a07c79e57b8894765a2c6e5d6e171564d0b0354",
+      "final_transition_sequence": 11,
+      "first_transition_sequence": 11
+    },
+    {
+      "action_id": "wait_for_diagnostics",
+      "command_id": "canonical-10-wait_for_diagnostics",
+      "command_sha256": "b707c64337e8469ce45c5a3dfe9b7961cc7a7f62584b9b750d6be88335a9d17c",
+      "final_transition_sequence": 13,
+      "first_transition_sequence": 12
+    },
+    {
+      "action_id": "review_diagnostics",
+      "command_id": "canonical-11-review_diagnostics",
+      "command_sha256": "89083d6198c51acedb5909b1be869dc9ba9cdbbcea457af9878a32ee714c54ec",
+      "final_transition_sequence": 14,
+      "first_transition_sequence": 14
+    },
+    {
+      "action_id": "escalation",
+      "command_id": "canonical-12-escalation",
+      "command_sha256": "c6f6a1dfc1ea0a0eedc112630790877424410c9ad89a07fba5f003b52986afc6",
+      "final_transition_sequence": 15,
+      "first_transition_sequence": 15
+    },
+    {
+      "action_id": "complete_handoff",
+      "command_id": "canonical-13-complete_handoff",
+      "command_sha256": "56b168f524be0c37c911eb36d0faec8b62d81fb631640f3b8860ce199d35fa37",
+      "final_transition_sequence": 16,
+      "first_transition_sequence": 16
+    }
+  ],
+  "example_id": "ASK-FACILITY-ARRIVAL-RC3-3",
+  "facility_profile": "BASE_CLINIC_TRAUMA_RECEPTION_RC3_3",
+  "final_state": {
+    "action_completed_at": {
+      "complete_handoff": 645,
+      "confirm_surge_roles": 345,
+      "differential": 225,
+      "documentation": 390,
+      "escalation": 585,
+      "monitor_vitals": 165,
+      "order_imaging": 255,
+      "order_labs": 285,
+      "pain_management": 315,
+      "primary_assessment": 135,
+      "receive_handoff": 45,
+      "review_diagnostics": 525,
+      "wait_for_diagnostics": 465
+    },
+    "actor_knowledge": {
+      "clinic_nurse": [
+        "casualty_inbound",
+        "diagnostic_results_received",
+        "diagnostics_reviewed",
+        "disposition_escalated",
+        "documentation_complete",
+        "field_handoff_reconciled",
+        "handoff_complete",
+        "imaging_ordered",
+        "labs_ordered",
+        "monitoring_established",
+        "pain_objective_addressed",
+        "prearrival_notice",
+        "primary_assessment_complete",
+        "second_casualty_inbound",
+        "surge_roles_confirmed"
+      ],
+      "diagnostics_tech": [
+        "diagnostic_results_delivered",
+        "imaging_ordered",
+        "labs_ordered"
+      ],
+      "receiving_provider": [
+        "casualty_inbound",
+        "diagnostic_event_awaited",
+        "diagnostic_results_received",
+        "diagnostics_reviewed",
+        "disposition_escalated",
+        "documentation_complete",
+        "field_handoff_reconciled",
+        "handoff_complete",
+        "imaging_ordered",
+        "labs_ordered",
+        "monitoring_established",
+        "pain_objective_addressed",
+        "prearrival_notice",
+        "primary_assessment_complete",
+        "second_casualty_inbound",
+        "surge_roles_confirmed",
+        "working_differential_documented"
+      ],
+      "wit_observer": [
+        "assessment_sequence_observed",
+        "diagnostic_results_timing_observed",
+        "diagnostic_timing_observed",
+        "differential_documentation_observed",
+        "documentation_observed",
+        "escalation_observed",
+        "exercise_started",
+        "handoff_closure_observed",
+        "handoff_observed",
+        "imaging_coordination_observed",
+        "laboratory_coordination_observed",
+        "monitoring_observed",
+        "pain_objective_observed",
+        "prearrival_notification_observed",
+        "reassessment_observed",
+        "surge_notice_observed",
+        "surge_role_confirmation_observed"
+      ]
+    },
+    "alerts": [
+      "Diagnostic results reviewed and casualty reassessed.",
+      "Ordered imaging and laboratory results are available for review.",
+      "Pre-arrival notification received. Prepare for post-field-care reception.",
+      "Second casualty inbound. Preserve continuity while resources remain constrained.",
+      "Source-defined pain-management objective addressed without generating a drug, dose, or route."
+    ],
+    "completed_action_ids": [
+      "complete_handoff",
+      "confirm_surge_roles",
+      "differential",
+      "documentation",
+      "escalation",
+      "monitor_vitals",
+      "order_imaging",
+      "order_labs",
+      "pain_management",
+      "primary_assessment",
+      "receive_handoff",
+      "review_diagnostics",
+      "wait_for_diagnostics"
+    ],
+    "completed_source_action_ids": [
+      "differential",
+      "documentation",
+      "escalation",
+      "monitor_vitals",
+      "order_imaging",
+      "order_labs",
+      "pain_management",
+      "primary_assessment"
+    ],
+    "elapsed_seconds": 645,
+    "fired_system_events": [
+      "diagnostics_ready",
+      "prearrival_notice",
+      "second_casualty_inbound"
+    ],
+    "max_positive_points": 80,
+    "outcome": "Closed-loop receiving handoff completed.",
+    "phase": "complete",
+    "revealed_hidden_findings": [
+      "Developing pneumothorax",
+      "Elevated lactate on labs if ordered"
+    ],
+    "revision": 16,
+    "score_points": 80,
+    "source_action_completed_at": {
+      "differential": 225,
+      "documentation": 390,
+      "escalation": 585,
+      "monitor_vitals": 165,
+      "order_imaging": 255,
+      "order_labs": 285,
+      "pain_management": 315,
+      "primary_assessment": 135
+    },
+    "terminal_status": "completed",
+    "unsafe_source_action_ids": []
+  },
+  "initial_patient_snapshot": {
+    "hidden_findings_count": 2,
+    "presentation": "Male patient on gurney, alert but confused. Complains of chest pain and shortness of breath. Tourniquet in place on right thigh from field care. Skin pale, diaphoretic.",
+    "vitals": {
+      "bp_diastolic": 62,
+      "bp_systolic": 98,
+      "gcs": 13,
+      "hr": 118,
+      "rr": 24,
+      "spo2": 93,
+      "temp_c": 36.4
+    }
+  },
+  "initial_state": {
+    "action_completed_at": {},
+    "actor_knowledge": {
+      "clinic_nurse": [
+        "casualty_inbound",
+        "prearrival_notice"
+      ],
+      "diagnostics_tech": [],
+      "receiving_provider": [
+        "casualty_inbound",
+        "prearrival_notice"
+      ],
+      "wit_observer": [
+        "exercise_started"
+      ]
+    },
+    "alerts": [],
+    "completed_action_ids": [],
+    "completed_source_action_ids": [],
+    "elapsed_seconds": 0,
+    "fired_system_events": [],
+    "max_positive_points": 80,
+    "outcome": null,
+    "phase": "pre_arrival",
+    "revealed_hidden_findings": [],
+    "revision": 0,
+    "score_points": 0,
+    "source_action_completed_at": {},
+    "terminal_status": "active",
+    "unsafe_source_action_ids": []
+  },
+  "normalized_score_bps": 10000,
+  "schema_version": "1.1.0",
+  "source_binding": {
+    "content_registry_merkle_root": "9db5b82df90426da8c1543b9ef67464dec59aff90d9731a5be26fff83f621841",
+    "source_action_ids": [
+      "differential",
+      "discharge_without_workup",
+      "documentation",
+      "escalation",
+      "monitor_vitals",
+      "order_imaging",
+      "order_labs",
+      "pain_management",
+      "primary_assessment",
+      "remove_tourniquet"
+    ],
+    "source_file_path": "src/content/scenarios.ts",
+    "source_scenario_id": "ASK-D-001",
+    "source_scenario_sha256": "b5562e64b4847d7bc47afc9fcc1e917aeee3268dddee3134bd2c3129266d5636",
+    "template_asset_id": "template:ASK-D-001",
+    "template_record_sha256": "6eeb1fbea265617816c0fc0a74854673fe5395e1ef74d619e0913f89211afc57"
+  },
+  "spec_sha256": "a13ee903414743d971edb1fbb53b2f624defc59a995cfd88235040766c0e54f8",
+  "title": "Post-CUF/TFC blast casualty reception at a constrained base clinic",
+  "transitions": [
+    {
+      "action_id": null,
+      "actor_id": "system",
+      "after_state_sha256": "3d1386402211a8c5985838c1cb33a5464e2193fc776caa13400ecc8b0cd1c16f",
+      "before_state_sha256": "6a2843f21aab46f28b29bd262e0effb6d7f491a2f659d778df2f8964f7b871b6",
+      "command_id": null,
+      "completed_at_seconds": 0,
+      "event_id": "prearrival_notice",
+      "kind": "system_event",
+      "label": "Pre-arrival notification received",
+      "origin": "system_event",
+      "score_delta": 0,
+      "sequence": 1,
+      "source_action_id": null,
+      "started_at_seconds": 0,
+      "state_after": {
+        "action_completed_at": {},
+        "actor_knowledge": {
+          "clinic_nurse": [
+            "casualty_inbound",
+            "prearrival_notice"
+          ],
+          "diagnostics_tech": [],
+          "receiving_provider": [
+            "casualty_inbound",
+            "prearrival_notice"
+          ],
+          "wit_observer": [
+            "exercise_started",
+            "prearrival_notification_observed"
+          ]
+        },
+        "alerts": [
+          "Pre-arrival notification received. Prepare for post-field-care reception."
+        ],
+        "completed_action_ids": [],
+        "completed_source_action_ids": [],
+        "elapsed_seconds": 0,
+        "fired_system_events": [
+          "prearrival_notice"
+        ],
+        "max_positive_points": 80,
+        "outcome": null,
+        "phase": "pre_arrival",
+        "revealed_hidden_findings": [],
+        "revision": 1,
+        "score_points": 0,
+        "source_action_completed_at": {},
+        "terminal_status": "active",
+        "unsafe_source_action_ids": []
+      },
+      "transition_id": "FAT-001-e67307b06521",
+      "wit_observation": {
+        "category": "preparedness",
+        "clinical_directive": null,
+        "process_only": true,
+        "statement": "Pre-arrival notification received"
+      }
+    },
+    {
+      "action_id": "receive_handoff",
+      "actor_id": "receiving_provider",
+      "after_state_sha256": "8be0d158be39c90d8618e89dbd0a9f91e04208cb5ef15d3a2fb33dd0f8c79374",
+      "before_state_sha256": "3d1386402211a8c5985838c1cb33a5464e2193fc776caa13400ecc8b0cd1c16f",
+      "command_id": "canonical-01-receive_handoff",
+      "completed_at_seconds": 45,
+      "event_id": null,
+      "kind": "learner_action",
+      "label": "Receive casualty and reconcile the field handoff",
+      "origin": "operational_workflow",
+      "score_delta": 0,
+      "sequence": 2,
+      "source_action_id": null,
+      "started_at_seconds": 0,
+      "state_after": {
+        "action_completed_at": {
+          "receive_handoff": 45
+        },
+        "actor_knowledge": {
+          "clinic_nurse": [
+            "casualty_inbound",
+            "field_handoff_reconciled",
+            "prearrival_notice"
+          ],
+          "diagnostics_tech": [],
+          "receiving_provider": [
+            "casualty_inbound",
+            "field_handoff_reconciled",
+            "prearrival_notice"
+          ],
+          "wit_observer": [
+            "exercise_started",
+            "handoff_observed",
+            "prearrival_notification_observed"
+          ]
+        },
+        "alerts": [
+          "Pre-arrival notification received. Prepare for post-field-care reception."
+        ],
+        "completed_action_ids": [
+          "receive_handoff"
+        ],
+        "completed_source_action_ids": [],
+        "elapsed_seconds": 45,
+        "fired_system_events": [
+          "prearrival_notice"
+        ],
+        "max_positive_points": 80,
+        "outcome": null,
+        "phase": "reception",
+        "revealed_hidden_findings": [],
+        "revision": 2,
+        "score_points": 0,
+        "source_action_completed_at": {},
+        "terminal_status": "active",
+        "unsafe_source_action_ids": []
+      },
+      "transition_id": "FAT-002-ef205c0706a5",
+      "wit_observation": {
+        "category": "continuity",
+        "clinical_directive": null,
+        "process_only": true,
+        "statement": "Receive casualty and reconcile the field handoff observed."
+      }
+    },
+    {
+      "action_id": "primary_assessment",
+      "actor_id": "receiving_provider",
+      "after_state_sha256": "e18334979240a65141a7249329d677a0b0d4fb5eb1b271f52b7a448cfa9e4109",
+      "before_state_sha256": "8be0d158be39c90d8618e89dbd0a9f91e04208cb5ef15d3a2fb33dd0f8c79374",
+      "command_id": "canonical-02-primary_assessment",
+      "completed_at_seconds": 135,
+      "event_id": null,
+      "kind": "learner_action",
+      "label": "Perform primary assessment",
+      "origin": "source_template",
+      "score_delta": 15,
+      "sequence": 3,
+      "source_action_id": "primary_assessment",
+      "started_at_seconds": 45,
+      "state_after": {
+        "action_completed_at": {
+          "primary_assessment": 135,
+          "receive_handoff": 45
+        },
+        "actor_knowledge": {
+          "clinic_nurse": [
+            "casualty_inbound",
+            "field_handoff_reconciled",
+            "prearrival_notice",
+            "primary_assessment_complete"
+          ],
+          "diagnostics_tech": [],
+          "receiving_provider": [
+            "casualty_inbound",
+            "field_handoff_reconciled",
+            "prearrival_notice",
+            "primary_assessment_complete"
+          ],
+          "wit_observer": [
+            "assessment_sequence_observed",
+            "exercise_started",
+            "handoff_observed",
+            "prearrival_notification_observed"
+          ]
+        },
+        "alerts": [
+          "Pre-arrival notification received. Prepare for post-field-care reception."
+        ],
+        "completed_action_ids": [
+          "primary_assessment",
+          "receive_handoff"
+        ],
+        "completed_source_action_ids": [
+          "primary_assessment"
+        ],
+        "elapsed_seconds": 135,
+        "fired_system_events": [
+          "prearrival_notice"
+        ],
+        "max_positive_points": 80,
+        "outcome": null,
+        "phase": "assessment",
+        "revealed_hidden_findings": [],
+        "revision": 3,
+        "score_points": 15,
+        "source_action_completed_at": {
+          "primary_assessment": 135
+        },
+        "terminal_status": "active",
+        "unsafe_source_action_ids": []
+      },
+      "transition_id": "FAT-003-be9efd81b616",
+      "wit_observation": {
+        "category": "assessment",
+        "clinical_directive": null,
+        "process_only": true,
+        "statement": "Perform primary assessment observed."
+      }
+    },
+    {
+      "action_id": "monitor_vitals",
+      "actor_id": "receiving_provider",
+      "after_state_sha256": "3ba46fc5a6bff22b8eba59c73a2a3e36c39b49fad4f344ab1e0143baba1db57e",
+      "before_state_sha256": "e18334979240a65141a7249329d677a0b0d4fb5eb1b271f52b7a448cfa9e4109",
+      "command_id": "canonical-03-monitor_vitals",
+      "completed_at_seconds": 165,
+      "event_id": null,
+      "kind": "learner_action",
+      "label": "Establish continuous monitoring",
+      "origin": "source_template",
+      "score_delta": 8,
+      "sequence": 4,
+      "source_action_id": "monitor_vitals",
+      "started_at_seconds": 135,
+      "state_after": {
+        "action_completed_at": {
+          "monitor_vitals": 165,
+          "primary_assessment": 135,
+          "receive_handoff": 45
+        },
+        "actor_knowledge": {
+          "clinic_nurse": [
+            "casualty_inbound",
+            "field_handoff_reconciled",
+            "monitoring_established",
+            "prearrival_notice",
+            "primary_assessment_complete"
+          ],
+          "diagnostics_tech": [],
+          "receiving_provider": [
+            "casualty_inbound",
+            "field_handoff_reconciled",
+            "monitoring_established",
+            "prearrival_notice",
+            "primary_assessment_complete"
+          ],
+          "wit_observer": [
+            "assessment_sequence_observed",
+            "exercise_started",
+            "handoff_observed",
+            "monitoring_observed",
+            "prearrival_notification_observed"
+          ]
+        },
+        "alerts": [
+          "Pre-arrival notification received. Prepare for post-field-care reception."
+        ],
+        "completed_action_ids": [
+          "monitor_vitals",
+          "primary_assessment",
+          "receive_handoff"
+        ],
+        "completed_source_action_ids": [
+          "monitor_vitals",
+          "primary_assessment"
+        ],
+        "elapsed_seconds": 165,
+        "fired_system_events": [
+          "prearrival_notice"
+        ],
+        "max_positive_points": 80,
+        "outcome": null,
+        "phase": "assessment",
+        "revealed_hidden_findings": [],
+        "revision": 4,
+        "score_points": 23,
+        "source_action_completed_at": {
+          "monitor_vitals": 165,
+          "primary_assessment": 135
+        },
+        "terminal_status": "active",
+        "unsafe_source_action_ids": []
+      },
+      "transition_id": "FAT-004-7e44289a5c5f",
+      "wit_observation": {
+        "category": "monitoring",
+        "clinical_directive": null,
+        "process_only": true,
+        "statement": "Establish continuous monitoring observed."
+      }
+    },
+    {
+      "action_id": "differential",
+      "actor_id": "receiving_provider",
+      "after_state_sha256": "dc7e687f291116d02871ab18f94e9f5a9edc519888e01f356df3ac076a2ccd90",
+      "before_state_sha256": "3ba46fc5a6bff22b8eba59c73a2a3e36c39b49fad4f344ab1e0143baba1db57e",
+      "command_id": "canonical-04-differential",
+      "completed_at_seconds": 225,
+      "event_id": null,
+      "kind": "learner_action",
+      "label": "Document differential diagnosis",
+      "origin": "source_template",
+      "score_delta": 10,
+      "sequence": 5,
+      "source_action_id": "differential",
+      "started_at_seconds": 165,
+      "state_after": {
+        "action_completed_at": {
+          "differential": 225,
+          "monitor_vitals": 165,
+          "primary_assessment": 135,
+          "receive_handoff": 45
+        },
+        "actor_knowledge": {
+          "clinic_nurse": [
+            "casualty_inbound",
+            "field_handoff_reconciled",
+            "monitoring_established",
+            "prearrival_notice",
+            "primary_assessment_complete"
+          ],
+          "diagnostics_tech": [],
+          "receiving_provider": [
+            "casualty_inbound",
+            "field_handoff_reconciled",
+            "monitoring_established",
+            "prearrival_notice",
+            "primary_assessment_complete",
+            "working_differential_documented"
+          ],
+          "wit_observer": [
+            "assessment_sequence_observed",
+            "differential_documentation_observed",
+            "exercise_started",
+            "handoff_observed",
+            "monitoring_observed",
+            "prearrival_notification_observed"
+          ]
+        },
+        "alerts": [
+          "Pre-arrival notification received. Prepare for post-field-care reception."
+        ],
+        "completed_action_ids": [
+          "differential",
+          "monitor_vitals",
+          "primary_assessment",
+          "receive_handoff"
+        ],
+        "completed_source_action_ids": [
+          "differential",
+          "monitor_vitals",
+          "primary_assessment"
+        ],
+        "elapsed_seconds": 225,
+        "fired_system_events": [
+          "prearrival_notice"
+        ],
+        "max_positive_points": 80,
+        "outcome": null,
+        "phase": "assessment",
+        "revealed_hidden_findings": [],
+        "revision": 5,
+        "score_points": 33,
+        "source_action_completed_at": {
+          "differential": 225,
+          "monitor_vitals": 165,
+          "primary_assessment": 135
+        },
+        "terminal_status": "active",
+        "unsafe_source_action_ids": []
+      },
+      "transition_id": "FAT-005-2925654e91fb",
+      "wit_observation": {
+        "category": "clinical_process",
+        "clinical_directive": null,
+        "process_only": true,
+        "statement": "Document differential diagnosis observed."
+      }
+    },
+    {
+      "action_id": "order_imaging",
+      "actor_id": "receiving_provider",
+      "after_state_sha256": "c93404fe447d2c9faae08875803298e85d7e4f171094727f46b9cdfeb036f7a5",
+      "before_state_sha256": "dc7e687f291116d02871ab18f94e9f5a9edc519888e01f356df3ac076a2ccd90",
+      "command_id": "canonical-05-order_imaging",
+      "completed_at_seconds": 255,
+      "event_id": null,
+      "kind": "learner_action",
+      "label": "Order chest imaging",
+      "origin": "source_template",
+      "score_delta": 15,
+      "sequence": 6,
+      "source_action_id": "order_imaging",
+      "started_at_seconds": 225,
+      "state_after": {
+        "action_completed_at": {
+          "differential": 225,
+          "monitor_vitals": 165,
+          "order_imaging": 255,
+          "primary_assessment": 135,
+          "receive_handoff": 45
+        },
+        "actor_knowledge": {
+          "clinic_nurse": [
+            "casualty_inbound",
+            "field_handoff_reconciled",
+            "imaging_ordered",
+            "monitoring_established",
+            "prearrival_notice",
+            "primary_assessment_complete"
+          ],
+          "diagnostics_tech": [
+            "imaging_ordered"
+          ],
+          "receiving_provider": [
+            "casualty_inbound",
+            "field_handoff_reconciled",
+            "imaging_ordered",
+            "monitoring_established",
+            "prearrival_notice",
+            "primary_assessment_complete",
+            "working_differential_documented"
+          ],
+          "wit_observer": [
+            "assessment_sequence_observed",
+            "differential_documentation_observed",
+            "exercise_started",
+            "handoff_observed",
+            "imaging_coordination_observed",
+            "monitoring_observed",
+            "prearrival_notification_observed"
+          ]
+        },
+        "alerts": [
+          "Pre-arrival notification received. Prepare for post-field-care reception."
+        ],
+        "completed_action_ids": [
+          "differential",
+          "monitor_vitals",
+          "order_imaging",
+          "primary_assessment",
+          "receive_handoff"
+        ],
+        "completed_source_action_ids": [
+          "differential",
+          "monitor_vitals",
+          "order_imaging",
+          "primary_assessment"
+        ],
+        "elapsed_seconds": 255,
+        "fired_system_events": [
+          "prearrival_notice"
+        ],
+        "max_positive_points": 80,
+        "outcome": null,
+        "phase": "diagnostics_pending",
+        "revealed_hidden_findings": [],
+        "revision": 6,
+        "score_points": 48,
+        "source_action_completed_at": {
+          "differential": 225,
+          "monitor_vitals": 165,
+          "order_imaging": 255,
+          "primary_assessment": 135
+        },
+        "terminal_status": "active",
+        "unsafe_source_action_ids": []
+      },
+      "transition_id": "FAT-006-dc5bc38417f1",
+      "wit_observation": {
+        "category": "diagnostics",
+        "clinical_directive": null,
+        "process_only": true,
+        "statement": "Order chest imaging observed."
+      }
+    },
+    {
+      "action_id": null,
+      "actor_id": "system",
+      "after_state_sha256": "876cc05c44ccf19bfdf62f6a31ec1f6154ecdb7f928f3e20026fab537db7d05c",
+      "before_state_sha256": "c93404fe447d2c9faae08875803298e85d7e4f171094727f46b9cdfeb036f7a5",
+      "command_id": null,
+      "completed_at_seconds": 255,
+      "event_id": "second_casualty_inbound",
+      "kind": "system_event",
+      "label": "Second casualty reported inbound",
+      "origin": "system_event",
+      "score_delta": 0,
+      "sequence": 7,
+      "source_action_id": null,
+      "started_at_seconds": 255,
+      "state_after": {
+        "action_completed_at": {
+          "differential": 225,
+          "monitor_vitals": 165,
+          "order_imaging": 255,
+          "primary_assessment": 135,
+          "receive_handoff": 45
+        },
+        "actor_knowledge": {
+          "clinic_nurse": [
+            "casualty_inbound",
+            "field_handoff_reconciled",
+            "imaging_ordered",
+            "monitoring_established",
+            "prearrival_notice",
+            "primary_assessment_complete",
+            "second_casualty_inbound"
+          ],
+          "diagnostics_tech": [
+            "imaging_ordered"
+          ],
+          "receiving_provider": [
+            "casualty_inbound",
+            "field_handoff_reconciled",
+            "imaging_ordered",
+            "monitoring_established",
+            "prearrival_notice",
+            "primary_assessment_complete",
+            "second_casualty_inbound",
+            "working_differential_documented"
+          ],
+          "wit_observer": [
+            "assessment_sequence_observed",
+            "differential_documentation_observed",
+            "exercise_started",
+            "handoff_observed",
+            "imaging_coordination_observed",
+            "monitoring_observed",
+            "prearrival_notification_observed",
+            "surge_notice_observed"
+          ]
+        },
+        "alerts": [
+          "Pre-arrival notification received. Prepare for post-field-care reception.",
+          "Second casualty inbound. Preserve continuity while resources remain constrained."
+        ],
+        "completed_action_ids": [
+          "differential",
+          "monitor_vitals",
+          "order_imaging",
+          "primary_assessment",
+          "receive_handoff"
+        ],
+        "completed_source_action_ids": [
+          "differential",
+          "monitor_vitals",
+          "order_imaging",
+          "primary_assessment"
+        ],
+        "elapsed_seconds": 255,
+        "fired_system_events": [
+          "prearrival_notice",
+          "second_casualty_inbound"
+        ],
+        "max_positive_points": 80,
+        "outcome": null,
+        "phase": "diagnostics_pending",
+        "revealed_hidden_findings": [],
+        "revision": 7,
+        "score_points": 48,
+        "source_action_completed_at": {
+          "differential": 225,
+          "monitor_vitals": 165,
+          "order_imaging": 255,
+          "primary_assessment": 135
+        },
+        "terminal_status": "active",
+        "unsafe_source_action_ids": []
+      },
+      "transition_id": "FAT-007-5c5f54584a8e",
+      "wit_observation": {
+        "category": "surge_response",
+        "clinical_directive": null,
+        "process_only": true,
+        "statement": "Second casualty reported inbound"
+      }
+    },
+    {
+      "action_id": "order_labs",
+      "actor_id": "receiving_provider",
+      "after_state_sha256": "4869807481880db7e3aa8b60501bb957f6397b919efc315d5af8b8b06229173a",
+      "before_state_sha256": "876cc05c44ccf19bfdf62f6a31ec1f6154ecdb7f928f3e20026fab537db7d05c",
+      "command_id": "canonical-06-order_labs",
+      "completed_at_seconds": 285,
+      "event_id": null,
+      "kind": "learner_action",
+      "label": "Order relevant labs",
+      "origin": "source_template",
+      "score_delta": 12,
+      "sequence": 8,
+      "source_action_id": "order_labs",
+      "started_at_seconds": 255,
+      "state_after": {
+        "action_completed_at": {
+          "differential": 225,
+          "monitor_vitals": 165,
+          "order_imaging": 255,
+          "order_labs": 285,
+          "primary_assessment": 135,
+          "receive_handoff": 45
+        },
+        "actor_knowledge": {
+          "clinic_nurse": [
+            "casualty_inbound",
+            "field_handoff_reconciled",
+            "imaging_ordered",
+            "labs_ordered",
+            "monitoring_established",
+            "prearrival_notice",
+            "primary_assessment_complete",
+            "second_casualty_inbound"
+          ],
+          "diagnostics_tech": [
+            "imaging_ordered",
+            "labs_ordered"
+          ],
+          "receiving_provider": [
+            "casualty_inbound",
+            "field_handoff_reconciled",
+            "imaging_ordered",
+            "labs_ordered",
+            "monitoring_established",
+            "prearrival_notice",
+            "primary_assessment_complete",
+            "second_casualty_inbound",
+            "working_differential_documented"
+          ],
+          "wit_observer": [
+            "assessment_sequence_observed",
+            "differential_documentation_observed",
+            "exercise_started",
+            "handoff_observed",
+            "imaging_coordination_observed",
+            "laboratory_coordination_observed",
+            "monitoring_observed",
+            "prearrival_notification_observed",
+            "surge_notice_observed"
+          ]
+        },
+        "alerts": [
+          "Pre-arrival notification received. Prepare for post-field-care reception.",
+          "Second casualty inbound. Preserve continuity while resources remain constrained."
+        ],
+        "completed_action_ids": [
+          "differential",
+          "monitor_vitals",
+          "order_imaging",
+          "order_labs",
+          "primary_assessment",
+          "receive_handoff"
+        ],
+        "completed_source_action_ids": [
+          "differential",
+          "monitor_vitals",
+          "order_imaging",
+          "order_labs",
+          "primary_assessment"
+        ],
+        "elapsed_seconds": 285,
+        "fired_system_events": [
+          "prearrival_notice",
+          "second_casualty_inbound"
+        ],
+        "max_positive_points": 80,
+        "outcome": null,
+        "phase": "diagnostics_pending",
+        "revealed_hidden_findings": [],
+        "revision": 8,
+        "score_points": 60,
+        "source_action_completed_at": {
+          "differential": 225,
+          "monitor_vitals": 165,
+          "order_imaging": 255,
+          "order_labs": 285,
+          "primary_assessment": 135
+        },
+        "terminal_status": "active",
+        "unsafe_source_action_ids": []
+      },
+      "transition_id": "FAT-008-063539fbf502",
+      "wit_observation": {
+        "category": "diagnostics",
+        "clinical_directive": null,
+        "process_only": true,
+        "statement": "Order relevant labs observed."
+      }
+    },
+    {
+      "action_id": "pain_management",
+      "actor_id": "receiving_provider",
+      "after_state_sha256": "3e470d731a697fb0979d0437da7889f4b1e5bb4038862ace3e84882317edf50f",
+      "before_state_sha256": "4869807481880db7e3aa8b60501bb957f6397b919efc315d5af8b8b06229173a",
+      "command_id": "canonical-07-pain_management",
+      "completed_at_seconds": 315,
+      "event_id": null,
+      "kind": "learner_action",
+      "label": "Address source-defined pain-management objective",
+      "origin": "source_template",
+      "score_delta": 3,
+      "sequence": 9,
+      "source_action_id": "pain_management",
+      "started_at_seconds": 285,
+      "state_after": {
+        "action_completed_at": {
+          "differential": 225,
+          "monitor_vitals": 165,
+          "order_imaging": 255,
+          "order_labs": 285,
+          "pain_management": 315,
+          "primary_assessment": 135,
+          "receive_handoff": 45
+        },
+        "actor_knowledge": {
+          "clinic_nurse": [
+            "casualty_inbound",
+            "field_handoff_reconciled",
+            "imaging_ordered",
+            "labs_ordered",
+            "monitoring_established",
+            "pain_objective_addressed",
+            "prearrival_notice",
+            "primary_assessment_complete",
+            "second_casualty_inbound"
+          ],
+          "diagnostics_tech": [
+            "imaging_ordered",
+            "labs_ordered"
+          ],
+          "receiving_provider": [
+            "casualty_inbound",
+            "field_handoff_reconciled",
+            "imaging_ordered",
+            "labs_ordered",
+            "monitoring_established",
+            "pain_objective_addressed",
+            "prearrival_notice",
+            "primary_assessment_complete",
+            "second_casualty_inbound",
+            "working_differential_documented"
+          ],
+          "wit_observer": [
+            "assessment_sequence_observed",
+            "differential_documentation_observed",
+            "exercise_started",
+            "handoff_observed",
+            "imaging_coordination_observed",
+            "laboratory_coordination_observed",
+            "monitoring_observed",
+            "pain_objective_observed",
+            "prearrival_notification_observed",
+            "surge_notice_observed"
+          ]
+        },
+        "alerts": [
+          "Pre-arrival notification received. Prepare for post-field-care reception.",
+          "Second casualty inbound. Preserve continuity while resources remain constrained.",
+          "Source-defined pain-management objective addressed without generating a drug, dose, or route."
+        ],
+        "completed_action_ids": [
+          "differential",
+          "monitor_vitals",
+          "order_imaging",
+          "order_labs",
+          "pain_management",
+          "primary_assessment",
+          "receive_handoff"
+        ],
+        "completed_source_action_ids": [
+          "differential",
+          "monitor_vitals",
+          "order_imaging",
+          "order_labs",
+          "pain_management",
+          "primary_assessment"
+        ],
+        "elapsed_seconds": 315,
+        "fired_system_events": [
+          "prearrival_notice",
+          "second_casualty_inbound"
+        ],
+        "max_positive_points": 80,
+        "outcome": null,
+        "phase": "diagnostics_pending",
+        "revealed_hidden_findings": [],
+        "revision": 9,
+        "score_points": 63,
+        "source_action_completed_at": {
+          "differential": 225,
+          "monitor_vitals": 165,
+          "order_imaging": 255,
+          "order_labs": 285,
+          "pain_management": 315,
+          "primary_assessment": 135
+        },
+        "terminal_status": "active",
+        "unsafe_source_action_ids": []
+      },
+      "transition_id": "FAT-009-feb5efec4520",
+      "wit_observation": {
+        "category": "source_objective",
+        "clinical_directive": null,
+        "process_only": true,
+        "statement": "Address source-defined pain-management objective observed."
+      }
+    },
+    {
+      "action_id": "confirm_surge_roles",
+      "actor_id": "receiving_provider",
+      "after_state_sha256": "4a1d7c8f33255416965be62a4cfd84a9e6de2125b0cf42b73831cbab007cb80a",
+      "before_state_sha256": "3e470d731a697fb0979d0437da7889f4b1e5bb4038862ace3e84882317edf50f",
+      "command_id": "canonical-08-confirm_surge_roles",
+      "completed_at_seconds": 345,
+      "event_id": null,
+      "kind": "learner_action",
+      "label": "Acknowledge the surge notice and confirm receiving-team roles",
+      "origin": "operational_workflow",
+      "score_delta": 0,
+      "sequence": 10,
+      "source_action_id": null,
+      "started_at_seconds": 315,
+      "state_after": {
+        "action_completed_at": {
+          "confirm_surge_roles": 345,
+          "differential": 225,
+          "monitor_vitals": 165,
+          "order_imaging": 255,
+          "order_labs": 285,
+          "pain_management": 315,
+          "primary_assessment": 135,
+          "receive_handoff": 45
+        },
+        "actor_knowledge": {
+          "clinic_nurse": [
+            "casualty_inbound",
+            "field_handoff_reconciled",
+            "imaging_ordered",
+            "labs_ordered",
+            "monitoring_established",
+            "pain_objective_addressed",
+            "prearrival_notice",
+            "primary_assessment_complete",
+            "second_casualty_inbound",
+            "surge_roles_confirmed"
+          ],
+          "diagnostics_tech": [
+            "imaging_ordered",
+            "labs_ordered"
+          ],
+          "receiving_provider": [
+            "casualty_inbound",
+            "field_handoff_reconciled",
+            "imaging_ordered",
+            "labs_ordered",
+            "monitoring_established",
+            "pain_objective_addressed",
+            "prearrival_notice",
+            "primary_assessment_complete",
+            "second_casualty_inbound",
+            "surge_roles_confirmed",
+            "working_differential_documented"
+          ],
+          "wit_observer": [
+            "assessment_sequence_observed",
+            "differential_documentation_observed",
+            "exercise_started",
+            "handoff_observed",
+            "imaging_coordination_observed",
+            "laboratory_coordination_observed",
+            "monitoring_observed",
+            "pain_objective_observed",
+            "prearrival_notification_observed",
+            "surge_notice_observed",
+            "surge_role_confirmation_observed"
+          ]
+        },
+        "alerts": [
+          "Pre-arrival notification received. Prepare for post-field-care reception.",
+          "Second casualty inbound. Preserve continuity while resources remain constrained.",
+          "Source-defined pain-management objective addressed without generating a drug, dose, or route."
+        ],
+        "completed_action_ids": [
+          "confirm_surge_roles",
+          "differential",
+          "monitor_vitals",
+          "order_imaging",
+          "order_labs",
+          "pain_management",
+          "primary_assessment",
+          "receive_handoff"
+        ],
+        "completed_source_action_ids": [
+          "differential",
+          "monitor_vitals",
+          "order_imaging",
+          "order_labs",
+          "pain_management",
+          "primary_assessment"
+        ],
+        "elapsed_seconds": 345,
+        "fired_system_events": [
+          "prearrival_notice",
+          "second_casualty_inbound"
+        ],
+        "max_positive_points": 80,
+        "outcome": null,
+        "phase": "diagnostics_pending",
+        "revealed_hidden_findings": [],
+        "revision": 10,
+        "score_points": 63,
+        "source_action_completed_at": {
+          "differential": 225,
+          "monitor_vitals": 165,
+          "order_imaging": 255,
+          "order_labs": 285,
+          "pain_management": 315,
+          "primary_assessment": 135
+        },
+        "terminal_status": "active",
+        "unsafe_source_action_ids": []
+      },
+      "transition_id": "FAT-010-f84ca49cd6fc",
+      "wit_observation": {
+        "category": "surge_response",
+        "clinical_directive": null,
+        "process_only": true,
+        "statement": "Acknowledge the surge notice and confirm receiving-team roles observed."
+      }
+    },
+    {
+      "action_id": "documentation",
+      "actor_id": "receiving_provider",
+      "after_state_sha256": "221851f47404b5f45e7db5354716dacf1beb4b9d847f1fbd668c85af448b9125",
+      "before_state_sha256": "4a1d7c8f33255416965be62a4cfd84a9e6de2125b0cf42b73831cbab007cb80a",
+      "command_id": "canonical-09-documentation",
+      "completed_at_seconds": 390,
+      "event_id": null,
+      "kind": "learner_action",
+      "label": "Document findings and plan",
+      "origin": "source_template",
+      "score_delta": 5,
+      "sequence": 11,
+      "source_action_id": "documentation",
+      "started_at_seconds": 345,
+      "state_after": {
+        "action_completed_at": {
+          "confirm_surge_roles": 345,
+          "differential": 225,
+          "documentation": 390,
+          "monitor_vitals": 165,
+          "order_imaging": 255,
+          "order_labs": 285,
+          "pain_management": 315,
+          "primary_assessment": 135,
+          "receive_handoff": 45
+        },
+        "actor_knowledge": {
+          "clinic_nurse": [
+            "casualty_inbound",
+            "documentation_complete",
+            "field_handoff_reconciled",
+            "imaging_ordered",
+            "labs_ordered",
+            "monitoring_established",
+            "pain_objective_addressed",
+            "prearrival_notice",
+            "primary_assessment_complete",
+            "second_casualty_inbound",
+            "surge_roles_confirmed"
+          ],
+          "diagnostics_tech": [
+            "imaging_ordered",
+            "labs_ordered"
+          ],
+          "receiving_provider": [
+            "casualty_inbound",
+            "documentation_complete",
+            "field_handoff_reconciled",
+            "imaging_ordered",
+            "labs_ordered",
+            "monitoring_established",
+            "pain_objective_addressed",
+            "prearrival_notice",
+            "primary_assessment_complete",
+            "second_casualty_inbound",
+            "surge_roles_confirmed",
+            "working_differential_documented"
+          ],
+          "wit_observer": [
+            "assessment_sequence_observed",
+            "differential_documentation_observed",
+            "documentation_observed",
+            "exercise_started",
+            "handoff_observed",
+            "imaging_coordination_observed",
+            "laboratory_coordination_observed",
+            "monitoring_observed",
+            "pain_objective_observed",
+            "prearrival_notification_observed",
+            "surge_notice_observed",
+            "surge_role_confirmation_observed"
+          ]
+        },
+        "alerts": [
+          "Pre-arrival notification received. Prepare for post-field-care reception.",
+          "Second casualty inbound. Preserve continuity while resources remain constrained.",
+          "Source-defined pain-management objective addressed without generating a drug, dose, or route."
+        ],
+        "completed_action_ids": [
+          "confirm_surge_roles",
+          "differential",
+          "documentation",
+          "monitor_vitals",
+          "order_imaging",
+          "order_labs",
+          "pain_management",
+          "primary_assessment",
+          "receive_handoff"
+        ],
+        "completed_source_action_ids": [
+          "differential",
+          "documentation",
+          "monitor_vitals",
+          "order_imaging",
+          "order_labs",
+          "pain_management",
+          "primary_assessment"
+        ],
+        "elapsed_seconds": 390,
+        "fired_system_events": [
+          "prearrival_notice",
+          "second_casualty_inbound"
+        ],
+        "max_positive_points": 80,
+        "outcome": null,
+        "phase": "diagnostics_pending",
+        "revealed_hidden_findings": [],
+        "revision": 11,
+        "score_points": 68,
+        "source_action_completed_at": {
+          "differential": 225,
+          "documentation": 390,
+          "monitor_vitals": 165,
+          "order_imaging": 255,
+          "order_labs": 285,
+          "pain_management": 315,
+          "primary_assessment": 135
+        },
+        "terminal_status": "active",
+        "unsafe_source_action_ids": []
+      },
+      "transition_id": "FAT-011-2b49c9dcc7af",
+      "wit_observation": {
+        "category": "documentation",
+        "clinical_directive": null,
+        "process_only": true,
+        "statement": "Document findings and plan observed."
+      }
+    },
+    {
+      "action_id": "wait_for_diagnostics",
+      "actor_id": "receiving_provider",
+      "after_state_sha256": "55b59d8e238aae57a284e8a8149dea875d60b107718c598c954c816771d147a7",
+      "before_state_sha256": "221851f47404b5f45e7db5354716dacf1beb4b9d847f1fbd668c85af448b9125",
+      "command_id": "canonical-10-wait_for_diagnostics",
+      "completed_at_seconds": 465,
+      "event_id": null,
+      "kind": "learner_action",
+      "label": "Advance to the next scheduled diagnostic event",
+      "origin": "operational_workflow",
+      "score_delta": 0,
+      "sequence": 12,
+      "source_action_id": null,
+      "started_at_seconds": 390,
+      "state_after": {
+        "action_completed_at": {
+          "confirm_surge_roles": 345,
+          "differential": 225,
+          "documentation": 390,
+          "monitor_vitals": 165,
+          "order_imaging": 255,
+          "order_labs": 285,
+          "pain_management": 315,
+          "primary_assessment": 135,
+          "receive_handoff": 45,
+          "wait_for_diagnostics": 465
+        },
+        "actor_knowledge": {
+          "clinic_nurse": [
+            "casualty_inbound",
+            "documentation_complete",
+            "field_handoff_reconciled",
+            "imaging_ordered",
+            "labs_ordered",
+            "monitoring_established",
+            "pain_objective_addressed",
+            "prearrival_notice",
+            "primary_assessment_complete",
+            "second_casualty_inbound",
+            "surge_roles_confirmed"
+          ],
+          "diagnostics_tech": [
+            "imaging_ordered",
+            "labs_ordered"
+          ],
+          "receiving_provider": [
+            "casualty_inbound",
+            "diagnostic_event_awaited",
+            "documentation_complete",
+            "field_handoff_reconciled",
+            "imaging_ordered",
+            "labs_ordered",
+            "monitoring_established",
+            "pain_objective_addressed",
+            "prearrival_notice",
+            "primary_assessment_complete",
+            "second_casualty_inbound",
+            "surge_roles_confirmed",
+            "working_differential_documented"
+          ],
+          "wit_observer": [
+            "assessment_sequence_observed",
+            "diagnostic_timing_observed",
+            "differential_documentation_observed",
+            "documentation_observed",
+            "exercise_started",
+            "handoff_observed",
+            "imaging_coordination_observed",
+            "laboratory_coordination_observed",
+            "monitoring_observed",
+            "pain_objective_observed",
+            "prearrival_notification_observed",
+            "surge_notice_observed",
+            "surge_role_confirmation_observed"
+          ]
+        },
+        "alerts": [
+          "Pre-arrival notification received. Prepare for post-field-care reception.",
+          "Second casualty inbound. Preserve continuity while resources remain constrained.",
+          "Source-defined pain-management objective addressed without generating a drug, dose, or route."
+        ],
+        "completed_action_ids": [
+          "confirm_surge_roles",
+          "differential",
+          "documentation",
+          "monitor_vitals",
+          "order_imaging",
+          "order_labs",
+          "pain_management",
+          "primary_assessment",
+          "receive_handoff",
+          "wait_for_diagnostics"
+        ],
+        "completed_source_action_ids": [
+          "differential",
+          "documentation",
+          "monitor_vitals",
+          "order_imaging",
+          "order_labs",
+          "pain_management",
+          "primary_assessment"
+        ],
+        "elapsed_seconds": 465,
+        "fired_system_events": [
+          "prearrival_notice",
+          "second_casualty_inbound"
+        ],
+        "max_positive_points": 80,
+        "outcome": null,
+        "phase": "diagnostics_pending",
+        "revealed_hidden_findings": [],
+        "revision": 12,
+        "score_points": 68,
+        "source_action_completed_at": {
+          "differential": 225,
+          "documentation": 390,
+          "monitor_vitals": 165,
+          "order_imaging": 255,
+          "order_labs": 285,
+          "pain_management": 315,
+          "primary_assessment": 135
+        },
+        "terminal_status": "active",
+        "unsafe_source_action_ids": []
+      },
+      "transition_id": "FAT-012-143f049adfc8",
+      "wit_observation": {
+        "category": "timing",
+        "clinical_directive": null,
+        "process_only": true,
+        "statement": "Advance to the next scheduled diagnostic event observed."
+      }
+    },
+    {
+      "action_id": null,
+      "actor_id": "system",
+      "after_state_sha256": "b19ba3d9dfacb4d9315be3913b7f543c9b7bd4f6c5ae57434ef2ead920620079",
+      "before_state_sha256": "55b59d8e238aae57a284e8a8149dea875d60b107718c598c954c816771d147a7",
+      "command_id": null,
+      "completed_at_seconds": 465,
+      "event_id": "diagnostics_ready",
+      "kind": "system_event",
+      "label": "Ordered imaging and laboratory results are available",
+      "origin": "system_event",
+      "score_delta": 0,
+      "sequence": 13,
+      "source_action_id": null,
+      "started_at_seconds": 465,
+      "state_after": {
+        "action_completed_at": {
+          "confirm_surge_roles": 345,
+          "differential": 225,
+          "documentation": 390,
+          "monitor_vitals": 165,
+          "order_imaging": 255,
+          "order_labs": 285,
+          "pain_management": 315,
+          "primary_assessment": 135,
+          "receive_handoff": 45,
+          "wait_for_diagnostics": 465
+        },
+        "actor_knowledge": {
+          "clinic_nurse": [
+            "casualty_inbound",
+            "diagnostic_results_received",
+            "documentation_complete",
+            "field_handoff_reconciled",
+            "imaging_ordered",
+            "labs_ordered",
+            "monitoring_established",
+            "pain_objective_addressed",
+            "prearrival_notice",
+            "primary_assessment_complete",
+            "second_casualty_inbound",
+            "surge_roles_confirmed"
+          ],
+          "diagnostics_tech": [
+            "diagnostic_results_delivered",
+            "imaging_ordered",
+            "labs_ordered"
+          ],
+          "receiving_provider": [
+            "casualty_inbound",
+            "diagnostic_event_awaited",
+            "diagnostic_results_received",
+            "documentation_complete",
+            "field_handoff_reconciled",
+            "imaging_ordered",
+            "labs_ordered",
+            "monitoring_established",
+            "pain_objective_addressed",
+            "prearrival_notice",
+            "primary_assessment_complete",
+            "second_casualty_inbound",
+            "surge_roles_confirmed",
+            "working_differential_documented"
+          ],
+          "wit_observer": [
+            "assessment_sequence_observed",
+            "diagnostic_results_timing_observed",
+            "diagnostic_timing_observed",
+            "differential_documentation_observed",
+            "documentation_observed",
+            "exercise_started",
+            "handoff_observed",
+            "imaging_coordination_observed",
+            "laboratory_coordination_observed",
+            "monitoring_observed",
+            "pain_objective_observed",
+            "prearrival_notification_observed",
+            "surge_notice_observed",
+            "surge_role_confirmation_observed"
+          ]
+        },
+        "alerts": [
+          "Ordered imaging and laboratory results are available for review.",
+          "Pre-arrival notification received. Prepare for post-field-care reception.",
+          "Second casualty inbound. Preserve continuity while resources remain constrained.",
+          "Source-defined pain-management objective addressed without generating a drug, dose, or route."
+        ],
+        "completed_action_ids": [
+          "confirm_surge_roles",
+          "differential",
+          "documentation",
+          "monitor_vitals",
+          "order_imaging",
+          "order_labs",
+          "pain_management",
+          "primary_assessment",
+          "receive_handoff",
+          "wait_for_diagnostics"
+        ],
+        "completed_source_action_ids": [
+          "differential",
+          "documentation",
+          "monitor_vitals",
+          "order_imaging",
+          "order_labs",
+          "pain_management",
+          "primary_assessment"
+        ],
+        "elapsed_seconds": 465,
+        "fired_system_events": [
+          "diagnostics_ready",
+          "prearrival_notice",
+          "second_casualty_inbound"
+        ],
+        "max_positive_points": 80,
+        "outcome": null,
+        "phase": "diagnostics_pending",
+        "revealed_hidden_findings": [
+          "Developing pneumothorax",
+          "Elevated lactate on labs if ordered"
+        ],
+        "revision": 13,
+        "score_points": 68,
+        "source_action_completed_at": {
+          "differential": 225,
+          "documentation": 390,
+          "monitor_vitals": 165,
+          "order_imaging": 255,
+          "order_labs": 285,
+          "pain_management": 315,
+          "primary_assessment": 135
+        },
+        "terminal_status": "active",
+        "unsafe_source_action_ids": []
+      },
+      "transition_id": "FAT-013-8196ddb116e6",
+      "wit_observation": {
+        "category": "diagnostics",
+        "clinical_directive": null,
+        "process_only": true,
+        "statement": "Ordered imaging and laboratory results are available"
+      }
+    },
+    {
+      "action_id": "review_diagnostics",
+      "actor_id": "receiving_provider",
+      "after_state_sha256": "c63d8e5587f139cee5867e268c71ee43bb70212fb20490b4cd43c0ba7f149a2b",
+      "before_state_sha256": "b19ba3d9dfacb4d9315be3913b7f543c9b7bd4f6c5ae57434ef2ead920620079",
+      "command_id": "canonical-11-review_diagnostics",
+      "completed_at_seconds": 525,
+      "event_id": null,
+      "kind": "learner_action",
+      "label": "Review returned results and reassess the casualty",
+      "origin": "operational_workflow",
+      "score_delta": 0,
+      "sequence": 14,
+      "source_action_id": null,
+      "started_at_seconds": 465,
+      "state_after": {
+        "action_completed_at": {
+          "confirm_surge_roles": 345,
+          "differential": 225,
+          "documentation": 390,
+          "monitor_vitals": 165,
+          "order_imaging": 255,
+          "order_labs": 285,
+          "pain_management": 315,
+          "primary_assessment": 135,
+          "receive_handoff": 45,
+          "review_diagnostics": 525,
+          "wait_for_diagnostics": 465
+        },
+        "actor_knowledge": {
+          "clinic_nurse": [
+            "casualty_inbound",
+            "diagnostic_results_received",
+            "diagnostics_reviewed",
+            "documentation_complete",
+            "field_handoff_reconciled",
+            "imaging_ordered",
+            "labs_ordered",
+            "monitoring_established",
+            "pain_objective_addressed",
+            "prearrival_notice",
+            "primary_assessment_complete",
+            "second_casualty_inbound",
+            "surge_roles_confirmed"
+          ],
+          "diagnostics_tech": [
+            "diagnostic_results_delivered",
+            "imaging_ordered",
+            "labs_ordered"
+          ],
+          "receiving_provider": [
+            "casualty_inbound",
+            "diagnostic_event_awaited",
+            "diagnostic_results_received",
+            "diagnostics_reviewed",
+            "documentation_complete",
+            "field_handoff_reconciled",
+            "imaging_ordered",
+            "labs_ordered",
+            "monitoring_established",
+            "pain_objective_addressed",
+            "prearrival_notice",
+            "primary_assessment_complete",
+            "second_casualty_inbound",
+            "surge_roles_confirmed",
+            "working_differential_documented"
+          ],
+          "wit_observer": [
+            "assessment_sequence_observed",
+            "diagnostic_results_timing_observed",
+            "diagnostic_timing_observed",
+            "differential_documentation_observed",
+            "documentation_observed",
+            "exercise_started",
+            "handoff_observed",
+            "imaging_coordination_observed",
+            "laboratory_coordination_observed",
+            "monitoring_observed",
+            "pain_objective_observed",
+            "prearrival_notification_observed",
+            "reassessment_observed",
+            "surge_notice_observed",
+            "surge_role_confirmation_observed"
+          ]
+        },
+        "alerts": [
+          "Diagnostic results reviewed and casualty reassessed.",
+          "Ordered imaging and laboratory results are available for review.",
+          "Pre-arrival notification received. Prepare for post-field-care reception.",
+          "Second casualty inbound. Preserve continuity while resources remain constrained.",
+          "Source-defined pain-management objective addressed without generating a drug, dose, or route."
+        ],
+        "completed_action_ids": [
+          "confirm_surge_roles",
+          "differential",
+          "documentation",
+          "monitor_vitals",
+          "order_imaging",
+          "order_labs",
+          "pain_management",
+          "primary_assessment",
+          "receive_handoff",
+          "review_diagnostics",
+          "wait_for_diagnostics"
+        ],
+        "completed_source_action_ids": [
+          "differential",
+          "documentation",
+          "monitor_vitals",
+          "order_imaging",
+          "order_labs",
+          "pain_management",
+          "primary_assessment"
+        ],
+        "elapsed_seconds": 525,
+        "fired_system_events": [
+          "diagnostics_ready",
+          "prearrival_notice",
+          "second_casualty_inbound"
+        ],
+        "max_positive_points": 80,
+        "outcome": null,
+        "phase": "results_review",
+        "revealed_hidden_findings": [
+          "Developing pneumothorax",
+          "Elevated lactate on labs if ordered"
+        ],
+        "revision": 14,
+        "score_points": 68,
+        "source_action_completed_at": {
+          "differential": 225,
+          "documentation": 390,
+          "monitor_vitals": 165,
+          "order_imaging": 255,
+          "order_labs": 285,
+          "pain_management": 315,
+          "primary_assessment": 135
+        },
+        "terminal_status": "active",
+        "unsafe_source_action_ids": []
+      },
+      "transition_id": "FAT-014-5253f39e62f3",
+      "wit_observation": {
+        "category": "reassessment",
+        "clinical_directive": null,
+        "process_only": true,
+        "statement": "Review returned results and reassess the casualty observed."
+      }
+    },
+    {
+      "action_id": "escalation",
+      "actor_id": "receiving_provider",
+      "after_state_sha256": "5977f78c79e631dd90dfa5c4686c251b68b44d5a523a935da00fd66d7cc8e196",
+      "before_state_sha256": "c63d8e5587f139cee5867e268c71ee43bb70212fb20490b4cd43c0ba7f149a2b",
+      "command_id": "canonical-12-escalation",
+      "completed_at_seconds": 585,
+      "event_id": null,
+      "kind": "learner_action",
+      "label": "Escalate disposition / consult",
+      "origin": "source_template",
+      "score_delta": 12,
+      "sequence": 15,
+      "source_action_id": "escalation",
+      "started_at_seconds": 525,
+      "state_after": {
+        "action_completed_at": {
+          "confirm_surge_roles": 345,
+          "differential": 225,
+          "documentation": 390,
+          "escalation": 585,
+          "monitor_vitals": 165,
+          "order_imaging": 255,
+          "order_labs": 285,
+          "pain_management": 315,
+          "primary_assessment": 135,
+          "receive_handoff": 45,
+          "review_diagnostics": 525,
+          "wait_for_diagnostics": 465
+        },
+        "actor_knowledge": {
+          "clinic_nurse": [
+            "casualty_inbound",
+            "diagnostic_results_received",
+            "diagnostics_reviewed",
+            "disposition_escalated",
+            "documentation_complete",
+            "field_handoff_reconciled",
+            "imaging_ordered",
+            "labs_ordered",
+            "monitoring_established",
+            "pain_objective_addressed",
+            "prearrival_notice",
+            "primary_assessment_complete",
+            "second_casualty_inbound",
+            "surge_roles_confirmed"
+          ],
+          "diagnostics_tech": [
+            "diagnostic_results_delivered",
+            "imaging_ordered",
+            "labs_ordered"
+          ],
+          "receiving_provider": [
+            "casualty_inbound",
+            "diagnostic_event_awaited",
+            "diagnostic_results_received",
+            "diagnostics_reviewed",
+            "disposition_escalated",
+            "documentation_complete",
+            "field_handoff_reconciled",
+            "imaging_ordered",
+            "labs_ordered",
+            "monitoring_established",
+            "pain_objective_addressed",
+            "prearrival_notice",
+            "primary_assessment_complete",
+            "second_casualty_inbound",
+            "surge_roles_confirmed",
+            "working_differential_documented"
+          ],
+          "wit_observer": [
+            "assessment_sequence_observed",
+            "diagnostic_results_timing_observed",
+            "diagnostic_timing_observed",
+            "differential_documentation_observed",
+            "documentation_observed",
+            "escalation_observed",
+            "exercise_started",
+            "handoff_observed",
+            "imaging_coordination_observed",
+            "laboratory_coordination_observed",
+            "monitoring_observed",
+            "pain_objective_observed",
+            "prearrival_notification_observed",
+            "reassessment_observed",
+            "surge_notice_observed",
+            "surge_role_confirmation_observed"
+          ]
+        },
+        "alerts": [
+          "Diagnostic results reviewed and casualty reassessed.",
+          "Ordered imaging and laboratory results are available for review.",
+          "Pre-arrival notification received. Prepare for post-field-care reception.",
+          "Second casualty inbound. Preserve continuity while resources remain constrained.",
+          "Source-defined pain-management objective addressed without generating a drug, dose, or route."
+        ],
+        "completed_action_ids": [
+          "confirm_surge_roles",
+          "differential",
+          "documentation",
+          "escalation",
+          "monitor_vitals",
+          "order_imaging",
+          "order_labs",
+          "pain_management",
+          "primary_assessment",
+          "receive_handoff",
+          "review_diagnostics",
+          "wait_for_diagnostics"
+        ],
+        "completed_source_action_ids": [
+          "differential",
+          "documentation",
+          "escalation",
+          "monitor_vitals",
+          "order_imaging",
+          "order_labs",
+          "pain_management",
+          "primary_assessment"
+        ],
+        "elapsed_seconds": 585,
+        "fired_system_events": [
+          "diagnostics_ready",
+          "prearrival_notice",
+          "second_casualty_inbound"
+        ],
+        "max_positive_points": 80,
+        "outcome": null,
+        "phase": "disposition",
+        "revealed_hidden_findings": [
+          "Developing pneumothorax",
+          "Elevated lactate on labs if ordered"
+        ],
+        "revision": 15,
+        "score_points": 80,
+        "source_action_completed_at": {
+          "differential": 225,
+          "documentation": 390,
+          "escalation": 585,
+          "monitor_vitals": 165,
+          "order_imaging": 255,
+          "order_labs": 285,
+          "pain_management": 315,
+          "primary_assessment": 135
+        },
+        "terminal_status": "active",
+        "unsafe_source_action_ids": []
+      },
+      "transition_id": "FAT-015-8bad7a49a16a",
+      "wit_observation": {
+        "category": "escalation",
+        "clinical_directive": null,
+        "process_only": true,
+        "statement": "Escalate disposition / consult observed."
+      }
+    },
+    {
+      "action_id": "complete_handoff",
+      "actor_id": "receiving_provider",
+      "after_state_sha256": "bc7bacdaa42f81d75a31357966a4190e650dc8b2318edf06f8cac6a3ae544130",
+      "before_state_sha256": "5977f78c79e631dd90dfa5c4686c251b68b44d5a523a935da00fd66d7cc8e196",
+      "command_id": "canonical-13-complete_handoff",
+      "completed_at_seconds": 645,
+      "event_id": null,
+      "kind": "learner_action",
+      "label": "Complete the receiving handoff to the next level of care",
+      "origin": "operational_workflow",
+      "score_delta": 0,
+      "sequence": 16,
+      "source_action_id": null,
+      "started_at_seconds": 585,
+      "state_after": {
+        "action_completed_at": {
+          "complete_handoff": 645,
+          "confirm_surge_roles": 345,
+          "differential": 225,
+          "documentation": 390,
+          "escalation": 585,
+          "monitor_vitals": 165,
+          "order_imaging": 255,
+          "order_labs": 285,
+          "pain_management": 315,
+          "primary_assessment": 135,
+          "receive_handoff": 45,
+          "review_diagnostics": 525,
+          "wait_for_diagnostics": 465
+        },
+        "actor_knowledge": {
+          "clinic_nurse": [
+            "casualty_inbound",
+            "diagnostic_results_received",
+            "diagnostics_reviewed",
+            "disposition_escalated",
+            "documentation_complete",
+            "field_handoff_reconciled",
+            "handoff_complete",
+            "imaging_ordered",
+            "labs_ordered",
+            "monitoring_established",
+            "pain_objective_addressed",
+            "prearrival_notice",
+            "primary_assessment_complete",
+            "second_casualty_inbound",
+            "surge_roles_confirmed"
+          ],
+          "diagnostics_tech": [
+            "diagnostic_results_delivered",
+            "imaging_ordered",
+            "labs_ordered"
+          ],
+          "receiving_provider": [
+            "casualty_inbound",
+            "diagnostic_event_awaited",
+            "diagnostic_results_received",
+            "diagnostics_reviewed",
+            "disposition_escalated",
+            "documentation_complete",
+            "field_handoff_reconciled",
+            "handoff_complete",
+            "imaging_ordered",
+            "labs_ordered",
+            "monitoring_established",
+            "pain_objective_addressed",
+            "prearrival_notice",
+            "primary_assessment_complete",
+            "second_casualty_inbound",
+            "surge_roles_confirmed",
+            "working_differential_documented"
+          ],
+          "wit_observer": [
+            "assessment_sequence_observed",
+            "diagnostic_results_timing_observed",
+            "diagnostic_timing_observed",
+            "differential_documentation_observed",
+            "documentation_observed",
+            "escalation_observed",
+            "exercise_started",
+            "handoff_closure_observed",
+            "handoff_observed",
+            "imaging_coordination_observed",
+            "laboratory_coordination_observed",
+            "monitoring_observed",
+            "pain_objective_observed",
+            "prearrival_notification_observed",
+            "reassessment_observed",
+            "surge_notice_observed",
+            "surge_role_confirmation_observed"
+          ]
+        },
+        "alerts": [
+          "Diagnostic results reviewed and casualty reassessed.",
+          "Ordered imaging and laboratory results are available for review.",
+          "Pre-arrival notification received. Prepare for post-field-care reception.",
+          "Second casualty inbound. Preserve continuity while resources remain constrained.",
+          "Source-defined pain-management objective addressed without generating a drug, dose, or route."
+        ],
+        "completed_action_ids": [
+          "complete_handoff",
+          "confirm_surge_roles",
+          "differential",
+          "documentation",
+          "escalation",
+          "monitor_vitals",
+          "order_imaging",
+          "order_labs",
+          "pain_management",
+          "primary_assessment",
+          "receive_handoff",
+          "review_diagnostics",
+          "wait_for_diagnostics"
+        ],
+        "completed_source_action_ids": [
+          "differential",
+          "documentation",
+          "escalation",
+          "monitor_vitals",
+          "order_imaging",
+          "order_labs",
+          "pain_management",
+          "primary_assessment"
+        ],
+        "elapsed_seconds": 645,
+        "fired_system_events": [
+          "diagnostics_ready",
+          "prearrival_notice",
+          "second_casualty_inbound"
+        ],
+        "max_positive_points": 80,
+        "outcome": "Closed-loop receiving handoff completed.",
+        "phase": "complete",
+        "revealed_hidden_findings": [
+          "Developing pneumothorax",
+          "Elevated lactate on labs if ordered"
+        ],
+        "revision": 16,
+        "score_points": 80,
+        "source_action_completed_at": {
+          "differential": 225,
+          "documentation": 390,
+          "escalation": 585,
+          "monitor_vitals": 165,
+          "order_imaging": 255,
+          "order_labs": 285,
+          "pain_management": 315,
+          "primary_assessment": 135
+        },
+        "terminal_status": "completed",
+        "unsafe_source_action_ids": []
+      },
+      "transition_id": "FAT-016-96a7034927d6",
+      "wit_observation": {
+        "category": "handoff",
+        "clinical_directive": null,
+        "process_only": true,
+        "statement": "Complete the receiving handoff to the next level of care observed."
+      }
+    }
+  ]
+}

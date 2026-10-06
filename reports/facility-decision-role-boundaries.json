@@ -1,0 +1,13 @@
+{
+  "checks": 200,
+  "errors": [],
+  "role_routes": {
+    "/examples/facility-decision": "FacilityDecisionIntegrityPage",
+    "/examples/facility-decision/demo": "FacilityDecisionDemoPage",
+    "/examples/facility-decision/instructor": "FacilityDecisionInstructorPage",
+    "/examples/facility-decision/learner": "FacilityDecisionLearnerPage",
+    "/examples/facility-decision/teaching": "FacilityDecisionTeachingPage"
+  },
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

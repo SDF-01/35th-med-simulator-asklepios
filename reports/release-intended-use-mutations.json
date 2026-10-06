@@ -1,0 +1,99 @@
+{
+  "cases": 10,
+  "classification": "PASS",
+  "errors": [],
+  "results": [
+    {
+      "case_id": "baseline",
+      "classification": "PASS",
+      "errors": [],
+      "observed_classification": "PASS",
+      "pass": true,
+      "required_error": null,
+      "status": "PASS"
+    },
+    {
+      "case_id": "direct_patient_care_promoted",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "prohibited use boundary differs:direct_patient_care",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "simulation_use_removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "healthcare simulation use is not explicitly permitted",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "simulated_patient_care_workflow_removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "simulated patient-care workflows are not explicitly permitted",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "debrief_disabled",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "required simulation learning-cycle element disabled",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "unreviewed_variants_promoted",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "unreviewed variants escaped",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "graph_direct_patient_care_promoted",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "graph direct-patient-care boundary differs",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "clinical_effectiveness_overclaimed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "clinical effectiveness was overclaimed",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "readme_boundary_removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "README direct-patient-care prohibition missing",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "readme_simulated_care_scope_removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "README simulated patient-care workflow statement missing",
+      "status": "EXPECTED_REJECTION"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

@@ -1,0 +1,467 @@
+{
+  "accepted_forgery_count": 0,
+  "anti_circular_note": "Profiles are regenerated in-process before checking when the attack is marked rehashed; stale hashes alone cannot explain rejection. Checker crashes are INTERNAL_ERROR and never count as semantic rejection.",
+  "attacks": 34,
+  "cases": 35,
+  "classification": "PASS",
+  "errors": [],
+  "execution_model": "in_process_semantic_checker_with_one_explicit_crash_subprocess",
+  "globally_rehashed_attacks": 31,
+  "internal_error_challenges": 1,
+  "rejected_attacks": 33,
+  "results": [
+    {
+      "case_id": "baseline",
+      "classification": "PASS",
+      "errors": [],
+      "pass": true,
+      "status": "PASS"
+    },
+    {
+      "case_id": "patient_care_authority_escalation_rehashed",
+      "checker_errors": [
+        "generated source digest differs",
+        "patient-care use escalated"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "concrete_treatment_activation_rehashed",
+      "checker_errors": [
+        "concrete treatment activated",
+        "generated source digest differs"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "operational_calibration_promotion_rehashed",
+      "checker_errors": [
+        "generated source digest differs",
+        "operational parameters falsely calibrated"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "learner_live_score_leak_rehashed",
+      "checker_errors": [
+        "generated source digest differs",
+        "learner answer leakage:show_live_score"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "learner_source_points_leak_rehashed",
+      "checker_errors": [
+        "generated source digest differs",
+        "learner answer leakage:show_source_points"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "learner_provenance_leak_rehashed",
+      "checker_errors": [
+        "generated source digest differs",
+        "learner answer leakage:show_provenance"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "learner_wit_leak_rehashed",
+      "checker_errors": [
+        "generated source digest differs",
+        "learner answer leakage:show_wit"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "learner_autoplay_leak_rehashed",
+      "checker_errors": [
+        "generated source digest differs",
+        "learner answer leakage:show_autoplay"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "critical_source_contract_removed_rehashed",
+      "checker_errors": [
+        "critical/important source action duplicated",
+        "critical/important source contract coverage differs",
+        "diagnostic order producer count differs:CHEST_IMAGING:0",
+        "generated source digest differs",
+        "reference sequence unknown decision:alternate",
+        "reference sequence unknown decision:canonical",
+        "unknown prerequisite:wait_for_diagnostics:order_imaging"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "source_contract_duplicated_rehashed",
+      "checker_errors": [
+        "critical/important source action duplicated",
+        "diagnostic order producer count differs:CHEST_IMAGING:2",
+        "generated source digest differs"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "concrete_medication_field_declared_rehashed",
+      "checker_errors": [
+        "concrete treatment field declared:pain_management",
+        "generated source digest differs"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "pain_policy_activated_rehashed",
+      "checker_errors": [
+        "concrete treatment enabled:PAIN_MANAGEMENT_OBJECTIVE",
+        "generated source digest differs"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "pain_forbidden_key_removed_rehashed",
+      "checker_errors": [
+        "generated source digest differs",
+        "pain policy concrete fields not fully blocked"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "world_event_action_coupled_rehashed",
+      "checker_errors": [
+        "generated source digest differs",
+        "world event coupled to learner action:second_casualty_inbound"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "world_event_calibrated_rehashed",
+      "checker_errors": [
+        "generated source digest differs",
+        "world event falsely calibrated:second_casualty_inbound"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "resource_zero_capacity_rehashed",
+      "checker_errors": [
+        "generated source digest differs",
+        "resource capacity invalid:CHEST_IMAGING_SERVICE"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "resource_calibration_promotion_rehashed",
+      "checker_errors": [
+        "generated source digest differs",
+        "resource falsely calibrated:CHEST_IMAGING_SERVICE"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "dynamic_physiology_false_validation_rehashed",
+      "checker_errors": [
+        "dynamic physiology falsely validated",
+        "generated source digest differs"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "latent_patient_state_leak_rehashed",
+      "checker_errors": [
+        "generated source digest differs",
+        "latent patient state exposed"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "high_risk_repeatability_escalation_rehashed",
+      "checker_errors": [
+        "generated source digest differs",
+        "repeatable decision inventory differs",
+        "unreviewed repeatable decision:remove_tourniquet"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "treatment_rule_self_adjudication_rehashed",
+      "checker_errors": [
+        "generated source digest differs",
+        "treatment rule self-adjudicated:PAIN_MANAGEMENT_OBJECTIVE"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "treatment_effect_model_activation_rehashed",
+      "checker_errors": [
+        "generated source digest differs",
+        "treatment effect model activated:PAIN_MANAGEMENT_OBJECTIVE"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "ordered_pair_obligations_weakened_rehashed",
+      "checker_errors": [
+        "generated source digest differs",
+        "ordered pair obligations weakened"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "reference_sequences_collapsed_rehashed",
+      "checker_errors": [
+        "generated source digest differs",
+        "reference sequences not distinct"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "handoff_ack_removed_rehashed",
+      "checker_errors": [
+        "closed-loop handoff fields incomplete",
+        "handoff closure not required:receiver_acknowledged"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "handoff_confirmation_weakened_rehashed",
+      "checker_errors": [
+        "handoff closure not required:sender_confirmed"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "diagnostic_order_producer_removed_rehashed",
+      "checker_errors": [
+        "diagnostic order producer count differs:LACTATE:0",
+        "generated source digest differs"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "diagnostic_result_requirement_removed_rehashed",
+      "checker_errors": [
+        "generated source digest differs",
+        "result-review contract does not require every exact result"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "high_risk_answer_label_leak_rehashed",
+      "checker_errors": [
+        "answer-label leakage:remove_tourniquet"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "diagnostic_source_path_traversal_rehashed",
+      "checker_errors": [
+        "diagnostic source path unsafe:CHEST_IMAGING_REPORT"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "duplicate_decision_rehashed",
+      "checker_errors": [
+        "duplicate decision IDs",
+        "generated source digest differs"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": true,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "source_action_inventory_changed",
+      "checker_errors": [
+        "source critical/important inventory differs",
+        "unknown source action:order_imaging"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "stale_generated_typescript",
+      "checker_errors": [
+        "generated source digest differs"
+      ],
+      "classification": "EXPECTED_REJECTION",
+      "diagnostic_tail": "",
+      "expected": "REJECTED",
+      "globally_rehashed": false,
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "checker_internal_error_is_not_rejection",
+      "checker_errors": [],
+      "classification": "PASS",
+      "diagnostic_tail": "checker_failed_before_structured_result",
+      "expected": "INTERNAL_ERROR",
+      "globally_rehashed": false,
+      "observed_classification": "INTERNAL_ERROR",
+      "pass": true,
+      "status": "PASS"
+    }
+  ],
+  "schema_version": "1.1.0",
+  "status": "PASS",
+  "unexpected_internal_errors": 0
+}

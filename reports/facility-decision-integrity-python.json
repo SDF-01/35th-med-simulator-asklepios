@@ -1,0 +1,14 @@
+{
+  "checks": 157,
+  "decisions": 16,
+  "diagnostics": 2,
+  "errors": [],
+  "generated_sha256": "c6885d70d7494b6944649691bc7e51f3e259cb3b911106d82b5ebd6dbb5bd470",
+  "profile_id": "ASK-D-001-DECISION-INTEGRITY-RC3-6A",
+  "profile_sha256": "6dcd30ec0cd2e98a8c0b3674a92645bdef3dbbb532f5a1c23ebcf6ac2418fcf3",
+  "schema_version": "1.0.0",
+  "source_actions_bound": 6,
+  "source_block_sha256": "fa49ecde7c55ed5e15f507877abb44c75ebea09ee56461aef4cb82c20c479ace",
+  "status": "PASS",
+  "treatment_policies": 2
+}

@@ -1,0 +1,112 @@
+{
+  "content_registry_merkle_root": "9db5b82df90426da8c1543b9ef67464dec59aff90d9731a5be26fff83f621841",
+  "end_conditions": {
+    "failure": [
+      "Preventable deterioration",
+      "Critical unsafe action"
+    ],
+    "success": [
+      "Assessment completed",
+      "Diagnostics ordered",
+      "Disposition escalated appropriately"
+    ],
+    "timeout_minutes": 20
+  },
+  "patient": {
+    "hidden_findings": [
+      "Developing pneumothorax",
+      "Elevated lactate on labs if ordered"
+    ],
+    "initial_presentation": "Male patient on gurney, alert but confused. Complains of chest pain and shortness of breath. Tourniquet in place on right thigh from field care. Skin pale, diaphoretic.",
+    "initial_vitals": {
+      "bp_diastolic": 62,
+      "bp_systolic": 98,
+      "gcs": 13,
+      "hr": 118,
+      "rr": 24,
+      "spo2": 93,
+      "temp_c": 36.4
+    }
+  },
+  "schema_version": "1.0.0",
+  "snapshot_sha256": "86df2d9f28cbfed710052f4e9d39f74431704cffee39bfaa27430cc1727e8d89",
+  "source_action_ids": [
+    "differential",
+    "discharge_without_workup",
+    "documentation",
+    "escalation",
+    "monitor_vitals",
+    "order_imaging",
+    "order_labs",
+    "pain_management",
+    "primary_assessment",
+    "remove_tourniquet"
+  ],
+  "source_actions": [
+    {
+      "id": "differential",
+      "label": "Document differential diagnosis",
+      "points": 10,
+      "priority": "important"
+    },
+    {
+      "id": "discharge_without_workup",
+      "label": "Discharge without adequate workup",
+      "points": -25,
+      "priority": "unsafe"
+    },
+    {
+      "id": "documentation",
+      "label": "Document findings and plan",
+      "points": 5,
+      "priority": "optional"
+    },
+    {
+      "id": "escalation",
+      "label": "Escalate disposition / consult",
+      "points": 12,
+      "priority": "important"
+    },
+    {
+      "id": "monitor_vitals",
+      "label": "Establish continuous monitoring",
+      "points": 8,
+      "priority": "important"
+    },
+    {
+      "id": "order_imaging",
+      "label": "Order chest imaging",
+      "points": 15,
+      "priority": "critical"
+    },
+    {
+      "id": "order_labs",
+      "label": "Order relevant labs",
+      "points": 12,
+      "priority": "critical"
+    },
+    {
+      "id": "pain_management",
+      "label": "Address pain management",
+      "points": 3,
+      "priority": "optional"
+    },
+    {
+      "id": "primary_assessment",
+      "label": "Perform primary assessment",
+      "points": 15,
+      "priority": "critical"
+    },
+    {
+      "id": "remove_tourniquet",
+      "label": "Remove tourniquet without indication",
+      "points": -20,
+      "priority": "unsafe"
+    }
+  ],
+  "source_file_path": "src/content/scenarios.ts",
+  "source_scenario_id": "ASK-D-001",
+  "source_scenario_sha256": "b5562e64b4847d7bc47afc9fcc1e917aeee3268dddee3134bd2c3129266d5636",
+  "template_asset_id": "template:ASK-D-001",
+  "template_record_sha256": "6eeb1fbea265617816c0fc0a74854673fe5395e1ef74d619e0913f89211afc57"
+}

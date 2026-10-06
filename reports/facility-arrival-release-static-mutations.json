@@ -1,0 +1,521 @@
+{
+  "accepted_mutations": 0,
+  "attacks": 35,
+  "cases": 36,
+  "classification": "PASS",
+  "errors": [],
+  "internal_errors": 0,
+  "results": [
+    {
+      "case_id": "baseline",
+      "classification": "PASS",
+      "errors": [],
+      "observed_classification": "PASS",
+      "pass": true,
+      "status": "PASS"
+    },
+    {
+      "case_id": "calibration-record-missing",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "calibration record missing:second_casualty_inbound",
+        "calibration status changed:second_casualty_inbound:None",
+        "event times disagree:second_casualty_inbound:facility=240:decision=None",
+        "exercise-assumption note missing:second_casualty_inbound"
+      ],
+      "pass": true,
+      "required_errors": [
+        "calibration record missing:second_casualty_inbound"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "calibration-status-promoted",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "calibration status changed:second_casualty_inbound:CALIBRATED"
+      ],
+      "pass": true,
+      "required_errors": [
+        "calibration status changed:second_casualty_inbound:CALIBRATED"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "calibration-time-disagrees",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "event times disagree:second_casualty_inbound:facility=240:decision=241"
+      ],
+      "pass": true,
+      "required_errors": [
+        "event times disagree:second_casualty_inbound:facility=240:decision=241"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "exercise-assumption-note-removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "exercise-assumption note missing:second_casualty_inbound"
+      ],
+      "pass": true,
+      "required_errors": [
+        "exercise-assumption note missing:second_casualty_inbound"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "clock-event-action-trigger-regression",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "event times disagree:second_casualty_inbound:facility=None:decision=240",
+        "facility clock event time changed:second_casualty_inbound:None",
+        "facility clock event trigger kind changed:second_casualty_inbound"
+      ],
+      "pass": true,
+      "required_errors": [
+        "facility clock event trigger kind changed:second_casualty_inbound"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "facility-clock-time-changed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "event times disagree:second_casualty_inbound:facility=241:decision=240",
+        "facility clock event time changed:second_casualty_inbound:241"
+      ],
+      "pass": true,
+      "required_errors": [
+        "facility clock event time changed:second_casualty_inbound:241",
+        "event times disagree:second_casualty_inbound:facility=241:decision=240"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "source-attestation-command-weakened",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "runtime source-attestation stage differs"
+      ],
+      "pass": true,
+      "required_errors": [
+        "runtime source-attestation stage differs"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "source-attestation-order-bypassed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "runtime assurance omits stage:arrival.artifact-boundary",
+        "runtime source attestations are not ordered after artifact boundary"
+      ],
+      "pass": true,
+      "required_errors": [
+        "runtime source attestations are not ordered after artifact boundary"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "runtime-chain-bypasses-source-attestations",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "runtime assurance omits stage:arrival.source-attestations"
+      ],
+      "pass": true,
+      "required_errors": [
+        "runtime assurance omits stage:arrival.source-attestations"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "complete-attestation-leaf-weakened",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "package script differs:check:facility-arrival-source-attestations"
+      ],
+      "pass": true,
+      "required_errors": [
+        "package script differs:check:facility-arrival-source-attestations"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "runtime-wrapper-approximated",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "package script differs:verify:facility-arrival-runtime"
+      ],
+      "pass": true,
+      "required_errors": [
+        "package script differs:verify:facility-arrival-runtime"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "workflow-duplicates-direct-gate",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "canonical release graph consistency failed"
+      ],
+      "pass": true,
+      "required_errors": [
+        "canonical release graph consistency failed"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "workflow-action-unpinned",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "GitHub action is not pinned to a full SHA:actions/setup-node@v4"
+      ],
+      "pass": true,
+      "required_errors": [
+        "GitHub action is not pinned to a full SHA:actions/setup-node@v4"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "workflow-persists-checkout-credentials",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "checkout credentials are persisted"
+      ],
+      "pass": true,
+      "required_errors": [
+        "checkout credentials are persisted"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "workflow-runtime-lane-removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "Linux/Windows runtime lanes do not share the canonical graph target"
+      ],
+      "pass": true,
+      "required_errors": [
+        "Linux/Windows runtime lanes do not share the canonical graph target"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "total-duration-resolver-removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "total dynamic-duration resolver missing"
+      ],
+      "pass": true,
+      "required_errors": [
+        "total dynamic-duration resolver missing"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "execution-guard-removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "execution-time unresolved-duration guard missing"
+      ],
+      "pass": true,
+      "required_errors": [
+        "execution-time unresolved-duration guard missing"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "typescript-generator-offline-route-removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "TypeScript generator omits offline standalone route"
+      ],
+      "pass": true,
+      "required_errors": [
+        "TypeScript generator omits offline standalone route"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "typescript-generator-shared-evolution-renderer-bypassed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "TypeScript parity checker bypasses shared evolution renderer"
+      ],
+      "pass": true,
+      "required_errors": [
+        "TypeScript parity checker bypasses shared evolution renderer"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "typescript-generator-evolution-block-removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "TypeScript parity checker omits engine-evolution block"
+      ],
+      "pass": true,
+      "required_errors": [
+        "TypeScript parity checker omits engine-evolution block"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "typescript-generator-graph-contract-helper-duplicated",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "TypeScript parity checker duplicates graph-contract authority"
+      ],
+      "pass": true,
+      "required_errors": [
+        "TypeScript parity checker duplicates graph-contract authority"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "node-builtin-capability-profile-weakened",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "Facility Arrival Node builtin capability profile differs"
+      ],
+      "pass": true,
+      "required_errors": [
+        "Facility Arrival Node builtin capability profile differs"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "node-crypto-capability-broadened",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "engine-evolution renderer Node crypto capability differs"
+      ],
+      "pass": true,
+      "required_errors": [
+        "engine-evolution renderer Node crypto capability differs"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "node-capability-regression-case-removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "Facility Arrival Node capability regression missing:reviewed_crypto_capability_wrong_source_rejected"
+      ],
+      "pass": true,
+      "required_errors": [
+        "Facility Arrival Node capability regression missing:reviewed_crypto_capability_wrong_source_rejected"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "python-canonical-generator-offline-route-removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "Python canonical generator omits offline standalone route"
+      ],
+      "pass": true,
+      "required_errors": [
+        "Python canonical generator omits offline standalone route"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "typescript-parity-checker-write-mode-restored",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "TypeScript generator is not verification-only"
+      ],
+      "pass": true,
+      "required_errors": [
+        "TypeScript generator is not verification-only"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "generation-bypasses-canonical-python-writer",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "TypeScript generator invoked outside parity check:generate:facility-arrival",
+        "package script differs:generate:facility-arrival"
+      ],
+      "pass": true,
+      "required_errors": [
+        "package script differs:generate:facility-arrival"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "generation-bypasses-independent-parity-check",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "package script differs:generate:facility-arrival"
+      ],
+      "pass": true,
+      "required_errors": [
+        "package script differs:generate:facility-arrival"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "source-attestations-bypass-independent-parity-check",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "package script differs:check:facility-arrival-source-attestations"
+      ],
+      "pass": true,
+      "required_errors": [
+        "package script differs:check:facility-arrival-source-attestations"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "application-build-generation-bypassed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "application build omits facility generation"
+      ],
+      "pass": true,
+      "required_errors": [
+        "application build omits facility generation"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "readme-route-removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "facility walkthrough not linked from root README"
+      ],
+      "pass": true,
+      "required_errors": [
+        "facility walkthrough not linked from root README"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "root-canonical-heading-stale",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "current policy-bound canonical facility heading missing"
+      ],
+      "pass": true,
+      "required_errors": [
+        "current policy-bound canonical facility heading missing"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "facility-example-heading-removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "facility example canonical heading missing"
+      ],
+      "pass": true,
+      "required_errors": [
+        "facility example canonical heading missing"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "spec-attestation-authentication-removed",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "final validator does not authenticate spec attestation"
+      ],
+      "pass": true,
+      "required_errors": [
+        "final validator does not authenticate spec attestation"
+      ],
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "workflow-yaml-anchor-rejected",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "observed_errors": [
+        "integrated gate dependencies differ",
+        "workflow job inventory differs",
+        "workflow syntax rejected:YAML anchors, aliases, and merge keys are forbidden"
+      ],
+      "pass": true,
+      "required_errors": [
+        "workflow syntax rejected:YAML anchors, aliases, and merge keys are forbidden"
+      ],
+      "status": "EXPECTED_REJECTION"
+    }
+  ],
+  "schema_version": "1.1.0",
+  "status": "PASS"
+}

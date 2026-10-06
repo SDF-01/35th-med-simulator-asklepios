@@ -1,0 +1,115 @@
+{
+  "cases": 12,
+  "classification": "PASS",
+  "errors": [],
+  "results": [
+    {
+      "case_id": "repository-wide-lf-policy",
+      "classification": "PASS",
+      "errors": [],
+      "pass": true,
+      "status": "PASS"
+    },
+    {
+      "case_id": "windows-npm-shim",
+      "classification": "PASS",
+      "errors": [],
+      "execution_argv": [
+        "cmd.exe",
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd run build"
+      ],
+      "pass": true,
+      "status": "PASS"
+    },
+    {
+      "case_id": "windows-npx-shim",
+      "classification": "PASS",
+      "errors": [],
+      "execution_argv": [
+        "cmd.exe",
+        "/d",
+        "/s",
+        "/c",
+        "npx.cmd tsx x.ts"
+      ],
+      "pass": true,
+      "status": "PASS"
+    },
+    {
+      "case_id": "windows-shim-arguments-quoted",
+      "classification": "PASS",
+      "errors": [],
+      "execution_argv": [
+        "C:/Windows/System32/cmd.exe",
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd run fixture -- \"value with spaces\" A&B"
+      ],
+      "pass": true,
+      "status": "PASS"
+    },
+    {
+      "case_id": "posix-npm-identity",
+      "classification": "PASS",
+      "errors": [],
+      "pass": true,
+      "status": "PASS"
+    },
+    {
+      "case_id": "crlf-is-semantic-identity",
+      "classification": "PASS",
+      "errors": [],
+      "pass": true,
+      "status": "PASS"
+    },
+    {
+      "case_id": "lone-cr-is-semantic-identity",
+      "classification": "PASS",
+      "errors": [],
+      "pass": true,
+      "status": "PASS"
+    },
+    {
+      "case_id": "semantic-change-rejected",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "utf8-bom-rejected",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "locked-input-crlf-checkout",
+      "classification": "PASS",
+      "errors": [],
+      "pass": true,
+      "status": "PASS"
+    },
+    {
+      "case_id": "locked-input-semantic-mutation",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "working-tree-locked-text-is-lf",
+      "classification": "PASS",
+      "errors": [],
+      "locked_text_files": 361,
+      "pass": true,
+      "status": "PASS"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

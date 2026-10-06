@@ -1,0 +1,1365 @@
+{
+  "schema_version": "1.0.0",
+  "classification": "PASS",
+  "status": "PASS",
+  "dashboard_id": "ASK-STAKEHOLDER-DASHBOARD-RC3-8",
+  "dashboard_profile": "SCENARIO_LIBRARY_SCORECARD_TREATMENT_AND_EVIDENCE_SURFACE_V1",
+  "scenario_pack": {
+    "catalog_id": "ASK-OPERATIONAL-PACK-RC3-8C",
+    "catalog_profile": "DETERMINISTIC_STAKEHOLDER_SCENARIO_CATALOG_V1",
+    "catalog_root_sha256": "89e46b95f20e561dddd325f49a7230f24e8c0943563ded5f9049295a879660c5",
+    "classification": "PASS",
+    "entries": [
+      {
+        "authority": {
+          "clinical_decision_support": "PROHIBITED",
+          "direct_patient_care": "PROHIBITED",
+          "healthcare_simulation": "PERMITTED_WITHIN_VALIDATED_SCOPE",
+          "operational_timing": "NOT_CALIBRATED",
+          "scoring_state": "SOURCE_CONFORMANCE_ONLY",
+          "treatment_state": "NO_SIMULATION_ADMITTED_CONCRETE_TREATMENT"
+        },
+        "candidate_id": "ASK-BEQ-CAND-9B503CF2341F8C9D",
+        "catalog_entry_id": "ASK-OP-187CE52297B9F776",
+        "context": {
+          "communications": "degraded",
+          "location": "aircraft shelter access road",
+          "resource_event": "equipment access is delayed by a relocation order",
+          "resources": "constrained",
+          "visibility": "Good",
+          "weather": "cold wind with intermittent smoke"
+        },
+        "learning_focus": [
+          "establish the operational picture",
+          "complete a traceable direct handoff",
+          "close the evolution without an unsafe branch"
+        ],
+        "operational_behavior_profile_id": "DIRECT_HANDOFF_BASELINE",
+        "plain_language_summary": "A fictional healthcare-simulation exercise in aircraft shelter access road with degraded communications and constrained resources.",
+        "profile_label": "Direct handoff",
+        "profile_sequence": 1,
+        "reproducibility": {
+          "context_signature_sha256": "533def111a0222c543bd54908f704e684797fb0d3ccf1df62c67e99b52521ccb",
+          "equivalence_class_id": "ASK-BEQ-CLASS-C12A5446DA04262A",
+          "package_sha256": "9b503cf2341f8c9d11f4839763994121283cd31d14a438787b4f70c0e2878298",
+          "policy_signature_sha256": "c12a5446da04262a26981460e4e6476ec41724ffb3761b610d6114bde7d289ea"
+        },
+        "schema_version": "1.0.0",
+        "seed": 153,
+        "source_scenario_id": "ASK-A-001",
+        "title": "Direct handoff — Aircraft Shelter Access Road",
+        "topic_id": "airway"
+      },
+      {
+        "authority": {
+          "clinical_decision_support": "PROHIBITED",
+          "direct_patient_care": "PROHIBITED",
+          "healthcare_simulation": "PERMITTED_WITHIN_VALIDATED_SCOPE",
+          "operational_timing": "NOT_CALIBRATED",
+          "scoring_state": "SOURCE_CONFORMANCE_ONLY",
+          "treatment_state": "NO_SIMULATION_ADMITTED_CONCRETE_TREATMENT"
+        },
+        "candidate_id": "ASK-BEQ-CAND-68ACBD02F9F27A3D",
+        "catalog_entry_id": "ASK-OP-4F3FFE6B7EDBEFA9",
+        "context": {
+          "communications": "degraded",
+          "location": "damaged operations perimeter",
+          "resource_event": "a second response task temporarily reduces available personnel",
+          "resources": "constrained",
+          "visibility": "Good",
+          "weather": "clear with cold crosswind"
+        },
+        "learning_focus": [
+          "establish the operational picture",
+          "complete a traceable direct handoff",
+          "close the evolution without an unsafe branch"
+        ],
+        "operational_behavior_profile_id": "DIRECT_HANDOFF_BASELINE",
+        "plain_language_summary": "A fictional healthcare-simulation exercise in damaged operations perimeter with degraded communications and constrained resources.",
+        "profile_label": "Direct handoff",
+        "profile_sequence": 2,
+        "reproducibility": {
+          "context_signature_sha256": "8f34fedee78a1b62e18ca8dee4fedbc8b47e39bc9d979bf3e800216a0ec359a8",
+          "equivalence_class_id": "ASK-BEQ-CLASS-C12A5446DA04262A",
+          "package_sha256": "68acbd02f9f27a3dd2046a08c8c4cd29069761ddabddeffec6279da0db75e85c",
+          "policy_signature_sha256": "c12a5446da04262a26981460e4e6476ec41724ffb3761b610d6114bde7d289ea"
+        },
+        "schema_version": "1.0.0",
+        "seed": 819,
+        "source_scenario_id": "ASK-A-001",
+        "title": "Direct handoff — Damaged Operations Perimeter",
+        "topic_id": "documentation_aar"
+      },
+      {
+        "authority": {
+          "clinical_decision_support": "PROHIBITED",
+          "direct_patient_care": "PROHIBITED",
+          "healthcare_simulation": "PERMITTED_WITHIN_VALIDATED_SCOPE",
+          "operational_timing": "NOT_CALIBRATED",
+          "scoring_state": "SOURCE_CONFORMANCE_ONLY",
+          "treatment_state": "NO_SIMULATION_ADMITTED_CONCRETE_TREATMENT"
+        },
+        "candidate_id": "ASK-BEQ-CAND-0B7174700EF6EED6",
+        "catalog_entry_id": "ASK-OP-BA717FC8E18927FF",
+        "context": {
+          "communications": "degraded",
+          "location": "flightline maintenance lane",
+          "resource_event": "communications become intermittent during casualty movement",
+          "resources": "constrained",
+          "visibility": "Variable",
+          "weather": "cold wind with intermittent smoke"
+        },
+        "learning_focus": [
+          "establish the operational picture",
+          "complete a traceable direct handoff",
+          "close the evolution without an unsafe branch"
+        ],
+        "operational_behavior_profile_id": "DIRECT_HANDOFF_BASELINE",
+        "plain_language_summary": "A fictional healthcare-simulation exercise in flightline maintenance lane with degraded communications and constrained resources.",
+        "profile_label": "Direct handoff",
+        "profile_sequence": 3,
+        "reproducibility": {
+          "context_signature_sha256": "53448b662abae64c31f3b1c036d4fe5207edc21658b83b6514ee0f6325089b3b",
+          "equivalence_class_id": "ASK-BEQ-CLASS-C12A5446DA04262A",
+          "package_sha256": "0b7174700ef6eed67cf39ea2ceab12cc10f7adc7e426cec23bf8d9e322613f46",
+          "policy_signature_sha256": "c12a5446da04262a26981460e4e6476ec41724ffb3761b610d6114bde7d289ea"
+        },
+        "schema_version": "1.0.0",
+        "seed": 1075,
+        "source_scenario_id": "ASK-A-001",
+        "title": "Direct handoff — Flightline Maintenance Lane",
+        "topic_id": "evacuation_transport"
+      },
+      {
+        "authority": {
+          "clinical_decision_support": "PROHIBITED",
+          "direct_patient_care": "PROHIBITED",
+          "healthcare_simulation": "PERMITTED_WITHIN_VALIDATED_SCOPE",
+          "operational_timing": "NOT_CALIBRATED",
+          "scoring_state": "SOURCE_CONFORMANCE_ONLY",
+          "treatment_state": "NO_SIMULATION_ADMITTED_CONCRETE_TREATMENT"
+        },
+        "candidate_id": "ASK-BEQ-CAND-84C92E5DA62DFC8B",
+        "catalog_entry_id": "ASK-OP-F6AB407F238E2DA7",
+        "context": {
+          "communications": "unavailable",
+          "location": "aircraft shelter access road",
+          "resource_event": "a second response task temporarily reduces available personnel",
+          "resources": "constrained",
+          "visibility": "Reduced",
+          "weather": "light rain with standing water"
+        },
+        "learning_focus": [
+          "recognize degraded communications",
+          "establish an intermediate relay",
+          "preserve information through the final handoff"
+        ],
+        "operational_behavior_profile_id": "COMMUNICATION_RELAY_REQUIRED",
+        "plain_language_summary": "A fictional healthcare-simulation exercise in aircraft shelter access road with unavailable communications and constrained resources.",
+        "profile_label": "Communications relay",
+        "profile_sequence": 1,
+        "reproducibility": {
+          "context_signature_sha256": "6c301547e334590e28e4e7d04cfaf2a67ec0a4590e72f93ad92a661c34c9f4f4",
+          "equivalence_class_id": "ASK-BEQ-CLASS-3FA1C1E81722880E",
+          "package_sha256": "84c92e5da62dfc8b8ed3bba4cf630a18776103e1874de7b583213bdb6f522336",
+          "policy_signature_sha256": "3fa1c1e81722880ec30d0539cd300057b0c89e41e9425b0a2094a12dd20efb11"
+        },
+        "schema_version": "1.0.0",
+        "seed": 1011,
+        "source_scenario_id": "ASK-A-001",
+        "title": "Communications relay — Aircraft Shelter Access Road",
+        "topic_id": "airway"
+      },
+      {
+        "authority": {
+          "clinical_decision_support": "PROHIBITED",
+          "direct_patient_care": "PROHIBITED",
+          "healthcare_simulation": "PERMITTED_WITHIN_VALIDATED_SCOPE",
+          "operational_timing": "NOT_CALIBRATED",
+          "scoring_state": "SOURCE_CONFORMANCE_ONLY",
+          "treatment_state": "NO_SIMULATION_ADMITTED_CONCRETE_TREATMENT"
+        },
+        "candidate_id": "ASK-BEQ-CAND-8D2027062D0FCD72",
+        "catalog_entry_id": "ASK-OP-67B833633704C82D",
+        "context": {
+          "communications": "intermittent",
+          "location": "damaged operations perimeter",
+          "resource_event": "transport route changes while the team prepares handoff",
+          "resources": "constrained",
+          "visibility": "Variable",
+          "weather": "light rain with standing water"
+        },
+        "learning_focus": [
+          "recognize degraded communications",
+          "establish an intermediate relay",
+          "preserve information through the final handoff"
+        ],
+        "operational_behavior_profile_id": "COMMUNICATION_RELAY_REQUIRED",
+        "plain_language_summary": "A fictional healthcare-simulation exercise in damaged operations perimeter with intermittent communications and constrained resources.",
+        "profile_label": "Communications relay",
+        "profile_sequence": 2,
+        "reproducibility": {
+          "context_signature_sha256": "554ce126dfe9cc86bae8d1e8586acb8a049edd155b1d3cc3e048d9bf23b827d5",
+          "equivalence_class_id": "ASK-BEQ-CLASS-3FA1C1E81722880E",
+          "package_sha256": "8d2027062d0fcd72ef769e47c9e426ae0002bce753e38773c0d6bac6230073ef",
+          "policy_signature_sha256": "3fa1c1e81722880ec30d0539cd300057b0c89e41e9425b0a2094a12dd20efb11"
+        },
+        "schema_version": "1.0.0",
+        "seed": 832,
+        "source_scenario_id": "ASK-A-001",
+        "title": "Communications relay — Damaged Operations Perimeter",
+        "topic_id": "documentation_aar"
+      },
+      {
+        "authority": {
+          "clinical_decision_support": "PROHIBITED",
+          "direct_patient_care": "PROHIBITED",
+          "healthcare_simulation": "PERMITTED_WITHIN_VALIDATED_SCOPE",
+          "operational_timing": "NOT_CALIBRATED",
+          "scoring_state": "SOURCE_CONFORMANCE_ONLY",
+          "treatment_state": "NO_SIMULATION_ADMITTED_CONCRETE_TREATMENT"
+        },
+        "candidate_id": "ASK-BEQ-CAND-E0729D4E0564EA48",
+        "catalog_entry_id": "ASK-OP-539E1DD946713BBA",
+        "context": {
+          "communications": "intermittent",
+          "location": "flightline maintenance lane",
+          "resource_event": "transport route changes while the team prepares handoff",
+          "resources": "constrained",
+          "visibility": "Good",
+          "weather": "dry conditions with reduced visibility"
+        },
+        "learning_focus": [
+          "recognize degraded communications",
+          "establish an intermediate relay",
+          "preserve information through the final handoff"
+        ],
+        "operational_behavior_profile_id": "COMMUNICATION_RELAY_REQUIRED",
+        "plain_language_summary": "A fictional healthcare-simulation exercise in flightline maintenance lane with intermittent communications and constrained resources.",
+        "profile_label": "Communications relay",
+        "profile_sequence": 3,
+        "reproducibility": {
+          "context_signature_sha256": "19dff5e165e8341ae2818a8f18e638ad35fe49dcc25d9acedba1636b6a225359",
+          "equivalence_class_id": "ASK-BEQ-CLASS-3FA1C1E81722880E",
+          "package_sha256": "e0729d4e0564ea48a229a13343286d00a9d68137989467f9f6b38800948b54b4",
+          "policy_signature_sha256": "3fa1c1e81722880ec30d0539cd300057b0c89e41e9425b0a2094a12dd20efb11"
+        },
+        "schema_version": "1.0.0",
+        "seed": 1082,
+        "source_scenario_id": "ASK-A-001",
+        "title": "Communications relay — Flightline Maintenance Lane",
+        "topic_id": "evacuation_transport"
+      },
+      {
+        "authority": {
+          "clinical_decision_support": "PROHIBITED",
+          "direct_patient_care": "PROHIBITED",
+          "healthcare_simulation": "PERMITTED_WITHIN_VALIDATED_SCOPE",
+          "operational_timing": "NOT_CALIBRATED",
+          "scoring_state": "SOURCE_CONFORMANCE_ONLY",
+          "treatment_state": "NO_SIMULATION_ADMITTED_CONCRETE_TREATMENT"
+        },
+        "candidate_id": "ASK-BEQ-CAND-180E1F2C3BB51755",
+        "catalog_entry_id": "ASK-OP-62C0BECFB96822BB",
+        "context": {
+          "communications": "degraded",
+          "location": "flightline maintenance lane",
+          "resource_event": "transport route changes while the team prepares handoff",
+          "resources": "overwhelmed",
+          "visibility": "Reduced",
+          "weather": "dry conditions with reduced visibility"
+        },
+        "learning_focus": [
+          "recognize resource contention",
+          "coordinate the constrained resource",
+          "complete handoff after the resource step"
+        ],
+        "operational_behavior_profile_id": "RESOURCE_COORDINATION_REQUIRED",
+        "plain_language_summary": "A fictional healthcare-simulation exercise in flightline maintenance lane with degraded communications and overwhelmed resources.",
+        "profile_label": "Resource coordination",
+        "profile_sequence": 1,
+        "reproducibility": {
+          "context_signature_sha256": "6a999c44eaf25fab67679a55a4b1ef2d19cca0eb707120552a72caa628e4d1db",
+          "equivalence_class_id": "ASK-BEQ-CLASS-43E0C8396457564A",
+          "package_sha256": "180e1f2c3bb5175514a79d38f1fb6ceea9f8208000aca2ca403e39293c709278",
+          "policy_signature_sha256": "43e0c8396457564ab31b83edd2be1f421a28fefef88791a6e7e361995145ea1f"
+        },
+        "schema_version": "1.0.0",
+        "seed": 952,
+        "source_scenario_id": "ASK-A-001",
+        "title": "Resource coordination — Flightline Maintenance Lane",
+        "topic_id": "airway"
+      },
+      {
+        "authority": {
+          "clinical_decision_support": "PROHIBITED",
+          "direct_patient_care": "PROHIBITED",
+          "healthcare_simulation": "PERMITTED_WITHIN_VALIDATED_SCOPE",
+          "operational_timing": "NOT_CALIBRATED",
+          "scoring_state": "SOURCE_CONFORMANCE_ONLY",
+          "treatment_state": "NO_SIMULATION_ADMITTED_CONCRETE_TREATMENT"
+        },
+        "candidate_id": "ASK-BEQ-CAND-5F25AA7F23FEC57F",
+        "catalog_entry_id": "ASK-OP-82FF545720FAEC13",
+        "context": {
+          "communications": "degraded",
+          "location": "aircraft shelter access road",
+          "resource_event": "communications become intermittent during casualty movement",
+          "resources": "overwhelmed",
+          "visibility": "Reduced",
+          "weather": "cold wind with intermittent smoke"
+        },
+        "learning_focus": [
+          "recognize resource contention",
+          "coordinate the constrained resource",
+          "complete handoff after the resource step"
+        ],
+        "operational_behavior_profile_id": "RESOURCE_COORDINATION_REQUIRED",
+        "plain_language_summary": "A fictional healthcare-simulation exercise in aircraft shelter access road with degraded communications and overwhelmed resources.",
+        "profile_label": "Resource coordination",
+        "profile_sequence": 2,
+        "reproducibility": {
+          "context_signature_sha256": "03116dc44328efcbadeee6e4e24f9c03dfdcb26cd6cb2f132058561895e74fab",
+          "equivalence_class_id": "ASK-BEQ-CLASS-43E0C8396457564A",
+          "package_sha256": "5f25aa7f23fec57f0dcc2c0e47fe8db5960f3e8426e44765d8fa4a97e114ec64",
+          "policy_signature_sha256": "43e0c8396457564ab31b83edd2be1f421a28fefef88791a6e7e361995145ea1f"
+        },
+        "schema_version": "1.0.0",
+        "seed": 778,
+        "source_scenario_id": "ASK-A-001",
+        "title": "Resource coordination — Aircraft Shelter Access Road",
+        "topic_id": "documentation_aar"
+      },
+      {
+        "authority": {
+          "clinical_decision_support": "PROHIBITED",
+          "direct_patient_care": "PROHIBITED",
+          "healthcare_simulation": "PERMITTED_WITHIN_VALIDATED_SCOPE",
+          "operational_timing": "NOT_CALIBRATED",
+          "scoring_state": "SOURCE_CONFORMANCE_ONLY",
+          "treatment_state": "NO_SIMULATION_ADMITTED_CONCRETE_TREATMENT"
+        },
+        "candidate_id": "ASK-BEQ-CAND-FCAAE19933DD1A18",
+        "catalog_entry_id": "ASK-OP-C67D4A18B439DDB1",
+        "context": {
+          "communications": "degraded",
+          "location": "damaged operations perimeter",
+          "resource_event": "a second response task temporarily reduces available personnel",
+          "resources": "overwhelmed",
+          "visibility": "Variable",
+          "weather": "dry conditions with reduced visibility"
+        },
+        "learning_focus": [
+          "recognize resource contention",
+          "coordinate the constrained resource",
+          "complete handoff after the resource step"
+        ],
+        "operational_behavior_profile_id": "RESOURCE_COORDINATION_REQUIRED",
+        "plain_language_summary": "A fictional healthcare-simulation exercise in damaged operations perimeter with degraded communications and overwhelmed resources.",
+        "profile_label": "Resource coordination",
+        "profile_sequence": 3,
+        "reproducibility": {
+          "context_signature_sha256": "039ccca3cbd0b18662ef7f9f0486b99973d8f4d6d4108f1e8538790c532a1752",
+          "equivalence_class_id": "ASK-BEQ-CLASS-43E0C8396457564A",
+          "package_sha256": "fcaae19933dd1a18aa8cd674ba054e2630d1b4947bbdcad06a7738b81ebc165d",
+          "policy_signature_sha256": "43e0c8396457564ab31b83edd2be1f421a28fefef88791a6e7e361995145ea1f"
+        },
+        "schema_version": "1.0.0",
+        "seed": 1038,
+        "source_scenario_id": "ASK-A-001",
+        "title": "Resource coordination — Damaged Operations Perimeter",
+        "topic_id": "evacuation_transport"
+      },
+      {
+        "authority": {
+          "clinical_decision_support": "PROHIBITED",
+          "direct_patient_care": "PROHIBITED",
+          "healthcare_simulation": "PERMITTED_WITHIN_VALIDATED_SCOPE",
+          "operational_timing": "NOT_CALIBRATED",
+          "scoring_state": "SOURCE_CONFORMANCE_ONLY",
+          "treatment_state": "NO_SIMULATION_ADMITTED_CONCRETE_TREATMENT"
+        },
+        "candidate_id": "ASK-BEQ-CAND-1D5023B6B32A1572",
+        "catalog_entry_id": "ASK-OP-4584846308BF5AFD",
+        "context": {
+          "communications": "intermittent",
+          "location": "aircraft shelter access road",
+          "resource_event": "communications become intermittent during casualty movement",
+          "resources": "overwhelmed",
+          "visibility": "Reduced",
+          "weather": "dry conditions with reduced visibility"
+        },
+        "learning_focus": [
+          "manage simultaneous communications and resource constraints",
+          "sequence relay before resource coordination",
+          "preserve a closed-loop final handoff"
+        ],
+        "operational_behavior_profile_id": "DUAL_CONSTRAINT_RELAY_AND_COORDINATION",
+        "plain_language_summary": "A fictional healthcare-simulation exercise in aircraft shelter access road with intermittent communications and overwhelmed resources.",
+        "profile_label": "Relay and resource coordination",
+        "profile_sequence": 1,
+        "reproducibility": {
+          "context_signature_sha256": "1d48ed3e8945eb2fca3a3c08913c0ca5e344eec512e8a04b82b70b3a8fe00543",
+          "equivalence_class_id": "ASK-BEQ-CLASS-CE1CD6973685F851",
+          "package_sha256": "1d5023b6b32a15728ad67340a31e9fe4cf9c2de5c9abee597c82e2855800d7d7",
+          "policy_signature_sha256": "ce1cd6973685f85175e1ad26df55da7e95ba39441b3480b347e6fa16c7decfb9"
+        },
+        "schema_version": "1.0.0",
+        "seed": 808,
+        "source_scenario_id": "ASK-A-001",
+        "title": "Relay and resource coordination — Aircraft Shelter Access Road",
+        "topic_id": "airway"
+      },
+      {
+        "authority": {
+          "clinical_decision_support": "PROHIBITED",
+          "direct_patient_care": "PROHIBITED",
+          "healthcare_simulation": "PERMITTED_WITHIN_VALIDATED_SCOPE",
+          "operational_timing": "NOT_CALIBRATED",
+          "scoring_state": "SOURCE_CONFORMANCE_ONLY",
+          "treatment_state": "NO_SIMULATION_ADMITTED_CONCRETE_TREATMENT"
+        },
+        "candidate_id": "ASK-BEQ-CAND-D91528E66401E4B0",
+        "catalog_entry_id": "ASK-OP-EF32FF59EF239823",
+        "context": {
+          "communications": "unavailable",
+          "location": "damaged operations perimeter",
+          "resource_event": "equipment access is delayed by a relocation order",
+          "resources": "overwhelmed",
+          "visibility": "Reduced",
+          "weather": "dry conditions with reduced visibility"
+        },
+        "learning_focus": [
+          "manage simultaneous communications and resource constraints",
+          "sequence relay before resource coordination",
+          "preserve a closed-loop final handoff"
+        ],
+        "operational_behavior_profile_id": "DUAL_CONSTRAINT_RELAY_AND_COORDINATION",
+        "plain_language_summary": "A fictional healthcare-simulation exercise in damaged operations perimeter with unavailable communications and overwhelmed resources.",
+        "profile_label": "Relay and resource coordination",
+        "profile_sequence": 2,
+        "reproducibility": {
+          "context_signature_sha256": "ac4f1a840dc4a54b017fbc103fe526c62172d0abdca8fa9177f000a6ce5e22ba",
+          "equivalence_class_id": "ASK-BEQ-CLASS-CE1CD6973685F851",
+          "package_sha256": "d91528e66401e4b0573c419d615f9dfdced95cc606b3a2e7bbf9fb205846197a",
+          "policy_signature_sha256": "ce1cd6973685f85175e1ad26df55da7e95ba39441b3480b347e6fa16c7decfb9"
+        },
+        "schema_version": "1.0.0",
+        "seed": 561,
+        "source_scenario_id": "ASK-A-001",
+        "title": "Relay and resource coordination — Damaged Operations Perimeter",
+        "topic_id": "documentation_aar"
+      },
+      {
+        "authority": {
+          "clinical_decision_support": "PROHIBITED",
+          "direct_patient_care": "PROHIBITED",
+          "healthcare_simulation": "PERMITTED_WITHIN_VALIDATED_SCOPE",
+          "operational_timing": "NOT_CALIBRATED",
+          "scoring_state": "SOURCE_CONFORMANCE_ONLY",
+          "treatment_state": "NO_SIMULATION_ADMITTED_CONCRETE_TREATMENT"
+        },
+        "candidate_id": "ASK-BEQ-CAND-D7D517737E3498F1",
+        "catalog_entry_id": "ASK-OP-5A53604EEC316950",
+        "context": {
+          "communications": "unavailable",
+          "location": "logistics staging apron",
+          "resource_event": "transport route changes while the team prepares handoff",
+          "resources": "overwhelmed",
+          "visibility": "Variable",
+          "weather": "cold wind with intermittent smoke"
+        },
+        "learning_focus": [
+          "manage simultaneous communications and resource constraints",
+          "sequence relay before resource coordination",
+          "preserve a closed-loop final handoff"
+        ],
+        "operational_behavior_profile_id": "DUAL_CONSTRAINT_RELAY_AND_COORDINATION",
+        "plain_language_summary": "A fictional healthcare-simulation exercise in logistics staging apron with unavailable communications and overwhelmed resources.",
+        "profile_label": "Relay and resource coordination",
+        "profile_sequence": 3,
+        "reproducibility": {
+          "context_signature_sha256": "07ec39cdf64b1044290df0b39c03efb9e7574236e8ff8403ca6ccd9e432313b0",
+          "equivalence_class_id": "ASK-BEQ-CLASS-CE1CD6973685F851",
+          "package_sha256": "d7d517737e3498f1ba1b645ccbf09a4dbf88a07186aaa7f026b472aaa45e3549",
+          "policy_signature_sha256": "ce1cd6973685f85175e1ad26df55da7e95ba39441b3480b347e6fa16c7decfb9"
+        },
+        "schema_version": "1.0.0",
+        "seed": 727,
+        "source_scenario_id": "ASK-A-001",
+        "title": "Relay and resource coordination — Logistics Staging Apron",
+        "topic_id": "evacuation_transport"
+      }
+    ],
+    "entry_count": 12,
+    "policy_epoch": 1,
+    "policy_id": "asklepios-operational-scenario-pack-policy-v1",
+    "policy_sha256": "1cacbe1f0406d38ad416ab2b1b4d387e8d428dd1c6e9ae021a70805fc5cd0808",
+    "profile_counts": {
+      "COMMUNICATION_RELAY_REQUIRED": 3,
+      "DIRECT_HANDOFF_BASELINE": 3,
+      "DUAL_CONSTRAINT_RELAY_AND_COORDINATION": 3,
+      "RESOURCE_COORDINATION_REQUIRED": 3
+    },
+    "schema_version": "1.0.0",
+    "selection_profile": "GREEDY_TOPIC_THEN_CONTEXT_DIVERSITY_STABLE_TIEBREAK_V1",
+    "source_archive_path": "reports/scenario-behavioral-equivalence.json",
+    "source_archive_root_sha256": "4de3567e9f03d4b6fca7f735e465d1ba124c22eabe8793eb79ddd89d27b76bf9",
+    "stakeholder_surfaces": [
+      "learner_scenario_library",
+      "instructor_scenario_selection",
+      "scientific_reviewer_provenance"
+    ],
+    "status": "PASS",
+    "truth_boundaries": {
+      "clinical_decision_support": "PROHIBITED",
+      "direct_patient_care": "PROHIBITED",
+      "healthcare_simulation": "PERMITTED_WITHIN_VALIDATED_SCOPE",
+      "human_team_behavior": "STRUCTURAL_ONLY_NOT_CALIBRATED",
+      "operational_timing": "NOT_CALIBRATED",
+      "scoring_state": "SOURCE_CONFORMANCE_ONLY",
+      "treatment_state": "NO_SIMULATION_ADMITTED_CONCRETE_TREATMENT"
+    }
+  },
+  "stakeholder_capability_map": {
+    "map_id": "asklepios-stakeholder-capability-map-v1",
+    "map_epoch": 2,
+    "map_sha256": "e120f454a1ab5beb66ccf3f79cc331a0840604abe3f3feb371c92bb7e3707354",
+    "capabilities": [
+      {
+        "affects_learner_scoring": false,
+        "affects_treatment_choices": false,
+        "capability_id": "BEHAVIORALLY_DISTINCT_OPERATIONAL_PROFILES",
+        "evidence_level": "STRUCTURAL_POLICY_DIVERSITY_NOT_EMPIRICALLY_CALIBRATED",
+        "interface_paths": [
+          "/scenarios"
+        ],
+        "limitations": [
+          "Four structural policy classes are verified; real human-team behavior has not been empirically calibrated."
+        ],
+        "owner_module": "src/scenario-core/behaviorProfiles.ts",
+        "plain_language_name": "Meaningfully different team challenges",
+        "source_of_truth": [
+          "config/scenario-science/BEHAVIORAL_DIVERSITY_POLICY.json",
+          "reports/scenario-behavioral-equivalence.json"
+        ],
+        "stakeholders": [
+          "learner",
+          "instructor",
+          "scientific_reviewer"
+        ],
+        "tests": [
+          "scripts/test_scenario_behavioral_equivalence.py",
+          "src/tests/scenarioOperationalBehaviorProfiles.test.ts"
+        ],
+        "user_problem": "Changing names or weather is not enough; scenarios should require different coordination strategies."
+      },
+      {
+        "affects_learner_scoring": false,
+        "affects_treatment_choices": false,
+        "capability_id": "DETERMINISTIC_SCENARIO_LIBRARY",
+        "evidence_level": "DETERMINISTIC_SOFTWARE_ASSURANCE",
+        "interface_paths": [
+          "/scenarios"
+        ],
+        "limitations": [
+          "The pack is an operational simulation pack, not a clinically validated treatment library."
+        ],
+        "owner_module": "src/pages/ScenarioLibraryPage.tsx",
+        "plain_language_name": "Reproducible scenario library",
+        "source_of_truth": [
+          "public/data/scenario_library/operational-pack.json"
+        ],
+        "stakeholders": [
+          "learner",
+          "instructor"
+        ],
+        "tests": [
+          "scripts/test_operational_scenario_pack.py",
+          "scripts/test_stakeholder_product_bundle.py"
+        ],
+        "user_problem": "People need to choose a training scenario and know that the same scenario can be recreated exactly."
+      },
+      {
+        "affects_learner_scoring": false,
+        "affects_treatment_choices": false,
+        "capability_id": "HASH_CHAINED_SIMULATION_TELEMETRY",
+        "evidence_level": "HASH_CHAINED_PRIVACY_BOUNDED_TELEMETRY",
+        "interface_paths": [
+          "/scenarios"
+        ],
+        "limitations": [
+          "Telemetry supports later calibration work; it does not itself establish real-world validity."
+        ],
+        "owner_module": "scripts/scenario_science_common.py",
+        "plain_language_name": "Tamper-evident simulation timeline",
+        "source_of_truth": [
+          "examples/scenario-science/reference-telemetry.json",
+          "config/scenario-science/SCENARIO_SCIENCE_POLICY.json"
+        ],
+        "stakeholders": [
+          "instructor",
+          "scientific_reviewer",
+          "maintainer"
+        ],
+        "tests": [
+          "scripts/test_scenario_science_telemetry.py"
+        ],
+        "user_problem": "Reviewers need a trustworthy record of what happened during a simulation without storing patient-identifying data."
+      },
+      {
+        "affects_learner_scoring": true,
+        "affects_treatment_choices": false,
+        "capability_id": "OFFLINE_FACILITY_ARRIVAL_SCENARIO",
+        "evidence_level": "DETERMINISTIC_OFFLINE_ARTIFACT_ASSURANCE",
+        "interface_paths": [
+          "examples/facility-arrival/playable.html"
+        ],
+        "limitations": [
+          "The offline exercise clock is deterministic but not calibrated to clinical operations."
+        ],
+        "owner_module": "scripts/build_facility_arrival_standalone.py",
+        "plain_language_name": "Offline browser scenario",
+        "source_of_truth": [
+          "examples/facility-arrival/playable.html",
+          "public/data/scenario_core/offline_scenario_release.json"
+        ],
+        "stakeholders": [
+          "learner",
+          "instructor"
+        ],
+        "tests": [
+          "scripts/test_facility_arrival_standalone_mutations.py",
+          "scripts/test_facility_arrival_standalone_ui.mjs"
+        ],
+        "user_problem": "Training may need to continue without a server or network connection."
+      },
+      {
+        "affects_learner_scoring": false,
+        "affects_treatment_choices": false,
+        "capability_id": "PLAIN_LANGUAGE_RELEASE_TRANSLATION",
+        "evidence_level": "MACHINE_CHECKED_NONTECHNICAL_RELEASE_CONTRACT",
+        "interface_paths": [
+          "docs/RC3_8_STAKEHOLDER_RELEASE_SUMMARY.md"
+        ],
+        "limitations": [
+          "Plain-language summaries explain the current evidence and limitations; they do not replace technical or scientific review."
+        ],
+        "owner_module": "config/product/PLAIN_LANGUAGE_RELEASE_CONTRACT.json",
+        "plain_language_name": "Plain-language release explanation",
+        "source_of_truth": [
+          "config/product/PLAIN_LANGUAGE_RELEASE_CONTRACT.json",
+          "docs/RC3_8_STAKEHOLDER_RELEASE_SUMMARY.md"
+        ],
+        "stakeholders": [
+          "learner",
+          "instructor",
+          "scientific_reviewer",
+          "maintainer"
+        ],
+        "tests": [
+          "scripts/test_stakeholder_product_bundle.py"
+        ],
+        "user_problem": "People should not need to understand release engineering jargon to know what changed, what they can do, and what the system still cannot claim."
+      },
+      {
+        "affects_learner_scoring": false,
+        "affects_treatment_choices": false,
+        "capability_id": "REPRODUCIBLE_RELEASE_EVIDENCE",
+        "evidence_level": "RECEIPT_BOUND_CROSS_PLATFORM_RELEASE_ASSURANCE",
+        "interface_paths": [
+          "/scenarios"
+        ],
+        "limitations": [
+          "Passing software gates does not create clinical authority or empirical calibration."
+        ],
+        "owner_module": "scripts/run_release_graph.py",
+        "plain_language_name": "Rebuildable and independently checked releases",
+        "source_of_truth": [
+          "config/release/RELEASE_GRAPH.json",
+          "reports/release-graph-consistency.json"
+        ],
+        "stakeholders": [
+          "maintainer",
+          "scientific_reviewer"
+        ],
+        "tests": [
+          "scripts/test_release_graph.py",
+          "scripts/test_release_source_closure.py"
+        ],
+        "user_problem": "Maintainers and reviewers need proof that the code, scenario artifacts, and reports came from the reviewed source."
+      },
+      {
+        "affects_learner_scoring": true,
+        "affects_treatment_choices": true,
+        "capability_id": "ROLE_BOUND_DECISION_EXPERIENCES",
+        "evidence_level": "AUTOMATED_ROLE_PROJECTION_ASSURANCE",
+        "interface_paths": [
+          "/examples/facility-decision"
+        ],
+        "limitations": [
+          "A production network deployment must also enforce role authorization on the server."
+        ],
+        "owner_module": "src/pages/FacilityDecisionSessionPage.tsx",
+        "plain_language_name": "Separate learner and instructor views",
+        "source_of_truth": [
+          "src/pages/FacilityDecisionSessionPage.tsx",
+          "src/facility-decision/fixtures.ts"
+        ],
+        "stakeholders": [
+          "learner",
+          "instructor"
+        ],
+        "tests": [
+          "scripts/test_facility_decision_role_boundaries.py",
+          "scripts/test_facility_decision_accessibility.py"
+        ],
+        "user_problem": "Learners should not see answer keys, source points, or instructor-only information during assessment."
+      },
+      {
+        "affects_learner_scoring": true,
+        "affects_treatment_choices": false,
+        "capability_id": "SOURCE_CONFORMANCE_SCORECARD",
+        "evidence_level": "SOURCE_CONFORMANCE_ONLY",
+        "interface_paths": [
+          "/scenarios"
+        ],
+        "limitations": [
+          "This is not a psychometrically validated proficiency measure.",
+          "Uncalibrated timing cannot change the score."
+        ],
+        "owner_module": "src/scenario-core/scorecard.ts",
+        "plain_language_name": "Evidence-backed learner scorecard",
+        "source_of_truth": [
+          "src/scenario-core/scorecard.ts",
+          "public/data/scenario_library/stakeholder-dashboard.json"
+        ],
+        "stakeholders": [
+          "learner",
+          "instructor"
+        ],
+        "tests": [
+          "src/tests/scenarioScorecard.test.ts",
+          "scripts/test_stakeholder_product_bundle.py"
+        ],
+        "user_problem": "A single number hides what the learner actually did well or missed."
+      },
+      {
+        "affects_learner_scoring": false,
+        "affects_treatment_choices": true,
+        "capability_id": "TREATMENT_ADMISSION_TRANSPARENCY",
+        "evidence_level": "ZERO_SIMULATION_ADMITTED_CONCRETE_TREATMENTS",
+        "interface_paths": [
+          "/scenarios",
+          "/examples/facility-decision"
+        ],
+        "limitations": [
+          "Discovered treatment concepts remain inactive until source, applicability, scope, effect, and independent review requirements are satisfied."
+        ],
+        "owner_module": "config/scenario-science/TREATMENT_ADMISSION_REGISTRY.json",
+        "plain_language_name": "Treatment approval status",
+        "source_of_truth": [
+          "config/scenario-science/TREATMENT_ADMISSION_REGISTRY.json"
+        ],
+        "stakeholders": [
+          "learner",
+          "instructor",
+          "scientific_reviewer"
+        ],
+        "tests": [
+          "scripts/test_stakeholder_product_bundle.py"
+        ],
+        "user_problem": "Users need to know why a treatment is available, blocked, or still awaiting review."
+      }
+    ]
+  },
+  "reference_scorecards": [
+    {
+      "schema_version": "1.0.0",
+      "scorecard_profile": "SOURCE_CONFORMANCE_MULTIDIMENSIONAL_SCORECARD_V1",
+      "route_id": "ASK-STAKEHOLDER-REFERENCE:DIRECT_HANDOFF_BASELINE",
+      "operational_behavior_profile_id": "DIRECT_HANDOFF_BASELINE",
+      "overall_status": "PASS",
+      "safety_gate": "PASS",
+      "source_conformance_score_bps": 10000,
+      "evidence_sufficient_for_composite": true,
+      "dimensions": [
+        {
+          "dimension_id": "situation_assessment",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "contact"
+          ],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The trace reached the reviewed observation step.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "information_management",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "pressure"
+          ],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The learner encountered and processed an operational information constraint.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "prioritization",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "approach",
+            "briefing",
+            "contact"
+          ],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The trace preserved the reviewed brief, movement, and contact order.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "communication",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "handoff"
+          ],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The trace completed the reviewed handoff step.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "resource_coordination",
+          "status": "NOT_APPLICABLE",
+          "evidence_node_ids": [],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "This operational profile does not require the constrained-resource coordination step.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "reassessment",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "pressure"
+          ],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The trace addressed an operational constraint after contact and before handoff.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "closed_loop_handoff",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "handoff"
+          ],
+          "evidence_edge_ids": [
+            "e6"
+          ],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The trace closed the handoff and reached the terminal state.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "safety",
+          "status": "SATISFIED",
+          "evidence_node_ids": [],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "No critical safety event was recorded in the completed trace.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        }
+      ],
+      "timing_score_effect": "NONE_UNTIL_CALIBRATED_FOR_DECLARED_SCOPE",
+      "scoring_state": "SOURCE_CONFORMANCE_ONLY",
+      "validity_boundary": "NOT_A_VALIDATED_PROFICIENCY_MEASURE",
+      "scorecard_sha256": "c392c2402ddffd241febb51ea33bf4d9ffea382294c8fdccd1e80b175b69de0c"
+    },
+    {
+      "schema_version": "1.0.0",
+      "scorecard_profile": "SOURCE_CONFORMANCE_MULTIDIMENSIONAL_SCORECARD_V1",
+      "route_id": "ASK-STAKEHOLDER-REFERENCE:COMMUNICATION_RELAY_REQUIRED",
+      "operational_behavior_profile_id": "COMMUNICATION_RELAY_REQUIRED",
+      "overall_status": "PASS",
+      "safety_gate": "PASS",
+      "source_conformance_score_bps": 10000,
+      "evidence_sufficient_for_composite": true,
+      "dimensions": [
+        {
+          "dimension_id": "situation_assessment",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "contact"
+          ],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The trace reached the reviewed observation step.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "information_management",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "pressure"
+          ],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The learner encountered and processed an operational information constraint.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "prioritization",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "approach",
+            "briefing",
+            "contact"
+          ],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The trace preserved the reviewed brief, movement, and contact order.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "communication",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "communications-relay",
+            "handoff"
+          ],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The trace completed the required relay and final handoff steps.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "resource_coordination",
+          "status": "NOT_APPLICABLE",
+          "evidence_node_ids": [],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "This operational profile does not require the constrained-resource coordination step.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "reassessment",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "pressure"
+          ],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The trace addressed an operational constraint after contact and before handoff.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "closed_loop_handoff",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "communications-relay",
+            "handoff"
+          ],
+          "evidence_edge_ids": [
+            "e7"
+          ],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The trace closed the handoff and reached the terminal state.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "safety",
+          "status": "SATISFIED",
+          "evidence_node_ids": [],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "No critical safety event was recorded in the completed trace.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        }
+      ],
+      "timing_score_effect": "NONE_UNTIL_CALIBRATED_FOR_DECLARED_SCOPE",
+      "scoring_state": "SOURCE_CONFORMANCE_ONLY",
+      "validity_boundary": "NOT_A_VALIDATED_PROFICIENCY_MEASURE",
+      "scorecard_sha256": "299ba8935d36c9020bd69c3a31cae88a204f610d68dafb8a571dd99a08870659"
+    },
+    {
+      "schema_version": "1.0.0",
+      "scorecard_profile": "SOURCE_CONFORMANCE_MULTIDIMENSIONAL_SCORECARD_V1",
+      "route_id": "ASK-STAKEHOLDER-REFERENCE:RESOURCE_COORDINATION_REQUIRED",
+      "operational_behavior_profile_id": "RESOURCE_COORDINATION_REQUIRED",
+      "overall_status": "PASS",
+      "safety_gate": "PASS",
+      "source_conformance_score_bps": 10000,
+      "evidence_sufficient_for_composite": true,
+      "dimensions": [
+        {
+          "dimension_id": "situation_assessment",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "contact"
+          ],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The trace reached the reviewed observation step.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "information_management",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "pressure",
+            "resource-coordination"
+          ],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The learner encountered and processed an operational information constraint.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "prioritization",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "approach",
+            "briefing",
+            "contact"
+          ],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The trace preserved the reviewed brief, movement, and contact order.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "communication",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "handoff"
+          ],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The trace completed the reviewed handoff step.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "resource_coordination",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "resource-coordination"
+          ],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The trace completed the required resource-coordination step.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "reassessment",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "pressure",
+            "resource-coordination"
+          ],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The trace addressed an operational constraint after contact and before handoff.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "closed_loop_handoff",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "handoff"
+          ],
+          "evidence_edge_ids": [
+            "e7"
+          ],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The trace closed the handoff and reached the terminal state.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "safety",
+          "status": "SATISFIED",
+          "evidence_node_ids": [],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "No critical safety event was recorded in the completed trace.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        }
+      ],
+      "timing_score_effect": "NONE_UNTIL_CALIBRATED_FOR_DECLARED_SCOPE",
+      "scoring_state": "SOURCE_CONFORMANCE_ONLY",
+      "validity_boundary": "NOT_A_VALIDATED_PROFICIENCY_MEASURE",
+      "scorecard_sha256": "5837d054b0782f16b47011e4cd422875ecb7c950598b8f3cac939885fc95ecbd"
+    },
+    {
+      "schema_version": "1.0.0",
+      "scorecard_profile": "SOURCE_CONFORMANCE_MULTIDIMENSIONAL_SCORECARD_V1",
+      "route_id": "ASK-STAKEHOLDER-REFERENCE:DUAL_CONSTRAINT_RELAY_AND_COORDINATION",
+      "operational_behavior_profile_id": "DUAL_CONSTRAINT_RELAY_AND_COORDINATION",
+      "overall_status": "PASS",
+      "safety_gate": "PASS",
+      "source_conformance_score_bps": 10000,
+      "evidence_sufficient_for_composite": true,
+      "dimensions": [
+        {
+          "dimension_id": "situation_assessment",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "contact"
+          ],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The trace reached the reviewed observation step.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "information_management",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "pressure",
+            "resource-coordination"
+          ],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The learner encountered and processed an operational information constraint.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "prioritization",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "approach",
+            "briefing",
+            "contact"
+          ],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The trace preserved the reviewed brief, movement, and contact order.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "communication",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "communications-relay",
+            "handoff"
+          ],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The trace completed the required relay and final handoff steps.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "resource_coordination",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "resource-coordination"
+          ],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The trace completed the required resource-coordination step.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "reassessment",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "pressure",
+            "resource-coordination"
+          ],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The trace addressed an operational constraint after contact and before handoff.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "closed_loop_handoff",
+          "status": "SATISFIED",
+          "evidence_node_ids": [
+            "communications-relay",
+            "handoff"
+          ],
+          "evidence_edge_ids": [
+            "e8"
+          ],
+          "evidence_event_ids": [],
+          "plain_language_finding": "The trace closed the handoff and reached the terminal state.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        },
+        {
+          "dimension_id": "safety",
+          "status": "SATISFIED",
+          "evidence_node_ids": [],
+          "evidence_edge_ids": [],
+          "evidence_event_ids": [],
+          "plain_language_finding": "No critical safety event was recorded in the completed trace.",
+          "scoring_authority": "SOURCE_CONFORMANCE_ONLY",
+          "psychometric_validity": "NOT_ESTABLISHED"
+        }
+      ],
+      "timing_score_effect": "NONE_UNTIL_CALIBRATED_FOR_DECLARED_SCOPE",
+      "scoring_state": "SOURCE_CONFORMANCE_ONLY",
+      "validity_boundary": "NOT_A_VALIDATED_PROFICIENCY_MEASURE",
+      "scorecard_sha256": "281ec2297369fd6c08c09fac0b4b19562ac108885d622a8bdf7fa8f57692d643"
+    }
+  ],
+  "treatment_admission": {
+    "registry_id": "asklepios-treatment-admission-registry-v1",
+    "registry_epoch": 1,
+    "registry_sha256": "a2e75c7a55b71de0755fceabf6252f5a807f7a2730d03c4a12d605d0079356cb",
+    "state_order": [
+      "DISCOVERED",
+      "SOURCE_BYTES_VERIFIED",
+      "EVIDENCE_SPAN_BOUND",
+      "APPLICABILITY_REVIEWED",
+      "CONTRAINDICATION_MODEL_REVIEWED",
+      "ROLE_SCOPE_BOUND",
+      "SIMULATED_EFFECT_ADJUDICATED",
+      "INDEPENDENTLY_ATTESTED",
+      "SIMULATION_ADMITTED"
+    ],
+    "entries": [
+      {
+        "concrete_treatment_allowed": false,
+        "current_state": "DISCOVERED",
+        "display_name": "Pain-management objective",
+        "effect_model_status": "BLOCKED",
+        "facility_action_id": "pain_management",
+        "governing_rule_status": "NOT_ADJUDICATED",
+        "missing_requirements": [
+          "exact_governing_source_locator",
+          "source_bytes_verified",
+          "evidence_span_bound",
+          "source_version_and_supersession_status",
+          "provider_scope_binding",
+          "patient_specific_eligibility",
+          "contraindication_logic",
+          "resource_availability",
+          "monitoring_plan",
+          "reassessment_plan",
+          "independent_clinical_attestation"
+        ],
+        "simulation_admitted": false,
+        "treatment_id": "PAIN_MANAGEMENT_OBJECTIVE"
+      },
+      {
+        "concrete_treatment_allowed": false,
+        "current_state": "DISCOVERED",
+        "display_name": "Tourniquet-modification decision",
+        "effect_model_status": "BLOCKED",
+        "facility_action_id": "remove_tourniquet",
+        "governing_rule_status": "NOT_ADJUDICATED",
+        "missing_requirements": [
+          "exact_governing_source_locator",
+          "source_bytes_verified",
+          "evidence_span_bound",
+          "application_time",
+          "wound_and_bleeding_assessment",
+          "distal_assessment",
+          "resuscitation_status",
+          "monitoring_capability",
+          "receiving_capability",
+          "provider_scope_binding",
+          "independent_clinical_attestation"
+        ],
+        "simulation_admitted": false,
+        "treatment_id": "TOURNIQUET_MODIFICATION"
+      }
+    ],
+    "admitted_treatment_count": 0
+  },
+  "scenario_science_readiness": {
+    "policy_id": "asklepios-scenario-science-policy-v1",
+    "policy_epoch": 1,
+    "policy_sha256": "33bc60a99c2d6c9687efa3605f974e9339abe382aee5c556b5756c2c5d910bd7",
+    "telemetry_profile": "HASH_CHAINED_PRIVACY_BOUNDED_SIMULATION_TELEMETRY_V1",
+    "evidence_state_order": [
+      "DISCOVERED",
+      "IDENTITY_VERIFIED",
+      "SPAN_BOUND",
+      "APPLICABILITY_REVIEWED",
+      "CONTRADICTION_CLEARED",
+      "SUPERSESSION_CLEARED",
+      "INDEPENDENTLY_ATTESTED",
+      "ADMITTED"
+    ],
+    "calibration_state_order": [
+      "EXERCISE_ASSUMPTION",
+      "DATASET_BOUND",
+      "MODEL_FIT",
+      "SIMULATION_BASED_CALIBRATION_PASSED",
+      "TEMPORAL_HOLDOUT_PASSED",
+      "SITE_HOLDOUT_PASSED",
+      "UNCERTAINTY_BOUND",
+      "DRIFT_RULE_DEFINED",
+      "CALIBRATED_FOR_DECLARED_SCOPE"
+    ],
+    "scoring_state_order": [
+      "SOURCE_CONFORMANCE_ONLY",
+      "EVIDENCE_MODEL_DEFINED",
+      "PILOT_RELIABILITY_ESTIMATED",
+      "HELD_OUT_CALIBRATED",
+      "MULTISITE_VALIDATED"
+    ],
+    "current_operational_timing": "NOT_CALIBRATED",
+    "current_scoring_state": "SOURCE_CONFORMANCE_ONLY"
+  },
+  "plain_language_release": {
+    "contract_id": "asklepios-plain-language-release-contract-v1",
+    "contract_epoch": 1,
+    "contract_sha256": "3547f82ac053ba13d3971e35c2f40fdf2a2565a6633778a7e1fea9c03cee8e74",
+    "summary_path": "docs/RC3_8_STAKEHOLDER_RELEASE_SUMMARY.md",
+    "required_headings": [
+      "What changed?",
+      "What can a learner do now?",
+      "What can an instructor do now?",
+      "What changed in scenario variety?",
+      "What changed in scoring?",
+      "What changed in treatment content?",
+      "What safety limitation remains?",
+      "What is still not calibrated or validated?"
+    ]
+  },
+  "truth_boundaries": {
+    "healthcare_simulation": "PERMITTED_WITHIN_VALIDATED_SCOPE",
+    "direct_patient_care": "PROHIBITED",
+    "clinical_decision_support": "PROHIBITED",
+    "patient_care_authority": "NONE",
+    "operational_timing": "NOT_CALIBRATED",
+    "scoring_validity": "SOURCE_CONFORMANCE_ONLY_NOT_PSYCHOMETRICALLY_VALIDATED",
+    "concrete_treatments_admitted": 0
+  },
+  "dashboard_root_sha256": "c750c01687f19bfca1a3beb299c0a0f1f3e248e22e5086430fe194d9591f31f2"
+}

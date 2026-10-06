@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://project-asklepios.local/schemas/content-registry.schema.json",
+  "title": "Project Asklepios content registry",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "registry_id",
+    "source_snapshot",
+    "authority_model",
+    "assets",
+    "relations",
+    "evidence_attestations",
+    "claim_candidates",
+    "compatibility_profiles",
+    "roots",
+    "release_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.1.0"
+    },
+    "registry_id": {
+      "type": "string"
+    },
+    "assets": {
+      "type": "array"
+    },
+    "relations": {
+      "type": "array"
+    },
+    "evidence_attestations": {
+      "type": "array"
+    },
+    "claim_candidates": {
+      "type": "array"
+    },
+    "compatibility_profiles": {
+      "type": "array"
+    },
+    "roots": {
+      "type": "object"
+    },
+    "release_boundary": {
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "cases": 8,
+  "classification": "PASS",
+  "failures": [],
+  "properties": {
+    "example_attestation_forgery_rejected": true,
+    "forged_digest_rejected": true,
+    "generation_cannot_overwrite_verification": true,
+    "stale_inputs_rejected": true,
+    "validator_crashes_never_count_as_rejections": true
+  },
+  "results": [
+    {
+      "case_id": "baseline_verified_attestations",
+      "classification": "PASS",
+      "errors": [],
+      "pass": true,
+      "status": "PASS"
+    },
+    {
+      "case_id": "write_mode_cannot_overwrite_verification",
+      "classification": "PASS",
+      "errors": [],
+      "pass": true,
+      "status": "PASS"
+    },
+    {
+      "case_id": "stale_spec_source_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [
+        "spec compiler source attestation is stale"
+      ],
+      "pass": true,
+      "returncode": 3,
+      "status": "EXPECTED_REJECTION",
+      "validator_healthy": true
+    },
+    {
+      "case_id": "stale_generated_spec_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [
+        "spec compiler target attestation is stale"
+      ],
+      "pass": true,
+      "returncode": 3,
+      "status": "EXPECTED_REJECTION",
+      "validator_healthy": true
+    },
+    {
+      "case_id": "stale_scenario_source_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [
+        "scenario-source binding attestation is stale"
+      ],
+      "pass": true,
+      "returncode": 3,
+      "status": "EXPECTED_REJECTION",
+      "validator_healthy": true
+    },
+    {
+      "case_id": "stale_registry_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [
+        "content-registry binding attestation is stale"
+      ],
+      "pass": true,
+      "returncode": 3,
+      "status": "EXPECTED_REJECTION",
+      "validator_healthy": true
+    },
+    {
+      "case_id": "forged_attestation_digest_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [
+        "spec compiler attestation digest invalid",
+        "spec compiler source attestation is stale"
+      ],
+      "pass": true,
+      "returncode": 3,
+      "status": "EXPECTED_REJECTION",
+      "validator_healthy": true
+    },
+    {
+      "case_id": "forged_example_attestation_rejected",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [
+        "attestation digest mismatch:reports/facility-arrival-example-check.json",
+        "current file hash differs:example:examples/facility-arrival/README.md"
+      ],
+      "pass": true,
+      "status": "EXPECTED_REJECTION"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

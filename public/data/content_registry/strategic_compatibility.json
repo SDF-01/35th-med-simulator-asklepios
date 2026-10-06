@@ -1,0 +1,1531 @@
+{
+  "schema_version": "1.0.0",
+  "registry_merkle_root": "9db5b82df90426da8c1543b9ef67464dec59aff90d9731a5be26fff83f621841",
+  "current_engine_profile": "single-casualty-movement-v1",
+  "activation_candidates": [
+    {
+      "catalog_id": "2J96J8",
+      "exercise_asset_id": "exercise:2J96J8",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Garrison training / Explosion / blast / Fuel / POL explosion"
+    },
+    {
+      "catalog_id": "2NFM6C",
+      "exercise_asset_id": "exercise:2NFM6C",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Garrison training / Explosion / blast / Ammunition cook-off"
+    },
+    {
+      "catalog_id": "2U3G5S",
+      "exercise_asset_id": "exercise:2U3G5S",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Special event / Active shooter / Open assembly area"
+    },
+    {
+      "catalog_id": "3W8PNX",
+      "exercise_asset_id": "exercise:3W8PNX",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "90287c0a62851fd44de431ed2d8976594f220ba12f72fd1766fbb65b7c992322",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "DEPLOYED_AUSTERE",
+      "title": "Joint exercise / Indirect fire / Rocket attack"
+    },
+    {
+      "catalog_id": "438UH7",
+      "exercise_asset_id": "exercise:438UH7",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Home station / Inbound missile / Housing / dormitory impact"
+    },
+    {
+      "catalog_id": "44B6XU",
+      "exercise_asset_id": "exercise:44B6XU",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Combat theater / Drone / UAS attack / Logistics yard strike"
+    },
+    {
+      "catalog_id": "45X4D3",
+      "exercise_asset_id": "exercise:45X4D3",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Home station / Active shooter / Open assembly area"
+    },
+    {
+      "catalog_id": "66KGVC",
+      "exercise_asset_id": "exercise:66KGVC",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "90287c0a62851fd44de431ed2d8976594f220ba12f72fd1766fbb65b7c992322",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "DEPLOYED_AUSTERE",
+      "title": "Deployed location / Inbound missile / Flightline impact"
+    },
+    {
+      "catalog_id": "67NR2W",
+      "exercise_asset_id": "exercise:67NR2W",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Combat theater / Explosion / blast / Fuel / POL explosion"
+    },
+    {
+      "catalog_id": "73VJJD",
+      "exercise_asset_id": "exercise:73VJJD",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "90287c0a62851fd44de431ed2d8976594f220ba12f72fd1766fbb65b7c992322",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "DEPLOYED_AUSTERE",
+      "title": "Joint exercise / Indirect fire / Mortar attack"
+    },
+    {
+      "catalog_id": "7XB6H5",
+      "exercise_asset_id": "exercise:7XB6H5",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Combat theater / Drone / UAS attack / Swarm / multi-drone"
+    },
+    {
+      "catalog_id": "9BN2AL",
+      "exercise_asset_id": "exercise:9BN2AL",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Combat theater / Drone / UAS attack / Combined with indirect fire"
+    },
+    {
+      "catalog_id": "9C4SMD",
+      "exercise_asset_id": "exercise:9C4SMD",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Joint exercise / Explosion / blast / IED detonation"
+    },
+    {
+      "catalog_id": "B7G9K8",
+      "exercise_asset_id": "exercise:B7G9K8",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "90287c0a62851fd44de431ed2d8976594f220ba12f72fd1766fbb65b7c992322",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "DEPLOYED_AUSTERE",
+      "title": "Deployed location / Drone / UAS attack / Logistics yard strike"
+    },
+    {
+      "catalog_id": "CY4N36",
+      "exercise_asset_id": "exercise:CY4N36",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "90287c0a62851fd44de431ed2d8976594f220ba12f72fd1766fbb65b7c992322",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "DEPLOYED_AUSTERE",
+      "title": "Deployed location / Drone / UAS attack / Swarm / multi-drone"
+    },
+    {
+      "catalog_id": "DVVE4X",
+      "exercise_asset_id": "exercise:DVVE4X",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Home station / Active shooter / Facility interior"
+    },
+    {
+      "catalog_id": "EVBRWT",
+      "exercise_asset_id": "exercise:EVBRWT",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Joint exercise / Explosion / blast / Ammunition cook-off"
+    },
+    {
+      "catalog_id": "F3RXYZ",
+      "exercise_asset_id": "exercise:F3RXYZ",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Special event / Active shooter / Vehicle + small arms"
+    },
+    {
+      "catalog_id": "GM3VQ6",
+      "exercise_asset_id": "exercise:GM3VQ6",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Joint exercise / Explosion / blast / Fuel / POL explosion"
+    },
+    {
+      "catalog_id": "GWB3GD",
+      "exercise_asset_id": "exercise:GWB3GD",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Home station / Drone / UAS attack / Perimeter breach"
+    },
+    {
+      "catalog_id": "H8LN3W",
+      "exercise_asset_id": "exercise:H8LN3W",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "90287c0a62851fd44de431ed2d8976594f220ba12f72fd1766fbb65b7c992322",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "DEPLOYED_AUSTERE",
+      "title": "Deployed location / Inbound missile / Secondary strike wave"
+    },
+    {
+      "catalog_id": "JJW995",
+      "exercise_asset_id": "exercise:JJW995",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Home station / Inbound missile / Flightline impact"
+    },
+    {
+      "catalog_id": "JY42LH",
+      "exercise_asset_id": "exercise:JY42LH",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Home station / Drone / UAS attack / Logistics yard strike"
+    },
+    {
+      "catalog_id": "LG5YY2",
+      "exercise_asset_id": "exercise:LG5YY2",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "90287c0a62851fd44de431ed2d8976594f220ba12f72fd1766fbb65b7c992322",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "DEPLOYED_AUSTERE",
+      "title": "Deployed location / Inbound missile / Housing / dormitory impact"
+    },
+    {
+      "catalog_id": "LU3DG4",
+      "exercise_asset_id": "exercise:LU3DG4",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "90287c0a62851fd44de431ed2d8976594f220ba12f72fd1766fbb65b7c992322",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "DEPLOYED_AUSTERE",
+      "title": "Deployed location / Drone / UAS attack / Combined with indirect fire"
+    },
+    {
+      "catalog_id": "MCQ3E7",
+      "exercise_asset_id": "exercise:MCQ3E7",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Combat theater / Explosion / blast / Ammunition cook-off"
+    },
+    {
+      "catalog_id": "MQCFAR",
+      "exercise_asset_id": "exercise:MQCFAR",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Home station / Inbound missile / Secondary strike wave"
+    },
+    {
+      "catalog_id": "N645KM",
+      "exercise_asset_id": "exercise:N645KM",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "90287c0a62851fd44de431ed2d8976594f220ba12f72fd1766fbb65b7c992322",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "DEPLOYED_AUSTERE",
+      "title": "Deployed location / Drone / UAS attack / Perimeter breach"
+    },
+    {
+      "catalog_id": "NB59NM",
+      "exercise_asset_id": "exercise:NB59NM",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "90287c0a62851fd44de431ed2d8976594f220ba12f72fd1766fbb65b7c992322",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "DEPLOYED_AUSTERE",
+      "title": "Combat theater / Sniper attack / Perimeter sniper fire"
+    },
+    {
+      "catalog_id": "Q9ENG2",
+      "exercise_asset_id": "exercise:Q9ENG2",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "90287c0a62851fd44de431ed2d8976594f220ba12f72fd1766fbb65b7c992322",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "DEPLOYED_AUSTERE",
+      "title": "Combat theater / Indirect fire / Mortar attack"
+    },
+    {
+      "catalog_id": "QW48G6",
+      "exercise_asset_id": "exercise:QW48G6",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Home station / Drone / UAS attack / Swarm / multi-drone"
+    },
+    {
+      "catalog_id": "RBG967",
+      "exercise_asset_id": "exercise:RBG967",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "90287c0a62851fd44de431ed2d8976594f220ba12f72fd1766fbb65b7c992322",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "DEPLOYED_AUSTERE",
+      "title": "Deployed location / Inbound missile / Clinic receiving inbound casualties"
+    },
+    {
+      "catalog_id": "S9T2VK",
+      "exercise_asset_id": "exercise:S9T2VK",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Home station / Inbound missile / Clinic receiving inbound casualties"
+    },
+    {
+      "catalog_id": "T464SL",
+      "exercise_asset_id": "exercise:T464SL",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Combat theater / Explosion / blast / IED detonation"
+    },
+    {
+      "catalog_id": "TASR64",
+      "exercise_asset_id": "exercise:TASR64",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Home station / Active shooter / Vehicle + small arms"
+    },
+    {
+      "catalog_id": "U9R259",
+      "exercise_asset_id": "exercise:U9R259",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "90287c0a62851fd44de431ed2d8976594f220ba12f72fd1766fbb65b7c992322",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "DEPLOYED_AUSTERE",
+      "title": "Deployed location / Inbound missile / Shelter-in-place active"
+    },
+    {
+      "catalog_id": "UXJMPM",
+      "exercise_asset_id": "exercise:UXJMPM",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Special event / Active shooter / Facility interior"
+    },
+    {
+      "catalog_id": "WK39AZ",
+      "exercise_asset_id": "exercise:WK39AZ",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Home station / Inbound missile / Shelter-in-place active"
+    },
+    {
+      "catalog_id": "WLQLHN",
+      "exercise_asset_id": "exercise:WLQLHN",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "90287c0a62851fd44de431ed2d8976594f220ba12f72fd1766fbb65b7c992322",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "DEPLOYED_AUSTERE",
+      "title": "Combat theater / Indirect fire / Rocket attack"
+    },
+    {
+      "catalog_id": "WX4BCD",
+      "exercise_asset_id": "exercise:WX4BCD",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Garrison training / Explosion / blast / IED detonation"
+    },
+    {
+      "catalog_id": "XC784J",
+      "exercise_asset_id": "exercise:XC784J",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Home station / Explosion / blast / IED detonation"
+    },
+    {
+      "catalog_id": "Z9N49B",
+      "exercise_asset_id": "exercise:Z9N49B",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Combat theater / Drone / UAS attack / Perimeter breach"
+    },
+    {
+      "catalog_id": "ZCNHFE",
+      "exercise_asset_id": "exercise:ZCNHFE",
+      "engine_profile": "single-casualty-movement-v1",
+      "activation_status": "ACTIVATION_CANDIDATE",
+      "blockers": [],
+      "structural_behavior_sha256": "6bd7f2187d90bd0c97a6cc7d61654afedc6cadc3954a36c0cc697142f584f4c9",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "FIELD_TO_OR",
+      "title": "Home station / Drone / UAS attack / Combined with indirect fire"
+    }
+  ],
+  "blocked_pending_profile": [
+    {
+      "catalog_id": "239PNY",
+      "exercise_asset_id": "exercise:239PNY",
+      "engine_profile": "clinic-workflow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "903302c9ac9300f160c5c1956a64dc29e25b8ae82c3dc6af8adbdec101bcba77",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "GARRISON_CLINIC",
+      "title": "Garrison training / Vehicle accident / Airfield vehicle strike"
+    },
+    {
+      "catalog_id": "3AHDFC",
+      "exercise_asset_id": "exercise:3AHDFC",
+      "engine_profile": "cbrne-decon-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "da7c3b2759f17268789778210e172c6c603948f4ca004a61afe87ffdb79e3341",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "CBRNE_CHAIN",
+      "title": "Joint exercise / CBRNE (general) / Radiological material suspected"
+    },
+    {
+      "catalog_id": "3D7B76",
+      "exercise_asset_id": "exercise:3D7B76",
+      "engine_profile": "environmental-care-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "36906cd0a93d9f18f1e90778f70f5fd1e16928a0f7724c77eae1e6da5e0f5201",
+      "source_template_ids": [
+        "ASK-D-001"
+      ],
+      "chain_archetype": "ENVIRONMENTAL",
+      "title": "Garrison training / Cold weather injury / Evacuation delay in cold"
+    },
+    {
+      "catalog_id": "4DBDTJ",
+      "exercise_asset_id": "exercise:4DBDTJ",
+      "engine_profile": "cbrne-decon-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "da7c3b2759f17268789778210e172c6c603948f4ca004a61afe87ffdb79e3341",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "CBRNE_CHAIN",
+      "title": "Deployed location / CBRNE (general) / Biological agent suspicion"
+    },
+    {
+      "catalog_id": "56TCSR",
+      "exercise_asset_id": "exercise:56TCSR",
+      "engine_profile": "multi-casualty-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "4b9fc513fb10ef08b2b2c7d300ed48c3f5303b74de6be25cbd87cf1d96cf3f0c",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "MCI_SURGE",
+      "title": "Special event / Mass casualty incident (MCI) / Medical facility surge"
+    },
+    {
+      "catalog_id": "5DB6TX",
+      "exercise_asset_id": "exercise:5DB6TX",
+      "engine_profile": "cbrne-decon-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "da7c3b2759f17268789778210e172c6c603948f4ca004a61afe87ffdb79e3341",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "CBRNE_CHAIN",
+      "title": "Joint exercise / CBRNE (general) / Biological agent suspicion"
+    },
+    {
+      "catalog_id": "5EACP9",
+      "exercise_asset_id": "exercise:5EACP9",
+      "engine_profile": "multi-casualty-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "4b9fc513fb10ef08b2b2c7d300ed48c3f5303b74de6be25cbd87cf1d96cf3f0c",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "MCI_SURGE",
+      "title": "Garrison training / Mass casualty incident (MCI) / Expectant / resource limited"
+    },
+    {
+      "catalog_id": "5K7HAL",
+      "exercise_asset_id": "exercise:5K7HAL",
+      "engine_profile": "environmental-care-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "36906cd0a93d9f18f1e90778f70f5fd1e16928a0f7724c77eae1e6da5e0f5201",
+      "source_template_ids": [
+        "ASK-D-001"
+      ],
+      "chain_archetype": "ENVIRONMENTAL",
+      "title": "Airshow / open house / Heat stress / heat illness / Training exertional heat illness"
+    },
+    {
+      "catalog_id": "5PC9B9",
+      "exercise_asset_id": "exercise:5PC9B9",
+      "engine_profile": "multi-casualty-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "4b9fc513fb10ef08b2b2c7d300ed48c3f5303b74de6be25cbd87cf1d96cf3f0c",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "MCI_SURGE",
+      "title": "Special event / Crowd surge / stampede / Airshow crowd crush"
+    },
+    {
+      "catalog_id": "64SR2R",
+      "exercise_asset_id": "exercise:64SR2R",
+      "engine_profile": "multi-casualty-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "4b9fc513fb10ef08b2b2c7d300ed48c3f5303b74de6be25cbd87cf1d96cf3f0c",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "MCI_SURGE",
+      "title": "Special event / Crowd surge / stampede / Installation gate surge"
+    },
+    {
+      "catalog_id": "6MS37M",
+      "exercise_asset_id": "exercise:6MS37M",
+      "engine_profile": "environmental-care-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "36906cd0a93d9f18f1e90778f70f5fd1e16928a0f7724c77eae1e6da5e0f5201",
+      "source_template_ids": [
+        "ASK-D-001"
+      ],
+      "chain_archetype": "ENVIRONMENTAL",
+      "title": "Airshow / open house / Heat stress / heat illness / Deployed heat wave"
+    },
+    {
+      "catalog_id": "6YA8RX",
+      "exercise_asset_id": "exercise:6YA8RX",
+      "engine_profile": "clinic-workflow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "903302c9ac9300f160c5c1956a64dc29e25b8ae82c3dc6af8adbdec101bcba77",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "GARRISON_CLINIC",
+      "title": "Garrison training / Vehicle accident / Convoy rollover"
+    },
+    {
+      "catalog_id": "734FRX",
+      "exercise_asset_id": "exercise:734FRX",
+      "engine_profile": "disaster-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "bf9e0b4f4b520b7b91e5f5291f97093f236d53a058a7db4f69a6ecdc5868f73a",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "HA_DR",
+      "title": "Humanitarian assistance / Hurricane / typhoon / Post-storm medical surge"
+    },
+    {
+      "catalog_id": "74CZT4",
+      "exercise_asset_id": "exercise:74CZT4",
+      "engine_profile": "disaster-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "bf9e0b4f4b520b7b91e5f5291f97093f236d53a058a7db4f69a6ecdc5868f73a",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "HA_DR",
+      "title": "Humanitarian assistance / Earthquake / Building collapse"
+    },
+    {
+      "catalog_id": "7CPQHG",
+      "exercise_asset_id": "exercise:7CPQHG",
+      "engine_profile": "aviation-multistage-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "2dd6d5272a72097a5b06f924b34ee236b8254f7007a90f75ef0b3a6c8f41b1f6",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "AVIATION",
+      "title": "Airshow / open house / Aircraft mishap / Runway crash landing"
+    },
+    {
+      "catalog_id": "7GLLTH",
+      "exercise_asset_id": "exercise:7GLLTH",
+      "engine_profile": "cbrne-decon-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "da7c3b2759f17268789778210e172c6c603948f4ca004a61afe87ffdb79e3341",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "CBRNE_CHAIN",
+      "title": "Deployed location / CBRNE (general) / Radiological material suspected"
+    },
+    {
+      "catalog_id": "9UK7UP",
+      "exercise_asset_id": "exercise:9UK7UP",
+      "engine_profile": "multi-casualty-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "4b9fc513fb10ef08b2b2c7d300ed48c3f5303b74de6be25cbd87cf1d96cf3f0c",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "MCI_SURGE",
+      "title": "Airshow / open house / Mass casualty incident (MCI) / Expectant / resource limited"
+    },
+    {
+      "catalog_id": "9YKMDY",
+      "exercise_asset_id": "exercise:9YKMDY",
+      "engine_profile": "cbrne-decon-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "da7c3b2759f17268789778210e172c6c603948f4ca004a61afe87ffdb79e3341",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "CBRNE_CHAIN",
+      "title": "Joint exercise / CBRNE (general) / Unknown agent release"
+    },
+    {
+      "catalog_id": "9ZVQHK",
+      "exercise_asset_id": "exercise:9ZVQHK",
+      "engine_profile": "aviation-multistage-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "2dd6d5272a72097a5b06f924b34ee236b8254f7007a90f75ef0b3a6c8f41b1f6",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "AVIATION",
+      "title": "Airshow / open house / Aircraft mishap / Airshow demonstration mishap"
+    },
+    {
+      "catalog_id": "A5CB4G",
+      "exercise_asset_id": "exercise:A5CB4G",
+      "engine_profile": "multi-casualty-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "4b9fc513fb10ef08b2b2c7d300ed48c3f5303b74de6be25cbd87cf1d96cf3f0c",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "MCI_SURGE",
+      "title": "Airshow / open house / Crowd surge / stampede / Installation gate surge"
+    },
+    {
+      "catalog_id": "AMCA56",
+      "exercise_asset_id": "exercise:AMCA56",
+      "engine_profile": "cbrne-decon-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "da7c3b2759f17268789778210e172c6c603948f4ca004a61afe87ffdb79e3341",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "CBRNE_CHAIN",
+      "title": "Combat theater / CBRNE (general) / Nerve agent suspected"
+    },
+    {
+      "catalog_id": "B43DN4",
+      "exercise_asset_id": "exercise:B43DN4",
+      "engine_profile": "multi-casualty-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "4b9fc513fb10ef08b2b2c7d300ed48c3f5303b74de6be25cbd87cf1d96cf3f0c",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "MCI_SURGE",
+      "title": "Airshow / open house / Mass casualty incident (MCI) / Primary triage site"
+    },
+    {
+      "catalog_id": "B5EMH4",
+      "exercise_asset_id": "exercise:B5EMH4",
+      "engine_profile": "cbrne-decon-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "da7c3b2759f17268789778210e172c6c603948f4ca004a61afe87ffdb79e3341",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "CBRNE_CHAIN",
+      "title": "Deployed location / CBRNE (general) / Industrial chemical spill"
+    },
+    {
+      "catalog_id": "BRAF66",
+      "exercise_asset_id": "exercise:BRAF66",
+      "engine_profile": "multi-casualty-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "4b9fc513fb10ef08b2b2c7d300ed48c3f5303b74de6be25cbd87cf1d96cf3f0c",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "MCI_SURGE",
+      "title": "Humanitarian assistance / Mass casualty incident (MCI) / Expectant / resource limited"
+    },
+    {
+      "catalog_id": "CT5UBS",
+      "exercise_asset_id": "exercise:CT5UBS",
+      "engine_profile": "multi-casualty-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "4b9fc513fb10ef08b2b2c7d300ed48c3f5303b74de6be25cbd87cf1d96cf3f0c",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "MCI_SURGE",
+      "title": "Humanitarian assistance / Structural collapse / Partial collapse / entrapment"
+    },
+    {
+      "catalog_id": "CYBFMF",
+      "exercise_asset_id": "exercise:CYBFMF",
+      "engine_profile": "cbrne-decon-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "da7c3b2759f17268789778210e172c6c603948f4ca004a61afe87ffdb79e3341",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "CBRNE_CHAIN",
+      "title": "Deployed location / CBRNE (general) / Unknown agent release"
+    },
+    {
+      "catalog_id": "DCNQWL",
+      "exercise_asset_id": "exercise:DCNQWL",
+      "engine_profile": "multi-casualty-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "4b9fc513fb10ef08b2b2c7d300ed48c3f5303b74de6be25cbd87cf1d96cf3f0c",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "MCI_SURGE",
+      "title": "Special event / Mass casualty incident (MCI) / Expectant / resource limited"
+    },
+    {
+      "catalog_id": "E9KFW2",
+      "exercise_asset_id": "exercise:E9KFW2",
+      "engine_profile": "cbrne-decon-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "da7c3b2759f17268789778210e172c6c603948f4ca004a61afe87ffdb79e3341",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "CBRNE_CHAIN",
+      "title": "Home station / CBRNE (general) / Radiological material suspected"
+    },
+    {
+      "catalog_id": "EJ83XB",
+      "exercise_asset_id": "exercise:EJ83XB",
+      "engine_profile": "disaster-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "bf9e0b4f4b520b7b91e5f5291f97093f236d53a058a7db4f69a6ecdc5868f73a",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "HA_DR",
+      "title": "Humanitarian assistance / Earthquake / Aftershock sequence"
+    },
+    {
+      "catalog_id": "F68VNB",
+      "exercise_asset_id": "exercise:F68VNB",
+      "engine_profile": "multi-casualty-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "4b9fc513fb10ef08b2b2c7d300ed48c3f5303b74de6be25cbd87cf1d96cf3f0c",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "MCI_SURGE",
+      "title": "Humanitarian assistance / Mass casualty incident (MCI) / Medical facility surge"
+    },
+    {
+      "catalog_id": "FE6KLA",
+      "exercise_asset_id": "exercise:FE6KLA",
+      "engine_profile": "cbrne-decon-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "da7c3b2759f17268789778210e172c6c603948f4ca004a61afe87ffdb79e3341",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "CBRNE_CHAIN",
+      "title": "Home station / CBRNE (general) / Biological agent suspicion"
+    },
+    {
+      "catalog_id": "FGUE4T",
+      "exercise_asset_id": "exercise:FGUE4T",
+      "engine_profile": "multi-casualty-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "4b9fc513fb10ef08b2b2c7d300ed48c3f5303b74de6be25cbd87cf1d96cf3f0c",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "MCI_SURGE",
+      "title": "Garrison training / Mass casualty incident (MCI) / Medical facility surge"
+    },
+    {
+      "catalog_id": "GUH9UL",
+      "exercise_asset_id": "exercise:GUH9UL",
+      "engine_profile": "environmental-care-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "36906cd0a93d9f18f1e90778f70f5fd1e16928a0f7724c77eae1e6da5e0f5201",
+      "source_template_ids": [
+        "ASK-D-001"
+      ],
+      "chain_archetype": "ENVIRONMENTAL",
+      "title": "Garrison training / Heat stress / heat illness / Deployed heat wave"
+    },
+    {
+      "catalog_id": "J6UXHH",
+      "exercise_asset_id": "exercise:J6UXHH",
+      "engine_profile": "multi-casualty-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "4b9fc513fb10ef08b2b2c7d300ed48c3f5303b74de6be25cbd87cf1d96cf3f0c",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "MCI_SURGE",
+      "title": "Humanitarian assistance / Structural collapse / Hangar / large structure"
+    },
+    {
+      "catalog_id": "JX3F5H",
+      "exercise_asset_id": "exercise:JX3F5H",
+      "engine_profile": "clinic-workflow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "903302c9ac9300f160c5c1956a64dc29e25b8ae82c3dc6af8adbdec101bcba77",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "GARRISON_CLINIC",
+      "title": "Special event / Vehicle accident / Convoy rollover"
+    },
+    {
+      "catalog_id": "JYMFT5",
+      "exercise_asset_id": "exercise:JYMFT5",
+      "engine_profile": "disaster-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "bf9e0b4f4b520b7b91e5f5291f97093f236d53a058a7db4f69a6ecdc5868f73a",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "HA_DR",
+      "title": "Humanitarian assistance / Tsunami / Coastal inundation"
+    },
+    {
+      "catalog_id": "K7F35A",
+      "exercise_asset_id": "exercise:K7F35A",
+      "engine_profile": "environmental-care-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "36906cd0a93d9f18f1e90778f70f5fd1e16928a0f7724c77eae1e6da5e0f5201",
+      "source_template_ids": [
+        "ASK-D-001"
+      ],
+      "chain_archetype": "ENVIRONMENTAL",
+      "title": "Garrison training / Heat stress / heat illness / Training exertional heat illness"
+    },
+    {
+      "catalog_id": "KAC7HN",
+      "exercise_asset_id": "exercise:KAC7HN",
+      "engine_profile": "environmental-care-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "36906cd0a93d9f18f1e90778f70f5fd1e16928a0f7724c77eae1e6da5e0f5201",
+      "source_template_ids": [
+        "ASK-D-001"
+      ],
+      "chain_archetype": "ENVIRONMENTAL",
+      "title": "Special event / Heat stress / heat illness / Training exertional heat illness"
+    },
+    {
+      "catalog_id": "KL9EZ9",
+      "exercise_asset_id": "exercise:KL9EZ9",
+      "engine_profile": "environmental-care-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "36906cd0a93d9f18f1e90778f70f5fd1e16928a0f7724c77eae1e6da5e0f5201",
+      "source_template_ids": [
+        "ASK-D-001"
+      ],
+      "chain_archetype": "ENVIRONMENTAL",
+      "title": "Garrison training / Cold weather injury / Hypothermia / frostbite"
+    },
+    {
+      "catalog_id": "LMHUMY",
+      "exercise_asset_id": "exercise:LMHUMY",
+      "engine_profile": "multi-casualty-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "4b9fc513fb10ef08b2b2c7d300ed48c3f5303b74de6be25cbd87cf1d96cf3f0c",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "MCI_SURGE",
+      "title": "Airshow / open house / Crowd surge / stampede / Airshow crowd crush"
+    },
+    {
+      "catalog_id": "P55N7W",
+      "exercise_asset_id": "exercise:P55N7W",
+      "engine_profile": "cbrne-decon-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "da7c3b2759f17268789778210e172c6c603948f4ca004a61afe87ffdb79e3341",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "CBRNE_CHAIN",
+      "title": "Joint exercise / CBRNE (general) / Nerve agent suspected"
+    },
+    {
+      "catalog_id": "PU5F2B",
+      "exercise_asset_id": "exercise:PU5F2B",
+      "engine_profile": "environmental-care-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "36906cd0a93d9f18f1e90778f70f5fd1e16928a0f7724c77eae1e6da5e0f5201",
+      "source_template_ids": [
+        "ASK-D-001"
+      ],
+      "chain_archetype": "ENVIRONMENTAL",
+      "title": "Special event / Heat stress / heat illness / Deployed heat wave"
+    },
+    {
+      "catalog_id": "PVYW4Z",
+      "exercise_asset_id": "exercise:PVYW4Z",
+      "engine_profile": "aviation-multistage-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "2dd6d5272a72097a5b06f924b34ee236b8254f7007a90f75ef0b3a6c8f41b1f6",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "AVIATION",
+      "title": "Airshow / open house / Aircraft mishap / Ground maintenance mishap"
+    },
+    {
+      "catalog_id": "RB2ND7",
+      "exercise_asset_id": "exercise:RB2ND7",
+      "engine_profile": "multi-casualty-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "4b9fc513fb10ef08b2b2c7d300ed48c3f5303b74de6be25cbd87cf1d96cf3f0c",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "MCI_SURGE",
+      "title": "Joint exercise / Mass casualty incident (MCI) / Primary triage site"
+    },
+    {
+      "catalog_id": "RRDNXN",
+      "exercise_asset_id": "exercise:RRDNXN",
+      "engine_profile": "cbrne-decon-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "da7c3b2759f17268789778210e172c6c603948f4ca004a61afe87ffdb79e3341",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "CBRNE_CHAIN",
+      "title": "Home station / CBRNE (general) / Unknown agent release"
+    },
+    {
+      "catalog_id": "SPPYYG",
+      "exercise_asset_id": "exercise:SPPYYG",
+      "engine_profile": "multi-casualty-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "4b9fc513fb10ef08b2b2c7d300ed48c3f5303b74de6be25cbd87cf1d96cf3f0c",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "MCI_SURGE",
+      "title": "Joint exercise / Mass casualty incident (MCI) / Medical facility surge"
+    },
+    {
+      "catalog_id": "U2R8AJ",
+      "exercise_asset_id": "exercise:U2R8AJ",
+      "engine_profile": "multi-casualty-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "4b9fc513fb10ef08b2b2c7d300ed48c3f5303b74de6be25cbd87cf1d96cf3f0c",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "MCI_SURGE",
+      "title": "Humanitarian assistance / Mass casualty incident (MCI) / Primary triage site"
+    },
+    {
+      "catalog_id": "UHKF35",
+      "exercise_asset_id": "exercise:UHKF35",
+      "engine_profile": "clinic-workflow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "903302c9ac9300f160c5c1956a64dc29e25b8ae82c3dc6af8adbdec101bcba77",
+      "source_template_ids": [
+        "ASK-A-001"
+      ],
+      "chain_archetype": "GARRISON_CLINIC",
+      "title": "Special event / Vehicle accident / Airfield vehicle strike"
+    },
+    {
+      "catalog_id": "URRLMQ",
+      "exercise_asset_id": "exercise:URRLMQ",
+      "engine_profile": "cbrne-decon-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "da7c3b2759f17268789778210e172c6c603948f4ca004a61afe87ffdb79e3341",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "CBRNE_CHAIN",
+      "title": "Deployed location / CBRNE (general) / Nerve agent suspected"
+    },
+    {
+      "catalog_id": "UTREJG",
+      "exercise_asset_id": "exercise:UTREJG",
+      "engine_profile": "cbrne-decon-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "da7c3b2759f17268789778210e172c6c603948f4ca004a61afe87ffdb79e3341",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "CBRNE_CHAIN",
+      "title": "Home station / CBRNE (general) / Industrial chemical spill"
+    },
+    {
+      "catalog_id": "V6R6RR",
+      "exercise_asset_id": "exercise:V6R6RR",
+      "engine_profile": "cbrne-decon-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "da7c3b2759f17268789778210e172c6c603948f4ca004a61afe87ffdb79e3341",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "CBRNE_CHAIN",
+      "title": "Joint exercise / CBRNE (general) / Industrial chemical spill"
+    },
+    {
+      "catalog_id": "VNNF75",
+      "exercise_asset_id": "exercise:VNNF75",
+      "engine_profile": "disaster-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "bf9e0b4f4b520b7b91e5f5291f97093f236d53a058a7db4f69a6ecdc5868f73a",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "HA_DR",
+      "title": "Humanitarian assistance / Hurricane / typhoon / Pre-landfall injuries"
+    },
+    {
+      "catalog_id": "WVF2HP",
+      "exercise_asset_id": "exercise:WVF2HP",
+      "engine_profile": "multi-casualty-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "4b9fc513fb10ef08b2b2c7d300ed48c3f5303b74de6be25cbd87cf1d96cf3f0c",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "MCI_SURGE",
+      "title": "Airshow / open house / Mass casualty incident (MCI) / Medical facility surge"
+    },
+    {
+      "catalog_id": "WW5WDA",
+      "exercise_asset_id": "exercise:WW5WDA",
+      "engine_profile": "multi-casualty-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "4b9fc513fb10ef08b2b2c7d300ed48c3f5303b74de6be25cbd87cf1d96cf3f0c",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "MCI_SURGE",
+      "title": "Garrison training / Mass casualty incident (MCI) / Primary triage site"
+    },
+    {
+      "catalog_id": "XCTRQC",
+      "exercise_asset_id": "exercise:XCTRQC",
+      "engine_profile": "cbrne-decon-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "da7c3b2759f17268789778210e172c6c603948f4ca004a61afe87ffdb79e3341",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "CBRNE_CHAIN",
+      "title": "Home station / CBRNE (general) / Nerve agent suspected"
+    },
+    {
+      "catalog_id": "Z6E3DH",
+      "exercise_asset_id": "exercise:Z6E3DH",
+      "engine_profile": "cbrne-decon-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "da7c3b2759f17268789778210e172c6c603948f4ca004a61afe87ffdb79e3341",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "CBRNE_CHAIN",
+      "title": "Combat theater / CBRNE (general) / Unknown agent release"
+    },
+    {
+      "catalog_id": "ZXCJ9R",
+      "exercise_asset_id": "exercise:ZXCJ9R",
+      "engine_profile": "multi-casualty-flow-pending",
+      "activation_status": "BLOCKED_PENDING_ENGINE_PROFILE",
+      "blockers": [
+        "current_strategic_action_graph_not_semantically_equivalent",
+        "profile_specific_review_required"
+      ],
+      "structural_behavior_sha256": "4b9fc513fb10ef08b2b2c7d300ed48c3f5303b74de6be25cbd87cf1d96cf3f0c",
+      "source_template_ids": [
+        "ASK-A-001",
+        "ASK-D-001"
+      ],
+      "chain_archetype": "MCI_SURGE",
+      "title": "Special event / Mass casualty incident (MCI) / Primary triage site"
+    }
+  ],
+  "counts": {
+    "activation_candidates": 43,
+    "blocked_pending_profile": 57,
+    "total": 100
+  },
+  "interpretation": "All catalog entries are migrated. Only entries whose segment graph and protected-template binding are compatible with the current strategic action model are activation candidates; blocked entries are preserved without semantic coercion."
+}

@@ -1,0 +1,1199 @@
+{
+  "schema_version": "1.0.0",
+  "profile_id": "ASK-D-001-DECISION-INTEGRITY-RC3-6A",
+  "source_scenario_id": "ASK-D-001",
+  "care_phase": "post_cuf_tfc_facility_reception",
+  "authority": {
+    "deployment_scope": "production_training_reference",
+    "patient_care_use": "PROHIBITED",
+    "clinical_rule_source": "INHERITED_REPOSITORY_TEMPLATE",
+    "concrete_treatment_activation": false,
+    "operational_parameters_calibrated": false
+  },
+  "structural_sources": [
+    {
+      "source_id": "hl7-fhir-plandefinition-r5",
+      "purpose": "definition versus request/event separation and action relationships",
+      "url": "https://hl7.org/fhir/R5/plandefinition.html"
+    },
+    {
+      "source_id": "hl7-fhir-requestorchestration-r5",
+      "purpose": "related requests and workflow interdependencies",
+      "url": "https://hl7.org/fhir/R5/requestorchestration.html"
+    },
+    {
+      "source_id": "who-smart-dak-decision-logic",
+      "purpose": "machine-readable decision inputs, outputs, and rule tables",
+      "url": "https://smart.who.int/dak-pnc/decision-logic.html"
+    },
+    {
+      "source_id": "ahrq-teamstepps-handoff",
+      "purpose": "closed-loop handoff and transfer-of-responsibility structure",
+      "url": "https://www.ahrq.gov/teamstepps-program/curriculum/communication/tools/handoff.html"
+    },
+    {
+      "source_id": "ahrq-teamstepps-checkback",
+      "purpose": "receiver acknowledgment and sender verification",
+      "url": "https://www.ahrq.gov/teamstepps-program/curriculum/communication/tools/checkback.html"
+    }
+  ],
+  "ui_modes": {
+    "learner_assessment": {
+      "show_live_score": false,
+      "show_source_points": false,
+      "show_source_origin": false,
+      "show_provenance": false,
+      "show_wit": false,
+      "show_autoplay": false,
+      "show_completed_replay": false,
+      "show_correctness_labels": false,
+      "show_disabled_reasons": false
+    },
+    "learner_teaching": {
+      "show_live_score": false,
+      "show_source_points": false,
+      "show_source_origin": false,
+      "show_provenance": false,
+      "show_wit": false,
+      "show_autoplay": false,
+      "show_completed_replay": false,
+      "show_correctness_labels": false,
+      "show_disabled_reasons": true
+    },
+    "instructor": {
+      "show_live_score": true,
+      "show_source_points": true,
+      "show_source_origin": true,
+      "show_provenance": true,
+      "show_wit": true,
+      "show_autoplay": false,
+      "show_completed_replay": false,
+      "show_correctness_labels": true,
+      "show_disabled_reasons": true
+    },
+    "stakeholder_demo": {
+      "show_live_score": true,
+      "show_source_points": true,
+      "show_source_origin": true,
+      "show_provenance": true,
+      "show_wit": true,
+      "show_autoplay": true,
+      "show_completed_replay": true,
+      "show_correctness_labels": true,
+      "show_disabled_reasons": true
+    }
+  },
+  "operational_model": {
+    "world_events": [
+      {
+        "event_id": "second_casualty_inbound",
+        "at_elapsed_seconds": 240,
+        "calibration_status": "NOT_CALIBRATED",
+        "note": "Exercise-design event clock. It is independent of imaging, laboratory, treatment, or disposition decisions."
+      }
+    ],
+    "information_staleness_seconds": 180,
+    "information_staleness_calibration_status": "NOT_CALIBRATED",
+    "resources": [
+      {
+        "resource_id": "CHEST_IMAGING_SERVICE",
+        "capacity": 1,
+        "queue_policy": "FIFO",
+        "service_duration_seconds": 180,
+        "calibration_status": "NOT_CALIBRATED",
+        "note": "Deterministic exercise assumption for workflow simulation; not a facility turnaround estimate."
+      },
+      {
+        "resource_id": "LABORATORY_SERVICE",
+        "capacity": 1,
+        "queue_policy": "FIFO",
+        "service_duration_seconds": 180,
+        "calibration_status": "NOT_CALIBRATED",
+        "note": "Deterministic exercise assumption for workflow simulation; not a facility turnaround estimate."
+      },
+      {
+        "resource_id": "HIGHER_LEVEL_CARE_COORDINATION",
+        "capacity": 1,
+        "queue_policy": "FIFO",
+        "service_duration_seconds": 60,
+        "calibration_status": "NOT_CALIBRATED",
+        "note": "Deterministic exercise assumption used to expose coordination state; not a transfer-time estimate."
+      }
+    ],
+    "patient_observation_policy": {
+      "mode": "SOURCE_BOUND_OBSERVATIONS_ONLY",
+      "dynamic_physiology_validated": false,
+      "latent_state_exposed_to_learner": false,
+      "note": "RC3.6A does not fabricate continuous physiology. Learner-visible observations are inherited from ASK-D-001 or released by an exact source-bound diagnostic result."
+    }
+  },
+  "diagnostic_catalog": [
+    {
+      "order_code": "CHEST_IMAGING",
+      "facility_action_id": "order_imaging",
+      "result_id": "CHEST_IMAGING_REPORT",
+      "source_pointer": "src/content/scenarios.ts#ASK-D-001.patients[0].hidden_findings[0]",
+      "result_granularity": "SOURCE_DIAGNOSIS_SUMMARY_ONLY",
+      "learner_result": "Chest imaging report: findings are reported as a developing pneumothorax.",
+      "limitation": "The source template does not provide modality-specific signs, images, measurements, or uncertainty.",
+      "resource_id": "CHEST_IMAGING_SERVICE"
+    },
+    {
+      "order_code": "LACTATE",
+      "facility_action_id": "order_labs",
+      "result_id": "LACTATE_RESULT",
+      "source_pointer": "src/content/scenarios.ts#ASK-D-001.patients[0].hidden_findings[1]",
+      "result_granularity": "SOURCE_QUALITATIVE_SUMMARY_ONLY",
+      "learner_result": "Laboratory result: lactate is reported as elevated.",
+      "limitation": "The source template does not provide a numeric value, units, reference interval, specimen details, or trend.",
+      "resource_id": "LABORATORY_SERVICE"
+    }
+  ],
+  "treatment_policies": [
+    {
+      "treatment_id": "PAIN_MANAGEMENT_OBJECTIVE",
+      "facility_action_id": "pain_management",
+      "activation_state": "ABSTRACT_OBJECTIVE_ONLY",
+      "concrete_treatment_allowed": false,
+      "forbidden_submission_keys": [
+        "medication",
+        "medication_name",
+        "dose",
+        "dose_unit",
+        "route",
+        "procedure",
+        "procedure_code",
+        "device_setting"
+      ],
+      "activation_requirements_for_future_concrete_content": [
+        "exact_governing_source_locator",
+        "source_version_and_supersession_status",
+        "provider_scope_binding",
+        "patient_specific_eligibility",
+        "contraindication_logic",
+        "resource_availability",
+        "monitoring_plan",
+        "reassessment_plan",
+        "independent_clinical_attestation"
+      ],
+      "governing_rule_status": "NOT_ADJUDICATED",
+      "effect_model_status": "BLOCKED"
+    },
+    {
+      "treatment_id": "TOURNIQUET_MODIFICATION",
+      "facility_action_id": "remove_tourniquet",
+      "activation_state": "BLOCKED_MISSING_ELIGIBILITY_MODEL",
+      "concrete_treatment_allowed": false,
+      "forbidden_submission_keys": [
+        "remove_now",
+        "conversion_time",
+        "replacement_device"
+      ],
+      "activation_requirements_for_future_concrete_content": [
+        "application_time",
+        "wound_and_bleeding_assessment",
+        "distal_assessment",
+        "resuscitation_status",
+        "monitoring_capability",
+        "receiving_capability",
+        "exact_governing_source_locator",
+        "provider_scope_binding"
+      ],
+      "governing_rule_status": "NOT_ADJUDICATED",
+      "effect_model_status": "BLOCKED"
+    }
+  ],
+  "decisions": [
+    {
+      "decision_id": "receive_handoff",
+      "facility_action_id": "receive_handoff",
+      "source_action_id": null,
+      "category": "handoff_reception",
+      "learner_label": "Receive the casualty and reconcile the field report",
+      "demo_label": "Receive casualty and reconcile the field handoff",
+      "prerequisites": [],
+      "required_world_events": [],
+      "fields": [
+        {
+          "field_id": "sender_role",
+          "label": "Sender role",
+          "type": "text",
+          "required": true,
+          "min_length": 2
+        },
+        {
+          "field_id": "casualty_identity_confirmed",
+          "label": "Casualty identity confirmed",
+          "type": "boolean",
+          "required": true,
+          "must_equal": true
+        },
+        {
+          "field_id": "mechanism_summary",
+          "label": "Mechanism and field-care summary",
+          "type": "text",
+          "required": true,
+          "min_length": 10
+        },
+        {
+          "field_id": "field_interventions",
+          "label": "Field interventions and devices",
+          "type": "list",
+          "required": true,
+          "min_items": 1
+        },
+        {
+          "field_id": "uncertainties",
+          "label": "Unresolved uncertainties",
+          "type": "list",
+          "required": true,
+          "min_items": 1
+        }
+      ],
+      "scoring_dimensions": [
+        "communication",
+        "information_gathering"
+      ],
+      "high_risk": false,
+      "governing_source": {
+        "authority_class": "OPERATIONAL_STANDARD",
+        "source_id": "ahrq-teamstepps-handoff",
+        "status": "STRUCTURAL_ONLY"
+      },
+      "repeatable": false
+    },
+    {
+      "decision_id": "primary_assessment",
+      "facility_action_id": "primary_assessment",
+      "source_action_id": "primary_assessment",
+      "category": "assessment",
+      "learner_label": "Document the receiving assessment",
+      "demo_label": "Perform primary assessment",
+      "prerequisites": [
+        "receive_handoff"
+      ],
+      "required_world_events": [],
+      "fields": [
+        {
+          "field_id": "assessment_domains",
+          "label": "Assessment domains completed",
+          "type": "multi_choice",
+          "required": true,
+          "required_values": [
+            "airway",
+            "breathing",
+            "circulation",
+            "neurologic",
+            "exposure"
+          ],
+          "allowed_values": [
+            "airway",
+            "breathing",
+            "circulation",
+            "neurologic",
+            "exposure"
+          ]
+        },
+        {
+          "field_id": "new_observations",
+          "label": "New observations",
+          "type": "list",
+          "required": true,
+          "min_items": 1
+        },
+        {
+          "field_id": "uncertainty_statement",
+          "label": "What remains uncertain?",
+          "type": "text",
+          "required": true,
+          "min_length": 10
+        }
+      ],
+      "scoring_dimensions": [
+        "information_gathering",
+        "clinical_reasoning"
+      ],
+      "high_risk": false,
+      "governing_source": {
+        "authority_class": "INHERITED_TEMPLATE",
+        "source_id": "ASK-D-001",
+        "status": "SOURCE_BOUND"
+      },
+      "repeatable": false
+    },
+    {
+      "decision_id": "monitor_vitals",
+      "facility_action_id": "monitor_vitals",
+      "source_action_id": "monitor_vitals",
+      "category": "monitoring",
+      "learner_label": "Define the monitoring and reassessment plan",
+      "demo_label": "Establish continuous monitoring",
+      "prerequisites": [
+        "primary_assessment"
+      ],
+      "required_world_events": [],
+      "fields": [
+        {
+          "field_id": "monitoring_channels",
+          "label": "Monitoring channels",
+          "type": "multi_choice",
+          "required": true,
+          "min_items": 3,
+          "allowed_values": [
+            "heart_rate",
+            "blood_pressure",
+            "respiratory_rate",
+            "oxygen_saturation",
+            "mental_status"
+          ]
+        },
+        {
+          "field_id": "reassessment_trigger",
+          "label": "Reassessment trigger or interval",
+          "type": "text",
+          "required": true,
+          "min_length": 8
+        }
+      ],
+      "scoring_dimensions": [
+        "information_gathering",
+        "reassessment"
+      ],
+      "high_risk": false,
+      "governing_source": {
+        "authority_class": "INHERITED_TEMPLATE",
+        "source_id": "ASK-D-001",
+        "status": "SOURCE_BOUND"
+      },
+      "repeatable": false
+    },
+    {
+      "decision_id": "differential",
+      "facility_action_id": "differential",
+      "source_action_id": "differential",
+      "category": "clinical_reasoning",
+      "learner_label": "Record a working differential and uncertainty",
+      "demo_label": "Document differential diagnosis",
+      "prerequisites": [
+        "primary_assessment"
+      ],
+      "required_world_events": [],
+      "fields": [
+        {
+          "field_id": "hypotheses",
+          "label": "Working hypotheses",
+          "type": "list",
+          "required": true,
+          "min_items": 2
+        },
+        {
+          "field_id": "time_critical_concern_present",
+          "label": "A time-critical concern is being considered",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "field_id": "evidence_and_uncertainty",
+          "label": "Evidence and uncertainty",
+          "type": "text",
+          "required": true,
+          "min_length": 15
+        }
+      ],
+      "scoring_dimensions": [
+        "clinical_reasoning"
+      ],
+      "high_risk": false,
+      "governing_source": {
+        "authority_class": "INHERITED_TEMPLATE",
+        "source_id": "ASK-D-001",
+        "status": "SOURCE_BOUND"
+      },
+      "repeatable": false
+    },
+    {
+      "decision_id": "order_imaging",
+      "facility_action_id": "order_imaging",
+      "source_action_id": "order_imaging",
+      "category": "diagnostic_order",
+      "learner_label": "Submit a chest-imaging request",
+      "demo_label": "Order chest imaging",
+      "prerequisites": [
+        "primary_assessment"
+      ],
+      "required_world_events": [],
+      "fields": [
+        {
+          "field_id": "order_code",
+          "label": "Requested study",
+          "type": "choice",
+          "required": true,
+          "allowed_values": [
+            "CHEST_IMAGING"
+          ],
+          "must_equal": "CHEST_IMAGING"
+        },
+        {
+          "field_id": "indication",
+          "label": "Clinical indication",
+          "type": "text",
+          "required": true,
+          "min_length": 10
+        },
+        {
+          "field_id": "urgency",
+          "label": "Requested urgency",
+          "type": "choice",
+          "required": true,
+          "allowed_values": [
+            "routine",
+            "urgent",
+            "immediate"
+          ]
+        }
+      ],
+      "creates_orders": [
+        "CHEST_IMAGING"
+      ],
+      "scoring_dimensions": [
+        "diagnostics",
+        "clinical_reasoning"
+      ],
+      "high_risk": false,
+      "governing_source": {
+        "authority_class": "INHERITED_TEMPLATE",
+        "source_id": "ASK-D-001",
+        "status": "SOURCE_BOUND"
+      },
+      "repeatable": false
+    },
+    {
+      "decision_id": "order_labs",
+      "facility_action_id": "order_labs",
+      "source_action_id": "order_labs",
+      "category": "diagnostic_order",
+      "learner_label": "Submit the required laboratory request",
+      "demo_label": "Order relevant labs",
+      "prerequisites": [
+        "primary_assessment"
+      ],
+      "required_world_events": [],
+      "fields": [
+        {
+          "field_id": "order_codes",
+          "label": "Requested laboratory studies",
+          "type": "multi_choice",
+          "required": true,
+          "required_values": [
+            "LACTATE"
+          ],
+          "allowed_values": [
+            "LACTATE"
+          ]
+        },
+        {
+          "field_id": "indication",
+          "label": "Clinical indication",
+          "type": "text",
+          "required": true,
+          "min_length": 10
+        },
+        {
+          "field_id": "urgency",
+          "label": "Requested urgency",
+          "type": "choice",
+          "required": true,
+          "allowed_values": [
+            "routine",
+            "urgent",
+            "immediate"
+          ]
+        }
+      ],
+      "creates_orders": [
+        "LACTATE"
+      ],
+      "scoring_dimensions": [
+        "diagnostics",
+        "clinical_reasoning"
+      ],
+      "high_risk": false,
+      "governing_source": {
+        "authority_class": "INHERITED_TEMPLATE",
+        "source_id": "ASK-D-001",
+        "status": "SOURCE_BOUND"
+      },
+      "repeatable": false
+    },
+    {
+      "decision_id": "pain_management",
+      "facility_action_id": "pain_management",
+      "source_action_id": "pain_management",
+      "category": "treatment_intent",
+      "learner_label": "Document a source-governed pain-management objective",
+      "demo_label": "Address the pain-management objective",
+      "prerequisites": [
+        "primary_assessment"
+      ],
+      "required_world_events": [],
+      "fields": [
+        {
+          "field_id": "pain_assessment",
+          "label": "Pain assessment summary",
+          "type": "text",
+          "required": true,
+          "min_length": 8
+        },
+        {
+          "field_id": "treatment_intent",
+          "label": "Treatment intent without drug, dose, route, or procedure",
+          "type": "text",
+          "required": true,
+          "min_length": 8
+        },
+        {
+          "field_id": "monitoring_plan",
+          "label": "Monitoring plan",
+          "type": "text",
+          "required": true,
+          "min_length": 8
+        },
+        {
+          "field_id": "reassessment_plan",
+          "label": "Reassessment plan",
+          "type": "text",
+          "required": true,
+          "min_length": 8
+        }
+      ],
+      "treatment_policy_id": "PAIN_MANAGEMENT_OBJECTIVE",
+      "scoring_dimensions": [
+        "treatment_legitimacy",
+        "reassessment"
+      ],
+      "high_risk": false,
+      "governing_source": {
+        "authority_class": "INHERITED_TEMPLATE",
+        "source_id": "ASK-D-001",
+        "status": "ABSTRACT_OBJECTIVE_ONLY"
+      },
+      "repeatable": false
+    },
+    {
+      "decision_id": "confirm_surge_roles",
+      "facility_action_id": "confirm_surge_roles",
+      "source_action_id": null,
+      "category": "team_coordination",
+      "learner_label": "Confirm team roles for the incoming surge",
+      "demo_label": "Acknowledge surge notice and confirm receiving-team roles",
+      "prerequisites": [
+        "receive_handoff"
+      ],
+      "required_world_events": [
+        "second_casualty_inbound"
+      ],
+      "fields": [
+        {
+          "field_id": "role_assignments",
+          "label": "Role assignments",
+          "type": "list",
+          "required": true,
+          "min_items": 2
+        },
+        {
+          "field_id": "continuity_plan",
+          "label": "Continuity plan for the current casualty",
+          "type": "text",
+          "required": true,
+          "min_length": 10
+        }
+      ],
+      "scoring_dimensions": [
+        "team_communication",
+        "operational_readiness"
+      ],
+      "high_risk": false,
+      "governing_source": {
+        "authority_class": "EXERCISE_WORKFLOW",
+        "source_id": "ASK-D-001-operational-context",
+        "status": "NOT_CALIBRATED"
+      },
+      "repeatable": false
+    },
+    {
+      "decision_id": "wait_for_diagnostics",
+      "facility_action_id": "wait_for_diagnostics",
+      "source_action_id": null,
+      "category": "operational_wait",
+      "learner_label": "Advance to the next available diagnostic result",
+      "demo_label": "Advance to the next scheduled diagnostic event",
+      "prerequisites": [
+        "order_imaging",
+        "order_labs"
+      ],
+      "required_world_events": [],
+      "fields": [
+        {
+          "field_id": "reassessment_during_wait",
+          "label": "Interim reassessment or monitoring note",
+          "type": "text",
+          "required": true,
+          "min_length": 8
+        }
+      ],
+      "scoring_dimensions": [
+        "reassessment",
+        "timeliness"
+      ],
+      "high_risk": false,
+      "governing_source": {
+        "authority_class": "EXERCISE_WORKFLOW",
+        "source_id": "ASK-D-001-operational-context",
+        "status": "NOT_CALIBRATED"
+      },
+      "repeatable": false
+    },
+    {
+      "decision_id": "review_diagnostics",
+      "facility_action_id": "review_diagnostics",
+      "source_action_id": null,
+      "category": "result_interpretation",
+      "learner_label": "Interpret available results and reassess the casualty",
+      "demo_label": "Review returned results and reassess the casualty",
+      "prerequisites": [
+        "wait_for_diagnostics"
+      ],
+      "required_world_events": [],
+      "requires_results": [
+        "CHEST_IMAGING_REPORT",
+        "LACTATE_RESULT"
+      ],
+      "fields": [
+        {
+          "field_id": "result_interpretation",
+          "label": "Result interpretation",
+          "type": "text",
+          "required": true,
+          "min_length": 15
+        },
+        {
+          "field_id": "reassessment_summary",
+          "label": "Reassessment summary",
+          "type": "text",
+          "required": true,
+          "min_length": 10
+        },
+        {
+          "field_id": "remaining_uncertainty",
+          "label": "Remaining uncertainty",
+          "type": "text",
+          "required": true,
+          "min_length": 8
+        }
+      ],
+      "scoring_dimensions": [
+        "clinical_reasoning",
+        "reassessment",
+        "diagnostics"
+      ],
+      "high_risk": false,
+      "governing_source": {
+        "authority_class": "SOURCE_RESULT_INTERPRETATION",
+        "source_id": "ASK-D-001",
+        "status": "SOURCE_BOUND_LIMITED_GRANULARITY"
+      },
+      "repeatable": false
+    },
+    {
+      "decision_id": "escalation",
+      "facility_action_id": "escalation",
+      "source_action_id": "escalation",
+      "category": "disposition",
+      "learner_label": "Submit a disposition and consultation request",
+      "demo_label": "Escalate disposition or consultation",
+      "prerequisites": [
+        "review_diagnostics"
+      ],
+      "required_world_events": [],
+      "fields": [
+        {
+          "field_id": "destination_capability",
+          "label": "Requested destination capability",
+          "type": "choice",
+          "required": true,
+          "allowed_values": [
+            "HIGHER_LEVEL_TRAUMA_CAPABILITY",
+            "LOCAL_ADMISSION",
+            "SPECIALTY_CONSULTATION"
+          ]
+        },
+        {
+          "field_id": "urgency",
+          "label": "Urgency",
+          "type": "choice",
+          "required": true,
+          "allowed_values": [
+            "routine",
+            "urgent",
+            "immediate"
+          ]
+        },
+        {
+          "field_id": "reason",
+          "label": "Reason and current risk",
+          "type": "text",
+          "required": true,
+          "min_length": 15
+        },
+        {
+          "field_id": "receiving_acceptance",
+          "label": "Receiving service acceptance recorded",
+          "type": "boolean",
+          "required": true,
+          "must_equal": true
+        },
+        {
+          "field_id": "transport_requirement",
+          "label": "Transport requirement",
+          "type": "text",
+          "required": true,
+          "min_length": 5
+        },
+        {
+          "field_id": "contingency",
+          "label": "Contingency if transfer is delayed",
+          "type": "text",
+          "required": true,
+          "min_length": 10
+        }
+      ],
+      "scoring_dimensions": [
+        "clinical_reasoning",
+        "disposition",
+        "communication"
+      ],
+      "high_risk": false,
+      "governing_source": {
+        "authority_class": "INHERITED_TEMPLATE",
+        "source_id": "ASK-D-001",
+        "status": "SOURCE_BOUND"
+      },
+      "repeatable": false
+    },
+    {
+      "decision_id": "documentation",
+      "facility_action_id": "documentation",
+      "source_action_id": "documentation",
+      "category": "documentation",
+      "learner_label": "Record findings, actions, response, pending work, and plan",
+      "demo_label": "Document findings and plan",
+      "prerequisites": [
+        "primary_assessment"
+      ],
+      "required_world_events": [],
+      "fields": [
+        {
+          "field_id": "findings",
+          "label": "Current findings",
+          "type": "text",
+          "required": true,
+          "min_length": 10
+        },
+        {
+          "field_id": "actions_and_response",
+          "label": "Actions and observed response",
+          "type": "text",
+          "required": true,
+          "min_length": 10
+        },
+        {
+          "field_id": "pending_work",
+          "label": "Pending tests, tasks, and risks",
+          "type": "text",
+          "required": true,
+          "min_length": 8
+        },
+        {
+          "field_id": "plan",
+          "label": "Plan and contingency",
+          "type": "text",
+          "required": true,
+          "min_length": 10
+        }
+      ],
+      "scoring_dimensions": [
+        "documentation"
+      ],
+      "high_risk": false,
+      "governing_source": {
+        "authority_class": "INHERITED_TEMPLATE",
+        "source_id": "ASK-D-001",
+        "status": "SOURCE_BOUND"
+      },
+      "repeatable": false
+    },
+    {
+      "decision_id": "complete_handoff",
+      "facility_action_id": "complete_handoff",
+      "source_action_id": null,
+      "category": "closed_loop_handoff",
+      "learner_label": "Complete the closed-loop transfer of responsibility",
+      "demo_label": "Complete the receiving handoff to the next level of care",
+      "prerequisites": [
+        "escalation",
+        "documentation",
+        "confirm_surge_roles"
+      ],
+      "required_world_events": [
+        "second_casualty_inbound"
+      ],
+      "fields": [
+        {
+          "field_id": "sender_identity",
+          "label": "Sender identity and role",
+          "type": "text",
+          "required": true,
+          "min_length": 2
+        },
+        {
+          "field_id": "receiver_identity",
+          "label": "Receiver identity and role",
+          "type": "text",
+          "required": true,
+          "min_length": 2
+        },
+        {
+          "field_id": "situation",
+          "label": "Situation",
+          "type": "text",
+          "required": true,
+          "min_length": 10
+        },
+        {
+          "field_id": "background",
+          "label": "Relevant background",
+          "type": "text",
+          "required": true,
+          "min_length": 10
+        },
+        {
+          "field_id": "assessment_and_uncertainty",
+          "label": "Assessment and uncertainty",
+          "type": "text",
+          "required": true,
+          "min_length": 15
+        },
+        {
+          "field_id": "actions_and_response",
+          "label": "Actions and response",
+          "type": "text",
+          "required": true,
+          "min_length": 10
+        },
+        {
+          "field_id": "pending_tasks",
+          "label": "Pending tests and tasks",
+          "type": "list",
+          "required": true,
+          "min_items": 1
+        },
+        {
+          "field_id": "recommendation",
+          "label": "Recommendation and requested disposition",
+          "type": "text",
+          "required": true,
+          "min_length": 10
+        },
+        {
+          "field_id": "contingency",
+          "label": "Contingency and escalation plan",
+          "type": "text",
+          "required": true,
+          "min_length": 10
+        },
+        {
+          "field_id": "receiver_acknowledged",
+          "label": "Receiver acknowledged the handoff",
+          "type": "boolean",
+          "required": true,
+          "must_equal": true
+        },
+        {
+          "field_id": "questions_offered",
+          "label": "Receiver had an opportunity to ask questions",
+          "type": "boolean",
+          "required": true,
+          "must_equal": true
+        },
+        {
+          "field_id": "sender_confirmed",
+          "label": "Sender confirmed shared understanding and responsibility transfer",
+          "type": "boolean",
+          "required": true,
+          "must_equal": true
+        }
+      ],
+      "scoring_dimensions": [
+        "communication",
+        "handoff",
+        "documentation"
+      ],
+      "high_risk": false,
+      "governing_source": {
+        "authority_class": "OPERATIONAL_STANDARD",
+        "source_id": "ahrq-teamstepps-handoff",
+        "status": "STRUCTURAL_ONLY"
+      },
+      "repeatable": false
+    },
+    {
+      "decision_id": "wait_60",
+      "facility_action_id": "wait_60",
+      "source_action_id": null,
+      "category": "operational_wait",
+      "learner_label": "Continue observation for 60 seconds",
+      "demo_label": "Advance 60 seconds",
+      "prerequisites": [
+        "receive_handoff"
+      ],
+      "required_world_events": [],
+      "fields": [
+        {
+          "field_id": "observation_plan",
+          "label": "What will be observed during this interval?",
+          "type": "text",
+          "required": true,
+          "min_length": 10
+        }
+      ],
+      "scoring_dimensions": [
+        "reassessment",
+        "timeliness",
+        "safety"
+      ],
+      "high_risk": false,
+      "repeatable": true,
+      "governing_source": {
+        "authority_class": "EXERCISE_WORKFLOW",
+        "source_id": "facility-arrival-time-advance",
+        "status": "NOT_CALIBRATED"
+      }
+    },
+    {
+      "decision_id": "discharge_without_workup",
+      "facility_action_id": "discharge_without_workup",
+      "source_action_id": "discharge_without_workup",
+      "category": "high_risk_disposition",
+      "learner_label": "End clinic evaluation and discharge the casualty",
+      "demo_label": "Source-defined discharge failure branch",
+      "prerequisites": [
+        "receive_handoff"
+      ],
+      "required_world_events": [],
+      "fields": [
+        {
+          "field_id": "rationale",
+          "label": "Rationale",
+          "type": "text",
+          "required": true,
+          "min_length": 15
+        },
+        {
+          "field_id": "deliberate_confirmation",
+          "label": "Confirm this irreversible disposition choice",
+          "type": "boolean",
+          "required": true,
+          "must_equal": true
+        }
+      ],
+      "scoring_dimensions": [
+        "safety"
+      ],
+      "high_risk": true,
+      "governing_source": {
+        "authority_class": "INHERITED_TEMPLATE",
+        "source_id": "ASK-D-001",
+        "status": "SOURCE_DEFINED_UNSAFE"
+      },
+      "repeatable": false
+    },
+    {
+      "decision_id": "remove_tourniquet",
+      "facility_action_id": "remove_tourniquet",
+      "source_action_id": "remove_tourniquet",
+      "category": "high_risk_treatment_change",
+      "learner_label": "Change the existing field-tourniquet plan",
+      "demo_label": "Source-defined tourniquet failure branch",
+      "prerequisites": [
+        "receive_handoff"
+      ],
+      "required_world_events": [],
+      "fields": [
+        {
+          "field_id": "rationale",
+          "label": "Rationale and observed indication",
+          "type": "text",
+          "required": true,
+          "min_length": 15
+        },
+        {
+          "field_id": "deliberate_confirmation",
+          "label": "Confirm this irreversible treatment change",
+          "type": "boolean",
+          "required": true,
+          "must_equal": true
+        }
+      ],
+      "treatment_policy_id": "TOURNIQUET_MODIFICATION",
+      "scoring_dimensions": [
+        "safety",
+        "treatment_legitimacy"
+      ],
+      "high_risk": true,
+      "governing_source": {
+        "authority_class": "INHERITED_TEMPLATE",
+        "source_id": "ASK-D-001",
+        "status": "SOURCE_DEFINED_UNSAFE"
+      },
+      "repeatable": false
+    }
+  ],
+  "dimension_policy": {
+    "dimensions": [
+      "information_gathering",
+      "clinical_reasoning",
+      "diagnostics",
+      "treatment_legitimacy",
+      "reassessment",
+      "disposition",
+      "communication",
+      "handoff",
+      "documentation",
+      "team_communication",
+      "operational_readiness",
+      "timeliness",
+      "safety"
+    ],
+    "learner_live_display": false,
+    "single_composite_score_is_clinical_validity": false,
+    "weights_calibration_status": "NOT_CALIBRATED"
+  },
+  "assurance": {
+    "reference_sequences": {
+      "canonical": [
+        "receive_handoff",
+        "primary_assessment",
+        "monitor_vitals",
+        "differential",
+        "order_imaging",
+        "order_labs",
+        "pain_management",
+        "documentation",
+        "wait_for_diagnostics",
+        "review_diagnostics",
+        "confirm_surge_roles",
+        "escalation",
+        "complete_handoff"
+      ],
+      "alternate": [
+        "receive_handoff",
+        "primary_assessment",
+        "differential",
+        "order_labs",
+        "monitor_vitals",
+        "order_imaging",
+        "documentation",
+        "pain_management",
+        "wait_for_diagnostics",
+        "review_diagnostics",
+        "confirm_surge_roles",
+        "escalation",
+        "complete_handoff"
+      ]
+    },
+    "ordered_pair_obligations": [
+      [
+        "receive_handoff",
+        "primary_assessment"
+      ],
+      [
+        "primary_assessment",
+        "order_imaging"
+      ],
+      [
+        "primary_assessment",
+        "order_labs"
+      ],
+      [
+        "primary_assessment",
+        "monitor_vitals"
+      ],
+      [
+        "order_imaging",
+        "wait_for_diagnostics"
+      ],
+      [
+        "order_labs",
+        "wait_for_diagnostics"
+      ],
+      [
+        "wait_for_diagnostics",
+        "review_diagnostics"
+      ],
+      [
+        "review_diagnostics",
+        "escalation"
+      ],
+      [
+        "documentation",
+        "complete_handoff"
+      ],
+      [
+        "escalation",
+        "complete_handoff"
+      ],
+      [
+        "confirm_surge_roles",
+        "complete_handoff"
+      ]
+    ],
+    "ordered_triple_obligations": [
+      [
+        "receive_handoff",
+        "primary_assessment",
+        "monitor_vitals"
+      ],
+      [
+        "primary_assessment",
+        "order_imaging",
+        "wait_for_diagnostics"
+      ],
+      [
+        "primary_assessment",
+        "order_labs",
+        "wait_for_diagnostics"
+      ],
+      [
+        "wait_for_diagnostics",
+        "review_diagnostics",
+        "escalation"
+      ],
+      [
+        "review_diagnostics",
+        "escalation",
+        "complete_handoff"
+      ]
+    ],
+    "bounded_exploration": {
+      "max_decision_depth": 20,
+      "max_repeatable_waits": 20,
+      "required_terminal_witnesses": [
+        "completed_canonical",
+        "completed_alternate",
+        "failed_discharge",
+        "failed_tourniquet",
+        "timeout"
+      ]
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "aar_sha256": "bbbfe88bc99743011e954fe37ae7be044671448e0294909cb6a52c5fbc76c142",
+  "counterfactual_boundaries": {
+    "available_branches": [
+      "unsafe_discharge",
+      "unsafe_tourniquet_removal",
+      "source_bound_timeout"
+    ],
+    "causal_claims_allowed": false,
+    "note": "Alternative branches are deterministic replay comparisons. They are not identified causal effects."
+  },
+  "example_id": "ASK-FACILITY-ARRIVAL-RC3-3",
+  "improvement_opportunities": [],
+  "normalized_score_bps": 10000,
+  "pass_threshold_bps": 8000,
+  "passed": true,
+  "schema_version": "1.1.0",
+  "session_sha256": "5d22d201964725a31c36f27b1cfc5c671869917dcc3a887d7bbcba6bcc5d26f0",
+  "source_action_coverage": {
+    "optional_completed": [
+      "documentation",
+      "pain_management"
+    ],
+    "optional_not_exercised": [],
+    "required_completed": [
+      "differential",
+      "escalation",
+      "monitor_vitals",
+      "order_imaging",
+      "order_labs",
+      "primary_assessment"
+    ],
+    "required_missing": []
+  },
+  "strengths": [
+    "All required source-template actions were completed.",
+    "No source-defined unsafe action was selected.",
+    "Diagnostic results were processed through an explicit system event before disclosure."
+  ],
+  "terminal_status": "completed",
+  "validity_ledger": {
+    "demonstrated": [
+      "source_scenario_block_binding",
+      "source_action_only_clinical_scoring",
+      "deterministic_event_sourced_replay",
+      "per_transition_state_binding",
+      "explicit_actor_knowledge_updates",
+      "hidden_findings_withheld_until_diagnostics",
+      "timeout_as_authenticated_system_event",
+      "duplicate_action_and_command_rejection",
+      "score_clamped_to_closed_basis_point_range",
+      "wit_process_observation_separated_from_clinical_scoring",
+      "exercise_assumptions_disclosed_as_uncalibrated"
+    ],
+    "open": [
+      "claim_level_clinical_entailment",
+      "real_world_frequency_calibration",
+      "human_team_policy_calibration",
+      "facility_specific_workflow_calibration",
+      "continuous_physiology_model",
+      "concurrent_multi_casualty_resource_contention",
+      "causal_identification_for_counterfactual_aar",
+      "executable_to_lean_refinement",
+      "independent_proof_kernel_acceptance",
+      "formal_vva_for_specific_wing_intended_use"
+    ]
+  },
+  "wit_observation_summary": [
+    {
+      "category": "preparedness",
+      "clinical_directive": null,
+      "process_only": true,
+      "statement": "Pre-arrival notification received"
+    },
+    {
+      "category": "continuity",
+      "clinical_directive": null,
+      "process_only": true,
+      "statement": "Receive casualty and reconcile the field handoff observed."
+    },
+    {
+      "category": "assessment",
+      "clinical_directive": null,
+      "process_only": true,
+      "statement": "Perform primary assessment observed."
+    },
+    {
+      "category": "monitoring",
+      "clinical_directive": null,
+      "process_only": true,
+      "statement": "Establish continuous monitoring observed."
+    },
+    {
+      "category": "clinical_process",
+      "clinical_directive": null,
+      "process_only": true,
+      "statement": "Document differential diagnosis observed."
+    },
+    {
+      "category": "diagnostics",
+      "clinical_directive": null,
+      "process_only": true,
+      "statement": "Order chest imaging observed."
+    },
+    {
+      "category": "surge_response",
+      "clinical_directive": null,
+      "process_only": true,
+      "statement": "Second casualty reported inbound"
+    },
+    {
+      "category": "diagnostics",
+      "clinical_directive": null,
+      "process_only": true,
+      "statement": "Order relevant labs observed."
+    },
+    {
+      "category": "source_objective",
+      "clinical_directive": null,
+      "process_only": true,
+      "statement": "Address source-defined pain-management objective observed."
+    },
+    {
+      "category": "surge_response",
+      "clinical_directive": null,
+      "process_only": true,
+      "statement": "Acknowledge the surge notice and confirm receiving-team roles observed."
+    },
+    {
+      "category": "documentation",
+      "clinical_directive": null,
+      "process_only": true,
+      "statement": "Document findings and plan observed."
+    },
+    {
+      "category": "timing",
+      "clinical_directive": null,
+      "process_only": true,
+      "statement": "Advance to the next scheduled diagnostic event observed."
+    },
+    {
+      "category": "diagnostics",
+      "clinical_directive": null,
+      "process_only": true,
+      "statement": "Ordered imaging and laboratory results are available"
+    },
+    {
+      "category": "reassessment",
+      "clinical_directive": null,
+      "process_only": true,
+      "statement": "Review returned results and reassess the casualty observed."
+    },
+    {
+      "category": "escalation",
+      "clinical_directive": null,
+      "process_only": true,
+      "statement": "Escalate disposition / consult observed."
+    },
+    {
+      "category": "handoff",
+      "clinical_directive": null,
+      "process_only": true,
+      "statement": "Complete the receiving handoff to the next level of care observed."
+    }
+  ]
+}

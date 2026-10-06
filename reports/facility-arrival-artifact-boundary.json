@@ -1,0 +1,44 @@
+{
+  "canonical_public_files": [
+    "public/data/facility_arrival/reference-aar.json",
+    "public/data/facility_arrival/reference-manifest.json",
+    "public/data/facility_arrival/reference-session.json"
+  ],
+  "comparisons": [
+    {
+      "match": true,
+      "public_path": "public/data/facility_arrival/reference-session.json",
+      "public_sha256": "ed10347c99462299dddf1c6ba3a8963b8abf2a0222edce3fcbe1f42465f6af1c",
+      "source_path": "examples/facility-arrival/interaction.json",
+      "source_sha256": "ed10347c99462299dddf1c6ba3a8963b8abf2a0222edce3fcbe1f42465f6af1c"
+    },
+    {
+      "match": true,
+      "public_path": "public/data/facility_arrival/reference-aar.json",
+      "public_sha256": "b466543a2526b9a0bb9db0213c67dff08442e2396bc2286fefb7ed90dcf52622",
+      "source_path": "examples/facility-arrival/aar.json",
+      "source_sha256": "b466543a2526b9a0bb9db0213c67dff08442e2396bc2286fefb7ed90dcf52622"
+    },
+    {
+      "match": true,
+      "public_path": "public/data/facility_arrival/reference-manifest.json",
+      "public_sha256": "158d987f8c59e950deedc04af84faaf9ab5b3679d108aa2f5044f844cda1fcc0",
+      "source_path": "examples/facility-arrival/manifest.json",
+      "source_sha256": "158d987f8c59e950deedc04af84faaf9ab5b3679d108aa2f5044f844cda1fcc0"
+    }
+  ],
+  "errors": [],
+  "forbidden_paths": [
+    "public/data/facility_arrival/manifest.json",
+    "public/data/facility_arrival/reference_aar.json",
+    "public/data/facility_arrival/reference_session.json",
+    "reports/facility-arrival-generation.json"
+  ],
+  "observed_public_files": [
+    "public/data/facility_arrival/reference-aar.json",
+    "public/data/facility_arrival/reference-manifest.json",
+    "public/data/facility_arrival/reference-session.json"
+  ],
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

@@ -1,0 +1,42 @@
+{
+  "archive_profile": "DETERMINISTIC_BEHAVIORAL_EQUIVALENCE_ARCHIVE_V1",
+  "authority_boundaries": {
+    "clinical_authority": "NOT_GRANTED",
+    "empirical_behavioral_validity": "NOT_ESTABLISHED",
+    "human_team_behavior": "STRUCTURAL_ONLY_NOT_CALIBRATED",
+    "operational_timing": "NOT_CALIBRATED",
+    "patient_care_use": "PROHIBITED",
+    "scoring_behavior": "inherited_unchanged"
+  },
+  "novelty_rules": {
+    "context_only_change_creates_policy_novelty": false,
+    "narrative_only_change_creates_policy_novelty": false,
+    "profile_relabeling_without_policy_change_permitted": false,
+    "provenance_only_change_creates_policy_novelty": false,
+    "reviewed_operational_semantic_change_may_create_policy_novelty": true,
+    "seed_only_change_creates_policy_novelty": false
+  },
+  "operational_profile_family": "REVIEWED_NONCLINICAL_OPERATIONAL_ROUTE_FAMILY_V1",
+  "output_path": "reports/scenario-behavioral-equivalence.json",
+  "policy_epoch": 1,
+  "policy_id": "asklepios-behavioral-diversity-policy-v1",
+  "policy_sha256": "80b5482457a975f8a97d150e5eb703cad349243646230ae25b2a35d4cc40b0cd",
+  "policy_signature_profile": "SOURCE_BOUND_POLICY_AND_TRAJECTORY_QUOTIENT_V1",
+  "ratchet_floors": {
+    "maximum_reachable_nonterminal_dead_ends": 0,
+    "minimum_candidates": 107,
+    "minimum_contexts_per_policy_class": 1,
+    "minimum_policy_equivalence_classes": 4,
+    "minimum_policy_novelty_ratio_bps": 373,
+    "minimum_unique_context_signatures": 107
+  },
+  "required_operational_profiles": [
+    "DIRECT_HANDOFF_BASELINE",
+    "COMMUNICATION_RELAY_REQUIRED",
+    "RESOURCE_COORDINATION_REQUIRED",
+    "DUAL_CONSTRAINT_RELAY_AND_COORDINATION"
+  ],
+  "route_quotient_profile": "ROOTED_LABELLED_DAG_ID_AND_PROSE_INVARIANT_V1",
+  "schema_version": "1.0.0",
+  "scope": "STRUCTURAL_OPERATIONAL_POLICY_DIVERSITY_FOR_HEALTHCARE_SIMULATION"
+}

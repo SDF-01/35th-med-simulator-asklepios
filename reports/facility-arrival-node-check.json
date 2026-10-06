@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.1.0",
+  "status": "FAIL",
+  "internal_error": false,
+  "checks": 456,
+  "example_id": "ASK-FACILITY-ARRIVAL-RC3-3",
+  "session_sha256": "5d22d201964725a31c36f27b1cfc5c671869917dcc3a887d7bbcba6bcc5d26f0",
+  "errors": [
+    "root README browser route"
+  ]
+}

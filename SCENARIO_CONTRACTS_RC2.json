@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "release": "Project Asklepios Scenario Contracts RC2",
+  "scope": "template-locked procedural scenario assembly with citation provenance and independent checking",
+  "clinical_authority": "NOT_GRANTED",
+  "research_evidence_role": "citation_support_only",
+  "scoring_behavior": "inherited_unchanged",
+  "source_template": "ASK-A-001",
+  "verified_scenario": "ASK-V-3CE6DAABDC",
+  "required_gate": "npm run verify:scenario-engine",
+  "formal_gate": "lake build plus external checker in GitHub Actions",
+  "deployment_scope": "research_sandbox_only",
+  "source_template_status": "repository_template_not_clinically_certified",
+  "build_time_proposal_gate": "reviewed_source_bound_allowlist",
+  "concrete_checkers": [
+    "typescript-independent",
+    "python-independent"
+  ],
+  "formal_verification": "github_ci_kernel_build_fresh_replay_and_axiom_audit",
+  "independent_kernel_status": "compatibility_monitor_pending"
+}

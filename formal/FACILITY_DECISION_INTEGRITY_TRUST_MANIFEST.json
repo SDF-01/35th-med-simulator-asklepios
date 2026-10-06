@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "formal_root_module": "ScenarioContracts",
+  "module": "ScenarioContracts.FacilityDecisionIntegrity",
+  "required_theorems": [
+    "ScenarioContracts.decision_operational_transition_preserves_clinical",
+    "ScenarioContracts.decision_learner_projection_ignores_instructor_score",
+    "ScenarioContracts.decision_learner_projection_ignores_provenance",
+    "ScenarioContracts.decision_unadjudicated_treatment_is_blocked",
+    "ScenarioContracts.decision_missing_scope_blocks_treatment",
+    "ScenarioContracts.decision_missing_eligibility_blocks_treatment",
+    "ScenarioContracts.decision_missing_source_attestation_blocks_treatment",
+    "ScenarioContracts.decision_absent_order_blocks_result",
+    "ScenarioContracts.decision_queued_order_blocks_result",
+    "ScenarioContracts.decision_completed_order_allows_result",
+    "ScenarioContracts.decision_world_event_independent_of_action_identity",
+    "ScenarioContracts.decision_handoff_without_ack_is_blocked",
+    "ScenarioContracts.decision_handoff_without_questions_is_blocked",
+    "ScenarioContracts.decision_handoff_without_sender_confirmation_is_blocked",
+    "ScenarioContracts.decision_complete_closed_loop_handoff_transfers",
+    "ScenarioContracts.decision_operational_replay_preserves_clinical",
+    "ScenarioContracts.decision_training_prohibits_patient_care"
+  ],
+  "per_theorem_axioms": {
+    "ScenarioContracts.decision_operational_transition_preserves_clinical": [],
+    "ScenarioContracts.decision_learner_projection_ignores_instructor_score": [],
+    "ScenarioContracts.decision_learner_projection_ignores_provenance": [],
+    "ScenarioContracts.decision_unadjudicated_treatment_is_blocked": [],
+    "ScenarioContracts.decision_missing_scope_blocks_treatment": [],
+    "ScenarioContracts.decision_missing_eligibility_blocks_treatment": [],
+    "ScenarioContracts.decision_missing_source_attestation_blocks_treatment": [],
+    "ScenarioContracts.decision_absent_order_blocks_result": [],
+    "ScenarioContracts.decision_queued_order_blocks_result": [],
+    "ScenarioContracts.decision_completed_order_allows_result": [],
+    "ScenarioContracts.decision_world_event_independent_of_action_identity": [],
+    "ScenarioContracts.decision_handoff_without_ack_is_blocked": [],
+    "ScenarioContracts.decision_handoff_without_questions_is_blocked": [],
+    "ScenarioContracts.decision_handoff_without_sender_confirmation_is_blocked": [],
+    "ScenarioContracts.decision_complete_closed_loop_handoff_transfers": [],
+    "ScenarioContracts.decision_operational_replay_preserves_clinical": [],
+    "ScenarioContracts.decision_training_prohibits_patient_care": []
+  },
+  "forbidden_dependencies": [
+    "sorryAx",
+    "Classical.choice",
+    "Quot.sound",
+    "Lean.trustCompiler",
+    "Lean.ofReduceBool"
+  ],
+  "proof_scope": "Noninterference and exact transition semantics for the formal RC3.6A decision-integrity model only. No clinical-validity, treatment-effect, empirical-calibration, executable-refinement, or patient-care claim."
+}

@@ -1,0 +1,238 @@
+{
+  "ratchet_anchor_sha256": "84d04484d51e79944b3079889d0eed50841f9588422e0f9928c3840822b5fb91",
+  "ratchet_epoch": 8,
+  "ratchet_id": "asklepios-technical-debt-ratchet-v1",
+  "register_id": "asklepios-release-debt-v1",
+  "register_path": "config/release/TECHNICAL_DEBT_REGISTER.json",
+  "report_path": "reports/technical-debt-ratchet.json",
+  "required_contract": {
+    "absolute_debt_free_claim_permitted": false,
+    "maximum_accepted_risks": 0,
+    "permitted_release_claim": "No known release-blocking technical debt remains within the machine-checked scope and current authenticated evidence.",
+    "requires_current_graph_hash": true,
+    "requires_current_output_hashes": true,
+    "stale_committed_reports_may_satisfy_gate": false,
+    "terminal_evidence_stage": "final.decision-evidence"
+  },
+  "required_entry_floors": {
+    "TD-BEHAVIOR-ARCHIVE-015": {
+      "evidence_stages": [
+        "scenario.contracts",
+        "scenario.behavior-archive-check",
+        "scenario.behavior-archive-attacks",
+        "scenario.capability-ratchet-attacks",
+        "scenario.evolution-evidence"
+      ],
+      "release_blocker": true,
+      "state": "CLOSED"
+    },
+    "TD-BUILD-003": {
+      "evidence_stages": [
+        "build.app-typecheck",
+        "build.double-reproducibility"
+      ],
+      "release_blocker": true,
+      "state": "CLOSED"
+    },
+    "TD-CANONICAL-STAKEHOLDER-TREATMENT-018": {
+      "evidence_stages": [
+        "scenario.treatment-admission",
+        "scenario.treatment-admission-check",
+        "scenario.treatment-admission-attacks",
+        "scenario.stakeholder-product",
+        "scenario.stakeholder-product-check",
+        "scenario.stakeholder-product-attacks",
+        "scenario.capability-ratchet-attacks",
+        "scenario.evolution-evidence"
+      ],
+      "release_blocker": true,
+      "state": "CLOSED"
+    },
+    "TD-DEBT-RATCHET-012": {
+      "evidence_stages": [
+        "release.debt-ratchet",
+        "release.debt-ratchet-attacks"
+      ],
+      "release_blocker": true,
+      "state": "CLOSED"
+    },
+    "TD-DIRECT-PATIENT-CARE-007": {
+      "evidence_stages": [
+        "release.intended-use-policy"
+      ],
+      "release_blocker": false,
+      "state": "OUT_OF_SCOPE"
+    },
+    "TD-ENGINE-DOCS-009": {
+      "evidence_stages": [
+        "standalone.generate",
+        "standalone.contracts",
+        "scenario.engine-evolution-docs-python",
+        "scenario.engine-evolution-docs-node",
+        "scenario.engine-evolution-doc-attacks",
+        "scenario.evolution-evidence"
+      ],
+      "release_blocker": true,
+      "state": "CLOSED"
+    },
+    "TD-HUB-SECURITY-008": {
+      "evidence_stages": [
+        "hub.security-source",
+        "hub.security-attacks",
+        "hub.runtime-smoke"
+      ],
+      "release_blocker": true,
+      "state": "CLOSED"
+    },
+    "TD-INTENDED-USE-005": {
+      "evidence_stages": [
+        "release.intended-use-policy",
+        "release.intended-use-attacks"
+      ],
+      "release_blocker": true,
+      "state": "CLOSED"
+    },
+    "TD-NODE-CHECKER-CLI-010": {
+      "evidence_stages": [
+        "scenario.node-checker-cli-attacks"
+      ],
+      "release_blocker": true,
+      "state": "CLOSED"
+    },
+    "TD-OFFLINE-RELEASE-013": {
+      "evidence_stages": [
+        "offline.release-python",
+        "offline.release-node",
+        "offline.release-attacks"
+      ],
+      "release_blocker": true,
+      "state": "CLOSED"
+    },
+    "TD-PLAIN-LANGUAGE-019": {
+      "evidence_stages": [
+        "scenario.plain-language-summary",
+        "scenario.plain-language-summary-check",
+        "scenario.plain-language-summary-attacks",
+        "scenario.capability-ratchet-attacks",
+        "scenario.evolution-evidence"
+      ],
+      "release_blocker": true,
+      "state": "CLOSED"
+    },
+    "TD-REAL-CLINICAL-TIMING-006": {
+      "evidence_stages": [
+        "simulation.timing-assurance"
+      ],
+      "release_blocker": false,
+      "state": "OUT_OF_SCOPE"
+    },
+    "TD-RELEASE-GRAPH-001": {
+      "evidence_stages": [
+        "orchestration.graph-check",
+        "orchestration.graph-attacks"
+      ],
+      "release_blocker": true,
+      "state": "CLOSED"
+    },
+    "TD-SCENARIO-EVIDENCE-002": {
+      "evidence_stages": [
+        "scenario.contracts",
+        "scenario.release-validation"
+      ],
+      "release_blocker": true,
+      "state": "CLOSED"
+    },
+    "TD-SCENARIO-EVOLUTION-EVIDENCE-014": {
+      "evidence_stages": [
+        "scenario.evolution-evidence",
+        "scenario.evolution-evidence-attacks"
+      ],
+      "release_blocker": true,
+      "state": "CLOSED"
+    },
+    "TD-SCENARIO-SCIENCE-016": {
+      "evidence_stages": [
+        "scenario.behavioral-policy",
+        "scenario.behavioral-policy-attacks",
+        "scenario.science-foundation",
+        "scenario.science-foundation-check",
+        "scenario.science-foundation-attacks",
+        "scenario.capability-ratchet-attacks",
+        "scenario.evolution-evidence"
+      ],
+      "release_blocker": true,
+      "state": "CLOSED"
+    },
+    "TD-STAKEHOLDER-PRODUCT-017": {
+      "evidence_stages": [
+        "scenario.stakeholder-product",
+        "scenario.stakeholder-product-check",
+        "scenario.stakeholder-product-attacks",
+        "scenario.capability-ratchet-attacks",
+        "scenario.evolution-evidence"
+      ],
+      "release_blocker": true,
+      "state": "CLOSED"
+    },
+    "TD-TIMING-004": {
+      "evidence_stages": [
+        "simulation.timing-assurance",
+        "simulation.timing-attacks"
+      ],
+      "release_blocker": true,
+      "state": "CLOSED"
+    },
+    "TD-VERIFIED-EXAMPLE-HARNESS-011": {
+      "evidence_stages": [
+        "scenario.verified-example-attacks",
+        "scenario.node-checker-cli-attacks"
+      ],
+      "release_blocker": true,
+      "state": "CLOSED"
+    }
+  },
+  "required_final_stage_receipts": [
+    "release.intended-use-attacks",
+    "release.simulation-quality-attacks",
+    "hub.security-attacks",
+    "standalone.contracts",
+    "offline.release-attacks",
+    "content.registry-source",
+    "arrival.runtime-evidence-join",
+    "decision.artifact-attacks",
+    "scenario.contracts",
+    "scenario.behavior-archive-check",
+    "scenario.behavior-archive-attacks",
+    "scenario.behavioral-policy",
+    "scenario.behavioral-policy-attacks",
+    "scenario.science-foundation",
+    "scenario.science-foundation-check",
+    "scenario.science-foundation-attacks",
+    "scenario.treatment-admission",
+    "scenario.treatment-admission-check",
+    "scenario.treatment-admission-attacks",
+    "scenario.plain-language-summary",
+    "scenario.plain-language-summary-check",
+    "scenario.plain-language-summary-attacks",
+    "scenario.stakeholder-product",
+    "scenario.stakeholder-product-check",
+    "scenario.stakeholder-product-attacks",
+    "scenario.verified-example-attacks",
+    "scenario.node-checker-cli-attacks",
+    "scenario.engine-evolution-doc-attacks",
+    "scenario.capability-ratchet-attacks",
+    "scenario.evolution-evidence",
+    "scenario.evolution-evidence-attacks",
+    "scenario.release-validation",
+    "hub.runtime-smoke",
+    "simulation.timing-assurance",
+    "formal.exact-audit",
+    "build.app-typecheck",
+    "build.double-reproducibility",
+    "release.debt-ratchet",
+    "release.debt-ratchet-attacks",
+    "final.decision-evidence"
+  ],
+  "schema_version": "1.0.0",
+  "truth_boundary": "This ratchet preserves known technical-debt records and authenticated evidence obligations. It does not prove that undiscovered defects do not exist and it does not promote clinical authority, operational calibration, patient dynamics, or psychometric validity."
+}

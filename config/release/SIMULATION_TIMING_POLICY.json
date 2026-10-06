@@ -1,0 +1,74 @@
+{
+  "clock_domains": {
+    "real_world_clinical_operational_timing": {
+      "required_before_promotion": [
+        "versioned_multisite_dataset",
+        "population_and_facility_applicability",
+        "sample_size_and_missingness",
+        "held_out_evaluation",
+        "uncertainty_intervals",
+        "drift_monitoring",
+        "independent_sme_approval"
+      ],
+      "status": "NOT_CALIBRATED",
+      "transferability": "NOT_ESTABLISHED"
+    },
+    "simulation_logical_clock": {
+      "action_identity_independence_required": true,
+      "duplicate_fire_tolerance": 0,
+      "early_fire_tolerance_seconds": 0,
+      "event_delivery": "first_transition_at_or_after_due_time",
+      "semantics": "monotonic_discrete_logical_time",
+      "status": "VALIDATED_FOR_DETERMINISTIC_SIMULATION",
+      "unit": "seconds"
+    },
+    "software_response_time": {
+      "budgets_ms": {
+        "p50": 25.0,
+        "p95": 100.0,
+        "p99": 250.0
+      },
+      "clinical_meaning": "NONE",
+      "measured_iterations": 1000,
+      "measurement_clock": "monotonic_high_resolution_clock",
+      "status": "ENGINEERING_BUDGET_REQUIRES_RUNTIME_EVIDENCE",
+      "warmup_iterations": 100
+    }
+  },
+  "exercise_parameters": [
+    {
+      "clinical_calibration_status": "NOT_CALIBRATED",
+      "parameter": "diagnostic_delay_seconds",
+      "simulation_status": "DETERMINISTIC_EXERCISE_ASSUMPTION",
+      "value": 180
+    },
+    {
+      "clinical_calibration_status": "NOT_A_REAL_WORLD_TARGET",
+      "parameter": "timeout_seconds",
+      "simulation_status": "SOURCE_BOUND",
+      "value": 1200
+    }
+  ],
+  "policy_id": "asklepios-simulation-timing-v1",
+  "production_gate": {
+    "requires_no_clinical_timing_promotion": true,
+    "requires_response_time_benchmark": true,
+    "requires_runtime_clock_regressions": true,
+    "requires_static_cross_layer_binding": true,
+    "requires_two_valid_action_orderings": true
+  },
+  "schema_version": "1.0.0",
+  "timed_events": [
+    {
+      "clinical_calibration_status": "NOT_CALIBRATED",
+      "decision_config_path": "config/facility-decision/ASK-D-001.json",
+      "event_id": "second_casualty_inbound",
+      "exercise_due_seconds": 240,
+      "facility_config_path": "config/facility-arrival/ASK-D-001.json",
+      "must_be_action_independent": true,
+      "must_fire_once": true,
+      "origin": "exercise_design",
+      "simulation_status": "EXERCISE_SCHEDULE_ENGINE_VALIDATED"
+    }
+  ]
+}

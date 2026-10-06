@@ -1,0 +1,18 @@
+{
+  "acknowledgement_policy": "TYPE_GUARDED_DUAL_SIGNATURE_ACK_WITH_MALFORMED_INPUT_AUDIT_V2",
+  "checks": 80,
+  "classification": "PASS",
+  "clinical_decision_support": "PROHIBITED",
+  "controller_capability_transport": "URL_FRAGMENT_THEN_SESSION_STORAGE",
+  "direct_patient_care": "PROHIBITED",
+  "direct_patient_care_authority_granted": false,
+  "errors": [],
+  "healthcare_simulation_training": "PERMITTED_WITHIN_VALIDATED_SCOPE",
+  "provider_identity_takeover_protection": true,
+  "public_device_projection_restricted": true,
+  "schema_version": "1.0.0",
+  "security_model": "DIGESTED_CAPABILITY_BOUND_SOCKET_V1",
+  "simulated_patient_care_workflows": "PERMITTED_WITHIN_VALIDATED_SCOPE",
+  "status": "PASS",
+  "typecheck_policy": "STRICT_ROOT_BUILD_INCLUDES_HUB_SERVER_AND_RUNTIME_SMOKE_V1"
+}

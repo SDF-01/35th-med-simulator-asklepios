@@ -1,0 +1,23 @@
+{
+  "attestation_kind": "verification",
+  "attestation_sha256": "953155a2b9344b0daf9d45e522db2fe129d0fb05cc11064e6c7de44e54d7e102",
+  "example_id": "ASK-FACILITY-ARRIVAL-RC3-3",
+  "file_sha256": {
+    "examples/facility-arrival/README.md": "9f5c5692035c311fbf60bb34c9bae23516bd013a6cbbcd97a2480b4f94061e28",
+    "examples/facility-arrival/aar.json": "b466543a2526b9a0bb9db0213c67dff08442e2396bc2286fefb7ed90dcf52622",
+    "examples/facility-arrival/claim-ledger.json": "7238a7fa9dd285b414567dbdd14fc32fc43ab7eebb1051f78aee40702b9fd4a9",
+    "examples/facility-arrival/interaction.json": "ed10347c99462299dddf1c6ba3a8963b8abf2a0222edce3fcbe1f42465f6af1c",
+    "examples/facility-arrival/manifest.json": "9a7127a7c2bc2a5a96ccb4b3a5632804836b7932ffb9baf486835bdd663f2547",
+    "examples/facility-arrival/source-snapshot.json": "104361f7ab61de9ee4239eb57aedfff9468af1cd25ed32aeecc40d9fcdac855d",
+    "examples/facility-arrival/source-truth.json": "26cfb27377e50b8b0bbeffb9d7c9ba1757fc78e1307a3609e5e886593688277b",
+    "public/data/facility_arrival/reference-aar.json": "b466543a2526b9a0bb9db0213c67dff08442e2396bc2286fefb7ed90dcf52622",
+    "public/data/facility_arrival/reference-manifest.json": "9a7127a7c2bc2a5a96ccb4b3a5632804836b7932ffb9baf486835bdd663f2547",
+    "public/data/facility_arrival/reference-session.json": "ed10347c99462299dddf1c6ba3a8963b8abf2a0222edce3fcbe1f42465f6af1c"
+  },
+  "files": 10,
+  "mismatches": [],
+  "mode": "check",
+  "schema_version": "1.1.0",
+  "session_sha256": "5d22d201964725a31c36f27b1cfc5c671869917dcc3a887d7bbcba6bcc5d26f0",
+  "status": "PASS"
+}

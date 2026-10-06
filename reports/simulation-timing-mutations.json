@@ -1,0 +1,144 @@
+{
+  "cases": 15,
+  "classification": "PASS",
+  "errors": [],
+  "results": [
+    {
+      "case_id": "baseline",
+      "classification": "PASS",
+      "errors": [],
+      "observed_classification": "PASS",
+      "pass": true,
+      "required_error": null,
+      "status": "PASS"
+    },
+    {
+      "case_id": "clinical_timing_promoted",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "clinical operational timing was promoted",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "facility_241_mismatch",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "facility timed event binding differs",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "action_trigger_regression",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "facility timed event binding differs",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "runtime_early_fire",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "canonical clock event fired early",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "runtime_duplicate_fire",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "alternate clock event did not fire exactly once",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "runtime_action_coupled",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "runtime event remained action-coupled",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "runtime_system_event_action_bound",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "runtime system event retained an action identity",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "runtime_schedule_drift",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "runtime event time differs across valid orderings",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "runtime_p95_budget_exceeded",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "runtime p95 budget exceeded",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "runtime_clinical_promotion",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "runtime report promoted clinical timing",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "graph_clinical_promotion",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "graph clinical timing boundary differs",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "protocol_clinical_promotion",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "operational timing calibration protocol was promoted",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "protocol_single_site_shortcut",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "operational timing study-design requirement disabled:versioned_multisite_dataset",
+      "status": "EXPECTED_REJECTION"
+    },
+    {
+      "case_id": "protocol_auto_promotion",
+      "classification": "EXPECTED_REJECTION",
+      "errors": [],
+      "observed_classification": "FAIL",
+      "pass": true,
+      "required_error": "automatic clinical timing promotion enabled",
+      "status": "EXPECTED_REJECTION"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

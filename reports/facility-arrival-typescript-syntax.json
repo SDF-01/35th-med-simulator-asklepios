@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "parser": "typescript-5.8.3",
+  "files_checked": 13,
+  "files": [
+    "scripts/checkFacilityArrivalRuntimeResolution.ts",
+    "scripts/generateFacilityArrivalArtifacts.ts",
+    "src/facility-arrival-checker/verify.ts",
+    "src/facility-arrival/bindings.generated.ts",
+    "src/facility-arrival/context.ts",
+    "src/facility-arrival/engine.ts",
+    "src/facility-arrival/index.ts",
+    "src/facility-arrival/specification.generated.ts",
+    "src/facility-arrival/types.ts",
+    "src/pages/FacilityArrivalExamplePage.tsx",
+    "src/tests/facilityArrivalDecision.test.ts",
+    "src/tests/facilityArrivalRelations.test.ts",
+    "src/tests/facilityArrivalRuntime.test.ts"
+  ],
+  "errors": []
+}

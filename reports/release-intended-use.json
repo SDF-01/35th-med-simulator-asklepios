@@ -1,0 +1,12 @@
+{
+  "checks": 39,
+  "classification": "PASS",
+  "clinical_decision_support": "PROHIBITED",
+  "direct_patient_care": "PROHIBITED",
+  "errors": [],
+  "healthcare_simulation_training": "PERMITTED_WITHIN_VALIDATED_SCOPE",
+  "intended_use": "HEALTHCARE_SIMULATION_AND_TRAINING",
+  "schema_version": "1.0.0",
+  "simulated_patient_care_workflows": "PERMITTED_WITHIN_VALIDATED_SCOPE",
+  "status": "PASS"
+}

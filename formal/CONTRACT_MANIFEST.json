@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "library": "ScenarioContracts",
+  "toolchain": "leanprover/lean4:v4.32.1",
+  "modules": [
+    {
+      "module": "ScenarioContracts.Basic",
+      "properties": [
+        "overlay_preserves_protected",
+        "overlay_preserves_scoring",
+        "overlay_preserves_actions",
+        "supporting_overlay_preserves_protected",
+        "supporting_overlay_preserves_scoring"
+      ]
+    },
+    {
+      "module": "ScenarioContracts.Route",
+      "properties": [
+        "route_contains_start",
+        "route_contains_terminal",
+        "route_extension_preserves_membership"
+      ]
+    },
+    {
+      "module": "ScenarioContracts.Origin",
+      "properties": [
+        "covers_append",
+        "covers_subset"
+      ]
+    },
+    {
+      "module": "ScenarioContracts.Certificate",
+      "properties": [
+        "accepted_protects_fields",
+        "accepted_has_route",
+        "accepted_has_origins",
+        "accepted_has_valid_stage_payloads"
+      ]
+    }
+  ],
+  "incomplete_proofs_allowed": false,
+  "external_checker_required": true
+}

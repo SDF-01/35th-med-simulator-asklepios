@@ -1,0 +1,14 @@
+{
+  "accepted_risks": 0,
+  "checks": 127,
+  "classification": "PASS",
+  "entry_count": 15,
+  "errors": [],
+  "ratchet_anchor_sha256": "f3a20c27e65e8bdbfadfeb27d379c105f6fe15b16e9436ed53ee8969c54af9ac",
+  "ratchet_epoch": 4,
+  "ratchet_id": "asklepios-technical-debt-ratchet-v1",
+  "required_receipt_count": 26,
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "truth_boundary": "This ratchet preserves known technical-debt records and authenticated evidence obligations. It does not prove that undiscovered defects do not exist and it does not promote clinical authority, operational calibration, patient dynamics, or psychometric validity."
+}
