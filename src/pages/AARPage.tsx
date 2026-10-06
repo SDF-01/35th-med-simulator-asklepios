@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AppChrome } from '@/components/ui/AppChrome';
 import { Alert } from '@/components/ui/Alert';
@@ -6,13 +7,30 @@ import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { PageHeader, SectionLabel } from '@/components/ui/PageHeader';
 import { PageShell } from '@/components/ui/PageShell';
+import { usePracticeHistoryStore } from '@/store/practiceHistoryStore';
 import { useSimulationStore } from '@/store/simulationStore';
 import { isSoloMode } from '@/utils/soloMode';
 
 export function AARPage() {
   const navigate = useNavigate();
   const aar = useSimulationStore((s) => s.aar);
+  const scenario = useSimulationStore((s) => s.scenario);
+  const recordPractice = usePracticeHistoryStore((s) => s.recordPractice);
   const solo = isSoloMode();
+
+  useEffect(() => {
+    if (!aar) return;
+    recordPractice({
+      sessionId: aar.session_id,
+      scenarioId: scenario?.scenario_id ?? aar.session_id,
+      scenarioTitle: scenario?.title ?? 'Training scenario',
+      score: aar.score,
+      passed: aar.passed,
+      patientOutcome: aar.patient_outcome,
+      mode: solo ? 'solo' : 'exercise',
+      bluf: aar.bluf,
+    });
+  }, [aar, scenario, solo, recordPractice]);
 
   if (!aar) {
     return (

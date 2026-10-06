@@ -38,6 +38,8 @@ Phones on the same Wi‑Fi: `http://<laptop-ip>:5183/join`
 2. Configure a scenario → **Start solo practice**.
 3. Run brief → simulation → after-action review on the same device.
 
+Completed AAR summaries are saved in browser localStorage (up to 20 entries) under **Past practices** on `/solo`. Clear history from that panel. Device-local only; not synced to the hub.
+
 Multi-role handoff chains are not included in solo mode yet.
 
 ### Quick multiplayer exercise test
@@ -56,7 +58,7 @@ After one online visit to a production or `vite preview` build, scenario library
 
 1. ~~**Solo practice mode**~~: `/solo` available for single-device practice without the hub.
 2. ~~**Offline / PWA hardening**~~: self-hosted fonts, service worker, install icons (see Offline / PWA above).
-3. **Local history**: persist past sessions/AAR in localStorage.
+3. ~~**Local history**~~: past AAR/practice summaries in localStorage (`practiceHistoryStore`, `/solo`).
 4. **Free multiplayer hosting**: `render.yaml` now uses `npm ci --include=dev` so `tsx` is available; still need frontend host + CORS + keep-alive.
 5. **Solo handoffs**: pass-and-play or in-browser lobby stand-in (deferred).
 
