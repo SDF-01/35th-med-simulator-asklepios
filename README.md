@@ -58,22 +58,25 @@ After one online visit to a production or `vite preview` build, scenario library
 
 The hub needs a long-lived Node process (Socket.IO). The SPA can live on a separate static host or on the same Render service.
 
-### Option A (recommended): Cloudflare Pages + Render hub
+### Option A (recommended when SPA is separate): Cloudflare Pages + Render hub
 
 1. Deploy the Vite SPA to Cloudflare Pages (`npm run build:bundle` or full `npm run build`).
-2. Deploy the hub from `render.yaml` (Render Blueprint) or manually:
-   - Build: `npm ci --include=dev` (keeps `tsx` available for `start:hub`)
-   - Start: `npm run start:hub`
-   - Health check: `/api/health`
+2. Deploy the hub from Render (Blueprint or manual). For hub-only, use build `npm ci --include=dev` (no `build:bundle`), start `npm run start:hub`, health `/api/health`.
 3. Set hub env `ASKLEPIOS_CORS_ORIGIN` to the Pages origin (comma-separated if you also allow localhost).
 4. Set SPA env `VITE_HUB_URL` to the Render hub origin (rebuild the SPA after changing it).
 
+Note: the checked-in `render.yaml` defaults to Option B (SPA + hub). For Option A, change the Render build command to omit `&& npm run build:bundle`.
+
 ### Option B: Single Render service (static + hub)
 
-1. Change the Render build command to `npm ci --include=dev && npm run build:bundle` so `dist/` exists.
-2. Keep start as `npm run start:hub`. When `dist/index.html` is present, the hub serves the SPA and keeps `/api/*` plus Socket.IO working.
-3. Set `ASKLEPIOS_CORS_ORIGIN` to this service's public HTTPS origin.
+`render.yaml` is configured for this path (preferred for a new Render account):
+
+1. Build: `npm ci --include=dev && npm run build:bundle` so `dist/` exists.
+2. Start: `npm run start:hub`. When `dist/index.html` is present, the hub serves the SPA and keeps `/api/*` plus Socket.IO working.
+3. Set `ASKLEPIOS_CORS_ORIGIN` to this service's public HTTPS origin (update the Blueprint placeholder after first deploy if the hostname differs).
 4. Leave `VITE_HUB_URL` empty so the browser uses same-origin hub URLs.
+
+**Git source note:** Render cannot pull from private git.mil. Use a public GitHub mirror/fork, connect a private GitHub repo Render can access, or create the web service manually and paste build/start settings from `render.yaml`.
 
 ### Keep-alive (free tier)
 
