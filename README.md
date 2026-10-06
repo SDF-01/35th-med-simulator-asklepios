@@ -32,7 +32,15 @@ npm run dev
 
 Phones on the same Wi‑Fi: `http://<laptop-ip>:5183/join`
 
-### Quick exercise test
+### Solo practice (no hub)
+
+1. Open http://localhost:5183/solo (or **Solo practice** on the landing page).
+2. Configure a scenario → **Start solo practice**.
+3. Run brief → simulation → after-action review on the same device.
+
+Multi-role handoff chains are not included in solo mode yet.
+
+### Quick multiplayer exercise test
 
 1. Open WIT → `/host` → **Create exercise** → copy the 6-character code.
 2. Open provider → `/join` → enter code → save profile.
@@ -40,10 +48,11 @@ Phones on the same Wi‑Fi: `http://<laptop-ip>:5183/join`
 
 ## Planned work (this repo)
 
-1. **Solo practice mode** — pick a scenario and run brief → simulation → AAR with no hub.
+1. ~~**Solo practice mode**~~ — `/solo` ships on branch `feat/solo-practice-mode`.
 2. **Offline / PWA hardening** — self-hosted fonts, service worker, install icons.
-3. **Free multiplayer hosting** — fix Render hub start (`tsx` / install), prefer single-service static+hub or Cloudflare Pages + Render; keep-alive for free-tier sleep.
-4. Leave multi-role handoff chains out of solo mode initially (pass-and-play later).
+3. **Local history** — persist past sessions/AAR in localStorage.
+4. **Free multiplayer hosting** — `render.yaml` now uses `npm ci --include=dev` so `tsx` is available; still need frontend host + CORS + keep-alive.
+5. **Solo handoffs** — pass-and-play or in-browser lobby stand-in (deferred).
 
 ## Notes
 

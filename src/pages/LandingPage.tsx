@@ -51,13 +51,18 @@ export function LandingPage() {
           </div>
 
           <div className="mx-auto flex max-w-md flex-col gap-3 sm:flex-row">
-            <Button type="button" className="flex-1 min-h-12" onClick={() => navigate('/host')}>
+            <Button type="button" className="flex-1 min-h-12" onClick={() => navigate('/solo')}>
+              Solo practice
+            </Button>
+            <Button type="button" variant="secondary" className="flex-1 min-h-12" onClick={() => navigate('/host')}>
               Host exercise
             </Button>
+          </div>
+          <div className="mx-auto mt-3 max-w-md">
             <Button
               type="button"
               variant="secondary"
-              className="flex-1 min-h-12"
+              className="w-full min-h-12"
               onClick={() => navigate('/join')}
             >
               Join exercise

@@ -12,6 +12,7 @@ import { buildSupplyInventory, getSupplyLimitsSummary } from '@/engines/supplyEn
 import { SUPPLY_OPTIONS } from '@/types/witConfig';
 import { setProviderStatus } from '@/services/networkHub';
 import { useSimulationStore } from '@/store/simulationStore';
+import { isSoloMode } from '@/utils/soloMode';
 
 export function ProviderBriefPage() {
   const navigate = useNavigate();
@@ -25,7 +26,11 @@ export function ProviderBriefPage() {
       <PageShell>
         <AppChrome role="provider" title="Mission brief" />
         <main id="main-content" className="flex flex-1 items-center justify-center px-4 py-12">
-          <Alert title="No scenario">No scenario loaded. Wait for WIT to deploy.</Alert>
+          <Alert title="No scenario">
+            {isSoloMode()
+              ? 'No scenario loaded. Return to Solo practice and start a scenario.'
+              : 'No scenario loaded. Wait for WIT to deploy.'}
+          </Alert>
         </main>
       </PageShell>
     );

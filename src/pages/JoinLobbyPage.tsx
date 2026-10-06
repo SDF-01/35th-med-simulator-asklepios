@@ -20,6 +20,7 @@ import {
   normalizeLobbyCode,
   saveLobbyCode,
 } from '@/utils/lobbyCode';
+import { disableSoloMode } from '@/utils/soloMode';
 
 export function JoinLobbyPage() {
   const navigate = useNavigate();
@@ -33,6 +34,10 @@ export function JoinLobbyPage() {
   const [busy, setBusy] = useState(false);
 
   const prefilledCode = routeCode ? normalizeLobbyCode(routeCode) : '';
+
+  useEffect(() => {
+    disableSoloMode();
+  }, []);
 
   useEffect(() => {
     if (prefilledCode) {

@@ -1,4 +1,5 @@
 import { getSavedLobbyCode, buildJoinPath } from '@/utils/lobbyCode';
+import { isSoloMode } from '@/utils/soloMode';
 
 export interface BackTarget {
   to: string;
@@ -6,6 +7,7 @@ export interface BackTarget {
 }
 
 function providerLobbyPath(): string {
+  if (isSoloMode()) return '/solo';
   const saved = getSavedLobbyCode();
   return saved ? buildJoinPath(saved, 'provider') : '/join';
 }
@@ -14,6 +16,10 @@ function providerLobbyPath(): string {
 export function getBackTarget(pathname: string): BackTarget | null {
   if (pathname === '/' || pathname === '/home') {
     return null;
+  }
+
+  if (pathname === '/solo') {
+    return { to: '/home', label: 'Home' };
   }
 
   if (pathname === '/join' || pathname.startsWith('/join/')) {

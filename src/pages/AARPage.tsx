@@ -7,10 +7,12 @@ import { Card } from '@/components/ui/Card';
 import { PageHeader, SectionLabel } from '@/components/ui/PageHeader';
 import { PageShell } from '@/components/ui/PageShell';
 import { useSimulationStore } from '@/store/simulationStore';
+import { isSoloMode } from '@/utils/soloMode';
 
 export function AARPage() {
   const navigate = useNavigate();
   const aar = useSimulationStore((s) => s.aar);
+  const solo = isSoloMode();
 
   if (!aar) {
     return (
@@ -33,10 +35,19 @@ export function AARPage() {
             title="Performance Summary"
             actions={
               <>
-                <Button onClick={() => navigate('/provider')}>Return to Lobby</Button>
-                <Button variant="secondary" onClick={() => navigate('/wit')}>
-                  WIT Command
+                <Button onClick={() => navigate(solo ? '/solo' : '/provider')}>
+                  {solo ? 'Solo practice' : 'Return to Lobby'}
                 </Button>
+                {!solo && (
+                  <Button variant="secondary" onClick={() => navigate('/wit')}>
+                    WIT Command
+                  </Button>
+                )}
+                {solo && (
+                  <Button variant="secondary" onClick={() => navigate('/home')}>
+                    Home
+                  </Button>
+                )}
               </>
             }
             className="mb-8"

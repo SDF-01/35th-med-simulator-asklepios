@@ -23,6 +23,7 @@ import {
   saveControllerCapability,
   saveProviderCapability,
 } from '@/utils/lobbyCapability';
+import { isSoloMode } from '@/utils/soloMode';
 
 const DISPLAY_NAME_KEY = 'asklepios_display_name';
 const PROFILE_KEY = 'asklepios_provider_profile';
@@ -51,6 +52,7 @@ function emitAuthorized<TPayload extends object>(
   event: string,
   payloadFactory: () => TPayload,
 ): void {
+  if (isSoloMode()) return;
   try {
     void emitWithAck<TPayload, { ok: boolean; error?: string }>(event, payloadFactory())
       .catch(reportHubAuthorizationError);
@@ -124,6 +126,9 @@ function createSocket(): Socket {
 }
 
 function getSocket(): Socket {
+  if (isSoloMode()) {
+    throw new Error('Exercise hub is disabled in solo practice mode.');
+  }
   if (!socket) {
     socket = createSocket();
   }
@@ -135,6 +140,7 @@ export function getHubUrl(): string {
 }
 
 export async function fetchHubHealth(): Promise<HubHealthResponse | null> {
+  if (isSoloMode()) return null;
   try {
     const response = await fetch(`${resolveHubUrl()}/api/health`, {
       method: 'GET',
@@ -148,6 +154,7 @@ export async function fetchHubHealth(): Promise<HubHealthResponse | null> {
 }
 
 export function pingHub(): Promise<boolean> {
+  if (isSoloMode()) return Promise.resolve(false);
   const s = getSocket();
   if (!s.connected) {
     return Promise.resolve(false);
@@ -163,6 +170,7 @@ export function pingHub(): Promise<boolean> {
 }
 
 export function subscribeHubReconnect(handler: () => void): () => void {
+  if (isSoloMode()) return () => {};
   providerReconnectHandlers.add(handler);
   const s = getSocket();
   if (s.connected) {
@@ -499,6 +507,7 @@ export function onProviderConnectionReplaced(
 }
 
 export function onEndExercise(handler: (payload: { message: string }) => void): () => void {
+  if (isSoloMode()) return () => {};
   const s = getSocket();
   s.on('provider:endex', handler);
   return () => s.off('provider:endex', handler);
@@ -548,6 +557,10 @@ function resolveHubState(socketInstance: Socket): HubConnectionState {
 }
 
 export function subscribeHubConnection(handler: (state: HubConnectionState) => void): () => void {
+  if (isSoloMode()) {
+    handler('offline');
+    return () => {};
+  }
   const s = getSocket();
 
   const onConnect = () => handler('online');
