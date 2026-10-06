@@ -10,6 +10,18 @@ Providers train on phone-sized bedside workflows. WIT evaluators configure and d
 
 Seeded from [SDF-01/ProjectAsklepios](https://github.com/SDF-01/ProjectAsklepios) for wing-hosted development on git.mil.
 
+| Remote | URL | Role |
+|--------|-----|------|
+| `origin` | [git.mil wing repo](https://web.git.mil/35th-weaselwerx/35th-med-simulator-asklepios) | Canonical |
+| `github` | [SDF-01/35th-med-simulator-asklepios](https://github.com/SDF-01/35th-med-simulator-asklepios) | Private mirror for Render |
+
+Push both after finishing work on `main` (no auto-sync yet):
+
+```bash
+git push origin main
+git push github main
+```
+
 | Layer | Location |
 |-------|----------|
 | Frontend | `src/`: React 19, Vite 6, Tailwind 4, Zustand, React Router |
