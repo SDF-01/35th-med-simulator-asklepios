@@ -1,3 +1,10 @@
+# Asklepios network hub on Render (free web service).
+#
+# Recommended: Cloudflare Pages (or similar) for the Vite SPA + this hub for Socket.IO.
+# Optional single-service: append ` && npm run build:bundle` to buildCommand so `dist/`
+# exists; the hub then serves the SPA when present (see server/index.ts).
+#
+# Free-tier sleep: point UptimeRobot (or similar) at GET /api/health every ~5 minutes.
 services:
   - type: web
     name: asklepios-hub
@@ -11,5 +18,7 @@ services:
       - key: NODE_ENV
         value: production
       - key: ASKLEPIOS_CORS_ORIGIN
-        # Set this to your real frontend origin after deploy (Cloudflare Pages / Vercel / Render static).
+        # Must list the real browser origin(s): Cloudflare Pages URL, and/or this
+        # Render URL when serving SPA from the same hub (comma-separated).
+        # Example: https://asklepios.pages.dev,https://asklepios-hub.onrender.com
         value: https://project-asklepios.vercel.app

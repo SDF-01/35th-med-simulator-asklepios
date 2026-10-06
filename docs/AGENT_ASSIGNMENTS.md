@@ -1,4 +1,4 @@
-# Agent assignment sheet — 35th Med Simulator Asklepios
+# Agent assignment sheet : 35th Med Simulator Asklepios
 
 Work only in this repo (`sync.git.mil/35th-weaselwerx/35th-med-simulator-asklepios`). Leave `SDF-01/ProjectAsklepios` alone.
 
@@ -14,14 +14,14 @@ Work only in this repo (`sync.git.mil/35th-weaselwerx/35th-med-simulator-asklepi
 | # | Stream | Branch | Status |
 |---|--------|--------|--------|
 | 1 | Solo practice | `feat/solo-practice-mode` | In progress / MR |
-| 2 | Offline / PWA | `feat/pwa-offline` | Ready for agent |
+| 2 | Offline / PWA | `feat/pwa-offline` | Merged |
 | 3 | Local history | `feat/local-history` | Ready for agent |
-| 4 | Hosting fix | `fix/render-hub-hosting` | Partial (`render.yaml` in solo branch) |
+| 4 | Hosting fix | `fix/render-hub-hosting` | Done / MR |
 | 5 | Solo handoffs | deferred | Do not start |
 
 ---
 
-## Agent 1 — Solo practice (this branch)
+## Agent 1 : Solo practice (this branch)
 
 **Done when:** landing has Solo practice → `/solo` → configure → brief → sim → AAR with hub no-ops; host/join clear solo flag.
 
@@ -29,7 +29,7 @@ Work only in this repo (`sync.git.mil/35th-weaselwerx/35th-med-simulator-asklepi
 
 ---
 
-## Agent 2 — Offline / PWA (`feat/pwa-offline`)
+## Agent 2 : Offline / PWA (`feat/pwa-offline`)
 
 **Scope**
 - Self-host fonts (replace Google Fonts CDN in `index.html`)
@@ -43,7 +43,7 @@ Work only in this repo (`sync.git.mil/35th-weaselwerx/35th-med-simulator-asklepi
 
 ---
 
-## Agent 3 — Local history (`feat/local-history`)
+## Agent 3 : Local history (`feat/local-history`)
 
 **Scope**
 - Zustand `persist` for completed AAR / recent solo sessions (localStorage)
@@ -56,13 +56,9 @@ Work only in this repo (`sync.git.mil/35th-weaselwerx/35th-med-simulator-asklepi
 
 ---
 
-## Agent 4 — Hosting docs (`fix/render-hub-hosting`)
+## Agent 4 : Hosting docs (`fix/render-hub-hosting`)
 
-**Scope**
-- Confirm `render.yaml` uses `npm ci --include=dev` (may already be on solo branch; rebase)
-- Document Cloudflare Pages + Render hub vs single Render static+hub in README
-- Optional: `express.static('dist')` SPA fallback on hub for single-service option
-- Note UptimeRobot keep-alive for free-tier sleep
+**Status:** Done on this branch (confirm/improve `render.yaml`, README hosting options + UptimeRobot, optional `dist` SPA static, `.env.example` production comments).
 
 **Do not touch:** solo UI; PWA.
 

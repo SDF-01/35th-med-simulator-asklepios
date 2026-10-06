@@ -1,5 +1,7 @@
+import { existsSync } from 'node:fs';
 import { createServer } from 'node:http';
 import type { AddressInfo } from 'node:net';
+import { join } from 'node:path';
 import cors from 'cors';
 import express from 'express';
 import { Server, type Socket } from 'socket.io';
@@ -561,15 +563,23 @@ app.get('/api/health', (_req, res) => {
   });
 });
 
-app.get('/', (_req, res) => {
-  res.json({
-    ok: true,
-    service: 'asklepios-hub',
-    version: HUB_VERSION,
-    health: '/api/health',
-    lobbies: '/api/lobbies',
+// Optional same-origin SPA: serve Vite `dist` when present (single Render service).
+// API routes above stay authoritative. Socket.IO attaches to httpServer, not Express.
+const DIST_DIR = join(process.cwd(), 'dist');
+const DIST_INDEX = join(DIST_DIR, 'index.html');
+const serveSpaFromDist = existsSync(DIST_INDEX);
+
+if (!serveSpaFromDist) {
+  app.get('/', (_req, res) => {
+    res.json({
+      ok: true,
+      service: 'asklepios-hub',
+      version: HUB_VERSION,
+      health: '/api/health',
+      lobbies: '/api/lobbies',
+    });
   });
-});
+}
 
 app.post('/api/lobbies', (req, res) => {
   if (!consumeLobbyCreateBudget(requestKey(req))) {
@@ -1085,6 +1095,30 @@ function cleanupExpiredLobbies(): void {
 const cleanupTimer = setInterval(cleanupExpiredLobbies, Math.min(60_000, Math.max(10_000, LOBBY_TTL_MS / 4)));
 cleanupTimer.unref();
 httpServer.on('close', () => clearInterval(cleanupTimer));
+
+if (serveSpaFromDist) {
+  app.use(
+    express.static(DIST_DIR, {
+      index: false,
+      fallthrough: true,
+      // Avoid caching index.html so deploys pick up new asset hashes quickly.
+      setHeaders(res, filePath) {
+        if (filePath.endsWith('index.html')) {
+          res.setHeader('Cache-Control', 'no-cache');
+        }
+      },
+    }),
+  );
+  app.get(/^(?!\/api\/|\/socket\.io(?:\/|$)).*/, (req, res, next) => {
+    if (req.method !== 'GET' && req.method !== 'HEAD') {
+      next();
+      return;
+    }
+    res.sendFile(DIST_INDEX, (error) => {
+      if (error) next(error);
+    });
+  });
+}
 
 const PORT = Number(process.env.PORT ?? process.env.ASKLEPIOS_HUB_PORT ?? 3021);
 

@@ -54,12 +54,37 @@ Production builds register a service worker (`vite-plugin-pwa`) that precaches t
 
 After one online visit to a production or `vite preview` build, scenario library JSON and the UI shell should load offline. Multiplayer lobbies still need the hub online. Installable icons live in `public/icons/` and are listed in `public/manifest.webmanifest`.
 
+## Free multiplayer hosting
+
+The hub needs a long-lived Node process (Socket.IO). The SPA can live on a separate static host or on the same Render service.
+
+### Option A (recommended): Cloudflare Pages + Render hub
+
+1. Deploy the Vite SPA to Cloudflare Pages (`npm run build:bundle` or full `npm run build`).
+2. Deploy the hub from `render.yaml` (Render Blueprint) or manually:
+   - Build: `npm ci --include=dev` (keeps `tsx` available for `start:hub`)
+   - Start: `npm run start:hub`
+   - Health check: `/api/health`
+3. Set hub env `ASKLEPIOS_CORS_ORIGIN` to the Pages origin (comma-separated if you also allow localhost).
+4. Set SPA env `VITE_HUB_URL` to the Render hub origin (rebuild the SPA after changing it).
+
+### Option B: Single Render service (static + hub)
+
+1. Change the Render build command to `npm ci --include=dev && npm run build:bundle` so `dist/` exists.
+2. Keep start as `npm run start:hub`. When `dist/index.html` is present, the hub serves the SPA and keeps `/api/*` plus Socket.IO working.
+3. Set `ASKLEPIOS_CORS_ORIGIN` to this service's public HTTPS origin.
+4. Leave `VITE_HUB_URL` empty so the browser uses same-origin hub URLs.
+
+### Keep-alive (free tier)
+
+Render free web services sleep after idle time. Point [UptimeRobot](https://uptimerobot.com/) (or similar) at `GET https://<your-hub>/api/health` every ~5 minutes so lobbies stay warm during training windows.
+
 ## Planned work (this repo)
 
 1. ~~**Solo practice mode**~~: `/solo` available for single-device practice without the hub.
 2. ~~**Offline / PWA hardening**~~: self-hosted fonts, service worker, install icons (see Offline / PWA above).
 3. ~~**Local history**~~: past AAR/practice summaries in localStorage (`practiceHistoryStore`, `/solo`).
-4. **Free multiplayer hosting**: `render.yaml` now uses `npm ci --include=dev` so `tsx` is available; still need frontend host + CORS + keep-alive.
+4. ~~**Free multiplayer hosting**~~: `render.yaml` + hosting docs (Cloudflare Pages + Render, or single Render SPA+hub).
 5. **Solo handoffs**: pass-and-play or in-browser lobby stand-in (deferred).
 
 ## Notes
